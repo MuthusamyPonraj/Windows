@@ -1,0 +1,51 @@
+
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;2521729">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Sort Demo</H1>
+<P>This sample demonstrates how to sort tables by different columns
+and also how to avoid sorting. The sample includes
+options to sort the table&rsquo;s content by CustomerName, ContactName and ContactTitle. 
+</P>
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=4><B>Features:</B></FONT></FONT></FONT></P>
+<UL>
+	<LI><P>Uses a data set with Customer's tables</P>
+	<LI><P>Data set created at design-time</P>
+	<LI><P>Includes options to sort the table&rsquo;s content by
+	CustomerName, ContactName and ContactTitle<FONT COLOR="#8d2e1c">  </FONT>
+	</P>
+	<LI><P>Demonstrates different ways to sort and avoid sorting:</P>
+	<UL>
+		<LI><P>By setting the <STRONG>SortBehavior</STRONG> property to<EM>
+		None </EM>can avoiding sorting on columns</P>
+		<LI><P>Sorting by double click can be achieved by setting the <STRONG>SortBehavior</STRONG> property to<EM>
+		DoubleClick</EM></P>
+		<LI><P>Sorting by single click can be achieved by setting the <STRONG>SortBehavior</STRONG> property to<EM>
+		SingleClick</EM></P>
+	</UL>
+</UL>
+<!--<P ALIGN=CENTER><img src="images/Sorting.png" NAME="graphics1" ALT="Sorting Methods screenshot" ALIGN=BOTTOM  BORDER=0></P>-->
+<P ALIGN=CENTER><BR><BR>
+</P>
+<P ALIGN=CENTER><BR><BR>
+</P>
+<P>Here is the code to sort the values by CompanyName:</P>
+<PRE STYLE="margin-bottom: 0.2in"><FONT COLOR="#8d2e1c">                this.gridDataBoundGrid1.SortColumn(this.gridDataBoundGrid1.Binder.InternalColumns["CompanyName"].Position );  </FONT></PRE><P>
+Here is the code to avoid column sort:</P>
+<PRE STYLE="margin-bottom: 0.2in"><FONT COLOR="#8d2e1c">                this.gridDataBoundGrid1.SortBehavior = GridSortBehavior.None;  </FONT></PRE>
+<P>Here is the code to sort by single click</P>
+<PRE><FONT COLOR="#8d2e1c">                this.gridDataBoundGrid1.SortBehavior = GridSortBehavior.SingleClick;</FONT>
+
+</BODY>
+</HTML>

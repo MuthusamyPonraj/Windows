@@ -1,0 +1,40 @@
+<html>
+<style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+
+
+<p>This sample showcases the folder browser which can be developed using a powerful TreeView control owing to its flexibility in GridControl.</p>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" src="Images\GridFolderBrowser.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+<p>The following code example illustrates how to set the data from the data source.&nbsp;</p>
+
+<font color="#8D2E1C"><pre>
+	void GridQueryCellInfo(object sender, GridQueryCellInfoEventArgs e) 
+	{
+		if (e.RowIndex > 0 && e.ColIndex > 0)
+		{
+		      e.Style.CellValue = externalData[e.RowIndex - 1].Items[e.ColIndex - 1];
+		      if (e.ColIndex == 1)
+		      {
+				e.Style.CellType = "TreeCell";
+				e.Style.Tag = externalData[e.RowIndex - 1].IndentLevel;
+				e.Style.ImageIndex = (int) externalData[e.RowIndex - 1].ExpandState;
+		      }
+		}
+		e.Handled = true;
+	}
+</pre></font>
+<br><br>
+</html>

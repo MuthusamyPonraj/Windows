@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sample>  
+  <name value="~/Data Binding/LINQ DataSource/Sample.aspx" />
+  <displayname value="LINQ DataSource" />
+  <sortorder value="7" />  
+  <imageUrl value="/Data Binding/LINQ DataSource/Images/sample.png"></imageUrl>
+</sample>

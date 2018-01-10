@@ -1,0 +1,32 @@
+<html><style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+<p><p>This sample allows you to display an event log that will show the order of various events related to the 
+grouping engine. You will be able to trace various grouping engine events like Group 
+Added, Group Collapsed, Group Expanded, Record Collapsed, Record Expanded, Record 
+Value Changed, Binding Context Changed, etc.
+<p></p>
+
+<p></p>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" src="Images\GroupingEngineEvents.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+<p> Here is the code to hook up an event:</p>
+<p><pre><font color="#8D2E1C">
+        this.groupingEngine.GroupCollapsed+=new GroupEventHandler(groupingEngine_GroupCollapsed);</font></pre></p>
+<p><font color="#8D2E1C"><pre>
+ private void groupingEngine_GroupCollapsed(object sender, GroupEventArgs e)
+ {
+     AppendOutput("GroupCollapsed",e);
+ }  </pre></font></p>
+</html>

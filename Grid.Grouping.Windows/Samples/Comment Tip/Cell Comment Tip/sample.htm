@@ -1,0 +1,44 @@
+<style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;3124596">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P>This sample illustrates how to add the Excel-like cell comments to the grid cells.</P>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" src="Images\CellCommentTip.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+<P>The following code is used to set the comment tip for particular column,</P>
+<PRE FONT COLOR="#8d2e1c">  
+// Add the comment tip text for particular column
+this.gridGroupingControl1.TableDescriptor.Columns["Column_Name"].Appearance.AnyRecordFieldCell.CommentTip.
+CommentText = "Comment Text";
+
+// Set the Image for the comment tip window.
+this.gridGroupingControl1.TableDescriptor.Columns["Column_Name"].Appearance.AnyRecordFieldCell.CommentTip.CommentImage = 
+Image.FromFile(@"../../CommentTipImage.png");
+</PRE>
+<P ALIGN=CENTER>
+</BODY>
+</HTML>

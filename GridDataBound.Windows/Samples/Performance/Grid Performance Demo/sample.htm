@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20081231;4143198">
+	<META NAME="CHANGED" CONTENT="20081231;4194714">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P>This sample illustrates filling a GDBG, virtual grid, and a
+Windows Forms data grid with a specified number of records as well as
+toggling the various options that can affect the speed of the grid. 
+</P>
+<!--<P ALIGN=CENTER><img src="images/sample1.png" NAME="graphics1" ALT="GridPerf screenshot" ALIGN=BOTTOM  BORDER=0>-->
+</P>
+<P ALIGN=CENTER><BR><BR>
+</P>
+<P>You can choose either a Grid data-bound grid or a virtual grid or
+a Windows Forms Data Grid in the sample to see the performance.</P>
+<P><FONT SIZE=4><B>GDBG</B></FONT></P>
+<P></P>
+<!--<P ALIGN=CENTER><img src="images/sample2.png" NAME="graphics2" ALT="GridPerf screenshot" ALIGN=BOTTOM  BORDER=0>-->
+</P>
+<P><FONT SIZE=4><B>Features</B></FONT></P>
+
+<P><FONT SIZE=3><B>Initialize Table</B></FONT></P>
+<UL>
+	<LI><P>Initialize the grid by
+	specifying the number of records at the top-right corner of the sample. By checking the check boxes provided, you can use 
+	<STRONG>OptimizedListChangeEvent</STRONG>, set &quot;ResizeToFit&quot; option for <STRONG>ColWidths</STRONG> and <STRONG>DataTableList</STRONG>.</P>
+
+	<LI><P><STRONG><SPAN LANG="en-US">OptimizedListChangeEvent
+	</SPAN></STRONG><SPAN LANG="en-US">specifies
+	whether to listen to</SPAN><SPAN LANG="en-US"><STRONG>
+	IBindingList.ListChanged</STRONG>,
+	instead of the currency manager change events, in order to update
+	the grid while </SPAN><STRONG><SPAN LANG="en-US">ResizeToFit</SPAN></STRONG><SPAN LANG="en-US">
+	on </SPAN><STRONG><SPAN LANG="en-US">ColWidths</SPAN></STRONG><SPAN LANG="en-US">
+	specifies whether the column widths should be
+	resized to fit the cell's content when it loads. </SPAN>
+	</P>
+	<LI><P><STRONG><SPAN LANG="en-US">DataTableList
+	</SPAN></STRONG><SPAN LANG="en-US">specifies
+	whether to use </SPAN><STRONG><SPAN LANG="en-US">Syncfusion.Collections.DataTableWrapperList</SPAN></STRONG><SPAN LANG="en-US">
+	instead of the data table as the data source.</SPAN></P>
+	<LI><P><STRONG><SPAN LANG="en-US">DataTableWrapperList</SPAN></STRONG><SPAN LANG="en-US">
+	is an</SPAN><STRONG><SPAN LANG="en-US">
+	IBindingList</SPAN></STRONG><SPAN LANG="en-US">
+	collection that wraps a data table and provides optimized access to
+	the rows of the data table </SPAN>
+	</P>
+	<LI><P>Using
+this as the grid&rsquo;s data source will improve performance when
+inserting records into an existing table that has many records. 
+	</P>
+</UL>
+<P><FONT SIZE=3><B>Manipulate Grid</B></FONT></P>
+<UL>
+	<LI><P>In the <strong>Manipulate</strong> <strong>Grid</strong>
+	options, you can specify the repeat count and the batch size in
+	order to check the performance in batch updates.</P>
+	<LI><P><SPAN LANG="en-US">You
+can also enable the scroll window check box, which invalidates only
+the inserted or removed rows instead of invalidating the whole grid. </SPAN>
+	</P>
+	<LI><P><SPAN LANG="en-US">The<STRONG> Insert
+	<SPAN STYLE="font-weight: medium">and</SPAN> Remove</STRONG></SPAN><SPAN LANG="en-US">
+	operation lets you check performance when inserting, removing, or
+	changing the records in the underlying data table.</SPAN>
+	</P>
+	<LI><P>Once data is loaded after the batch update, you will be able to see the
+performance and the memory usage in the text box as shown below:</P>
+</UL>
+<!--<P ALIGN=CENTER><img src="images/sample3.png" NAME="graphics3" ALT="GridPerf screenshot" ALIGN=BOTTOM  BORDER=1>-->
+</P>
+<P ALIGN=CENTER><BR><BR>
+</P>
+<H3>Virtual Grid</H3>
+<UL>
+	<UL>
+		<LI><P><SPAN LANG="en-US">The
+		above applies to a virtual grid also.</P>
+		<LI><P>As Virtual Grid is not a bound
+		control, it will not listen to </SPAN><STRONG><SPAN LANG="en-US">ListChangedEvent</SPAN></STRONG><SPAN LANG="en-US">
+		to update the grid.</P>
+		<LI><P>Once the records are inserted or removed,
+		calling </SPAN><STRONG><SPAN LANG="en-US">Grid.Refresh</SPAN></STRONG><SPAN LANG="en-US">
+		will fire the </SPAN><STRONG><SPAN LANG="en-US">QueryCellInfo</SPAN></STRONG><SPAN LANG="en-US">
+		to update the grid from the data table.</SPAN></P>
+	</UL>
+</UL>
+<H3>Data Grid</H3>
+<UL>
+	<UL>
+		<LI><P><SPAN LANG="en-US">You
+		can observe the performance in the Windows Forms of the data grid
+		with respect to </SPAN><STRONG><SPAN LANG="en-US">GridDataBoundGrid/Virtual.
+		<BR></SPAN></STRONG><BR><BR>
+		</P>
+		
+	</UL>
+</UL>
+</BODY>
+</HTML>

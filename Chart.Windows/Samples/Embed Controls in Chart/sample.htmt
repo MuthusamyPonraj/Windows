@@ -1,0 +1,3 @@
+#ChartHostControls
+
+Essential Chart provides support for hosting Windows forms controls within the chart. The controls can be embedded using the DockingManager of the chartControl which enables the control to move anywhere inside the ChartArea.

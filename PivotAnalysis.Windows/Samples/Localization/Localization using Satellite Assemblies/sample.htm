@@ -1,0 +1,49 @@
+<style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20090102;1111796">
+	<META NAME="CHANGEDBY" CONTENT="kalai">
+	<META NAME="CHANGED" CONTENT="20090102;1121764">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P>This sample illustrates the Localization of PivotGrid Control and this sample is localized with German culture(de-DE). </P>
+<!--<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT="PivotGridControl with Groupbar" ALIGN=BOTTOM  BORDER=0></P>-->
+<p>
+<table width="100%">
+<tr>
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2"   src="Images\Localization.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+<p><font><b> Steps for Performing Localization: </font></b></p>
+
+The Strings in could be Localized using satellite Assemblies. A text File containing the key and the corresponding string is added. The resource File is then created from it using the following command in Visual Studio Command Promt. 
+
+<br><br><b>resgen Location\SR.txt Location\SR.resources </b></br></br>
+
+The resource File could be altered  by the user as per his needs. From the resource File, the satellite dlls are created using the following command: 
+
+<br><br><b>al /t:lib /culture:de-DE /out:Location\Syncfusion.PivotAnalysis.Windows.resources.dll /v:1.1.0.0 /delay+ /keyf:F:\\sf.publicsnk /embed:F:\SR.Resources </br></b>
+
+
+<br>The obtained resource file is then placed in the following location: </br>
+
+
+<br><br><b>< Location of Form>\bin\debug\de-DE  (In case of German Culture) </b> </br>
+
+
+<br><br>The Program could be ran to see the changes made in the Resource File.</br>
+<br><br>
+</BODY>
+</HTML>

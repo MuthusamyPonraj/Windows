@@ -1,0 +1,27 @@
+<html><style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+<p><p>This sample illustrates how to get a Product table in a GridGroupingControl, where each product contains a rating from multiple customers. 
+<p></p>
+
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2"  src="Images\ProductRating.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+<P><b>Code Snippet:</b></p>
+<p><pre><font color="#8D2E1C">
+GridTableDescriptor mainTd1 = this.gridGroupingControl1.TableDescriptor;
+mainTd1.GroupedColumns.Clear();
+mainTd1.GroupedColumns.Add(mainTd1.Columns["Discontinued"].MappingName);
+mainTd1.VisibleColumns.Reset();
+mainTd1.VisibleColumns.Remove("Discontinued");</font></pre></p>
+</html>

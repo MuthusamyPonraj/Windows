@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sample>  
+  <name value="~/Chart Axes/Crossing/Sample.aspx" />
+  <displayname value="MultiPage Printing" />
+  <sortorder value="2" />  
+  <imageUrl value="~/Print/MultiPage Printing/images/sample1.png"></imageUrl>   
+</sample>

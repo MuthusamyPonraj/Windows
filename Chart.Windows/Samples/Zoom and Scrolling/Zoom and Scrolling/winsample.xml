@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sample>  
+  <name value="~/Zoom and Scrolling/Zoom and Scrolling/Sample.aspx" />
+  <displayname value="Zoom and Scrolling" />
+  <sortorder value="1" />  
+  <imageUrl value="/Zoom and Scrolling/Zoom and Scrolling/images/sample.png"></imageUrl>
+</sample>

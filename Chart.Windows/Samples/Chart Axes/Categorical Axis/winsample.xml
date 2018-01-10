@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sample>  
+  <name value="~/Chart Axes/Categorical Axis/Sample.aspx" />
+  <displayname value="Categorical Axis" />
+  <sortorder value="1" />  
+  <imageUrl value="/Chart Axes/Categorical Axis/images/sample.png"></imageUrl>
+</sample>

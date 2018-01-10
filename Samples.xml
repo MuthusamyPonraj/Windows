@@ -1,0 +1,1066 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Products>
+
+<!--Region ShowCase-->
+<ShowcaseSample Name="Patient Monitor" SourcePath="Showcase\PatientMonitoringDemo\CS" RowSpan="2" ImagePath="Showcase\patientmonitor.png"/>
+<ShowcaseSample Name="Invoice" SourcePath="Showcase\Invoice\CS" RowSpan="1" ImagePath="Showcase\Invoice.png"/>
+<ShowcaseSample Name="Car Dashboard" SourcePath="Showcase\CarDashboardDemo\CS" RowSpan="1" ImagePath="Showcase\CarDashboard.png"/>
+<ShowcaseSample Name="Expense Analysis" SourcePath="Showcase\Expense Analysis Demo\CS" RowSpan="1" ImagePath="Showcase\ExpenseDetails.png"/>
+<ShowcaseSample Name="Diagram Builder" SourcePath="Showcase\Diagram Builder\CS" RowSpan="1" ImagePath="Showcase\DiagramBuilder.png"/>
+<ShowcaseSample Name="Weather Analysis" SourcePath="Showcase\Weather Analysis Demo\CS" RowSpan="2" ImagePath="Showcase\weather.png"/>
+<ShowcaseSample Name="Pivot Customization" SourcePath="Showcase\Pivot Customization Demo\CS" RowSpan="1" ImagePath="Showcase\PivotCustomization.png"/>
+<ShowcaseSample Name="Succinctly Series" SourcePath="Showcase\SuccinitySeries\CS" RowSpan="1" ImagePath="Showcase\succinctly.png"/>   
+<ShowcaseSample Name="Presentation Viewer" SourcePath="Showcase\Presentation Demo\CS" RowSpan="1" ImagePath="Showcase\ppt__logo.png"/>
+<ShowcaseSample Name="Visual Studio" SourcePath="Showcase\VS2012Demo\CS" RowSpan="1" ImagePath="Showcase\vs2012demo.png"/>
+<ShowcaseSample Name="Spreadsheet " SourcePath="Showcase\SpreadsheetDemo\CS" RowSpan="1" ImagePath="Showcase\Spreadsheet.png"/>
+<ShowcaseSample Name="Word" SourcePath="Showcase\Word 2013 Demo\CS" RowSpan="1" ImagePath="Showcase\word2013demo.png"/>
+<ShowcaseSample Name="Sales Analysis" SourcePath="Showcase\Sales Analysis Demo\CS" RowSpan="2" ImagePath="Showcase\sales.png"/>
+<ShowcaseSample Name="Trader Grid" SourcePath="Showcase\Grouping Trader Grid Test Demo\CS" RowSpan="1" ImagePath="Showcase\TraderGridTestDemo.png"/>
+<ShowcaseSample Name="Outlook" SourcePath="Showcase\Outlook Demo\CS" RowSpan="1" ImagePath="Showcase\OutlookDemo.png"/>
+<ShowcaseSample Name="Formula Analysis" SourcePath="Showcase\Formula Analysis Demo\CS" RowSpan="1" ImagePath="Showcase\Calculate.png"/>
+<ShowcaseSample Name="Audit Showcase" SourcePath="Showcase\Audit Showcase\CS" RowSpan="1" ImagePath="Showcase\Audit Showcase\Image\tax.png"/>
+
+
+
+<!--End of Region Showcase-->
+
+
+
+<!--Region Grids-->
+<Product Name="Cell Grid" Category="Grids" EnableSecondLevel="True">
+  <Sample Name="Grid Pad" Category ="Product Showcase" SourcePath="Grid.Windows\Samples\Product Showcase\Grid Pad Demo" ImagePath="Grid.Windows\Samples\Product Showcase\Grid Pad Demo\Images\GridPadDemo.png"/>
+  <Sample Name="Excel Like UI" Category ="Product Showcase" SourcePath="Grid.Windows\Samples\Product Showcase\Excel Like UI Demo" ImagePath="Grid.Windows\Samples\Product Showcase\Excel Like UI Demo\Images\ExcelLikeUIDemo.png"/>
+	<Sample Name="Grid Folder Browser" Category ="Product Showcase" SourcePath="Grid.Windows\Samples\Product Showcase\Grid Folder Browser Demo" ImagePath="Grid.Windows\Samples\Product Showcase\Grid Folder Browser Demo\Images\GridFolderBrowserDemo.png"/>
+	<Sample Name="Pivot Grid" Category ="Product Showcase" SourcePath="Grid.Windows\Samples\Product Showcase\Pivot Grid Demo" ImagePath="Grid.Windows\Samples\Product Showcase\Pivot Grid Demo\Images\PivotGridDemo.png"/>
+
+  <Sample Name="Trader Grid Test" Category ="Performance" SourcePath="Grid.Windows\Samples\Performance\Trader Grid Test Demo" ImagePath="Grid.Windows\Samples\Performance\Trader Grid Test Demo\Images\TraderGridTestDemo.png"/>
+  <Sample Name="Refresh Grid" Category ="Performance" SourcePath="Grid.Windows\Samples\Performance\Refresh Grid Demo" ImagePath="Grid.Windows\Samples\Performance\Refresh Grid Demo\Images\RefreshGridDemo.png"/>
+  <Sample Name="QueryCellInfo Optimization" Category ="Performance" SourcePath="Grid.Windows\Samples\Performance\QueryCellInfo Optimization Demo" ImagePath="Grid.Windows\Samples\Performance\QueryCellInfo Optimization Demo\Images\QueryCellInfoOptimizationDemo.png"/>
+
+  <Sample Name="Editor Cell" Category ="Cell Types" SourcePath="Grid.Windows\Samples\Cell Types\Editor Cell Demo" ImagePath="Grid.Windows\Samples\Cell Types\Editor Cell Demo\Images\EditorCellDemo.png"/>
+  <Sample Name="Drop Down Cell" Category ="Cell Types" SourcePath="Grid.Windows\Samples\Cell Types\Drop Down Cell Demo" ImagePath="Grid.Windows\Samples\Cell Types\Drop Down Cell Demo\Images\DropDownCellDemo.png"/>
+  <Sample Name="Content Cell" Category ="Cell Types" SourcePath="Grid.Windows\Samples\Cell Types\Content Cell Demo" ImagePath="Grid.Windows\Samples\Cell Types\Content Cell Demo\Images\ContentCellDemo.png"/>
+	<Sample Name="Interactive Cell" Category ="Cell Types" SourcePath="Grid.Windows\Samples\Cell Types\Interactive Cell Demo" ImagePath="Grid.Windows\Samples\Cell Types\Interactive Cell Demo\Images\InteractiveCellDemo.png"/>
+	<Sample Name="Web Browser Cell" Category ="Cell Types" SourcePath="Grid.Windows\Samples\Cell Types\Web Browser Cell Demo" ImagePath="Grid.Windows\Samples\Cell Types\Web Browser Cell Demo\Images\WebBrowserCellDemo.png"/>
+  <Sample Name="Event Logger" Category ="Cell Types" SourcePath="Grid.Windows\Samples\Cell Types\Event Logger Demo" ImagePath="Grid.Windows\Samples\Cell Types\Event Logger Demo\Images\EventLoggerDemo.png"/>
+
+  <Sample Name="Getting Started" Category ="Custom Cell Types" SourcePath="Grid.Windows\Samples\Custom Cell Types\Getting Started" ImagePath="Grid.Windows\Samples\Custom Cell Types\Getting Started\Images\GettingStarted.png"/>
+  <Sample Name="Editor Cell" Category ="Custom Cell Types" SourcePath="Grid.Windows\Samples\Custom Cell Types\Editor Cell Demo" ImagePath="Grid.Windows\Samples\Custom Cell Types\Editor Cell Demo\Images\EditorCellDemo.png"/>
+  <Sample Name="Content Cell" Category ="Custom Cell Types" SourcePath="Grid.Windows\Samples\Custom Cell Types\Content Cell Demo" ImagePath="Grid.Windows\Samples\Custom Cell Types\Content Cell Demo\Images\ContentCellDemo.png"/>
+  <Sample Name="Interactive Cell" Category ="Custom Cell Types" SourcePath="Grid.Windows\Samples\Custom Cell Types\Interactive Cell Demo" IsUpdated="TRUE" ImagePath="Grid.Windows\Samples\Custom Cell Types\Interactive Cell Demo\Images\InteractiveCellDemo.png"/>
+  <Sample Name="Drop Down Cell" Category ="Custom Cell Types" SourcePath="Grid.Windows\Samples\Custom Cell Types\Drop Down Cell Demo" ImagePath="Grid.Windows\Samples\Custom Cell Types\Drop Down Cell Demo\Images\DropDownCellDemo.png"/>
+	
+	<Sample Name="Getting Started" Category ="Virtual Grid" SourcePath="Grid.Windows\Samples\Virtual Grid\Getting Started" ImagePath="Grid.Windows\Samples\Virtual Grid\Getting Started\Images\GettingStarted.png"/>
+	<Sample Name="Virtual Grid" Category ="Virtual Grid" SourcePath="Grid.Windows\Samples\Virtual Grid\Virtual Grid Demo" ImagePath="Grid.Windows\Samples\Virtual Grid\Virtual Grid Demo\Images\VirtualGridDemo.png"/>
+	<Sample Name="Virtual Tree Grid" Category ="Virtual Grid" SourcePath="Grid.Windows\Samples\Virtual Grid\Virtual Tree Grid Demo" ImagePath="Grid.Windows\Samples\Virtual Grid\Virtual Tree Grid Demo\Images\VirtualTreeGridDemo.png"/>
+  <Sample Name="Grid Population" Category ="Virtual Grid" SourcePath="Grid.Windows\Samples\Virtual Grid\Grid Population Demo" ImagePath="Grid.Windows\Samples\Virtual Grid\Grid Population Demo\Images\GridPopulationDemo.png"/>
+
+  <Sample Name="Getting Started" Category ="Grid List Control" SourcePath="Grid.Windows\Samples\Grid List Control\Getting Started" ImagePath="Grid.Windows\Samples\Grid List Control\Getting Started\Images\GettingStarted.png"/>
+  <Sample Name="Visual Style" Category ="Grid List Control" SourcePath="Grid.Windows\Samples\Grid List Control\Visual Style Demo" ImagePath="Grid.Windows\Samples\Grid List Control\Visual Style Demo\Images\VisualStyleDemo.png"/>
+  <Sample Name="Customization" Category ="Grid List Control" SourcePath="Grid.Windows\Samples\Grid List Control\Customization Demo" ImagePath="Grid.Windows\Samples\Grid List Control\Customization Demo\Images\CustomizationDemo.png"/>
+	<Sample Name="Drop-Down Grid" Category ="Grid List Control" SourcePath="Grid.Windows\Samples\Grid List Control\Drop-Down Grid Demo" ImagePath="Grid.Windows\Samples\Grid List Control\Drop-Down Grid Demo\Images\Drop-DownGridDemo.png"/>
+
+  <Sample Name="Visual Styles" Category ="Appearance" SourcePath="Grid.Windows\Samples\Appearance\Visual Styles Demo" ImagePath="Grid.Windows\Samples\Appearance\Visual Styles Demo\Images\VisualStylesDemo.png"/>
+  <Sample Name="Text Format" Category ="Appearance" SourcePath="Grid.Windows\Samples\Appearance\Text Format Demo" ImagePath="Grid.Windows\Samples\Appearance\Text Format Demo\Images\TextFormatDemo.png"/>
+  <Sample Name="GridStyle" Category ="Appearance" SourcePath="Grid.Windows\Samples\Appearance\GridStyle Demo" ImagePath="Grid.Windows\Samples\Appearance\GridStyle Demo\Images\GridStyleDemo.png"/>
+	<Sample Name="SkinManager" Category ="Appearance" SourcePath="Grid.Windows\Samples\Appearance\SkinManager Demo" ImagePath="Grid.Windows\Samples\Appearance\SkinManager Demo\Images\SkinManagerDemo.png"/>
+  <Sample Name="Cell Customization" Category ="Appearance" SourcePath="Grid.Windows\Samples\Appearance\Cell Customization Demo" ImagePath="Grid.Windows\Samples\Appearance\Cell Customization Demo\Images\CellCustomizationDemo.png"/>
+  <Sample Name="Properties" Category ="Appearance" SourcePath="Grid.Windows\Samples\Appearance\Properties Demo" ImagePath="Grid.Windows\Samples\Appearance\Properties Demo\Images\PropertiesDemo.png"/>
+
+  <Sample Name="Cell Tip" Category ="ToolTip" SourcePath="Grid.Windows\Samples\ToolTip\Cell Tip Demo" ImagePath="Grid.Windows\Samples\ToolTip\Cell Tip Demo\Images\CellTipDemo.png"/>
+  <Sample Name="Cell Comment Tip" Category ="ToolTip" SourcePath="Grid.Windows\Samples\ToolTip\Cell Comment Tip Demo" ImagePath="Grid.Windows\Samples\ToolTip\Cell Comment Tip Demo\Images\CellCommentTipDemo.png"/>
+	
+	<Sample Name="Format Cells" Category ="Dynamic Formatting" SourcePath="Grid.Windows\Samples\Dynamic Formatting\Format Cells Demo" ImagePath="Grid.Windows\Samples\Dynamic Formatting\Format Cells Demo\Images\FormatCellsDemo.png"/>
+	<Sample Name="Virtual Merge Cell" Category ="Dynamic Formatting" SourcePath="Grid.Windows\Samples\Dynamic Formatting\Virtual Merge Cell Demo" ImagePath="Grid.Windows\Samples\Dynamic Formatting\Virtual Merge Cell Demo\Images\VirtualMergeCellDemo.png"/>
+
+  <Sample Name="Multiple Views" Category ="Grid Layout" SourcePath="Grid.Windows\Samples\Grid Layout\Multiple Views Demo" ImagePath="Grid.Windows\Samples\Grid Layout\Multiple Views Demo\Images\MultipleViewsDemo.png"/>
+  <Sample Name="Resize To Fit" Category ="Grid Layout" SourcePath="Grid.Windows\Samples\Grid Layout\Resize To Fit Demo" ImagePath="Grid.Windows\Samples\Grid Layout\Resize To Fit Demo\Images\ResizeToFitDemo.png"/>
+	<Sample Name="Selection Mode" Category ="Grid Layout" SourcePath="Grid.Windows\Samples\Grid Layout\Selection Mode Demo" ImagePath="Grid.Windows\Samples\Grid Layout\Selection Mode Demo\Images\SelectionModeDemo.png"/>
+  <Sample Name="Error Provider" Category ="Grid Layout" SourcePath="Grid.Windows\Samples\Grid Layout\Error Provider Demo" ImagePath="Grid.Windows\Samples\Grid Layout\Error Provider Demo\Images\ErrorProviderDemo.png"/>
+  <Sample Name="Custom Cell Autosizing" Category ="Grid Layout" SourcePath="Grid.Windows\Samples\Grid Layout\Custom Cell Autosizing Demo" ImagePath="Grid.Windows\Samples\Grid Layout\Custom Cell Autosizing Demo\Images\CustomCellAutosizingDemo.png"/>
+  <Sample Name="Sorting" Category ="Grid Layout" SourcePath="Grid.Windows\Samples\Grid Layout\Sorting Demo" ImagePath="Grid.Windows\Samples\Grid Layout\Sorting Demo\Images\SortingDemo.png"/>
+	
+	<Sample Name="Formula Grid" Category ="Formula Support" SourcePath="Grid.Windows\Samples\Formula Support\Formula Grid Demo" ImagePath="Grid.Windows\Samples\Formula Support\Formula Grid Demo\Images\FormulaGridDemo.png"/>
+	<Sample Name="Formula Range Selection" Category ="Formula Support" SourcePath="Grid.Windows\Samples\Formula Support\Formula Range Selection Demo" ImagePath="Grid.Windows\Samples\Formula Support\Formula Range Selection Demo\Images\FormulaRangeSelectionDemo.png"/>
+  <Sample Name="Cross-Reference" Category ="Formula Support" SourcePath="Grid.Windows\Samples\Formula Support\Cross-Reference Demo" ImagePath="Grid.Windows\Samples\Formula Support\Cross-Reference Demo\Images\Cross-ReferenceDemo.png"/>
+  <Sample Name="Named Range" Category ="Formula Support" SourcePath="Grid.Windows\Samples\Formula Support\Named Range Demo" ImagePath="Grid.Windows\Samples\Formula Support\Named Range Demo\Images\NamedRangeDemo.png"/>
+	<Sample Name="Retirement Simulation" Category ="Formula Support" SourcePath="Grid.Windows\Samples\Formula Support\Retirement Simulation Demo" ImagePath="Grid.Windows\Samples\Formula Support\Retirement Simulation Demo\Images\RetirementSimulationDemo.png"/>
+
+  <Sample Name="Mark Header" Category ="MS Excel-Style Features" SourcePath="Grid.Windows\Samples\MS Excel-Style Features\Mark Header Demo" ImagePath="Grid.Windows\Samples\MS Excel-Style Features\Mark Header Demo\Images\MarkHeaderDemo.png"/>
+  <Sample Name="Workbook" Category ="MS Excel-Style Features" SourcePath="Grid.Windows\Samples\MS Excel-Style Features\Workbook Demo" ImagePath="Grid.Windows\Samples\MS Excel-Style Features\Workbook Demo\Images\WorkbookDemo.png"/>
+  <Sample Name="Freeze Pane" Category ="MS Excel-Style Features" SourcePath="Grid.Windows\Samples\MS Excel-Style Features\Freeze Pane Demo" ImagePath="Grid.Windows\Samples\MS Excel-Style Features\Freeze Pane Demo\Images\FreezePaneDemo.png"/>
+	<Sample Name="Selection Marker" Category ="MS Excel-Style Features" SourcePath="Grid.Windows\Samples\MS Excel-Style Features\Selection Marker Demo" ImagePath="Grid.Windows\Samples\MS Excel-Style Features\Selection Marker Demo\Images\SelectionMarkerDemo.png"/>
+  <Sample Name="Hide Rows and Columns" Category ="MS Excel-Style Features" SourcePath="Grid.Windows\Samples\MS Excel-Style Features\Hide Rows and Columns Demo" ImagePath="Grid.Windows\Samples\MS Excel-Style Features\Hide Rows and Columns Demo\Images\HideRowsandColumnsDemo.png"/>
+
+  <Sample Name="Copy-Paste" Category ="Editing" SourcePath="Grid.Windows\Samples\Editing\Copy-Paste Demo" ImagePath="Grid.Windows\Samples\Editing\Copy-Paste Demo\Images\Copy-PasteDemo.png"/>
+	<Sample Name="Find-Replace" Category ="Editing" SourcePath="Grid.Windows\Samples\Editing\Find-Replace Demo" ImagePath="Grid.Windows\Samples\Editing\Find-Replace Demo\Images\Find-ReplaceDemo.png"/>
+	<Sample Name="Undo-Redo" Category ="Editing" SourcePath="Grid.Windows\Samples\Editing\Undo-Redo Demo" ImagePath="Grid.Windows\Samples\Editing\Undo-Redo Demo\Images\Undo-RedoDemo.png"/>
+		
+	<Sample Name="Drag Column Header" Category ="Drag-and-Drop Support" SourcePath="Grid.Windows\Samples\Drag-and-Drop Support\Drag Column Header Demo" ImagePath="Grid.Windows\Samples\Drag-and-Drop Support\Drag Column Header Demo\Images\DragColumnHeaderDemo.png"/>
+	<Sample Name="OLE Drag-and-Drop" Category ="Drag-and-Drop Support" SourcePath="Grid.Windows\Samples\Drag-and-Drop Support\OLE Drag-and-Drop Demo" ImagePath="Grid.Windows\Samples\Drag-and-Drop Support\OLE Drag-and-Drop Demo\Images\OLEDrag-and-DropDemo.png"/>
+
+  <Sample Name="Print Grid" Category ="Printing" SourcePath="Grid.Windows\Samples\Printing\Print Grid Demo" ImagePath="Grid.Windows\Samples\Printing\Print Grid Demo\Images\PrintGridDemo.png"/>
+  <Sample Name="Print To Fit" Category ="Printing" SourcePath="Grid.Windows\Samples\Printing\Print To Fit Demo" ImagePath="Grid.Windows\Samples\Printing\Print To Fit Demo\Images\PrintToFitDemo.png"/>
+  <Sample Name="Print Page Layout" Category ="Printing" SourcePath="Grid.Windows\Samples\Printing\Print Page Layout Demo" ImagePath="Grid.Windows\Samples\Printing\Print Page Layout Demo\Images\PrintPageLayoutDemo.png"/>
+  <Sample Name="Multi-Grid Printing" Category ="Printing" SourcePath="Grid.Windows\Samples\Printing\Multi-Grid Printing" ImagePath="Grid.Windows\Samples\Printing\Multi-Grid Printing\Images\Multi-GridPrinting.png"/>
+
+  <Sample Name="Serialization" Category ="Serialization" SourcePath="Grid.Windows\Samples\Serialization\Serialization Demo" ImagePath="Grid.Windows\Samples\Serialization\Serialization Demo\Images\SerializationDemo.png"/>
+	
+	<Sample Name="Localization" Category ="Localization" SourcePath="Grid.Windows\Samples\Localization Samples\Localization Demo" ImagePath="Grid.Windows\Samples\Localization Samples\Localization Demo\Images\LocalizationDemo.png"/>
+
+  <Sample Name="Virtual Importing" Category ="Importing" SourcePath="Grid.Windows\Samples\Importing\Virtual Importing" ImagePath="Grid.Windows\Samples\Importing\Virtual Importing\Images\Virtual_Import.png"/>
+
+  <Sample Name="Exporting" Category ="Exporting" SourcePath="Grid.Windows\Samples\Exporting\Exporting Demo" ImagePath="Grid.Windows\Samples\Exporting\Exporting Demo\Images\ExportingDemo.png"/>
+
+  <Sample Name="Zooming" Category ="Zoom and Scroll" SourcePath="Grid.Windows\Samples\Zoom and Scroll\Zooming Demo" ImagePath="Grid.Windows\Samples\Zoom and Scroll\Zooming Demo\Images\ZoomingDemo.png"/>
+  <Sample Name="ScrollBar" Category ="Zoom and Scroll" SourcePath="Grid.Windows\Samples\Zoom and Scroll\ScrollBar Demo" ImagePath="Grid.Windows\Samples\Zoom and Scroll\ScrollBar Demo\Images\ScrollBarDemo.png"/>
+</Product>
+
+<Product Name="Data Grid" Category="Grids" EnableSecondLevel="True">
+
+	<Sample Name="Portfolio Grid" Category ="Product Showcase" SourcePath="Grid.Grouping.Windows\Samples\Product Showcase\Portfolio Grid Demo" ImagePath="Grid.Grouping.Windows\Samples\Product Showcase\Portfolio Grid Demo\Images\PortfolioGridDemo.png"/>
+	<Sample Name="LINQ Group-By" Category ="Product Showcase" SourcePath="Grid.Grouping.Windows\Samples\Product Showcase\LINQ Group-By Demo" ImagePath="Grid.Grouping.Windows\Samples\Product Showcase\LINQ Group-By Demo\Images\LINQGroup-ByDemo.png"/>
+	<Sample Name="LINQ To SQL" Category ="Product Showcase" SourcePath="Grid.Grouping.Windows\Samples\Product Showcase\LINQ To SQL Demo" ImagePath="Grid.Grouping.Windows\Samples\Product Showcase\LINQ To SQL Demo\Images\LINQToSQLDemo.png"/>
+	<Sample Name="Grid Vs Chart" Category ="Product Showcase" SourcePath="Grid.Grouping.Windows\Samples\Product Showcase\GridVsChart Demo" ImagePath="Grid.Grouping.Windows\Samples\Product Showcase\GridVsChart Demo\Images\GridVsChartDemo.png"/>
+	
+	<Sample Name="Real-Time Update" Category ="Performance" SourcePath="Grid.Grouping.Windows\Samples\Performance\Real-Time Update Demo" ImagePath="Grid.Grouping.Windows\Samples\Performance\Real-Time Update Demo\Images\Real-TimeUpdateDemo.png"/>
+	<Sample Name="Engine Optimization" Category ="Performance" SourcePath="Grid.Grouping.Windows\Samples\Performance\Engine Optimization Demo" ImagePath="Grid.Grouping.Windows\Samples\Performance\Engine Optimization Demo\Images\EngineOptimizationDemo.png"/>
+	<Sample Name="Grouping Performance" Category ="Performance" SourcePath="Grid.Grouping.Windows\Samples\Performance\Grouping Performance Demo" ImagePath="Grid.Grouping.Windows\Samples\Performance\Grouping Performance Demo\Images\GroupingPerformanceDemo.png"/>
+	<Sample Name="Market Simulation" Category ="Performance" SourcePath="Grid.Grouping.Windows\Samples\Performance\Market Simulation Demo" ImagePath="Grid.Grouping.Windows\Samples\Performance\Market Simulation Demo\Images\MarketSimulationDemo.png"/>
+	<Sample Name="Manual Total Summary" Category ="Performance" SourcePath="Grid.Grouping.Windows\Samples\Performance\Manual Total Summary Demo" ImagePath="Grid.Grouping.Windows\Samples\Performance\Manual Total Summary Demo\Images\ManualTotalSummaryDemo.png"/>
+	
+	<Sample Name="Getting Started" Category ="Getting Started" SourcePath="Grid.Grouping.Windows\Samples\Getting Started\Getting Started Demo" ImagePath="Grid.Grouping.Windows\Samples\Getting Started\Getting Started Demo\Images\VSDemo.png"/>
+	<Sample Name="Synchronization" Category ="Getting Started" SourcePath="Grid.Grouping.Windows\Samples\Getting Started\Synchronization Demo" ImagePath="Grid.Grouping.Windows\Samples\Getting Started\Synchronization Demo\Images\SynchronizationDemo.png"/>
+	<Sample Name="Data Binding" Category ="Getting Started" SourcePath="Grid.Grouping.Windows\Samples\Getting Started\Data Binding Demo" ImagePath="Grid.Grouping.Windows\Samples\Getting Started\Data Binding Demo\Images\DataBindingDemo.png"/>
+	<Sample Name="Record Binding" Category ="Getting Started" SourcePath="Grid.Grouping.Windows\Samples\Getting Started\Record Binding Demo" ImagePath="Grid.Grouping.Windows\Samples\Getting Started\Record Binding Demo\Images\RecordBindingDemo.png"/>
+			
+	<Sample Name="Strong-Typed Collection" Category ="Data Sources" SourcePath="Grid.Grouping.Windows\Samples\Data Sources\Strong-Typed Collection Demo" ImagePath="Grid.Grouping.Windows\Samples\Data Sources\Strong-Typed Collection Demo\Images\Strong-TypedCollectionDemo.png"/>
+	<Sample Name="Nested Child-Collection" Category ="Data Sources" SourcePath="Grid.Grouping.Windows\Samples\Data Sources\Nested Child-Collection Demo" ImagePath="Grid.Grouping.Windows\Samples\Data Sources\Nested Child-Collection Demo\Images\NestedChild-CollectionDemo.png"/>
+	<Sample Name="Dynamic Object Binding" Category ="Data Sources" SourcePath="Grid.Grouping.Windows\Samples\Data Sources\Dynamic Object Binding Demo" ImagePath="Grid.Grouping.Windows\Samples\Data Sources\Dynamic Object Binding Demo\Images\DynamicObjectBindingDemo.png"/>
+	
+	<Sample Name="Related Master Details" Category ="Relation And Hierarchy" SourcePath="Grid.Grouping.Windows\Samples\Relation And Hierarchy\Related Master Details Demo" ImagePath="Grid.Grouping.Windows\Samples\Relation And Hierarchy\Related Master Details Demo\Images\RelatedMasterDetailsDemo.png"/>	
+	<Sample Name="Master Detail Form" Category ="Relation And Hierarchy" SourcePath="Grid.Grouping.Windows\Samples\Relation And Hierarchy\Master Detail Form Demo" ImagePath="Grid.Grouping.Windows\Samples\Relation And Hierarchy\Master Detail Form Demo\Images\MasterDetailFormDemo.png"/>
+	<Sample Name="Foreign-Key Reference" Category ="Relation And Hierarchy" SourcePath="Grid.Grouping.Windows\Samples\Relation And Hierarchy\Foreign-Key Reference Demo" ImagePath="Grid.Grouping.Windows\Samples\Relation And Hierarchy\Foreign-Key Reference Demo\Images\Foreign-KeyReferenceDemo.png"/>
+	<Sample Name="List Item Reference" Category ="Relation And Hierarchy" SourcePath="Grid.Grouping.Windows\Samples\Relation And Hierarchy\List Item Reference Demo" ImagePath="Grid.Grouping.Windows\Samples\Relation And Hierarchy\List Item Reference Demo\Images\ListItemReferenceDemo.png"/>
+	<Sample Name="Uniform Child List" Category ="Relation And Hierarchy" SourcePath="Grid.Grouping.Windows\Samples\Relation And Hierarchy\Uniform Child List Demo" ImagePath="Grid.Grouping.Windows\Samples\Relation And Hierarchy\Uniform Child List Demo\Images\UniformChildListDemo.png"/>
+	<Sample Name="Self Referential Grid" Category ="Relation And Hierarchy" SourcePath="Grid.Grouping.Windows\Samples\Relation And Hierarchy\Self Referential Grid Demo" ImagePath="Grid.Grouping.Windows\Samples\Relation And Hierarchy\Self Referential Grid Demo\Images\SelfReferentialGridDemo.png"/>
+	<Sample Name="Hierarchy" Category ="Relation And Hierarchy" SourcePath="Grid.Grouping.Windows\Samples\Relation And Hierarchy\Hierarchy Demo" ImagePath="Grid.Grouping.Windows\Samples\Relation And Hierarchy\Hierarchy Demo\Images\HierarchyDemo.png"/>
+	<Sample Name="Hierarchy View" Category ="Relation And Hierarchy" SourcePath="Grid.Grouping.Windows\Samples\Relation And Hierarchy\Hierarchy View Demo" ImagePath="Grid.Grouping.Windows\Samples\Relation And Hierarchy\Hierarchy View Demo\Images\HierarchyViewDemo.png"/>
+	<Sample Name="Entity Framework" Category ="Relation And Hierarchy" SourcePath="Grid.Grouping.Windows\Samples\Relation And Hierarchy\Entity Framework Demo" ImagePath="Grid.Grouping.Windows\Samples\Relation And Hierarchy\Entity Framework Demo\Images\EntityFrameworkDemo.png"/>
+	<Sample Name="Employee Territory Order" Category ="Relation And Hierarchy" SourcePath="Grid.Grouping.Windows\Samples\Relation And Hierarchy\Employee Territory Order Demo" ImagePath="Grid.Grouping.Windows\Samples\Relation And Hierarchy\Employee Territory Order Demo\Images\EmployeeTerritoryOrderDemo.png"/>	
+		
+	<Sample Name="Grouping" Category ="Grouping"  SourcePath="Grid.Grouping.Windows\Samples\Grouping\Grouping Demo" ImagePath="Grid.Grouping.Windows\Samples\Grouping\Grouping Demo\Images\GroupingDemo.png"/>	
+	<Sample Name="Multi Column Grouping" Category ="Grouping" SourcePath="Grid.Grouping.Windows\Samples\Grouping\Multi Column Grouping Demo" ImagePath="Grid.Grouping.Windows\Samples\Grouping\Multi Column Grouping Demo\Images\MultiColumnGroupingDemo.png"/>
+	<Sample Name="Product Ratings" Category ="Grouping" SourcePath="Grid.Grouping.Windows\Samples\Grouping\Product Ratings Demo" ImagePath="Grid.Grouping.Windows\Samples\Grouping\Product Ratings Demo\Images\ProductRatingsDemo.png"/>
+	<Sample Name="Grouping Events" Category ="Grouping" SourcePath="Grid.Grouping.Windows\Samples\Grouping\Grouping Events Demo" ImagePath="Grid.Grouping.Windows\Samples\Grouping\Grouping Events Demo\Images\GroupingEventsDemo.png"/>
+	
+	<Sample Name="Sorting" Category ="Sorting" SourcePath="Grid.Grouping.Windows\Samples\Sorting\Sorting Demo" ImagePath="Grid.Grouping.Windows\Samples\Sorting\Sorting Demo\Images\SortingDemo.png"/>
+	<Sample Name="Multi Column Sorting" Category ="Sorting" SourcePath="Grid.Grouping.Windows\Samples\Sorting\Multi Column Sorting Demo" ImagePath="Grid.Grouping.Windows\Samples\Sorting\Multi Column Sorting Demo\Images\MultiColumnSortingDemo.png"/>
+	<Sample Name="Sort By Display Member" Category ="Sorting" SourcePath="Grid.Grouping.Windows\Samples\Sorting\Sort By Display Member Demo" ImagePath="Grid.Grouping.Windows\Samples\Sorting\Sort By Display Member Demo\Images\SortByDisplayMemberDemo.png"/>
+	
+	<Sample Name="Getting Started" Category ="Summaries" SourcePath="Grid.Grouping.Windows\Samples\Summaries\Getting Started" ImagePath="Grid.Grouping.Windows\Samples\Summaries\Getting Started\Images\GettingStarted.png"/>	
+	<Sample Name="Nested-Table and Group Summary" Category ="Summaries" SourcePath="Grid.Grouping.Windows\Samples\Summaries\Nested-Table and Group Summary Demo" ImagePath="Grid.Grouping.Windows\Samples\Summaries\Nested-Table and Group Summary Demo\Images\Nested-TableandGroupSummaryDemo.png"/>
+	<Sample Name="Custom Summary" Category ="Summaries" SourcePath="Grid.Grouping.Windows\Samples\Summaries\Custom Summary Demo" ImagePath="Grid.Grouping.Windows\Samples\Summaries\Custom Summary Demo\Images\CustomSummaryDemo.png"/>
+	<Sample Name="Weighted Summary" Category ="Summaries" SourcePath="Grid.Grouping.Windows\Samples\Summaries\Weighted Summary Demo" ImagePath="Grid.Grouping.Windows\Samples\Summaries\Weighted Summary Demo\Images\WeightedSummaryDemo.png"/>
+	<Sample Name="Caption Summary" Category ="Summaries" SourcePath="Grid.Grouping.Windows\Samples\Summaries\Caption Summary Demo" ImagePath="Grid.Grouping.Windows\Samples\Summaries\Caption Summary Demo\Images\CaptionSummaryDemo.png"/>
+	<Sample Name="Sort by Summary" Category ="Summaries" SourcePath="Grid.Grouping.Windows\Samples\Summaries\Sort by Summary Demo" ImagePath="Grid.Grouping.Windows\Samples\Summaries\Sort by Summary Demo\Images\SortbySummaryDemo.png"/>
+	
+	<Sample Name="Getting Started" Category ="Filters and Expressions" SourcePath="Grid.Grouping.Windows\Samples\Filters and Expressions\Getting Started" ImagePath="Grid.Grouping.Windows\Samples\Filters and Expressions\Getting Started\Images\GettingStarted.png"/>	
+	<Sample Name="Filter Bar" Category ="Filters and Expressions" SourcePath="Grid.Grouping.Windows\Samples\Filters and Expressions\Filter Bar Demo" ImagePath="Grid.Grouping.Windows\Samples\Filters and Expressions\Filter Bar Demo\Images\FilterBarDemo.png"/>
+	<Sample Name="MS Excel-Style Filter" Category ="Filters and Expressions" SourcePath="Grid.Grouping.Windows\Samples\Filters and Expressions\Optimized Excel Filter Demo" ImagePath="Grid.Grouping.Windows\Samples\Filters and Expressions\Optimized Excel Filter Demo\Images\OptimizedExcelFilterDemo.png"/>
+	<Sample Name="Dynamic Filter" Category ="Filters and Expressions" SourcePath="Grid.Grouping.Windows\Samples\Filters and Expressions\Dynamic Filter Demo" ImagePath="Grid.Grouping.Windows\Samples\Filters and Expressions\Dynamic Filter Demo\Images\DynamicFilterDemo.png"/>
+	<Sample Name="Filter By DisplayMember" Category ="Filters and Expressions" SourcePath="Grid.Grouping.Windows\Samples\Filters and Expressions\Filter By DisplayMember Demo" ImagePath="Grid.Grouping.Windows\Samples\Filters and Expressions\Filter By DisplayMember Demo\Images\FilterByDisplayMemberDemo.png"/>
+	<Sample Name="Expression Field" Category ="Filters and Expressions" SourcePath="Grid.Grouping.Windows\Samples\Filters and Expressions\Expression Field Demo" ImagePath="Grid.Grouping.Windows\Samples\Filters and Expressions\Expression Field Demo\Images\ExpressionFieldDemo.png"/>
+		
+	<Sample Name="Record Range Selection" Category ="Selection" SourcePath="Grid.Grouping.Windows\Samples\Selection\Record Range Selection Demo" ImagePath="Grid.Grouping.Windows\Samples\Selection\Record Range Selection Demo\Images\RecordRangeSelectionDemo.png"/>	
+	<Sample Name="Cell Range Selection" Category ="Selection" SourcePath="Grid.Grouping.Windows\Samples\Selection\Cell Range Selection Demo" ImagePath="Grid.Grouping.Windows\Samples\Selection\Cell Range Selection Demo\Images\CellRangeSelectionDemo.png"/>
+	
+	<Sample Name="Table Style" Category ="Styling and Formatting" SourcePath="Grid.Grouping.Windows\Samples\Styling and Formatting\Table Style Demo" ImagePath="Grid.Grouping.Windows\Samples\Styling and Formatting\Table Style Demo\Images\TableStyleDemo.png"/>	
+	<Sample Name="Column Styles" Category ="Styling and Formatting" SourcePath="Grid.Grouping.Windows\Samples\Styling and Formatting\Column Style Demo" ImagePath="Grid.Grouping.Windows\Samples\Styling and Formatting\Column Style Demo\Images\ColumnStyleDemo.png"/>	
+	<Sample Name="Group Style" Category ="Styling and Formatting" SourcePath="Grid.Grouping.Windows\Samples\Styling and Formatting\Group Style Demo" ImagePath="Grid.Grouping.Windows\Samples\Styling and Formatting\Group Style Demo\Images\GroupStyleDemo.png"/>
+	<Sample Name="Record Style" Category ="Styling and Formatting" SourcePath="Grid.Grouping.Windows\Samples\Styling and Formatting\Record Style Demo" ImagePath="Grid.Grouping.Windows\Samples\Styling and Formatting\Record Style Demo\Images\RecordStyleDemo.png"/>
+	<Sample Name="Visual Styles" Category ="Styling and Formatting" SourcePath="Grid.Grouping.Windows\Samples\Styling and Formatting\Skin Customization Demo" ImagePath="Grid.Grouping.Windows\Samples\Styling and Formatting\Skin Customization Demo\Images\SkinCustomizationDemo.png"/>	
+	<Sample Name="Conditional Formatting" Category ="Styling and Formatting" SourcePath="Grid.Grouping.Windows\Samples\Styling and Formatting\Conditional Formatting Demo" ImagePath="Grid.Grouping.Windows\Samples\Styling and Formatting\Conditional Formatting Demo\Images\ConditionalFormattingDemo.png"/>
+	<Sample Name="Conditional Data Bars" Category ="Styling and Formatting" SourcePath="Grid.Grouping.Windows\Samples\Styling and Formatting\Conditional Data Bars" ImagePath="Grid.Grouping.Windows\Samples\Styling and Formatting\Conditional Data Bars\Images\DataBars.png"/>
+	<Sample Name="Dynamic Formatting" Category ="Styling and Formatting" SourcePath="Grid.Grouping.Windows\Samples\Styling and Formatting\Dynamic Formatting Demo" ImagePath="Grid.Grouping.Windows\Samples\Styling and Formatting\Dynamic Formatting Demo\Images\DynamicFormattingDemo.png"/>
+	<Sample Name="Cell Formatting" Category ="Styling and Formatting" SourcePath="Grid.Grouping.Windows\Samples\Styling and Formatting\Cell Formatting Demo" ImagePath="Grid.Grouping.Windows\Samples\Styling and Formatting\Cell Formatting Demo\Images\CellFormattingDemo.png"/>
+	<Sample Name="Table Indent Formatting" Category ="Styling and Formatting" SourcePath="Grid.Grouping.Windows\Samples\Styling and Formatting\Table Indent Formatting Demo" ImagePath="Grid.Grouping.Windows\Samples\Styling and Formatting\Table Indent Formatting Demo\Images\TableIndentFormattingDemo.png"/>
+	<Sample Name="Custom Cell Range" Category ="Styling and Formatting" SourcePath="Grid.Grouping.Windows\Samples\Styling and Formatting\Custom Cell Range Demo" ImagePath="Grid.Grouping.Windows\Samples\Styling and Formatting\Custom Cell Range Demo\Images\CustomCellRangeDemo.png"/>
+	<Sample Name="Error Provider" Category ="Styling and Formatting" SourcePath="Grid.Grouping.Windows\Samples\Styling and Formatting\Error Provider Demo" ImagePath="Grid.Grouping.Windows\Samples\Styling and Formatting\Error Provider Demo\Images\ErrorProviderDemo.png"/>
+	<Sample Name="Custom Views" Category ="Styling and Formatting" SourcePath="Grid.Grouping.Windows\Samples\Styling and Formatting\Custom Views Demo" ImagePath="Grid.Grouping.Windows\Samples\Styling and Formatting\Custom Views Demo\Images\CustomViewsDemo.png"/>
+		
+    <Sample Name="Cell Comment Tip" Category ="Comment Tip" SourcePath="Grid.Grouping.Windows\Samples\Comment Tip\Cell Comment Tip" ImagePath="Grid.Grouping.Windows\Samples\Comment Tip\Cell Comment Tip\Images\Excel-LikeCellCommentTipDemo.png"/>
+    	
+	<Sample Name="Custom Cell Type" Category ="Customization" SourcePath="Grid.Grouping.Windows\Samples\Customization\Custom Cell Type Demo" ImagePath="Grid.Grouping.Windows\Samples\Customization\Custom Cell Type Demo\Images\CustomCellTypeDemo.png"/>
+	<Sample Name="Custom Field Type" Category ="Customization" SourcePath="Grid.Grouping.Windows\Samples\Customization\Custom Field Type Demo" ImagePath="Grid.Grouping.Windows\Samples\Customization\Custom Field Type Demo\Images\CustomFieldTypeDemo.png"/>
+
+	<Sample Name="Table Options" Category ="Grouping Grid Options" SourcePath="Grid.Grouping.Windows\Samples\Grouping Grid Options\Table Options Demo" ImagePath="Grid.Grouping.Windows\Samples\Grouping Grid Options\Table Options Demo\Images\TableOptionsDemo.png"/>
+	<Sample Name="Top-Level Group Options" Category ="Grouping Grid Options" SourcePath="Grid.Grouping.Windows\Samples\Grouping Grid Options\Top-Level-Group Options Demo" ImagePath="Grid.Grouping.Windows\Samples\Grouping Grid Options\Top-Level-Group Options Demo\Images\Top-Level-GroupOptionsDemo.png"/>
+	<Sample Name="Child-Group Options" Category ="Grouping Grid Options" SourcePath="Grid.Grouping.Windows\Samples\Grouping Grid Options\Child-Group Options Demo" ImagePath="Grid.Grouping.Windows\Samples\Grouping Grid Options\Child-Group Options Demo\Images\Child-GroupOptionsDemo.png"/>
+	<Sample Name="Nested-Table Group Options" Category ="Grouping Grid Options" SourcePath="Grid.Grouping.Windows\Samples\Grouping Grid Options\Nested-Table Group Options Demo" ImagePath="Grid.Grouping.Windows\Samples\Grouping Grid Options\Nested-Table Group Options Demo\Images\Nested-TableGroupOptionsDemo.png"/>
+	
+	<Sample Name="Group Customization" Category ="Layout Customization" SourcePath="Grid.Grouping.Windows\Samples\Layout Customization\Group Customization Demo" ImagePath="Grid.Grouping.Windows\Samples\Layout Customization\Group Customization Demo\Images\GroupCustomizationDemo.png"/>
+	<Sample Name="Stacked Headers" Category ="Layout Customization" SourcePath="Grid.Grouping.Windows\Samples\Layout Customization\Stacked Headers Demo" ImagePath="Grid.Grouping.Windows\Samples\Layout Customization\Stacked Headers Demo\Images\StackedHeadersDemo.png"/>
+	<Sample Name="Field Chooser" Category ="Layout Customization" SourcePath="Grid.Grouping.Windows\Samples\Layout Customization\Field Chooser Demo" ImagePath="Grid.Grouping.Windows\Samples\Layout Customization\Field Chooser Demo\Images\FieldChooserDemo.png"/>
+	<Sample Name="Record Customization" Category ="Layout Customization" SourcePath="Grid.Grouping.Windows\Samples\Layout Customization\Record Customization Demo" ImagePath="Grid.Grouping.Windows\Samples\Layout Customization\Record Customization Demo\Images\RecordCustomizationDemo.png"/>
+	<Sample Name="Frozen Column" Category ="Layout Customization" SourcePath="Grid.Grouping.Windows\Samples\Layout Customization\Frozen Column Demo" ImagePath="Grid.Grouping.Windows\Samples\Layout Customization\Frozen Column Demo\Images\FrozenColumnDemo.png"/>
+	<Sample Name="Resizable Rows" Category ="Layout Customization" SourcePath="Grid.Grouping.Windows\Samples\Layout Customization\Resizable Rows Demo" ImagePath="Grid.Grouping.Windows\Samples\Layout Customization\Resizable Rows Demo\Images\ResizableRowsDemo.png"/>
+	<Sample Name="Cut-Copy-Paste" Category ="Layout Customization" SourcePath="Grid.Grouping.Windows\Samples\Layout Customization\Cut-Copy-Paste Demo" ImagePath="Grid.Grouping.Windows\Samples\Layout Customization\Cut-Copy-Paste Demo\Images\Cut-Copy-PasteDemo.png"/>
+	<Sample Name="Find-Replace" Category ="Layout Customization" SourcePath="Grid.Grouping.Windows\Samples\Layout Customization\Find-Replace Demo" ImagePath="Grid.Grouping.Windows\Samples\Layout Customization\Find-Replace Demo\Images\Find-ReplaceDemo.png"/>
+		
+	<Sample Name="Elements View" Category ="Grouping Architecture" SourcePath="Grid.Grouping.Windows\Samples\Grouping Architecture\Elements View Demo" ImagePath="Grid.Grouping.Windows\Samples\Grouping Architecture\Elements View Demo\Images\ElementsViewDemo.png"/>	
+	<Sample Name="Current Element Access" Category ="Grouping Architecture" SourcePath="Grid.Grouping.Windows\Samples\Grouping Architecture\Current Element Access Demo" ImagePath="Grid.Grouping.Windows\Samples\Grouping Architecture\Current Element Access Demo\Images\CurrentElementAccessDemo.png"/>
+	<Sample Name="Table Control Events" Category ="Grouping Architecture" SourcePath="Grid.Grouping.Windows\Samples\Grouping Architecture\Table Control Events Demo" ImagePath="Grid.Grouping.Windows\Samples\Grouping Architecture\Table Control Events Demo\Images\TableControlEventsDemo.png"/>
+	<Sample Name="Grouping Engine Events" Category ="Grouping Architecture" SourcePath="Grid.Grouping.Windows\Samples\Grouping Architecture\Grouping Engine Events Demo" ImagePath="Grid.Grouping.Windows\Samples\Grouping Architecture\Grouping Engine Events Demo\Images\GroupingEngineEventsDemo.png"/>
+	
+	<Sample Name="XML Serialization" Category ="Serialization" SourcePath="Grid.Grouping.Windows\Samples\Serialization\XML Serialization Demo" ImagePath="Grid.Grouping.Windows\Samples\Serialization\XML Serialization Demo\Images\XMLSerializationDemo.png"/>	
+	<Sample Name="Employee View" Category ="Serialization" SourcePath="Grid.Grouping.Windows\Samples\Serialization\Employee View Demo" ImagePath="Grid.Grouping.Windows\Samples\Serialization\Employee View Demo\Images\EmployeeViewDemo.png"/>
+		
+	<Sample Name="Flat Grid" Category ="Printing" SourcePath="Grid.Grouping.Windows\Samples\Printing\Flat Grid Demo" ImagePath="Grid.Grouping.Windows\Samples\Printing\Flat Grid Demo\Images\FlatGridDemo.png"/>
+	<Sample Name="Hierarchical Grid" Category ="Printing" SourcePath="Grid.Grouping.Windows\Samples\Printing\Hierarchical Grid Demo" ImagePath="Grid.Grouping.Windows\Samples\Printing\Hierarchical Grid Demo\Images\HierarchicalGridDemo.png"/>
+	
+	<Sample Name="Excel Exporting" Category ="Exporting"  SourcePath="Grid.Grouping.Windows\Samples\Exporting\Excel Exporting Demo" ImagePath="Grid.Grouping.Windows\Samples\Exporting\Excel Exporting Demo\Images\ExcelExporting.png"/>
+	<Sample Name="PDF Export" Category ="Exporting" SourcePath="Grid.Grouping.Windows\Samples\Exporting\PDF Export Demo" ImagePath="Grid.Grouping.Windows\Samples\Exporting\PDF Export Demo\Images\PDFExportDemo.png"/>
+	<Sample Name="Word Converter" Category ="Exporting" SourcePath="Grid.Grouping.Windows\Samples\Exporting\Word Converter Demo" ImagePath="Grid.Grouping.Windows\Samples\Exporting\Word Converter Demo\Images\WordConverterDemo.png"/>
+	
+	<Sample Name="Localization" Category ="Localization Samples" SourcePath="Grid.Grouping.Windows\Samples\Localization Samples\Localization Demo" ImagePath="Grid.Grouping.Windows\Samples\Localization Samples\Localization Demo\Images\LocalizationDemo.png"/>	
+	<Sample Name="Enum Localization" Category ="Localization Samples" SourcePath="Grid.Grouping.Windows\Samples\Localization Samples\Enum Localization Demo" ImagePath="Grid.Grouping.Windows\Samples\Localization Samples\Enum Localization Demo\Images\EnumLocalizationDemo.png"/>
+		
+	<Sample Name="Zooming" Category ="Zooming" SourcePath="Grid.Grouping.Windows\Samples\Zooming\Zooming Demo" ImagePath="Grid.Grouping.Windows\Samples\Zooming\Zooming Demo\Images\ZoomingDemo.png"/>
+	
+</Product>
+
+<Product Name="Spreadsheet" Category="Grids" IsUpdated="True" EnableSecondLevel="True">
+
+	    <Sample Name="Getting Started" Category ="Getting Started" SourcePath="Spreadsheet.Windows\Samples\GettingStarted" ImagePath="Spreadsheet.Windows\Samples\GettingStarted\Images\GettingStarted.png"/>
+        <Sample Name="Formula" Category ="Getting Started" SourcePath="Spreadsheet.Windows\Samples\Formula" ImagePath="Spreadsheet.Windows\Samples\Formula\Images\Formula.png"/>
+        <Sample Name="Cell Formatting" Category ="Getting Started" SourcePath="Spreadsheet.Windows\Samples\CellFormatting" ImagePath="Spreadsheet.Windows\Samples\CellFormatting\Images\CellFormatting.png"/>
+        <Sample Name="Conditional Formatting" Category ="Data Visualization" SourcePath="Spreadsheet.Windows\Samples\ConditionalFormatting" ImagePath="Spreadsheet.Windows\Samples\ConditionalFormatting\Images\ConditionalFormatting.png"/>
+        <Sample Name="Advanced Conditional Formatting" Category ="Data Visualization" SourcePath="Spreadsheet.Windows\Samples\AdvancedConditionalFormatting" ImagePath="Spreadsheet.Windows\Samples\AdvancedConditionalFormatting\Images\AdvancedConditionalFormat.png"/>
+        <Sample Name="Outlining" Category ="Data Visualization" SourcePath="Spreadsheet.Windows\Samples\Outlining" ImagePath="Spreadsheet.Windows\Samples\Outlining\Images\Outlining.png"/>
+		<Sample Name="Data Management" IsNew="True" Category ="Miscellaneous" SourcePath="Spreadsheet.Windows\Samples\Data Management" ImagePath="Spreadsheet.Windows\Samples\Data Management\Images\DataManagement.png"/>
+        <Sample Name="Exporting" Category ="Miscellaneous" SourcePath="Spreadsheet.Windows\Samples\Exporting" ImagePath="Spreadsheet.Windows\Samples\Exporting\Images\Exporting.png"/>
+        <Sample Name="Printing" Category ="Miscellaneous" SourcePath="Spreadsheet.Windows\Samples\Printing" ImagePath="Spreadsheet.Windows\Samples\Printing\Images\Printing.png"/>
+        <Sample Name="Localization" Category ="Miscellaneous" SourcePath="Spreadsheet.Windows\Samples\Localization" ImagePath="Spreadsheet.Windows\Samples\Localization\Images\Localization.png" IsVS2017 ="True"/>
+		<Sample Name="Chart" Category ="Data Visualization" SourcePath="Spreadsheet.Windows\Samples\Chart" ImagePath="Spreadsheet.Windows\Samples\Chart\Images\Chart.png"/>
+		<Sample Name="Sparklines" Category ="Data Visualization" SourcePath="Spreadsheet.Windows\Samples\Sparklines" ImagePath="Spreadsheet.Windows\Samples\Sparklines\Images\Sparkline.png"/>
+		<Sample Name="GraphicCells" Category ="Data Visualization" SourcePath="Spreadsheet.Windows\Samples\GraphicCell" ImagePath="Spreadsheet.Windows\Samples\GraphicCell\Images\GraphicCell.png"/>
+</Product>
+  
+<!--End of Region Grids-->
+
+
+<!--Region Data Visualization-->
+
+ <Product Name="Chart" Category="Data Visualization" EnableSecondLevel="True">
+    <Sample Name="Getting Started" Category="Getting Started" SourcePath="Chart.Windows\Samples\Getting Started\Getting Started" ImagePath="Chart.Windows\Samples\Images\GettingStarted.png"/>
+	
+	<Sample Name="Chart Appearance" Category="Chart Appearance" SourcePath="Chart.Windows\Samples\Chart Appearance\Chart Appearance" ImagePath="Chart.Windows\Samples\Images\Appearance.png"/>
+	<Sample Name="Chart Borders" Category="Chart Appearance" SourcePath="Chart.Windows\Samples\Chart Appearance\Chart Borders" ImagePath="Chart.Windows\Samples\Images\Borders.png"/>
+	<Sample Name="Chart Custom Drawing" Category="Chart Appearance" SourcePath="Chart.Windows\Samples\Chart Appearance\Chart Custom Drawing" ImagePath="Chart.Windows\Samples\Images\Custom.png"/>
+	<Sample Name="Chart Divide Area" Category="Chart Appearance" SourcePath="Chart.Windows\Samples\Chart Appearance\Chart Divide Area" ImagePath="Chart.Windows\Samples\Images\Divide.png"/>
+	<Sample Name="Chart Skins" Category="Chart Appearance" SourcePath="Chart.Windows\Samples\Chart Appearance\Chart Skins" ImagePath="Chart.Windows\Samples\Images\Skins.png"/>
+	<Sample Name="Chart Template" Category="Chart Appearance" SourcePath="Chart.Windows\Samples\Chart Appearance\Chart Template" ImagePath="Chart.Windows\Samples\Images\Template.png"/>
+	<Sample Name="Chart Watermark" Category="Chart Appearance" SourcePath="Chart.Windows\Samples\Chart Appearance\Chart Watermark" ImagePath="Chart.Windows\Samples\Images\Watermark.png"/>
+	<Sample Name="Interlaced Grid" Category="Chart Appearance" SourcePath="Chart.Windows\Samples\Chart Appearance\Interlaced Grid" ImagePath="Chart.Windows\Samples\Images\Grid.png"/>
+	
+	<Sample Name="Categorical Axis" Category="Chart Axes"  SourcePath="Chart.Windows\Samples\Chart Axes\Categorical Axis" ImagePath="Chart.Windows\Samples\Images\Category.png"/>
+	<Sample Name="Axes Label Position" Category="Chart Axes" SourcePath="Chart.Windows\Samples\Chart Axes\Axes Label Position" ImagePath="Chart.Windows\Samples\Images\AxisLabel.png"/>
+	<Sample Name="Axis Crossing" Category="Chart Axes" SourcePath="Chart.Windows\Samples\Chart Axes\Axis Crossing" ImagePath="Chart.Windows\Samples\Images\Crossing.png"/>
+	<Sample Name="Chart Axis Customization" Category="Chart Axes" SourcePath="Chart.Windows\Samples\Chart Axes\Chart Axis Customization" ImagePath="Chart.Windows\Samples\Images\Customization.png"/>
+	<Sample Name="Chart Breaks" Category="Chart Axes" SourcePath="Chart.Windows\Samples\Chart Axes\Chart Breaks" ImagePath="Chart.Windows\Samples\Images\Break.png"/>
+	<Sample Name="Chart Custom Axis Origin" Category="Chart Axes" SourcePath="Chart.Windows\Samples\Chart Axes\Chart Custom Axis Origin" ImagePath="Chart.Windows\Samples\Images\Origin.png"/>
+	<Sample Name="Chart Grouping Labels" Category="Chart Axes" SourcePath="Chart.Windows\Samples\Chart Axes\Chart Grouping Labels" ImagePath="Chart.Windows\Samples\Images\Labels.png"/>
+	<Sample Name="Chart Labels Customization" Category="Chart Axes" SourcePath="Chart.Windows\Samples\Chart Axes\Chart Labels Customization" ImagePath="Chart.Windows\Samples\Images\labelCustomization.png"/>
+	<Sample Name="Chart Multiple Axes" Category="Chart Axes" SourcePath="Chart.Windows\Samples\Chart Axes\Chart Multiple Axes" ImagePath="Chart.Windows\Samples\Images\multipleAxes.png"/>
+	<Sample Name="Chart Strip Line" Category="Chart Axes" SourcePath="Chart.Windows\Samples\Chart Axes\Chart Strip Line" ImagePath="Chart.Windows\Samples\Images\stripLine.png"/>
+	<Sample Name="Chart Tick Marks" Category="Chart Axes" SourcePath="Chart.Windows\Samples\Chart Axes\Chart Tick Marks" ImagePath="Chart.Windows\Samples\Images\Marks.png"/>
+	<Sample Name="Multiple Axes Layout" Category="Chart Axes" SourcePath="Chart.Windows\Samples\Chart Axes\Multiple Axes Layout" ImagePath="Chart.Windows\Samples\Images\axisLayout.png"/>
+	
+	<Sample Name="Chart Custom Points" Category="Chart Series" SourcePath="Chart.Windows\Samples\Chart Series\Chart Custom Points" ImagePath="Chart.Windows\Samples\Images\customPoint.png"/>
+	<Sample Name="Chart Point Collection Methods" Category="Chart Series" SourcePath="Chart.Windows\Samples\Chart Series\Chart Point Collection Methods" ImagePath="Chart.Windows\Samples\Images\Collection.png"/>
+	<Sample Name="Chart Series Model" Category="Chart Series" SourcePath="Chart.Windows\Samples\Chart Series\Chart Series Model" ImagePath="Chart.Windows\Samples\Images\model.png"/>
+	<Sample Name="Chart Symbols" Category="Chart Series" SourcePath="Chart.Windows\Samples\Chart Series\Chart Symbols" ImagePath="Chart.Windows\Samples\Images\Symbol.png"/>
+	<Sample Name="Chart Trendline" Category="Chart Series" SourcePath="Chart.Windows\Samples\Chart Series\Chart Trendline" ImagePath="Chart.Windows\Samples\Images\Trendline.png"/>
+	
+	<Sample Name="Chart Smart Labels" Category="Chart Styles" SourcePath="Chart.Windows\Samples\Chart Styles\Chart Smart Labels" ImagePath="Chart.Windows\Samples\Images\smartLabels.png"/>
+	<Sample Name="Chart Styles Customization" Category="Chart Styles" SourcePath="Chart.Windows\Samples\Chart Styles\Chart Styles Customization" ImagePath="Chart.Windows\Samples\Images\styleCustomization.png"/>
+	<Sample Name="Right-to-Left Support" Category="Chart Styles" SourcePath="Chart.Windows\Samples\Chart Styles\Right-to-Left Support" ImagePath="Chart.Windows\Samples\Images\Right-To-Left.png"/>
+	
+	<Sample Name="Chart Legend" Category="Chart Title and Legends" SourcePath="Chart.Windows\Samples\Chart Title and Legends\Chart Legend" ImagePath="Chart.Windows\Samples\Images\Legend.png"/>
+	<Sample Name="Multiple Chart Legends" Category="Chart Title and Legends" SourcePath="Chart.Windows\Samples\Chart Title and Legends\Multiple Chart Legends" ImagePath="Chart.Windows\Samples\Images\MultiLegend.png"/>
+	<Sample Name="Multiple Chart Titles" Category="Chart Title and Legends" SourcePath="Chart.Windows\Samples\Chart Title and Legends\Multiple Chart Titles" ImagePath="Chart.Windows\Samples\Images\multiTitle.png"/>
+	
+	<Sample Name="Area Charts" Category="Chart Types" SourcePath="Chart.Windows\Samples\Chart Types\Area Charts" ImagePath="Chart.Windows\Samples\Images\Area.png"/>
+	<Sample Name="Bar Charts" Category="Chart Types" SourcePath="Chart.Windows\Samples\Chart Types\Bar Charts" ImagePath="Chart.Windows\Samples\Images\Bar.png"/>
+	<Sample Name="Box-and-Whisker Chart" Category="Chart Types" SourcePath="Chart.Windows\Samples\Chart Types\Box-and-Whisker Chart" ImagePath="Chart.Windows\Samples\Images\Box.png"/>
+	<Sample Name="Bubble and Scatter Charts" Category="Chart Types" SourcePath="Chart.Windows\Samples\Chart Types\Bubble and Scatter Charts" ImagePath="Chart.Windows\Samples\Images\Bubble.png"/>
+	<Sample Name="Column Charts" Category="Chart Types" SourcePath="Chart.Windows\Samples\Chart Types\Column Charts" ImagePath="Chart.Windows\Samples\Images\Column.png"/>
+	<Sample Name="Combination Chart" Category="Chart Types" SourcePath="Chart.Windows\Samples\Chart Types\Combination Chart" ImagePath="Chart.Windows\Samples\Images\Combination.png"/>
+	<Sample Name="Error Bar Chart" Category="Chart Types" SourcePath="Chart.Windows\Samples\Chart Types\Error Bar Chart" ImagePath="Chart.Windows\Samples\Images\Error Bar.png"/>
+	<Sample Name="Financial Charts" Category="Chart Types" SourcePath="Chart.Windows\Samples\Chart Types\Financial Charts" ImagePath="Chart.Windows\Samples\Images\Financial.png"/>
+	<Sample Name="Gantt Chart" Category="Chart Types" SourcePath="Chart.Windows\Samples\Chart Types\Gantt Chart" ImagePath="Chart.Windows\Samples\Images\Gantt.png"/>
+	<Sample Name="Heat Map Chart" Category="Chart Types" SourcePath="Chart.Windows\Samples\Chart Types\Heat Map Chart" ImagePath="Chart.Windows\Samples\Images\Heat.png"/>
+	<Sample Name="Histogram Chart" Category="Chart Types" SourcePath="Chart.Windows\Samples\Chart Types\Histogram Chart" ImagePath="Chart.Windows\Samples\Images\Histogram.png"/>
+	<Sample Name="Line Charts" Category="Chart Types" SourcePath="Chart.Windows\Samples\Chart Types\Line Charts" ImagePath="Chart.Windows\Samples\Images\Line.png"/>
+	<Sample Name="Pie Chart" Category="Chart Types" SourcePath="Chart.Windows\Samples\Chart Types\Pie Chart" ImagePath="Chart.Windows\Samples\Images\Pie.png"/>
+	<Sample Name="Polar and Radar Charts" Category="Chart Types" SourcePath="Chart.Windows\Samples\Chart Types\Polar and Radar Charts" ImagePath="Chart.Windows\Samples\Images\Polar.png"/>
+	<Sample Name="Pyramid and Funnel Charts" Category="Chart Types" SourcePath="Chart.Windows\Samples\Chart Types\Pyramid and Funnel Charts" ImagePath="Chart.Windows\Samples\Images\Funnel.png"/>
+	<Sample Name="Range Area Chart" Category="Chart Types" SourcePath="Chart.Windows\Samples\Chart Types\Range Area Chart" ImagePath="Chart.Windows\Samples\Images\RangeArea.png"/>
+	<Sample Name="Stacked 100 Charts" Category="Chart Types" SourcePath="Chart.Windows\Samples\Chart Types\Stacked 100 Charts" ImagePath="Chart.Windows\Samples\Images\Stacked.png"/>
+	<Sample Name="Stock-and-Volume Chart" Category="Chart Types" SourcePath="Chart.Windows\Samples\Chart Types\Stock-and-Volume Chart" ImagePath="Chart.Windows\Samples\Images\Stock.png"/>
+	<Sample Name="Tornado Chart" Category="Chart Types" SourcePath="Chart.Windows\Samples\Chart Types\Tornado Chart" ImagePath="Chart.Windows\Samples\Images\Tornado.png"/>
+	
+	<Sample Name="Localization Demo" Category="Culture Localization" SourcePath="Chart.Windows\Samples\Culture Localization\Localization Demo" ImagePath="Chart.Windows\Samples\Images\Localization.png"/>
+	
+	<Sample Name="Multiple Pie Chart" Category="Custom Charts" SourcePath="Chart.Windows\Samples\Custom Charts\Multiple Pie Chart" ImagePath="Chart.Windows\Samples\Images\MultiplePie.png"/>
+	<Sample Name="Pareto Chart" Category="Custom Charts" SourcePath="Chart.Windows\Samples\Custom Charts\Pareto Chart" ImagePath="Chart.Windows\Samples\Images\Pareto.png"/>
+	
+	<Sample Name="Axis Label Binding" Category="Data Binding" SourcePath="Chart.Windows\Samples\Data Binding\Axis Label Binding" ImagePath="Chart.Windows\Samples\Images\labelBinding.png"/>
+	<Sample Name="Chart Grouping" Category="Data Binding" SourcePath="Chart.Windows\Samples\Data Binding\Chart Grouping" ImagePath="Chart.Windows\Samples\Images\Grouping.png"/>
+	<Sample Name="Chart with Huge DataSource" Category="Data Binding" SourcePath="Chart.Windows\Samples\Data Binding\Chart with Huge DataSource" ImagePath="Chart.Windows\Samples\Images\DataSource.png"/>
+	<Sample Name="Custom Collections" Category="Data Binding" SourcePath="Chart.Windows\Samples\Data Binding\Custom Collections" ImagePath="Chart.Windows\Samples\Images\CustomCollection.png"/>
+	<Sample Name="Filtered Data" Category="Data Binding" SourcePath="Chart.Windows\Samples\Data Binding\Filtered Data" ImagePath="Chart.Windows\Samples\Images\Filtered.png"/>
+	<Sample Name="Huge Data in Multi-Chart" Category="Data Binding" SourcePath="Chart.Windows\Samples\Data Binding\Huge Data in Multi-Chart" ImagePath="Chart.Windows\Samples\Images\Huge Data.png"/>
+	<Sample Name="LINQ DataSource" Category="Data Binding" SourcePath="Chart.Windows\Samples\Data Binding\LINQ DataSource" ImagePath="Chart.Windows\Samples\Images\LINQ.png"/>
+	
+	<Sample Name="Chart Label Hierarchy" Category="Date Time Chart" SourcePath="Chart.Windows\Samples\Date Time Chart\Chart Label Hierarchy" ImagePath="Chart.Windows\Samples\Images\Hierarchy.png"/>
+	<Sample Name="Chart Label Hierarchy" Category="Date Time Chart" SourcePath="Chart.Windows\Samples\Date Time Chart\Date Time Axes in Chart" ImagePath="Chart.Windows\Samples\Images\DateTime.png"/>
+	<Sample Name="Dates in DataSet" Category="Date Time Chart" SourcePath="Chart.Windows\Samples\Date Time Chart\Dates in DataSet" ImagePath="Chart.Windows\Samples\Images\Dataset.png"/>
+
+	<Sample Name="Embed Custom Control" Category="Embed Controls in Chart" SourcePath="Chart.Windows\Samples\Embed Controls in Chart\Embed Custom Control" ImagePath="Chart.Windows\Samples\Images\Embed.png"/>
+	
+	<Sample Name="Chart Export Data" Category="Export" SourcePath="Chart.Windows\Samples\Export\Chart Export Data" ImagePath="Chart.Windows\Samples\Images\Export.png"/>
+	
+	<Sample Name="Data from an Array" Category="Import" SourcePath="Chart.Windows\Samples\Import\Data from an Array" ImagePath="Chart.Windows\Samples\Images\Array.png"/>
+	<Sample Name="Data from an Indexed Model" Category="Import" SourcePath="Chart.Windows\Samples\Import\Data from an Indexed Model" ImagePath="Chart.Windows\Samples\Images\Indexed.png"/>
+	<Sample Name="Data from CSV" Category="Import" SourcePath="Chart.Windows\Samples\Import\Data from CSV" ImagePath="Chart.Windows\Samples\Images\CSV.png"/>
+	<Sample Name="Data from Database" Category="Import" SourcePath="Chart.Windows\Samples\Import\Data from Database" ImagePath="Chart.Windows\Samples\Images\DataSource.png"/>
+	<Sample Name="Data from Excel" Category="Import" SourcePath="Chart.Windows\Samples\Import\Data from Excel" ImagePath="Chart.Windows\Samples\Images\Excel.png"/>
+	<Sample Name="Data from XML" Category="Import" SourcePath="Chart.Windows\Samples\Import\Data from XML" ImagePath="Chart.Windows\Samples\Images\XML.png"/>
+	
+	<Sample Name="Chart Print" Category="Print" SourcePath="Chart.Windows\Samples\Print\Chart Print" ImagePath="Chart.Windows\Samples\Images\Print.png"/>
+	<Sample Name="MultiPage Printing" Category="Print" SourcePath="Chart.Windows\Samples\Print\MultiPage Printing" ImagePath="Chart.Windows\Samples\Images\MultiPage.png"/>
+	
+	<Sample Name="Chart Real Time" Category="Real Time" SourcePath="Chart.Windows\Samples\Real Time\Chart Real Time" ImagePath="Chart.Windows\Samples\Images\RealTime.png"/>
+	<Sample Name="Chart RealTime With Thread" Category="Real Time" SourcePath="Chart.Windows\Samples\Real Time\Chart RealTime With Thread" ImagePath="Chart.Windows\Samples\Images\Thread.png"/>
+	<Sample Name="Chart Recorder" Category="Real Time" SourcePath="Chart.Windows\Samples\Real Time\Chart Recorder" ImagePath="Chart.Windows\Samples\Images\Recorder.png"/>
+	
+	<Sample Name="SparklineControl" Category="SparklineChart" SourcePath="Chart.Windows\Samples\SparklineChart\SparklineControl" ImagePath="Chart.Windows\Samples\Images\sparkline.png"/>
+    <Sample Name="SparklinesWithGrid" Category="SparklineChart" SourcePath="Chart.Windows\Samples\SparklineChart\SparklinesWithGrid" ImagePath="Chart.Windows\Samples\Images\sparkgrid.png"/>
+	
+	<Sample Name="Chart Statistical Formulas" Category="Statistical Analysis" SourcePath="Chart.Windows\Samples\Statistical Analysis\Chart Statistical Formulas" ImagePath="Chart.Windows\Samples\Images\statistical.png"/>
+	<Sample Name="Chart Utility Functions" Category="Statistical Analysis" SourcePath="Chart.Windows\Samples\Statistical Analysis\Chart Utility Functions" ImagePath="Chart.Windows\Samples\Images\Utility.png"/>
+	
+	<Sample Name="Chart Auto Highlight" Category="User Interaction" SourcePath="Chart.Windows\Samples\User Interaction\Chart Auto Highlight" ImagePath="Chart.Windows\Samples\Images\highlight.png"/>
+	<Sample Name="Chart Drag and Drop" Category="User Interaction" SourcePath="Chart.Windows\Samples\User Interaction\Chart Drag and Drop" ImagePath="Chart.Windows\Samples\Images\Drag.png"/>
+	<Sample Name="Chart Callout" Category="User Interaction" SourcePath="Chart.Windows\Samples\User Interaction\Chart Callout" ImagePath="Chart.Windows\Samples\Images\Callout.png"/>
+	<Sample Name="Chart Drill Down" Category="User Interaction" SourcePath="Chart.Windows\Samples\User Interaction\Chart Drill Down" ImagePath="Chart.Windows\Samples\Images\drill.png"/>
+	<Sample Name="Chart Interactive Cursor" Category="User Interaction" SourcePath="Chart.Windows\Samples\User Interaction\Chart Interactive Cursor" ImagePath="Chart.Windows\Samples\Images\interactive.png"/>
+	<Sample Name="Chart Point" Category="User Interaction" SourcePath="Chart.Windows\Samples\User Interaction\Chart Point" ImagePath="Chart.Windows\Samples\Images\point.png"/>
+	<Sample Name="Chart Region Events" Category="User Interaction" SourcePath="Chart.Windows\Samples\User Interaction\Chart Region Events" ImagePath="Chart.Windows\Samples\Images\events.png"/>
+	<Sample Name="Chart Series Highlight" Category="User Interaction" SourcePath="Chart.Windows\Samples\User Interaction\Chart Series Highlight" ImagePath="Chart.Windows\Samples\Images\seriesHighlight.png"/>
+	<Sample Name="Chart Toolbar" Category="User Interaction" SourcePath="Chart.Windows\Samples\User Interaction\Chart Toolbar" ImagePath="Chart.Windows\Samples\Images\toolbar.png"/>
+	<Sample Name="Chart ToolTips" Category="User Interaction" SourcePath="Chart.Windows\Samples\User Interaction\Chart ToolTips" ImagePath="Chart.Windows\Samples\Images\FancyTooltips.png"/>
+	<Sample Name="ChartAxisLabel Tooltip" Category="User Interaction" SourcePath="Chart.Windows\Samples\User Interaction\ChartAxisLabel Tooltip" ImagePath="Chart.Windows\Samples\Images\axisTooltip.png"/>
+	<Sample Name="ChartSerialization" Category="User Interaction" SourcePath="Chart.Windows\Samples\User Interaction\ChartSerialization" ImagePath="Chart.Windows\Samples\Images\Serialization.png"/>
+    <Sample Name="Chart Trackball" Category="User Interaction" SourcePath="Chart.Windows\Samples\User Interaction\Chart Trackball" ImagePath="Chart.Windows\Samples\Images\trackball.png"/>
+	
+	<Sample Name="Zoom and Scrolling" Category="Zoom and Scrolling"  SourcePath="Chart.Windows\Samples\Zoom and Scrolling\Zoom and Scrolling" ImagePath="Chart.Windows\Samples\Images\zoom.png"/>
+	
+	
+    </Product>
+
+  <Product Name="Diagram" Category="Data Visualization" EnableSecondLevel="True">
+
+    <Sample Name="Nodes" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\Nodes" ImagePath="Diagram.Windows\Images\Nodes.png"/>
+    <Sample Name="Connectors" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\Connectors" ImagePath="Diagram.Windows\Images\Connectors.png" />
+    <Sample Name="Controls Galore" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\Contols Galore" ImagePath="Diagram.Windows\Images\Controls Galore.png"/>
+    <Sample Name="Labels" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\Labels" ImagePath="Diagram.Windows\Images\Labels.png"/>
+    <Sample Name="Ports" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\Ports" ImagePath="Diagram.Windows\Images\Ports.png"/>
+    <Sample Name="Layers" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\Layers" IsUpdated="TRUE" ImagePath="Diagram.Windows\Images\Layers.png"/>
+    <Sample Name="Gridlines" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\Grid" ImagePath="Diagram.Windows\Images\Grid.png"/>
+    <Sample Name="Overview" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\Overview" ImagePath="Diagram.Windows\Images\Overview.png"/>
+    <Sample Name="Multiple Views" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\Multiple Views" ImagePath="Diagram.Windows\Images\Multiple Views.png"/>
+    <Sample Name="Line Routing and Bridging" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\Line Routing and Bridging" ImagePath="Diagram.Windows\Images\Line Routing and Bridging.png"/>
+    <Sample Name="Dynamic Properties" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\Dynamic Properties" ImagePath="Diagram.Windows\Images\DynamicProperties.png"/>
+    <Sample Name="Custom Symbol" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\Custom Symbol" ImagePath="Diagram.Windows\Images\Custom Symbol.png"/>
+    <Sample Name="Custom Selection Handle" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\Custom Selection Handle" ImagePath="Diagram.Windows\Images\Custom Selection Handle.png"/>
+    <Sample Name="Custom Command" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\Custom Command" ImagePath="Diagram.Windows\Images\Custom Command.png"/>
+    <Sample Name="Grouping and Ordering" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\Grouping and Ordering" ImagePath="Diagram.Windows\Images\Grouping and Ordering.png"/>
+    <Sample Name="Zooming and Panning" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\Zooming and Panning" ImagePath="Diagram.Windows\Images\Zooming and Panning.png"/>
+    <Sample Name="Scripting" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\Scripting" ImagePath="Diagram.Windows\Images\Scripting.png"/>
+    <Sample Name="Expander" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\Expander" ImagePath="Diagram.Windows\Images\Expander.png"/>
+    <Sample Name="Simple Drill Down" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\Simple Drill Down" ImagePath="Diagram.Windows\Images\Simple Drill Down.png"/>
+    <Sample Name="Diagram Events" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\Diagram Events" ImagePath="Diagram.Windows\Images\Diagram Events.png"/>
+    <Sample Name="Model Events" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\ModelEvents" ImagePath="Diagram.Windows\Images\Model Events.png"/>
+    <Sample Name="Save to Database" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\Save to Database" ImagePath="Diagram.Windows\Images\Save to Database.png"/>
+    <Sample Name="Serialization" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\Serialization" ImagePath="Diagram.Windows\Images\Serialization.png"/>
+    <Sample Name="Localizing" Category="Getting Started" IsVS2017="True" SourcePath="Diagram.Windows\Samples\Getting Started\Localizing Demo" ImagePath="Diagram.Windows\Images\Localizing Demo.png"/>
+    <Sample Name="Commands" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\Commands" ImagePath="Diagram.Windows\Images\Commands.png"/>
+    <Sample Name="Export Image" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\Export Image" ImagePath="Diagram.Windows\Images\Export Image.png"/>
+    <Sample Name="Palette Groupbar" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\PaletteGroupbar" ImagePath="Diagram.Windows\Images\PaletteGroupbar.png"/>
+    <Sample Name="Print" Category="Getting Started" SourcePath="Diagram.Windows\Samples\Getting Started\Print Demo" ImagePath="Diagram.Windows\Images\Print Demo.png"/>
+
+    <Sample Name="Flow Diagram" Category="Use Case Diagrams" SourcePath="Diagram.Windows\Samples\Use Case Diagrams\Flow Diagram" ImagePath="Diagram.Windows\Images\Flow Diagram.png"/>
+    <Sample Name="Swim lane Diagram" Category="Use Case Diagrams" SourcePath="Diagram.Windows\Samples\Use Case Diagrams\Swim lane Diagram" ImagePath="Diagram.Windows\Images\Swim lane Diagram.png"/>
+    <Sample Name="Fishbone Diagram" Category="Use Case Diagrams" SourcePath="Diagram.Windows\Samples\Use Case Diagrams\Fishbone Diagram" ImagePath="Diagram.Windows\Images\Fishbone Diagram.png"/>
+    <Sample Name="Network Diagram" Category="Use Case Diagrams" SourcePath="Diagram.Windows\Samples\Use Case Diagrams\Network Diagram" ImagePath="Diagram.Windows\Images\Network Diagram.png"/>
+    <Sample Name="Circuit Diagram" Category="Use Case Diagrams" SourcePath="Diagram.Windows\Samples\Use Case Diagrams\Circuit Diagram" ImagePath="Diagram.Windows\Images\Circuit Diagram.png"/>
+    <Sample Name="Floor Plan Diagram" Category="Use Case Diagrams" SourcePath="Diagram.Windows\Samples\Use Case Diagrams\Floor Plan Diagram" ImagePath="Diagram.Windows\Images\Floor Plan Diagram.png"/>
+    <Sample Name="Database Diagram" Category="Use Case Diagrams" SourcePath="Diagram.Windows\Samples\Use Case Diagrams\Database Diagram" ImagePath="Diagram.Windows\Images\Database Diagram.png"/>
+    <Sample Name="Class Diagram" Category="Use Case Diagrams" SourcePath="Diagram.Windows\Samples\Use Case Diagrams\Class Diagram" ImagePath="Diagram.Windows\Images\Class Diagram.png"/>
+    <Sample Name="Sequence Diagram" Category="Use Case Diagrams" SourcePath="Diagram.Windows\Samples\Use Case Diagrams\Sequence Diagram" ImagePath="Diagram.Windows\Images\Sequence Diagram.png"/>
+    <Sample Name="Seat Reservation" Category="Use Case Diagrams" SourcePath="Diagram.Windows\Samples\Use Case Diagrams\Seat Reservation" ImagePath="Diagram.Windows\Images\Seat Reservation.png"/>
+    <Sample Name="Weather Monitoring" Category="Use Case Diagrams" SourcePath="Diagram.Windows\Samples\Use Case Diagrams\Weather Monitoring" ImagePath="Diagram.Windows\Images\Weather Monitoring.png"/>
+
+    <Sample Name="Directed Tree Layout" Category="Layout Algorithm" SourcePath="Diagram.Windows\Samples\Layout Algorithm\Directed Tree Layout" ImagePath="Diagram.Windows\Images\Directed Tree Layout.png"/>
+    <Sample Name="Hierarchical Layout" Category="Layout Algorithm" SourcePath="Diagram.Windows\Samples\Layout Algorithm\Hierarchical Layout" ImagePath="Diagram.Windows\Images\Hierarchical Layout.png"/>
+    <Sample Name="Org Chart Layout" Category="Layout Algorithm" SourcePath="Diagram.Windows\Samples\Layout Algorithm\Org Chart Layout" ImagePath="Diagram.Windows\Images\Org Chart Layout.png"/>
+    <Sample Name="Radial Tree Layout" Category="Layout Algorithm" SourcePath="Diagram.Windows\Samples\Layout Algorithm\Radial Tree Layout" ImagePath="Diagram.Windows\Images\Radial Tree Layout.png"/>
+    <Sample Name="Symmetric Layout" Category="Layout Algorithm" SourcePath="Diagram.Windows\Samples\Layout Algorithm\Symmetric Layout" ImagePath="Diagram.Windows\Images\Symmetric Layout.png"/>
+    <Sample Name="Table Layout" Category="Layout Algorithm" SourcePath="Diagram.Windows\Samples\Layout Algorithm\Table Layout" ImagePath="Diagram.Windows\Images\Table Layout.png"/>
+    <Sample Name="Sub Graph Layout" Category="Layout Algorithm" SourcePath="Diagram.Windows\Samples\Layout Algorithm\Sub Graph Layout" ImagePath="Diagram.Windows\Images\Sub Graph Layout.png"/>
+
+    <Sample Name="XML Binding" Category="Data Binding" SourcePath="Diagram.Windows\Samples\Data Binding\XML Binding" ImagePath="Diagram.Windows\Images\XML Binding.png"/>
+    <Sample Name="Database Binding" Category="Data Binding" SourcePath="Diagram.Windows\Samples\Data Binding\Database Binding" ImagePath="Diagram.Windows\Images\Database Binding.png"/>
+    <Sample Name="Data Binding" Category="Data Binding" SourcePath="Diagram.Windows\Samples\Data Binding\Diagram Data Binding" ImagePath="Diagram.Windows\Images\Diagram Data Binding.png"/>
+    <Sample Name="Business Object Binding" Category="Data Binding" SourcePath="Diagram.Windows\Samples\Data Binding\Business Object Binding" ImagePath="Diagram.Windows\Images\Business Object Binding.png"/>
+    <Sample Name="Datasource Binding" Category="Data Binding" SourcePath="Diagram.Windows\Samples\Data Binding\Datasource Binding" ImagePath="Diagram.Windows\Images\Datasource Binding.png"/>
+
+    <Sample Name="Map Diagram" Category="Static Diagrams" SourcePath="Diagram.Windows\Samples\Static Diagrams\Map Diagram" ImagePath="Diagram.Windows\Images\Map Diagram.png"/>
+    <Sample Name="Clock" Category="Static Diagrams" SourcePath="Diagram.Windows\Samples\Static Diagrams\Clock" ImagePath="Diagram.Windows\Images\Clock.png"/>
+    <Sample Name="Venn Diagram" Category="Static Diagrams" SourcePath="Diagram.Windows\Samples\Static Diagrams\Venn Diagram" ImagePath="Diagram.Windows\Images\Venn Diagram.png"/>
+    <Sample Name="State Diagram" Category="Static Diagrams" SourcePath="Diagram.Windows\Samples\Static Diagrams\State Diagram" ImagePath="Diagram.Windows\Images\State Diagram.png"/>
+  </Product>
+
+  <Product Name="Schedule" Category="Data Visualization" EnableSecondLevel="False">
+    <Sample Name="Scheduler" Category ="Schedule" SourcePath="Schedule.Windows\Samples\Scheduler Demo" ImagePath="Schedule.Windows\Samples\Scheduler Demo\Images\SchedulerDemo.png"/>
+    <Sample Name="Scheduler With Recurrence" Category ="Schedule" SourcePath="Schedule.Windows\Samples\Scheduler With Recurrence Demo" ImagePath="Schedule.Windows\Samples\Scheduler With Recurrence Demo\Images\SchedulerWithRecurrenceDemo.png"/>
+  </Product>
+ 
+ <Product Name="Gauge" Category="Data Visualization" EnableSecondLevel="True">
+   <Sample Name="RadialGauge" Category ="Getting Started" SourcePath="Gauge.Windows\Samples\RadialGauge\RadialGauge" ImagePath="Gauge.Windows\Images\RadialGaugeDemo.png"/>
+    <Sample Name="Data Binding" Category ="Performance" SourcePath="Gauge.Windows\Samples\RadialGauge\DataBinding" ImagePath="Gauge.Windows\Images\DataBindingDemo.png"/>
+    <Sample Name="Half Circle Gauge" Category ="Customization" SourcePath="Gauge.Windows\Samples\RadialGauge\HalfCircleGauge" ImagePath="Gauge.Windows\Images\HalfCircleGauge.png"/>
+    <Sample Name="LinearGauge" Category ="Getting Started" SourcePath="Gauge.Windows\Samples\LinearGauge\LinearGauge" ImagePath="Gauge.Windows\Images\LinearGaugeDemo.png"/>
+    <Sample Name="Custom Renderer" Category ="Customization" SourcePath="Gauge.Windows\Samples\LinearGauge\CustomRenderer" ImagePath="Gauge.Windows\Images\CustomRenderer.png"/>
+    <Sample Name="DigitalGauge" Category ="Getting Started" SourcePath="Gauge.Windows\Samples\DigitalGauge\DigitalGauge" ImagePath="Gauge.Windows\Images\DigitalGaugeDemo.png"/>
+    <Sample Name="Health Tracker" Category ="Customization" SourcePath="Gauge.Windows\Samples\RadialGauge\HealthTracker" ImagePath="Gauge.Windows\Images\GaugeInteraction.png"/>
+	<Sample Name="Theme Customization" Category ="Customization" SourcePath="Gauge.Windows\Samples\Gauge Theme Demo" ImagePath="Gauge.Windows\Images\GaugeTheme.png"/>
+	<Sample Name="User Interaction" Category ="Interaction" SourcePath="Gauge.Windows\Samples\UserInteraction" ImagePath="Gauge.Windows\Images\UserInteraction.png"/>
+ </Product>
+  
+ <Product Name="Barcode" Category="Data Visualization" EnableSecondLevel="True">
+<Sample Name="GettingStarted" Category="GettingStarted"  SourcePath="SfBarcode.Windows\Samples\GettingStarted" ImagePath="SfBarcode.Windows\images\barcode.png"/>
+</Product>
+
+  <Product Name="BulletGraph" Category="Data Visualization" EnableSecondLevel="False" >  
+    <Sample Name="GettingStarted"  SourcePath="BulletGraph.Windows\Samples\GettingStartedDemo" ImagePath="BulletGraph.Windows\Images\GettingStarted.png"/>
+	<Sample Name="BulletGraphMeasures" SourcePath="BulletGraph.Windows\Samples\BulletGraphMeasuresDemo" ImagePath="BulletGraph.Windows\Images\BulletGraphMeasures.png"/>	
+  </Product>
+  
+  <Product Name="TreeMap" Category="Data Visualization" EnableSecondLevel="False" >  
+    <Sample Name="GettingStarted" SourcePath="TreeMap.Windows\Samples\GettingStarted" ImagePath="TreeMap.Windows\Images\GettingStarted.png"/>
+    <Sample Name="Color Mapping" SourcePath="TreeMap.Windows\Samples\ColorMapping" ImagePath="TreeMap.Windows\Images\ColorMapping.png"/>
+	<Sample Name="Customization" SourcePath="TreeMap.Windows\Samples\Customization" ImagePath="TreeMap.Windows\Images\Customization.png"/>
+  </Product>
+  
+  <Product Name="Maps" Category="Data Visualization" EnableSecondLevel="False">    
+	<Sample Name="GettingStarted" SourcePath="Maps.Windows\Samples\GettingStarted" ImagePath="Maps.Windows\Images\GettingStarted.png"/>	
+    <Sample Name="HeatMap" SourcePath="Maps.Windows\Samples\HeatMap" ImagePath="Maps.Windows\Images\HeatMap.png"/>
+	<Sample Name="BubbleVisualisation" SourcePath="Maps.Windows\Samples\BubbleVisualisation" ImagePath="Maps.Windows\Images\BubbleVisualization.png"/>
+	<Sample Name="MultiLayer" SourcePath="Maps.Windows\Samples\MultiLayer" ImagePath="Maps.Windows\Images\MultiLayer.png"/>	
+    <Sample Name="ShapeSelection" SourcePath="Maps.Windows\Samples\ShapeSelection" ImagePath="Maps.Windows\Images\ShapeSelection.png"/>	
+  </Product>
+  
+
+ 
+<!--End of Region Data Visualization-->
+  
+<!--Region Layout-->
+<Product Name="Office Style Form" Category="Layout" EnableSecondLevel="False" >
+  <Sample Name="Getting Started" SourcePath="Tools.Windows\Samples\Office Style Form\Office2010Form" ImagePath="Tools.Windows\Images\office2010form.png"/>
+</Product>
+<Product Name="Ribbon" Category="Layout" EnableSecondLevel="True">
+<Sample Name="Windows Explorer" Category="Product Showcase" SourcePath="Tools.Windows\Samples\Ribbon\WindowsExplorer" ImagePath="Tools.Windows\Images\Explorer.png"/>
+<Sample Name="Getting Started" Category="Getting Started" SourcePath="Tools.Windows\Samples\Ribbon\RibbonControlAdv" ImagePath="Tools.Windows\Images\ribboncontroladvdemo.png"/>
+<Sample Name="Office 2016" Category="Getting Started" SourcePath="Tools.Windows\Samples\Ribbon\Office2016" ImagePath="Tools.Windows\Images\Office2016.png"/>
+<Sample Name="Ribbon Merging" Category="Getting Started" SourcePath="Tools.Windows\Samples\Ribbon\RibbonMerge" ImagePath="Tools.Windows\Images\ribbonmerge.png"/>
+<Sample Name="Localization" IsVS2017="True" Category="Localization" SourcePath="Tools.Windows\Samples\Ribbon\RibbonLocalization" ImagePath="Tools.Windows\Images\ribbonfeatures.png"/>
+
+</Product>
+
+<Product Name="Docking Manager" Category="Layout" EnableSecondLevel="True">
+<Sample Name="Visual Studio Demo" Category="Product Showcase" SourcePath="Tools.Windows\Samples\Docking Manager\VisualStudioDemo" ImagePath="Tools.Windows\Images\VisualStudioDemo.png"/>
+<Sample Name="Getting Started" Category="Getting Started"  SourcePath="Tools.Windows\Samples\Docking Manager\SDI" ImagePath="Tools.Windows\Images\SDIDemo.png"/>
+<Sample Name="MDI" Category="Getting Started" SourcePath="Tools.Windows\Samples\Docking Manager\MDI" ImagePath="Tools.Windows\Images\MDIDemo.png"/>
+<Sample Name="Custom Captions" Category="Customization" SourcePath="Tools.Windows\Samples\Docking Manager\Custom Captions" ImagePath="Tools.Windows\Images\customcaptions.png"/>
+<Sample Name="Linked Manager" Category="Getting Started" SourcePath="Tools.Windows\Samples\Docking Manager\LinkedManager" ImagePath="Tools.Windows\Images\LinkedManager.png"/>
+<Sample Name="Localization" IsVS2017="True" Category="Localization" SourcePath="Tools.Windows\Samples\Docking Manager\Localization" ImagePath="Tools.Windows\Images\Localization.png"/>
+<Sample Name="Nested Docking" Category="Getting Started" SourcePath="Tools.Windows\Samples\Docking Manager\NestedDocking" ImagePath="Tools.Windows\Images\NestedDocking.png"/>
+<Sample Name="State Persistence" Category="Serialization" SourcePath="Tools.Windows\Samples\Docking Manager\StatePersistence" ImagePath="Tools.Windows\Images\StatePersistence.png"/>
+
+</Product>
+
+<Product Name="Carousel" Category="Layout" EnableSecondLevel="False">
+<Sample Name="Getting Started" SourcePath="Tools.Windows\Samples\Carousel\Carousel" ImagePath="Tools.Windows\Images\carousel.png"/>
+</Product>
+
+<Product Name="TabControl" Category="Layout" EnableSecondLevel="False">
+<Sample Name="Getting Started" SourcePath="Tools.Windows\Samples\TabControl\Getting Started" ImagePath="Tools.Windows\Images\gettingstarted.png"/>
+<Sample Name="VS2008 Splitter" SourcePath="Tools.Windows\Samples\TabControl\VS2008 splitter" ImagePath="Tools.Windows\Images\VS2008splitter.png"/>
+</Product>
+
+<Product Name="TabbedMDIManager" Category="Layout" EnableSecondLevel="False">
+<Sample Name="Getting Started" SourcePath="Tools.Windows\Samples\TabbedMDI Manager\Tabbed MDI" ImagePath="Tools.Windows\Images\tabbedmdidemo.png"/>
+</Product>
+
+<Product Name="TileLayout" Category="Layout" EnableSecondLevel="False">
+<Sample Name="Getting Started" SourcePath="Tools.Windows\Samples\Tile Layout\TileLayout" ImagePath="Tools.Windows\Images\tilelayoutdemo.png"/>
+</Product>
+
+<Product Name="Metro Form" Category="Layout" EnableSecondLevel="False">
+<Sample Name="Getting Started" SourcePath="Tools.Windows\Samples\Metro Style\Metro Style Controls" ImagePath="Tools.Windows\Images\metrostylecontrols.png"/>
+</Product>
+
+<Product Name="Container Controls" Category="Layout" EnableSecondLevel="False">
+<Sample Name="Gradient Panel" SourcePath="Tools.Windows\Samples\Container controls\Gradient Panel" ImagePath="Tools.Windows\Images\gradientpanel.png"/>
+<Sample Name="TabBarSplitterControl" SourcePath="Tools.Windows\Samples\Container controls\TabBarSplitter" ImagePath="Tools.Windows\Images\tabbarsplitterdemo.png"/>
+<Sample Name="Popup Container" SourcePath="Tools.Windows\Samples\Container controls\Popup Container" ImagePath="Tools.Windows\Images\popupcontainerdemo.png"/>
+<Sample Name="Split Container" SourcePath="Tools.Windows\Samples\Container controls\Split ContainerAdv" ImagePath="Tools.Windows\Images\splitcontaineradv.png"/>
+</Product>
+
+<!--End of Region Layout-->
+
+<!--Region Editors-->
+
+  <Product Name="Input Controls" Category="Editors" EnableSecondLevel="False">
+<Sample Name="Editors" SourcePath="Tools.Windows\Samples\Editor Controls\Editor Controls" ImagePath="Tools.Windows\Images\editors.png"/>
+    <Sample Name="AutoComplete" SourcePath="Tools.Windows\Samples\Input Controls\AutoComplete" ImagePath="Tools.Windows\Images\autocomplete.png"/>
+    <Sample Name="Buttons" SourcePath="Tools.Windows\Samples\Input Controls\Buttons" ImagePath="Tools.Windows\Images\buttons.png"/>
+    <Sample Name="Calculator" SourcePath="Tools.Windows\Samples\Input Controls\Calculator" ImagePath="Tools.Windows\Images\calculator.png"/>
+    <Sample Name="CheckBox" SourcePath="Tools.Windows\Samples\Input Controls\CheckboxAdv" ImagePath="Tools.Windows\Images\checkbox.png"/>
+    <Sample Name="RadioButton" SourcePath="Tools.Windows\Samples\Input Controls\RadiobuttonAdv" ImagePath="Tools.Windows\Images\radiobutton.png"/>
+  </Product>
+
+  <Product Name="Rating" Category="Editors" EnableSecondLevel="False">
+    <Sample Name="Getting Started" SourcePath="Tools.Windows\Samples\RatingControl\GettingStarted" ImagePath="Tools.Windows\Images\RatingGettingStarted.png"/>
+    <Sample Name="Rating Precision" SourcePath="Tools.Windows\Samples\RatingControl\RatingPrecision" ImagePath="Tools.Windows\Images\RatingPrecisionDemo.png"/>
+    <Sample Name="Rating Customization" SourcePath="Tools.Windows\Samples\RatingControl\RatingCustomization" ImagePath="Tools.Windows\Images\RatingCustomizationDemo.png"/>
+  </Product>
+  
+  <Product Name="List Controls" Category="Editors" EnableSecondLevel="False">
+    <Sample Name="ComboboxAdv" SourcePath="Tools.Windows\Samples\List Controls\ComboboxAdv" ImagePath="Tools.Windows\Images\comboboxAdv.png"/>
+    <Sample Name="ComboboxBase" SourcePath="Tools.Windows\Samples\List Controls\Combobox Base" ImagePath="Tools.Windows\Images\combobase.png"/>
+    <Sample Name="ComboboxDropdown" SourcePath="Tools.Windows\Samples\List Controls\Combo DropDown" ImagePath="Tools.Windows\Images\combodropdown.png"/>
+    <Sample Name="ComboBoxAutocomplete" SourcePath="Tools.Windows\Samples\List Controls\ComboBox Autocomplete" ImagePath="Tools.Windows\Images\comboBoxautocomplete.png"/>
+    <Sample Name="MultiColumnCombobox" SourcePath="Tools.Windows\Samples\List Controls\Multi Column Combobox" ImagePath="Tools.Windows\Images\multicolumncombo.png"/>
+    <Sample Name="FontListBox" SourcePath="Tools.Windows\Samples\List Controls\FontListBox" ImagePath="Tools.Windows\Images\fontlistbox.png"/>
+	<Sample Name="MultiSelectionComboBox" SourcePath="Tools.Windows\Samples\List Controls\MultiSelectionComboBox" ImagePath="Tools.Windows\Images\multiselection.png"/>
+  </Product>
+
+  <!--Region Edit Control--> 
+  <Product Name="Syntax Editor" Category="Editors" EnableSecondLevel="True">
+    <Sample Name="Gradient Background" Category ="Styles" SourcePath="Edit.Windows\Samples\Styles\Gradient Background" ImagePath="Edit.Windows\Images\gradientbg.png"/>
+    <Sample Name="Single Line Mode" Category ="Styles" SourcePath="Edit.Windows\Samples\Styles\Single Line Mode" ImagePath="Edit.Windows\Images\singlelinemode.png"/>
+    <Sample Name="Split Views" Category ="Styles" SourcePath="Edit.Windows\Samples\Styles\Split Views" ImagePath="Edit.Windows\Images\splitview.png"/>
+    <Sample Name="Themes" Category ="Styles" SourcePath="Edit.Windows\Samples\Styles\Themes Support" ImagePath="Edit.Windows\Images\themes.png"/>
+
+    <Sample Name="Custom Config" Category ="Syntax Highlighting" SourcePath="Edit.Windows\Samples\Syntax Highlighting\Custom Config" ImagePath="Edit.Windows\Images\customconfig.png"/>
+    <Sample Name="Syntax Coloring" Category ="Syntax Highlighting" SourcePath="Edit.Windows\Samples\Syntax Highlighting\Syntax Coloring" ImagePath="Edit.Windows\Images\syntaxcoloring.png"/>
+
+    <Sample Name="Interactive Operations" Category ="Text Operations" SourcePath="Edit.Windows\Samples\Text Operations\Interactive operations" ImagePath="Edit.Windows\Images\interactiveoperations.png"/>
+    <Sample Name="ClipBoard Operations" Category ="Text Operations" SourcePath="Edit.Windows\Samples\Text Operations\Clipboard Operations" ImagePath="Edit.Windows\Images\clipboardoperations.png"/>
+    <Sample Name="Unicode" Category ="Text Operations" SourcePath="Edit.Windows\Samples\Text Operations\Unicode" ImagePath="Edit.Windows\Images\unicodedemo.png"/>
+    <Sample Name="Word Wrap" Category ="Text Operations" SourcePath="Edit.Windows\Samples\Text Operations\Word Wrap" ImagePath="Edit.Windows\Images\wordwrap.png"/>
+
+    <Sample Name="Indentation Guidelines" Category ="Text Navigation" SourcePath="Edit.Windows\Samples\Text Navigation\Indentation Guidelines" ImagePath="Edit.Windows\Images\indentation.png"/>
+    <Sample Name="Positions and Offsets" Category ="Text Navigation" SourcePath="Edit.Windows\Samples\Text Navigation\Positions and Offsets" ImagePath="Edit.Windows\Images\positionoffset.png"/>
+    <Sample Name="Text Navigation" Category ="Text Navigation" SourcePath="Edit.Windows\Samples\Text Navigation\Text Navigation" ImagePath="Edit.Windows\Images\textnavigation.png"/>
+
+    <Sample Name="Export" Category ="Export" SourcePath="Edit.Windows\Samples\Export\Export" ImagePath="Edit.Windows\Images\exportdemo.png"/>
+
+    <Sample Name="Getting Started" Category ="Interactive Features" SourcePath="Edit.Windows\Samples\Interactive Features\Getting Started" ImagePath="Edit.Windows\Images\gettingstarted.png"/>
+    <Sample Name="Edit Features" Category ="Interactive Features" SourcePath="Edit.Windows\Samples\Interactive Features\Edit Features" ImagePath="Edit.Windows\Images\editfeatures.png"/>
+    <Sample Name="Find and Replace" Category ="Interactive Features" SourcePath="Edit.Windows\Samples\Interactive Features\Find and Replace" ImagePath="Edit.Windows\Images\findreplace.png"/>
+    <Sample Name="Font Customization" Category ="Interactive Features" SourcePath="Edit.Windows\Samples\Interactive Features\Font Customization" ImagePath="Edit.Windows\Images\fontcustomization.png"/>
+    <Sample Name="Status Bar" Category ="Interactive Features" SourcePath="Edit.Windows\Samples\Interactive Features\StatusBar" ImagePath="Edit.Windows\Images\statusbar.png"/>
+    <Sample Name="Text Interactions" Category ="Interactive Features" SourcePath="Edit.Windows\Samples\Interactive Features\TextInteractions" ImagePath="Edit.Windows\Images\textinteraction.png"/>
+
+	<Sample Name="Printing" Category ="Printing" SourcePath="Edit.Windows\Samples\Printing\Print" ImagePath="Edit.Windows\Images\printing.png"/>
+
+    <Sample Name="Intellisense" Category ="Intellisense Functions" SourcePath="Edit.Windows\Samples\Intellisense Functions\Advanced Intellisense" ImagePath="Edit.Windows\Images\advintellisense.png"/>
+    <Sample Name="Code Snippets" Category ="Intellisense Functions" SourcePath="Edit.Windows\Samples\Intellisense Functions\Code Snippets" ImagePath="Edit.Windows\Images\codesnippets.png"/>
+    <Sample Name="Context Choices" Category ="Intellisense Functions" SourcePath="Edit.Windows\Samples\Intellisense Functions\Context Choices" ImagePath="Edit.Windows\Images\contextchoice.png"/>
+    <Sample Name="Context Tooltip" Category ="Intellisense Functions" SourcePath="Edit.Windows\Samples\Intellisense Functions\Context Tooltip" ImagePath="Edit.Windows\Images\contexttooltip.png"/>
+    <Sample Name="From XML" Category ="Intellisense Functions" SourcePath="Edit.Windows\Samples\Intellisense Functions\Intellisense from XML" ImagePath="Edit.Windows\Images\xmlintellisense.png"/>
+
+
+  </Product>
+
+  <!--End of Region EditControl-->
+  
+  <!--Region HTML-->
+  <Product Name="HTML UI" Category="Editors" EnableSecondLevel="True">
+    <Sample Name="Load From Disk" Category ="Getting Started" SourcePath="HTMLUI.Windows\Samples\Getting Started\Load From Disk" ImagePath="HTMLUI.Windows\Images\loaddisk.png"/>
+    <Sample Name="Load From Resources" Category ="Getting Started" SourcePath="HTMLUI.Windows\Samples\Getting Started\Load From Resources" ImagePath="HTMLUI.Windows\Images\loadresources.png"/>
+    <Sample Name="File Links" Category ="Getting Started" SourcePath="HTMLUI.Windows\Samples\Getting Started\File Links" ImagePath="HTMLUI.Windows\Images\filelinks.png"/>
+    <Sample Name="Startup Document" Category ="Getting Started" SourcePath="HTMLUI.Windows\Samples\Getting Started\Startup Document" ImagePath="HTMLUI.Windows \Images\startupdoc.png"/>
+    
+    <Sample Name="Background" Category ="Appearance" SourcePath="HTMLUI.Windows\Samples\Appearance\Background" ImagePath="HTMLUI.Windows\Images\background.png"/>
+    <Sample Name="Element CSS" Category ="Appearance" SourcePath="HTMLUI.Windows\Samples\Appearance\Element CSS" ImagePath="HTMLUI.Windows\Images\elementcss.png"/>
+    <Sample Name="HTML CSS" Category ="Appearance" SourcePath="HTMLUI.Windows\Samples\Appearance\HTML CSS" ImagePath="HTMLUI.Windows\Images\htmlcss.png"/>
+
+    <Sample Name="Bookmarks" Category ="HTML Tags" SourcePath="HTMLUI.Windows\Samples\HTML Tags\Bookmarks" ImagePath="HTMLUI.Windows\Images\bookmarks.png"/>
+    <Sample Name="Tables" Category ="HTML Tags" SourcePath="HTMLUI.Windows\Samples\HTML Tags\Tables" ImagePath="HTMLUI.Windows\Images\tables.png"/>
+    <Sample Name="Tags Overview" Category ="HTML Tags" SourcePath="HTMLUI.Windows\Samples\HTML Tags\Tags Overview" ImagePath="HTMLUI.Windows\Images\tagsoverview.png"/>
+    
+    <Sample Name="HTMLUI Chat" Category ="HTML Layout" SourcePath="HTMLUI.Windows\Samples\HTML Layout\HTMLUI Chat" ImagePath="HTMLUI.Windows\Images\htmlchat.png"/>
+    <Sample Name="HTMLUI Dialog" Category ="HTML Layout" SourcePath="HTMLUI.Windows\Samples\HTML Layout\HTMLUI Dialog" ImagePath="HTMLUI.Windows\Images\htmldialog.png"/>
+    <Sample Name="SlideShow" Category ="HTML Layout" SourcePath="HTMLUI.Windows\Samples\HTML Layout\Slide Show" ImagePath="HTMLUI.Windows\Images\slideshow.png"/>
+    <Sample Name="Tic Tac Toe" Category ="HTML Layout" SourcePath="HTMLUI.Windows\Samples\HTML Layout\Tic Tac Toe" ImagePath="HTMLUI.Windows\Images\tictactoe.png"/>
+
+    <Sample Name="HTML UI Editor" Category ="HTML Renderer" SourcePath="HTMLUI.Windows\Samples\HTML Renderer\HTMLUI Editor" ImagePath="HTMLUI.Windows\Images\htmleditor.png"/>
+    <Sample Name="HTML UI Explorer" Category ="HTML Explorer" SourcePath="HTMLUI.Windows\Samples\HTML Renderer\HTMLUI Explorer" ImagePath="HTMLUI.Windows\Images\htmlexplorer.png"/>
+    <Sample Name="Scripting" Category ="Scripting" SourcePath="HTMLUI.Windows\Samples\HTML Renderer\Scripting" ImagePath="HTMLUI.Windows\Images\scripting.png"/>
+    <Sample Name="XSL Transform" Category ="XSL Transform" SourcePath="HTMLUI.Windows\Samples\HTML Renderer\XSL Transform" ImagePath="HTMLUI.Windows\Images\xsltransform.png"/>
+
+    <Sample Name="CSS Binding" Category ="Data Binding" SourcePath="HTMLUI.Windows\Samples\Data Binding\CSS Binding" ImagePath="HTMLUI.Windows\Images\cssbinding.png"/>
+
+    <Sample Name="Bubbling Events" Category ="Events" SourcePath="HTMLUI.Windows\Samples\Events\Bubbling Events" ImagePath="HTMLUI.Windows\Images\bubblingevents.png"/>
+    <Sample Name="Control Events" Category ="Events" SourcePath="HTMLUI.Windows\Samples\Events\Control Events" ImagePath="HTMLUI.Windows\Images\controlevents.png"/>
+    <Sample Name="Element Events" Category ="Events" SourcePath="HTMLUI.Windows\Samples\Events\Element Events" ImagePath="HTMLUI.Windows\Images\elementevents.png"/>
+
+    <Sample Name="Controls Creation" Category ="Custom Controls" SourcePath="HTMLUI.Windows\Samples\Custom Controls\Controls Creation" ImagePath="HTMLUI.Windows\Images\controlcreation.png"/>
+    <Sample Name="Custom Controls" Category ="Custom Controls" SourcePath="HTMLUI.Windows\Samples\Custom Controls\Custom Controls" ImagePath="HTMLUI.Windows\Images\customcontrols.png"/>
+
+    <Sample Name="Element Coordinates" Category ="Format HTML" SourcePath="HTMLUI.Windows\Samples\Format HTML\Element Coordinates" ImagePath="HTMLUI.Windows\Images\elementcoord.png"/>
+    <Sample Name="Formatting" Category ="Format HTML" SourcePath="HTMLUI.Windows\Samples\Format HTML\Formatting" ImagePath="HTMLUI.Windows\Images\formattingdemo.png"/>
+
+    <Sample Name="Text Selection" Category ="User Interaction" SourcePath="HTMLUI.Windows\Samples\User Interaction\Text Selection" ImagePath="HTMLUI.Windows\Images\textselection.png"/>
+    <Sample Name="Scrollbars" Category ="User Interaction" SourcePath="HTMLUI.Windows\Samples\User Interaction\Scroll bars" ImagePath="HTMLUI.Windows\Images\scrollbars.png"/>
+    <Sample Name="Keyboard" Category ="User Interaction" SourcePath="HTMLUI.Windows\Samples\User Interaction\Keyboard" ImagePath="HTMLUI.Windows\Images\keyboard.png"/>
+
+    <Sample Name="Export" Category ="Export" SourcePath="HTMLUI.Windows\Samples\Export\Export" ImagePath="HTMLUI.Windows\Images\exportdemo.png"/>
+
+
+  </Product>
+  <!--End of Region HTML-->
+
+  <Product Name="Radial Slider" Category="Editors"  EnableSecondLevel="False">
+    <Sample Name="Getting Started" SourcePath="Tools.Windows\Samples\RadialSlider\RadialSlider" ImagePath="Tools.Windows\Images\radialslider.png"/>
+  </Product>
+  
+  <Product Name="Calendar" Category="Editors" EnableSecondLevel="False" IsUpdated="True">
+    <Sample Name="MonthCalendar" SourcePath="Tools.Windows\Samples\Calendar\Month Calendar" ImagePath="Tools.Windows\Images\monthcalendar.png" IsUpdated="True"/>
+    <Sample Name="DateTimePicker" SourcePath="Tools.Windows\Samples\Calendar\DateTime Picker" ImagePath="Tools.Windows\Images\datetimepicker.png" IsUpdated="True"/>
+  </Product>
+
+  <Product Name="Color Pickers" Category="Editors" EnableSecondLevel="False">
+    <Sample Name="ColorPickerUIAdv" SourcePath="Tools.Windows\Samples\ColorUI Controls\ColorPickerUI" ImagePath="Tools.Windows\Images\colorpicker.png"/>
+    <Sample Name="ColorPickerButton" SourcePath="Tools.Windows\Samples\ColorUI Controls\ColorPickerButton" ImagePath="Tools.Windows\Images\colorpickerbutton.png"/>
+    <Sample Name="ColorUIControl" SourcePath="Tools.Windows\Samples\ColorUI Controls\Color UI Control" ImagePath="Tools.Windows\Images\colorui.png"/>
+  </Product>
+
+  <Product Name="Toggle Button" Category="Editors" EnableSecondLevel="False">
+    <Sample Name="Getting Started" SourcePath="Tools.Windows\Samples\ToggleButton\ToggleButton" ImagePath="Tools.Windows\Images\togglebuttondemo.png"/>
+    <Sample Name="ToggleButton Customization" SourcePath="Tools.Windows\Samples\ToggleButton\ToggleCustomization" ImagePath="Tools.Windows\Images\customizationdemo.png"/>
+  </Product>
+<!--End of Region Editors-->
+
+  <!--Region File Format-->
+
+ <Product Name="DocIO" Category="File Format" EnableSecondLevel="True" IsUpdated="True">
+    <Sample Name="Sales Invoice" Category="Product Showcase" SourcePath="DocIO.Windows\Samples\Product Showcase\Sales Invoice" ImagePath="DocIO.Windows\Images\invoice.png"/>
+    <Sample Name="Update Fields" Category="Product Showcase" SourcePath="DocIO.Windows\Samples\Product Showcase\Update Fields" ImagePath="DocIO.Windows\Images\updatefields.png"/>
+
+    <Sample Name="Hello World" Category="Getting Started" SourcePath="DocIO.Windows\Samples\Getting Started\Hello World" ImagePath="DocIO.Windows\Images\generateword.png"/>
+
+    <Sample Name="Image Insertion" Category="Insert Content" SourcePath="DocIO.Windows\Samples\Insert Content\Image Insertion" ImagePath="DocIO.Windows\Images\image-insertion.png"/>
+    <Sample Name="Table Insertion" Category="Insert Content" SourcePath="DocIO.Windows\Samples\Insert Content\Table Insertion" ImagePath="DocIO.Windows\Images\tableinsertion.png"/>
+    <Sample Name="Hyperlink" Category="Insert Content" SourcePath="DocIO.Windows\Samples\Insert Content\Hyperlink" ImagePath="DocIO.Windows\Images\hyperlink.png"/>
+    <Sample Name="Bookmarks" Category="Insert Content" SourcePath="DocIO.Windows\Samples\Insert Content\Bookmarks" ImagePath="DocIO.Windows\Images\bookmark.png"/>
+    <Sample Name="Header and Footer" Category="Insert Content" SourcePath="DocIO.Windows\Samples\Insert Content\Header and Footer" ImagePath="DocIO.Windows\Images\headerandfooter.png"/>
+    <Sample Name="Clone and Merge" Category="Insert Content" IsUpdated="True" SourcePath="DocIO.Windows\Samples\Insert Content\Clone and Merge" ImagePath="DocIO.Windows\Images\cloneandmerge.png"/>
+    <Sample Name="OLE Object" Category="Insert Content" SourcePath="DocIO.Windows\Samples\Insert Content\OLE Object" ImagePath="DocIO.Windows\Images\oleobject.png"/>
+
+    <Sample Category="Formatting" Name="Format Text" SourcePath="DocIO.Windows\Samples\Formatting\Format Text" ImagePath="DocIO.Windows\Images\formattext.png"/>
+    <Sample Name="Format Table" Category="Formatting" SourcePath="DocIO.Windows\Samples\Formatting\Format Table" ImagePath="DocIO.Windows\Images\tableformat.png"/>
+    <Sample Name="Styles" Category="Formatting" SourcePath="DocIO.Windows\Samples\Formatting\Styles" ImagePath="DocIO.Windows\Images\styles.png"/>
+    <Sample Name="RTL Support" Category="Formatting" SourcePath="DocIO.Windows\Samples\Formatting\RTL Support" ImagePath="DocIO.Windows\Images\rtl.png"/>
+    <Sample Name="Table Styles" Category="Formatting" SourcePath="DocIO.Windows\Samples\Formatting\TableStyles" ImagePath="DocIO.Windows\Images\tablestyles.png"/>
+
+    <Sample Name="Insert Break" Category="Page Layout" SourcePath="DocIO.Windows\Samples\Page Layout\Insert Break" ImagePath="DocIO.Windows\Images\insertbreak.png"/>
+    <Sample Name="Watermark" Category="Page Layout" SourcePath="DocIO.Windows\Samples\Page Layout\Watermark" ImagePath="DocIO.Windows\Images\watermark.png"/>
+
+    <Sample Name="Footnotes and Endnotes" Category="References" SourcePath="DocIO.Windows\Samples\References\Footnotes and Endnotes" ImagePath="DocIO.Windows\Images\footnote.png"/>
+    <Sample Name="Table of Contents" Category="References" SourcePath="DocIO.Windows\Samples\References\Table of Contents" ImagePath="DocIO.Windows\Images\toc.png"/>
+
+    <Sample Name="Find and Replace" Category="Editing" SourcePath="DocIO.Windows\Samples\Editing\Find and Replace" ImagePath="DocIO.Windows\Images\findandreplace.png"/>
+    <Sample Name="Advanced Replace" Category="Editing" SourcePath="DocIO.Windows\Samples\Editing\Advanced Replace" ImagePath="DocIO.Windows\Images\advancereplace.png"/>
+    <Sample Name="Forms" Category="Editing" SourcePath="DocIO.Windows\Samples\Editing\Forms" ImagePath="DocIO.Windows\Images\form.png"/>
+    <Sample Name="Bookmark Navigation" Category="Editing" SourcePath="DocIO.Windows\Samples\Editing\Bookmark Navigation" ImagePath="DocIO.Windows\Images\bookmarknavigation.png"/>
+    <Sample Name="Form Filling and Protection" Category="Content Control" SourcePath="DocIO.Windows\Samples\Content Control\Form Filling and Protection" ImagePath="DocIO.Windows\Images\ProtectionAndFormFilling.png"/>
+    <Sample Name="XML Mapping" Category="Content Control" SourcePath="DocIO.Windows\Samples\Content Control\XML Mapping" ImagePath="DocIO.Windows\Images\XmlMapping.png"/>
+    <Sample Name="Employee Report" Category="Mail Merge" SourcePath="DocIO.Windows\Samples\Mail Merge\Employee Report" ImagePath="DocIO.Windows\Images\employeereport.png"/>
+    <Sample Name="Letter Format" Category="Mail Merge" SourcePath="DocIO.Windows\Samples\Mail Merge\Letter Format" ImagePath="DocIO.Windows\Images\letterformat.png"/>
+    <Sample Name="Mail Merge Event" Category="Mail Merge" SourcePath="DocIO.Windows\Samples\Mail Merge\Mail Merge Event" ImagePath="DocIO.Windows\Images\mailmerge.png"/>
+    <Sample Name="Nested Mail Merge" Category="Mail Merge" SourcePath="DocIO.Windows\Samples\Mail Merge\Nested Mail Merge" ImagePath="DocIO.Windows\Images\nestedmerge.png"/>
+
+    <Sample Name="Document Settings" Category="View" SourcePath="DocIO.Windows\Samples\View\Document Settings" ImagePath="DocIO.Windows\Images\wordsettings.png"/>
+    <Sample Name="Macro Preservation" Category="View" SourcePath="DocIO.Windows\Samples\View\Macro Preservation" ImagePath="DocIO.Windows\Images\macropreservation.png"/>
+
+    <Sample Name="Document Protection" Category="Security" SourcePath="DocIO.Windows\Samples\Security\Document Protection" ImagePath="DocIO.Windows\Images\protection.png"/>
+    <Sample Name="Encrypt and Decrypt" Category="Security" SourcePath="DocIO.Windows\Samples\Security\Encrypt and Decrypt" ImagePath="DocIO.Windows\Images\encrypt.png"/>
+
+    <Sample Name="Word to EPub" Category="Import and Export"  SourcePath="DocIO.Windows\Samples\Import and Export\Doc to EPub" ImagePath="DocIO.Windows\Images\wordtoepub.png"/>
+    <Sample Name="Word to HTML" Category="Import and Export"  SourcePath="DocIO.Windows\Samples\Import and Export\Doc To HTML" ImagePath="DocIO.Windows\Images\wordtohtml.png"/>
+    <Sample Name="Word to PDF"  Category="Import and Export" IsUpdated="True" SourcePath="DocIO.Windows\Samples\Import and Export\Doc to PDF" ImagePath="DocIO.Windows\Images\wordtopdf.png"/>
+    <Sample Name="Word to RTF" Category="Import and Export"  SourcePath="DocIO.Windows\Samples\Import and Export\Doc to RTF" ImagePath="DocIO.Windows\Images\wordtortf.png"/>
+	<Sample Name="Word to ODT" Category="Import and Export"  SourcePath="DocIO.Windows\Samples\Import And Export\Doc to ODT" ImagePath="DocIO.Windows\Samples\Import And Export\Doc to ODT\images\sample.png" />
+	<Sample Name="Word to WordML" Category="Import and Export"  SourcePath="DocIO.Windows\Samples\Import And Export\Word to WordML" ImagePath="DocIO.Windows\Samples\Import And Export\Word to WordML\images\sample.png" />
+    <Sample Name="HTML to Word" Category="Import and Export"  SourcePath="DocIO.Windows\Samples\Import and Export\HTML To Doc" ImagePath="DocIO.Windows\Images\htmltoword.png"/>
+    <Sample Name="RTF to Word" Category="Import and Export"  SourcePath="DocIO.Windows\Samples\Import and Export\RTF to Doc" ImagePath="DocIO.Windows\Images\rtftoword.png"/>
+	<Sample Name="WordML to Word" Category="Import and Export"  SourcePath="DocIO.Windows\Samples\Import And Export\WordML to Word" ImagePath="DocIO.Windows\Samples\Import And Export\WordML to Word\images\WordMLtoWord.png" />
+    <Sample Name="Word to Image" Category="Import and Export"  SourcePath="DocIO.Windows\Samples\Import and Export\Word To Image" ImagePath="DocIO.Windows\Images\wordtoimage.png"/>
+
+<Sample Name="AutoShapes" Category="Shapes" SourcePath="DocIO.Windows\Samples\Shapes\AutoShapes" ImagePath="DocIO.Windows\Images\AutoShapes.png"/>
+<Sample Name="Print" Category="Print" SourcePath="DocIO.Windows\Samples\Print\Print" ImagePath="DocIO.Windows\Images\printing.png"/>
+  <Sample Name="Pie Chart" Category="Chart"  SourcePath="DocIO.Windows\Samples\Chart\Pie Chart" ImagePath="DocIO.Windows\Images\piechart.png"/>
+  <Sample Name="Bar Chart"  Category="Chart"  SourcePath="DocIO.Windows\Samples\Chart\Bar Chart" ImagePath="DocIO.Windows\Images\barchart.png"/>
+  </Product>
+ 
+<Product Name="PDF" Category="File Format"  EnableSecondLevel="True">
+<Sample Name="Job Application" Category="Product Showcase"  SourcePath="PDF.Windows\Samples\Product Showcase\Job Application" ImagePath="PDF.Windows\images\job.png"/>
+<Sample Name="Invoice" Category="Product Showcase"  SourcePath="PDF.Windows\Samples\Product Showcase\Invoice" ImagePath="PDF.Windows\images\invoice.png"/>
+<Sample Name="Hello World" Category="Getting Started"  SourcePath="PDF.Windows\Samples\Getting Started\Hello World" ImagePath="PDF.Windows\images\hello.png"/>
+<Sample Name="PDF-A" Category="Getting Started"  SourcePath="PDF.Windows\Samples\Getting Started\PDF-A" ImagePath="PDF.Windows\images\conformance.png"/>
+<Sample Name="PDF Compression Level" Category="Compression"  SourcePath="PDF.Windows\Samples\Compression\PDF Compression Level" ImagePath="PDF.Windows\images\compress.png"/>
+<Sample Name="Compress Existing PDF" Category="Compression" SourcePath="PDF.Windows\Samples\Compression\Compress Existing PDF" ImagePath="PDF.Windows\images\compress.png"/>
+<Sample Name="Text Flow" Category="Drawing Text"  SourcePath="PDF.Windows\Samples\Drawing Text\Text Flow" ImagePath="PDF.Windows\images\textflow.png"/>
+<Sample Name="RTL Support" Category="Drawing Text"  SourcePath="PDF.Windows\Samples\Drawing Text\RTL Support" ImagePath="PDF.Windows\images\RTL.png"/>
+<Sample Name="Bullets and Lists" Category="Drawing Text"  SourcePath="PDF.Windows\Samples\Drawing Text\Bullets and Lists" ImagePath="PDF.Windows\images\bullets.png"/>
+<Sample Name="Multi Column HTML Text" Category="Drawing Text"  SourcePath="PDF.Windows\Samples\Drawing Text\Multi Column HTML Text" ImagePath="PDF.Windows\images\multi.png"/>
+<Sample Name="Barcode" Category="Graphics"  SourcePath="PDF.Windows\Samples\Graphics\Barcode" ImagePath="PDF.Windows\images\barcode.png"/>
+<Sample Name="Drawing Shapes" Category="Graphics"  SourcePath="PDF.Windows\Samples\Graphics\Drawing Shapes" ImagePath="PDF.Windows\images\shapes.png"/>
+<Sample Name="Graphic Brushes" Category="Graphics"  SourcePath="PDF.Windows\Samples\Graphics\Graphic Brushes" ImagePath="PDF.Windows\images\brush.png"/>
+<Sample Name="Image Insertion" Category="Graphics"  SourcePath="PDF.Windows\Samples\Graphics\Image Insertion" ImagePath="PDF.Windows\images\imageinsertion.png"/>
+<Sample Name="Layers" Category="Graphics"  SourcePath="PDF.Windows\Samples\Graphics\Layers" ImagePath="PDF.Windows\images\layers.png"/>
+<Sample Name="Northwind Report" Category="Tables" SourcePath="PDF.Windows\Samples\Tables\Northwind Report" ImagePath="PDF.Windows\images\northwind.png"/>
+<Sample Name="Adventure Cycle Works" Category="Tables"  SourcePath="PDF.Windows\Samples\Tables\Adventure Cycle" ImagePath="PDF.Windows\images\northwind.png"/>
+<Sample Name="Table Features" Category="Tables"  SourcePath="PDF.Windows\Samples\Tables\Table Features" ImagePath="PDF.Windows\images\table.png"/>
+<Sample Name="Document Settings" Category="Settings"  SourcePath="PDF.Windows\Samples\Settings\Document Settings" ImagePath="PDF.Windows\images\docsetting.png"/>
+<Sample Name="Page Settings" Category="Settings"  SourcePath="PDF.Windows\Samples\Settings\Page Settings" ImagePath="PDF.Windows\images\pages.png"/>
+<Sample Name="Headers and Footers" Category="Settings"  SourcePath="PDF.Windows\Samples\Settings\Headers and Footers" ImagePath="PDF.Windows\images\headers.png"/>
+<Sample Name="Encryption" Category="Security"  SourcePath="PDF.Windows\Samples\Security\Encryption" ImagePath="PDF.Windows\images\encryption.png"/>
+<Sample Name="Digital Signature" Category="Security"  SourcePath="PDF.Windows\Samples\Security\Digital Signature" ImagePath="PDF.Windows\images\digitalsignatures.png"/>
+<Sample Name="Form Fill" Category="User Interaction"  SourcePath="PDF.Windows\Samples\User Interaction\Form Fill" ImagePath="PDF.Windows\images\formfilling.png"/>
+<Sample Name="XFA Form Creation" Category="User Interaction"  SourcePath="PDF.Windows\Samples\User Interaction\XFA Form Creation" ImagePath="PDF.Windows\images\formfilling.png"/>
+<Sample Name="XFA Form Fill" Category="User Interaction"  SourcePath="PDF.Windows\Samples\User Interaction\XFA Form Fill" ImagePath="PDF.Windows\images\formfilling.png"/>
+<Sample Name="Interactive Features" Category="User Interaction"  SourcePath="PDF.Windows\Samples\User Interaction\Interactive Features" ImagePath="PDF.Windows\images\userinteraction.png"/>
+<Sample Name="Portfolio" Category="User Interaction"  SourcePath="Pdf.Windows\Samples\User Interaction\Portfolio" ImagePath="Pdf.Windows\Images\portfolio.png"/>
+<Sample Name="Annotations" Category="User Interaction"  SourcePath="Pdf.Windows\Samples\User Interaction\Annotation Flatten" ImagePath="Pdf.Windows\Images\Sample.png"/>
+<Sample Name="Named Destination" Category="User Interaction" SourcePath="PDF.Windows\Samples\User Interaction\Named Destination" ImagePath="PDF.Windows\images\namedDestination.png"/>
+<Sample Name="Getting Started" Category="Viewer"  SourcePath="PDF.Windows\Samples\Viewer\Pdf Viewer Demo" ImagePath="PDF.Windows\images\viewer.png"/>
+<Sample Name="Custom Toolbar" Category="Viewer"  SourcePath="PDF.Windows\Samples\Viewer\Custom Toolbar" ImagePath="PDF.Windows\images\customtool.png"/>
+<Sample Name="Multi Tabbed Viewer" Category="Viewer"  SourcePath="PDF.Windows\Samples\Viewer\Multi Tabbed Viewer" ImagePath="PDF.Windows\images\mutitab.png"/>
+<Sample Name="HTML to PDF" Category="Import to PDF"  SourcePath="PDF.Windows\Samples\Import to PDF\HTML to PDF" ImagePath="PDF.Windows\images\htmltopdf.png"/>
+<Sample Name="Doc to PDF" Category="Import to PDF"  SourcePath="PDF.Windows\Samples\Import to PDF\Doc to PDF" ImagePath="PDF.Windows\images\wordtopdf.png"/>
+<Sample Name="RTF to PDF" Category="Import to PDF"  SourcePath="PDF.Windows\Samples\Import to PDF\RTF to PDF" ImagePath="PDF.Windows\images\RTFtopdf.png"/>
+<Sample Name="Excel to PDF" Category="Import to PDF"  SourcePath="PDF.Windows\Samples\Import to PDF\Excel to PDF" ImagePath="PDF.Windows\images\exceltopdf.png"/>
+<Sample Name="XPS to PDF" Category="Import to PDF"  SourcePath="PDF.Windows\Samples\Import to PDF\XPS to PDF" ImagePath="PDF.Windows\images\xpstopdf.png"/>
+<Sample Name="Image Extraction" Category="Export PDF"  SourcePath="PDF.Windows\Samples\Export PDF\Image Extraction" ImagePath="PDF.Windows\images\imageextraction.png"/>
+<Sample Name="Text Extraction" Category="Export PDF"  SourcePath="PDF.Windows\Samples\Export PDF\Text Extraction" ImagePath="PDF.Windows\images\textextraction.png"/>
+<Sample Name="Export as Image" Category="Export PDF"  SourcePath="PDF.Windows\Samples\Export PDF\Export as Image" ImagePath="PDF.Windows\images\pdftoimage.png"/>
+<Sample Name="Silent Printing" Category="Print"  SourcePath="PDF.Windows\Samples\Print\Silent Printing" ImagePath="PDF.Windows\images\printing.png"/>
+<Sample Name="Merge Documents" Category="Modify Documents"  SourcePath="PDF.Windows\Samples\Modify Documents\Merge Documents" ImagePath="PDF.Windows\images\merge.png"/>
+<Sample Name="Split Document" Category="Modify Documents"  SourcePath="PDF.Windows\Samples\Modify Documents\Split Document" ImagePath="PDF.Windows\images\split.png"/>
+<Sample Name="Stamp Document" Category="Modify Documents"  SourcePath="PDF.Windows\Samples\Modify Documents\Stamp Document" ImagePath="PDF.Windows\images\import.png"/>
+<Sample Name="Overlay Documents" Category="Modify Documents"  SourcePath="PDF.Windows\Samples\Modify Documents\Overlay Documents" ImagePath="PDF.Windows\images\overlay.png"/>
+<Sample Name="Booklet" Category="Modify Documents"  SourcePath="PDF.Windows\Samples\Modify Documents\Booklet" ImagePath="PDF.Windows\images\booklet.png"/>
+<Sample Name="PDF OCR" Category="OCR"  SourcePath="PDF.Windows\Samples\OCR\PDF OCR" ImagePath="PDF.Windows\images\ocr.png"/>
+<Sample Name="Image OCR" Category="OCR"  SourcePath="PDF.Windows\Samples\OCR\Image OCR" ImagePath="PDF.Windows\images\OCRImage.png"/>
+<Sample Name="Autotag" Category="Accessibility" SourcePath="PDF.Windows\Samples\Accessibility\Auto Tag" ImagePath="PDF.Windows\images\hello.png"/>
+<Sample Name="Customtag" Category="Accessibility" SourcePath="PDF.Windows\Samples\Accessibility\Custom Tag" ImagePath="PDF.Windows\images\hello.png"/>
+
+</Product>
+
+ <Product Name="PDF Viewer" Category="File Format" EnableSecondLevel="True">
+<Sample Name="Getting Started" Category="Getting Started" 
+SourcePath="PdfViewer.Windows\Samples\Getting Started\Pdf Viewer Demo" ImagePath="PdfViewer.Windows\Images\viewer.png"/>
+<Sample Name="PdfViewer Bookmark Navigation" Category="Bookmark Navigation" 
+SourcePath="PdfViewer.Windows\Samples\PdfViewer Bookmark\PdfViewer Bookmark" ImagePath="PdfViewer.Windows\Images\Bookmark.png"/>
+<Sample Name="Custom Toolbar" Category="Toolbar Customization" 
+SourcePath="PdfViewer.Windows\Samples\Toolbar Customization\Custom Toolbar" ImagePath="PdfViewer.Windows\Images\customtool.png"/>
+<Sample Name="Silent Printing" Category="Print" 
+SourcePath="PdfViewer.Windows\Samples\Print\Silent Printing" ImagePath="PdfViewer.Windows\Images\printing.png"/>
+<Sample Name="Multi Tabbed Viewer" Category="Multi Tabbed View"
+SourcePath="PdfViewer.Windows\Samples\Multi Tabbed View\Multi Tabbed Viewer" ImagePath="PdfViewer.Windows\Images\mutitab.png"/>
+<Sample Name="Export as Image" Category="Export" 
+SourcePath="PdfViewer.Windows\Samples\Export\Export as Image" ImagePath="PdfViewer.Windows\Images\pdftoimage.png"/>
+</Product>
+
+ <Product Name="XlsIO" Category="File Format" EnableSecondLevel="True" IsUpdated="False">
+
+    <Sample Name="Budget Planner" Category="Product Showcase" SourcePath="XlsIO.Windows\Samples\Product Showcase\Budget Planner" ImagePath="XlsIO.Windows\Images\Budget Planner.png"/>
+    <Sample Name="Stock Portfolio" Category="Product Showcase" SourcePath="XlsIO.Windows\Samples\Product Showcase\Stock Portfolio" ImagePath="XlsIO.Windows\Images\Stock Portfolio.png"/>
+    
+    <Sample Name="Create Spreadsheet" Category="Getting Started" SourcePath="XlsIO.Windows\Samples\Getting Started\Create Spreadsheet" ImagePath="XlsIO.Windows\Images\Create Spreadsheet.png"/>
+    <Sample Name="Find and Extract" Category="Getting Started" SourcePath="XlsIO.Windows\Samples\Getting Started\Find and Extract" ImagePath="XlsIO.Windows\Images\Find and Extract.png"/>
+    <Sample Name="Replace Options" Category="Getting Started" SourcePath="XlsIO.Windows\Samples\Getting Started\Replace Options" ImagePath="XlsIO.Windows\Images\Find and Extract.png"/>
+
+    <Sample Name="Conditional Formatting" Category="Formatting" SourcePath="XlsIO.Windows\Samples\Formatting\Conditional Formatting" ImagePath="XlsIO.Windows\Images\Conditional Formatting.png"/>
+    <Sample Name="Format Cells" Category="Formatting" SourcePath="XlsIO.Windows\Samples\Formatting\Format Cells" ImagePath="XlsIO.Windows\Images\Format Cells.png"/>
+    <Sample Name="Styles and Formatting" Category="Formatting" SourcePath="XlsIO.Windows\Samples\Formatting\Styles and Formatting" ImagePath="XlsIO.Windows\Images\Styles and Formatting.png"/>
+
+    <Sample Name="Compute All Formulas" Category="Formulas" SourcePath="XlsIO.Windows\Samples\Formulas\Compute All Formulas" ImagePath="XlsIO.Windows\Images\Compute All Formulas.png"/>
+    <Sample Name="Compute Specific Formula" Category="Formulas" SourcePath="XlsIO.Windows\Samples\Formulas\Compute Specific Formula" ImagePath="XlsIO.Windows\Images\Compute Specific Formula.png"/>
+	<Sample Name="Formulas" Category="Formulas" SourcePath="XlsIO.Windows\Samples\Formulas\Formulas" ImagePath="XlsIO.Windows\Images\Formulas.png"/>
+	<Sample Name="Table Formula" Category="Formulas" SourcePath="XlsIO.Windows\Samples\Formulas\Table Formula" ImagePath="XlsIO.Windows\Images\Table Formula.png"/>
+	
+    <Sample Name="Data Validation" Category="Data Management" SourcePath="XlsIO.Windows\Samples\Data Management\Data Validation" ImagePath="XlsIO.Windows\Images\Data Validation.png"/>
+    <Sample Name="Form Controls" Category="Data Management" SourcePath="XlsIO.Windows\Samples\Data Management\Form Controls" ImagePath="XlsIO.Windows\Images\Form Controls.png"/>
+    
+    <Sample Name="Interactive Features" Category="Data Management" SourcePath="XlsIO.Windows\Samples\Data Management\Interactive Features" ImagePath="XlsIO.Windows\Images\Interactive Features.png"/>
+    <Sample Name="Ole Object" Category="Data Management" SourcePath="XlsIO.Windows\Samples\Data Management\OleObject" ImagePath="XlsIO.Windows\Images\OleObject.png"/>
+    <Sample Name="Performance" Category="Data Management" SourcePath="XlsIO.Windows\Samples\Data Management\Performance" ImagePath="XlsIO.Windows\Images\Performance.png"/>
+    <Sample Name="Range Manipulation" Category="Data Management" SourcePath="XlsIO.Windows\Samples\Data Management\Range Manipulation" ImagePath="XlsIO.Windows\Images\Range Manipulation.png"/>
+    <Sample Name="Sorting" Category="Data Management" SourcePath="XlsIO.Windows\Samples\Data Management\Sorting" ImagePath="XlsIO.Windows\Images\Sorting.png"/>	
+	<Sample Name="Filters" Category="Data Management" SourcePath="XlsIO.Windows\Samples\Data Management\Filters" ImagePath="XlsIO.Windows\Images\Worksheet Management.png"/>	
+	
+    <Sample Name="External Connection" Category="Data Binding" SourcePath="XlsIO.Windows\Samples\Data Binding\External Connection" ImagePath="XlsIO.Windows\Images\External Connection.png"/>
+    <Sample Name="Import-Export DataTable" Category="Data Binding" SourcePath="XlsIO.Windows\Samples\Data Binding\Import-Export DataTable" ImagePath="XlsIO.Windows\Images\Import Export Data Table.png"/>
+    <Sample Name="Import From Grid" Category="Data Binding" SourcePath="XlsIO.Windows\Samples\Data Binding\Import From Grid" ImagePath="XlsIO.Windows\Images\Import Export Data Table.png" />
+    <Sample Name="Invoice" Category="Data Binding" SourcePath="XlsIO.Windows\Samples\Data Binding\Invoice" ImagePath="XlsIO.Windows\Images\Invoice.png"/>
+    <Sample Name="Template Marker" Category="Data Binding" SourcePath="XlsIO.Windows\Samples\Data Binding\Template Marker" ImagePath="XlsIO.Windows\Images\Template Marker.png"/>
+    <Sample Name="Business Objects" Category="Data Binding" SourcePath="XlsIO.Windows\Samples\Data Binding\Import-BussinessObjects" ImagePath="XlsIO.Windows\Images\BusinessObject.png"/>
+    <Sample Name="LINQ Wrapper" Category="Data Binding" SourcePath="XlsIO.Windows\Samples\Data Binding\LINQ Wrapper" ImagePath="XlsIO.Windows\Images\LINQ Wrapper.png"/>
+
+    <Sample Name="Chart Worksheet" Category="Charts" SourcePath="XlsIO.Windows\Samples\Charts\Chart Worksheet" ImagePath="XlsIO.Windows\Images\Chart Worksheet.png"/>
+    <Sample Name="Embedded Chart" Category="Charts" SourcePath="XlsIO.Windows\Samples\Charts\Embedded Chart" ImagePath="XlsIO.Windows\Images\Embedded Chart.png"/>
+    <Sample Name="Sparklines" Category="Charts" SourcePath="XlsIO.Windows\Samples\Charts\Sparklines" ImagePath="XlsIO.Windows\Images\Sparklines.png"/>
+    <Sample Name="Box and Whisker" Category="Charts" SourcePath="XlsIO.Windows\Samples\Charts\Box and Whisker"  ImagePath="XlsIO.Windows\Images\Embedded Chart.png"/>
+	<Sample Name="Funnel" Category="Charts" SourcePath="XlsIO.Windows\Samples\Charts\Funnel Chart"  ImagePath="XlsIO.Windows\Images\Embedded Chart.png"/>
+	<Sample Name="Sunburst" Category="Charts" SourcePath="XlsIO.Windows\Samples\Charts\Sunburst"  ImagePath="XlsIO.Windows\Images\Embedded Chart.png"/>
+	<Sample Name="Treemap" Category="Charts" SourcePath="XlsIO.Windows\Samples\Charts\Treemap"   ImagePath="XlsIO.Windows\Images\Embedded Chart.png"/>
+
+    <Sample Name="Row-Column Manipulations" Category="Sheet Management" SourcePath="XlsIO.Windows\Samples\Sheet Manipulations\Row-Column Manipulations" ImagePath="XlsIO.Windows\Images\Row Column Manipulations.png"/>
+    <Sample Name="Worksheet Management" Category="Sheet Management" SourcePath="XlsIO.Windows\Samples\Sheet Manipulations\Worksheet Management" ImagePath="XlsIO.Windows\Images\Worksheet Management.png"/>
+
+	<Sample Name="Excel to PDF" Category="Export" SourcePath="XlsIO.Windows\Samples\Export\Excel to PDF" IsUpdated="False" ImagePath="XlsIO.Windows\Images\Excel to PDF.png"/>
+	<Sample Name="Worksheet to HTML" Category="Export" SourcePath="XlsIO.Windows\Samples\Export\Worksheet to HTML" ImagePath="XlsIO.Windows\Images\Worksheet to HTML.png"/>
+    <Sample Name="Worksheet to Image" Category="Export" SourcePath="XlsIO.Windows\Samples\Export\Worksheet to Image" ImagePath="XlsIO.Windows\Images\Worksheet to Image.png"/>
+	<Sample Name="Excel To ODS" Category="Export" SourcePath="XlsIO.Windows\Samples\Export\Excel To ODS" ImagePath="XlsIO.Windows\Images\ExcelToODS.png"/>
+	
+    <Sample Name="Document Settings" Category="Settings" SourcePath="XlsIO.Windows\Samples\Settings\Document Settings" ImagePath="XlsIO.Windows\Images\Document Settings.png"/>
+    <Sample Name="Encrypt and Decrypt" Category="Settings" SourcePath="XlsIO.Windows\Samples\Settings\Encrypt and Decrypt" ImagePath="XlsIO.Windows\Images\Encrypt and Decrypt.png"/>
+    <Sample Name="Workbook Protection" Category="Settings" SourcePath="XlsIO.Windows\Samples\Settings\Workbook Protection" ImagePath="XlsIO.Windows\Images\Workbook Protection.png"/>
+    <Sample Name="Worksheet Protection" Category="Settings" SourcePath="XlsIO.Windows\Samples\Settings\Worksheet Protection" ImagePath="XlsIO.Windows\Images\Worksheet Protection.png"/>
+
+    <Sample Name="Pivot Chart" Category="Business Intelligence" SourcePath="XlsIO.Windows\Samples\Business Intelligence\Pivot Chart" ImagePath="XlsIO.Windows\Images\Pivot Chart.png"/>
+    <Sample Name="Pivot Table" Category="Business Intelligence" SourcePath="XlsIO.Windows\Samples\Business Intelligence\Pivot Table" ImagePath="XlsIO.Windows\Images\Pivot Table.png"/>
+    <Sample Name="Tables" Category="Business Intelligence" SourcePath="XlsIO.Windows\Samples\Business Intelligence\Tables" ImagePath="XlsIO.Windows\Images\Tables.png"/>
+
+    <Sample Name="AutoShapes" Category="Shapes" SourcePath="\XlsIO.Windows\Samples\Shapes\AutoShapes" ImagePath="XlsIO.Windows\Images\AutoShapes.png"/>
+		
+  </Product>
+
+ <Product Name="Presentation" Category="File Format" EnableSecondLevel="True">
+	<Sample Name="PPTX To Image" Category="Conversion" SourcePath="Presentation.Windows\Samples\Conversion\PPTXToImage" ImagePath="XlsIO.Windows\Images\Budget Planner.png"/>	
+	<Sample Name="PPTX To PDF" Category="Conversion" SourcePath="Presentation.Windows\Samples\Conversion\PPTXToPDF" ImagePath="XlsIO.Windows\Images\Budget Planner.png"/>	
+	<Sample Name="Hello World" Category="Getting Started" SourcePath="Presentation.Windows\Samples\Getting Started\HelloWorld" ImagePath="XlsIO.Windows\Images\Budget Planner.png"/>
+	<Sample Name="Images" Category="Slide Elements" SourcePath="Presentation.Windows\Samples\Slide Elements\Images" ImagePath="XlsIO.Windows\Images\Budget Planner.png"/>
+	<Sample Name="Slides" Category="Slide Elements" SourcePath="Presentation.Windows\Samples\Slide Elements\Slides" ImagePath="XlsIO.Windows\Images\Budget Planner.png"/>
+	<Sample Name="Tables" Category="Slide Elements" SourcePath="Presentation.Windows\Samples\Slide Elements\Tables" ImagePath="XlsIO.Windows\Images\Budget Planner.png"/>
+	<Sample Name="Notes" Category="Slide Elements"  SourcePath="Presentation.Windows\Samples\Slide Elements\Notes" ImagePath="XlsIO.Windows\Images\Budget Planner.png"/>
+	<Sample Name="OLE Object" Category="Slide Elements" SourcePath="Presentation.Windows\Samples\Slide Elements\OLE Object" ImagePath="XlsIO.Windows\Images\Budget Planner.png"/>
+	<Sample Name="Comments" Category="Slide Elements" SourcePath="Presentation.Windows\Samples\Slide Elements\Comments" ImagePath="Presentation.Windows\Samples\Slide Elements\Comments\Images\CommentsSample.JPG"/>
+	<Sample Name="Cloning Slide" Category="Clone and Merge" SourcePath="Presentation.Windows\Samples\Clone and Merge\CloningSlide" ImagePath="XlsIO.Windows\Images\Budget Planner.png"/>
+	<Sample Name="Merging Presentations" Category="Clone and Merge" SourcePath="Presentation.Windows\Samples\Clone and Merge\MergingPresentations" ImagePath="XlsIO.Windows\Images\Budget Planner.png"/>
+	<Sample Name="Encryption And Decryption" Category="Security" SourcePath="Presentation.Windows\Samples\Security\Encryption And Decryption" ImagePath="XlsIO.Windows\Images\Budget Planner.png"/>
+	<Sample Name="SmartArt Creation" Category="SmartArt" SourcePath="Presentation.Windows\Samples\SmartArt\SmartArt Creation" ImagePath="XlsIO.Windows\Images\Budget Planner.png"/>
+	<Sample Name="Manipulating SmartArt" Category="SmartArt" SourcePath="Presentation.Windows\Samples\SmartArt\Manipulating SmartArt" ImagePath="XlsIO.Windows\Images\Budget Planner.png"/>
+	<Sample Name="Customizing Appearance" Category="SmartArt" SourcePath="Presentation.Windows\Samples\SmartArt\Customizing Appearance" ImagePath="XlsIO.Windows\Images\Budget Planner.png"/>
+    <Sample Name="Chart Creation" Category="Chart" SourcePath="Presentation.Windows\Samples\Working With Chart\Creating Chart" ImagePath="XlsIO.Windows\Images\Budget Planner.png"/>
+	<Sample Name="Chart from Excel Data" Category="Chart" SourcePath="Presentation.Windows\Samples\Working With Chart\Excel Data To Chart" ImagePath="XlsIO.Windows\Images\Budget Planner.png"/>
+	<Sample Name="Customizing Appearance" Category="Chart" SourcePath="Presentation.Windows\Samples\Working With Chart\Modifying Chart" ImagePath="XlsIO.Windows\Images\Budget Planner.png"/>
+</Product>
+  <!--End of Region File Format-->
+
+  <!--Region Reports-->
+
+  <!--End of Region Reports-->
+
+  <!--Region Business Intelligence-->
+  <Product Name="Pivot Grid" Category="Business Intelligence" EnableSecondLevel="True">
+
+	<Sample Name="Conditional Format" Category ="Product Showcase" SourcePath="PivotGrid.Windows\Samples\Product Showcase\Conditional Format Demo" ImagePath="PivotGrid.Windows\Samples\Product Showcase\Conditional Format Demo\Images\ConditionalFormatDemo.png"/>	
+	<Sample Name="Pivotal Chart" Category ="Product Showcase" SourcePath="PivotGrid.Windows\Samples\Product Showcase\Pivotal Chart Demo" ImagePath="PivotGrid.Windows\Samples\Product Showcase\Pivotal Chart Demo\Images\PivotalChartDemo.png"/>
+	<Sample Name="RowPivotsOnly" Category ="Product Showcase" SourcePath="PivotGrid.Windows\Samples\Product Showcase\RowPivotsOnly Demo" ImagePath="PivotGrid.Windows\Samples\Product Showcase\RowPivotsOnly Demo\Images\Capture.png"/>
+
+	<Sample Name="Pivot Grid" Category ="Getting Started" SourcePath="PivotGrid.Windows\Samples\Appearance\Pivot Grid Demo" ImagePath="PivotGrid.Windows\Samples\Appearance\Pivot Grid Demo\Images\PivotGridDemo.png"/>
+    <Sample Name="Asynchronous Data Processing" Category ="Getting Started" SourcePath="PivotGrid.Windows\Samples\Getting Started\Asynchronous Data Demo" ImagePath="PivotGrid.Windows\Samples\Getting Started\Asynchronous Data Demo\Images\asynload.png"/>
+
+  <Sample Name="Visual Style" Category ="Appearance" SourcePath="PivotGrid.Windows\Samples\Appearance\Visual Style Demo" ImagePath="PivotGrid.Windows\Samples\Appearance\Visual Style Demo\Images\VisualStyleDemo.png"/>
+  <Sample Name="HyperlinkCell" Category ="Appearance" SourcePath="PivotGrid.Windows\Samples\Appearance\HyperlinkCell Demo" ImagePath="PivotGrid.Windows\Samples\Appearance\HyperlinkCell Demo\Images\HyperlinkCellDemo.png"/>
+	<Sample Name="ToolTip" Category ="Appearance" SourcePath="PivotGrid.Windows\Samples\Appearance\Tool Tip Demo" ImagePath="PivotGrid.Windows\Samples\Appearance\Tool Tip Demo\Images\ToolTipDemo.png"/>
+
+	<Sample Name="Editing and Updating" Category ="Interactive Features" SourcePath="PivotGrid.Windows\Samples\Interactive Features\Editing and Updating Demo" ImagePath="PivotGrid.Windows\Samples\Interactive Features\Editing and Updating Demo\Images\EditingandUpdatingDemo.png"/>
+    
+	<Sample Name="Localization using Satellite Assemblies" Category ="Localization" SourcePath="PivotGrid.Windows\Samples\Localization\Localization using Satellite Assemblies" ImagePath="PivotGrid.Windows\Samples\Localization\Localization using Satellite Assemblies\Images\Localization_1.png"/>
+
+	<Sample Name="GroupingBar" Category ="GroupingBar" SourcePath="PivotGrid.Windows\Samples\GroupingBar\GroupingBar Demo" ImagePath="PivotGrid.Windows\Samples\GroupingBar\GroupingBar Demo\Images\GroupingBarDemo.png"/>
+
+	<Sample Name="Cell Selection" Category ="Selection" SourcePath="PivotGrid.Windows\Samples\Selection\Cell Selection Demo" ImagePath="PivotGrid.Windows\Samples\Selection\Cell Selection Demo\Images\CellSelectionDemo.png"/>
+
+	<Sample Name="Pivot Print" Category ="Printing" SourcePath="PivotGrid.Windows\Samples\Printing\Pivot Print Demo" ImagePath="PivotGrid.Windows\Samples\Printing\Pivot Print Demo\Images\PivotPrintDemo.png"/>
+
+	<Sample Name="Export" Category ="Exporting" SourcePath="PivotGrid.Windows\Samples\Exporting\Export Demo" ImagePath="PivotGrid.Windows\Samples\Exporting\Export Demo\Images\ExportDemo.png"/>
+	
+	
+</Product> 
+
+  <Product Name="PivotChart" Category="Business Intelligence" EnableSecondLevel="True">
+
+  <Sample Name="PivotChart" Category ="Getting Started" SourcePath="PivotChart.Windows\Samples\Getting Started\PivotChart Demo" ImagePath="PivotChart.Windows\Samples\Getting Started\PivotChart Demo\Images\image.png"/>  
+  <Sample Name="PivotChart Styles" Category ="Appearance" SourcePath="PivotChart.Windows\Samples\Appearance\PivotChartStyles Demo" ImagePath="PivotChart.Windows\Samples\Appearance\PivotChartStyles Demo\Images\image.png"/>
+  <Sample Name="PivotChart Types" Category ="Chart Types" SourcePath="PivotChart.Windows\Samples\Chart Types\PivotChartTypes Demo" ImagePath="PivotChart.Windows\Samples\Chart Types\PivotChartTypes Demo\Images\pivotcharttypes.png"/>
+  <Sample Name="IEnumerable" Category ="DataBinding" SourcePath="PivotChart.Windows\Samples\Data Binding\IEnumerable Demo" ImagePath="PivotChart.Windows\Samples\Data Binding\IEnumerable Demo\Images\image.png"/>   
+  <Sample Name="Grouping" Category ="PivotChart Layout" SourcePath="PivotChart.Windows\Samples\PivotChart Layout\Groupbar Demo" ImagePath="PivotChart.Windows\Samples\PivotChart Layout\Groupbar Demo\Images\image.png"/>
+  <Sample Name="DrillDown" Category ="PivotChart Layout" SourcePath="PivotChart.Windows\Samples\PivotChart Layout\DrillDown Demo" ImagePath="PivotChart.Windows\Samples\PivotChart Layout\DrillDown Demo\Images\image.png"/>
+  <Sample Name="PivotChart Print" Category ="Printing" SourcePath="PivotChart.Windows\Samples\Printing\PivotChartPrint Demo" ImagePath="PivotChart.Windows\Samples\Printing\PivotChartPrint Demo\images\image.png"/>
+  <Sample Name="PivotChart Export" Category ="Exporting" SourcePath="PivotChart.Windows\Samples\Exporting\PivotChartExport Demo" ImagePath="PivotChart.Windows\Samples\Exporting\PivotChartExport Demo\Images\pivotchartexport.png"/>
+  <Sample Name="Zooming and Scrolling" Category ="Zooming and Scrolling" SourcePath="PivotChart.Windows\Samples\Zooming and Scrolling\Zooming and Scrolling" ImagePath="PivotChart.Windows\Samples\Zooming and Scrolling\Zooming and Scrolling\images\Zoomingandscrolling.png"/>	  
+  
+  
+  </Product>
+  
+
+  <!--End of Region Business Intelligence-->
+  
+  <!--Region Navigation-->
+  <Product Name="Tree View" Category="Navigation" EnableSecondLevel="True" >
+    <Sample Name="Getting Started" Category ="Getting Started" SourcePath="Tools.Windows\Samples\TreeView\Getting Started" ImagePath="Tools.Windows\Images\treeGettingStarted.png"/>
+    <Sample Name="Load on Demand" Category ="Performance" SourcePath="Tools.Windows\Samples\TreeView\Load on Demand" ImagePath="Tools.Windows\Images\loadondemand.png"/>
+    <Sample Name="Customizations" Category ="Customizations" SourcePath="Tools.Windows\Samples\TreeView\Customizations" ImagePath="Tools.Windows\Images\customizations.png"/>
+    <Sample Name="Custom Controls" Category ="Customizations" SourcePath="Tools.Windows\Samples\TreeView\Custom Controls" ImagePath="Tools.Windows\Images\customcontrols.png"/>
+    <Sample Name="MultiColumnTreeview" Category ="Performance" SourcePath="Tools.Windows\Samples\TreeView\Multi Column Treeview" ImagePath="Tools.Windows\Images\multicolumntreeview.png"/>
+    <Sample Name="TreeViewAdv Search" Category ="Interaction" SourcePath="Tools.Windows\Samples\TreeView\TreeViewAdv Search" ImagePath="Tools.Windows\Images\treesearch.png"/>
+    <Sample Name="Sorting" Category ="Sorting" SourcePath="Tools.Windows\Samples\TreeView\Sorting" ImagePath="Tools.Windows\Images\treesearch.png"/>
+	<Sample Name="Printing" Category ="Printing" SourcePath="Tools.Windows\Samples\TreeView\Printing" ImagePath="Tools.Windows\Images\treesearch.png"/>
+	<Sample Name="Drag and Drop"  Category ="Drag and Drop" SourcePath="Tools.Windows\Samples\TreeView\DragAndDrop" ImagePath="Tools.Windows\Images\treesearch.png"/>
+  </Product>
+  
+  <Product Name="Group Bar" Category="Navigation" EnableSecondLevel="False" IsUpdated="True">
+    <Sample Name="Getting Started" SourcePath="Tools.Windows\Samples\GroupBar\GroupBar" ImagePath="Tools.Windows\Images\groupbar.png" IsUpdated="True"/>
+    <Sample Name="GroupView" SourcePath="Tools.Windows\Samples\GroupBar\GroupView" ImagePath="Tools.Windows\Images\groupview.png" />
+  </Product>
+  <Product Name="Menu" Category="Navigation" EnableSecondLevel="False" IsUpdated="True">
+    <Sample Name="SDI" SourcePath="Tools.Windows\Samples\Menu\SDI" ImagePath="Tools.Windows\Images\sdimenu.png" IsUpdated="True"/>
+    <Sample Name="MDI" SourcePath="Tools.Windows\Samples\Menu\MDI" ImagePath="Tools.Windows\Images\mdimenu.png" IsUpdated="True"/>
+	<Sample Name="Custom Colors" SourcePath="Tools.Windows\Samples\Ribbon\Custom Colors" ImagePath="Tools.Windows\Images\customcolors.png"/>
+  </Product>
+  <Product Name="Task Bar" Category="Navigation" EnableSecondLevel="False">
+    <Sample Name="Getting Started" SourcePath="Tools.Windows\Samples\TaskBar\TaskBar" ImagePath="Tools.Windows\Images\taskbar.png"/>
+    <Sample Name="XpTaskBar" SourcePath="Tools.Windows\Samples\TaskBar\XpTaskbar" ImagePath="Tools.Windows\Images\xptaskbar.png"/>
+  </Product>
+  <Product Name="ToolBar" Category="Navigation" EnableSecondLevel="False">
+    <Sample Name="Getting Started" SourcePath="Tools.Windows\Samples\ToolBars\Toolbars" ImagePath="Tools.Windows\Images\toolbars.png"/>
+    <Sample Name="Control Bars" SourcePath="Tools.Windows\Samples\ToolBars\Control Bars" ImagePath="Tools.Windows\Images\controlbars.png"/>
+    <Sample Name="Command Bars" SourcePath="Tools.Windows\Samples\ToolBars\Command Bars" ImagePath="Tools.Windows\Images\commandbars.png"/>
+  </Product>
+   <Product Name="Radial Menu" Category="Navigation" EnableSecondLevel="False">
+    <Sample Name="Getting Started"  SourcePath="Tools.Windows\Samples\RadialMenu\RadialMenu" ImagePath="Tools.Windows\Images\radialmenu.png"/>
+  </Product>
+  <Product Name="Tree Navigator" Category="Navigation" EnableSecondLevel="False">
+    <Sample Name="Getting Started" SourcePath="Tools.Windows\Samples\TreeNavigator\" ImagePath="Tools.Windows\Images\treenavigator.png"/>
+  </Product>
+  <Product Name="Navigation Drawer" Category="Navigation" EnableSecondLevel="False">
+    <Sample Name="Getting Started" SourcePath="Tools.Windows\Samples\NavigationDrawer\" ImagePath="Tools.Windows\Samples\NavigationDrawer\Images\NavigationDrawer.png"/>
+  </Product>
+    <!--End of Region Navigation-->
+  
+  <!--Region Notification-->
+  <Product Name="Splash" Category="Notification" EnableSecondLevel="False">
+    <Sample Name="Splash Panel" SourcePath="Tools.Windows\Samples\Splash\SplashPanel" ImagePath="Tools.Windows\Images\splashpanel.png"/>
+    <Sample Name="Splash Control" SourcePath="Tools.Windows\Samples\Splash\Splash Control" ImagePath="Tools.Windows\Images\splashcontrol.png"/>
+  </Product>
+  <Product Name="StatusBar" Category="Notification" EnableSecondLevel="False">
+    <Sample Name="StatusBarAdv" SourcePath="Tools.Windows\Samples\StatusBar\StatusBarAdv" ImagePath="Tools.Windows\Images\statusbaradv.png"/>
+    <Sample Name="StatusBarAdv Panel" SourcePath="Tools.Windows\Samples\StatusBar\StatusBarAdv Panel" ImagePath="Tools.Windows\Images\statusbaradvpanel.png"/>
+  </Product>
+  <Product Name="ProgressBar" Category="Notification" EnableSecondLevel="False">
+    <Sample Name="Getting Started" SourcePath="Tools.Windows\Samples\Progressbar\ProgressBar" ImagePath="Tools.Windows\Images\progressbar.png"/>
+	<Sample Name="Customization" SourcePath="Tools.Windows\Samples\Progressbar\ProgressBarCustomization" ImagePath="Tools.Windows\Images\progressbar.png"/>
+  </Product>
+  <Product Name="Super ToolTip" Category="Notification" EnableSecondLevel="False">
+    <Sample Name="Getting Started" SourcePath="Tools.Windows\Samples\Super Tooltip\SuperTooltip" ImagePath="Tools.Windows\Images\supertooltip.png"/>
+  </Product>
+  <Product Name="MessageBoxAdv" Category="Notification" EnableSecondLevel="False">
+    <Sample Name="Getting Started" SourcePath="Tools.Windows\Samples\MessageBoxAdv\MessageBoxAdv" ImagePath="Tools.Windows\Images\messageboxadv.png"/>
+  </Product>
+  <Product Name="Clock" Category="Notification" EnableSecondLevel="False">
+    <Sample Name="Analog Clock" SourcePath="Tools.Windows\Samples\Clock\Clock" ImagePath="Tools.Windows\Images\clock.png"/>
+    <Sample Name="Digital Clock" SourcePath="Tools.Windows\Samples\Digital Clock\Digital Clock" ImagePath="Tools.Windows\Images\digitalclock.png"/>
+  </Product>
+  <Product Name="Hub Tile" Category="Notification"  EnableSecondLevel="False">
+    <Sample Name="Getting Started"  SourcePath="Tools.Windows\Samples\HubTile\HubTile\HubTile" ImagePath="Tools.Windows\Images\Hubtilewf.png"/>
+	<Sample Name="HubTile Transition" SourcePath="Tools.Windows\Samples\HubTile\HubTile\HubTile Transition" ImagePath="Tools.Windows\Images\PulsingTile.png"/>
+  </Product>
+  
+  <!--End of Region Notification-->
+
+    <!--Region BigData-->
+  <Product Name="Predictive Analytics" Category="Data Science"  EnableSecondLevel="False">
+	<Sample Name="Getting Started" Category ="Predictive Analytics" SourcePath="PMML.Windows\PMMLWFSampleBrowser"
+	ImagePath="PMML.Windows\PMMLWFSampleBrowser\Images\PMML_WF.png"/>
+	</Product>
+  <!--End of Region BigData-->
+  
+  <!--Region Miscellaneous-->  
+
+<Product Name="Calculate" Category="Miscellaneous" EnableSecondLevel="False">
+	<Sample Name="Array ICalcData" Category ="Calculate" SourcePath="Calculate.Windows\Samples\Array ICalcData Demo" ImagePath="Calculate.Windows\Samples\Array ICalcData Demo\Images\ArrayICalcDataDemo.png"/>
+	<Sample Name="Data Grid Calculator" Category ="Calculate" SourcePath="Calculate.Windows\Samples\Data Grid Calculator Demo" ImagePath="Calculate.Windows\Samples\Data Grid Calculator Demo\Images\DataGridCalculatorDemo.png"/>
+	<Sample Name="Data-Bound-Grid Calculator" Category ="Calculate" SourcePath="Calculate.Windows\Samples\Grid-Data-Bound-Grid Calculator Demo" ImagePath="Calculate.Windows\Samples\Grid-Data-Bound-Grid Calculator Demo\Images\Grid-Data-Bound-GridCalculatorDemo.png"/>
+	<Sample Name="Tabbed Panel Grids" Category ="Calculate" SourcePath="Calculate.Windows\Samples\Tabbed Panel Grids Demo" ImagePath="Calculate.Windows\Samples\Tabbed Panel Grids Demo\Images\TabbedPanelGridsDemo.png"/>
+	<Sample Name="Working With CalcQuick" Category ="Calculate" SourcePath="Calculate.Windows\Samples\Working With CalcQuick Demo" ImagePath="Calculate.Windows\Samples\Working With CalcQuick Demo\Images\WorkingWithCalcQuickDemo.png"/>
+	<Sample Name="Xls File Using CalcEngine" Category ="Calculate" SourcePath="Calculate.Windows\Samples\Xls File Using CalcEngine Demo" ImagePath="Calculate.Windows\Samples\Xls File Using CalcEngine Demo\Images\XlsFileUsingCalcEngineDemo.png"/>
+</Product>
+
+<Product Name="Grouping" Category="Miscellaneous" EnableSecondLevel="False">
+	<Sample Name="Custom Summary" Category ="Grouping" SourcePath="Grouping.Windows\Samples\Custom Summary Demo" ImagePath="Grouping.Windows\Samples\Custom Summary Demo\Images\CustomSummaryDemo.png"/>
+	<Sample Name="Foreign-Key Reference" Category ="Grouping" SourcePath="Grouping.Windows\Samples\Foreign-Key Reference Demo" ImagePath="Grouping.Windows\Samples\Foreign-Key Reference Demo\Images\Foreign-KeyReferenceDemo.png"/>
+	<Sample Name="Grouping Tutorial" Category ="Grouping" SourcePath="Grouping.Windows\Samples\Grouping Tutorial" ImagePath="Grouping.Windows\Samples\Grouping Tutorial\Images\GroupingTutorial.png"/>
+	<Sample Name="Grouping With Data Grid" Category ="Grouping" SourcePath="Grouping.Windows\Samples\Grouping With Data Grid Demo" ImagePath="Grouping.Windows\Samples\Grouping With Data Grid Demo\Images\GroupingWithDataGridDemo.png"/>
+	<Sample Name="List-Item Reference" Category ="Grouping" SourcePath="Grouping.Windows\Samples\List-Item Reference Demo" ImagePath="Grouping.Windows\Samples\List-Item Reference Demo\Images\List-ItemReferenceDemo.png"/>
+	<Sample Name="Manual Relations" Category ="Grouping" SourcePath="Grouping.Windows\Samples\Manual Relations Demo" ImagePath="Grouping.Windows\Samples\Manual Relations Demo\Images\ManualRelationsDemo.png"/>
+	<Sample Name="Random Test" Category ="Grouping" SourcePath="Grouping.Windows\Samples\Random Test Demo" ImagePath="Grouping.Windows\Samples\Random Test Demo\Images\RandomTestDemo.png"/>
+	<Sample Name="Strong-Typed Collection" Category ="Grouping" SourcePath="Grouping.Windows\Samples\Strong-Typed Collection Demo" ImagePath="Grouping.Windows\Samples\Strong-Typed Collection Demo\Images\Strong-TypedCollectionDemo.png"/>
+</Product>
+
+<Product Name="Localization" Category="Miscellaneous" EnableSecondLevel="False">
+    <Sample Name="Getting Started" IsVS2017="True" SourcePath="Tools.Windows\Samples\Localization\Localization" ImagePath="Tools.Windows\Images\localization.png"/>
+  </Product>
+<Product Name="Skin Manager" Category="Miscellaneous" EnableSecondLevel="False">
+    <Sample Name="Getting Started" SourcePath="Tools.Windows\Samples\Skin Manager\Skin Manager" ImagePath="Tools.Windows\Images\skinmanager.png"/>
+  </Product>
+  <Product Name="Wizard" Category="Miscellaneous" EnableSecondLevel="False">
+    <Sample Name="Getting Started" SourcePath="Tools.Windows\Samples\Wizard\Wizard Control" ImagePath="Tools.Windows\Images\wizard.png"/>
+    <Sample Name="Task Pane" SourcePath="Tools.Windows\Samples\Wizard\Task Pane" ImagePath="Tools.Windows\Images\wizardtaskpane.png"/>
+  </Product>
+  <Product Name="Scrollers Frame" Category="Miscellaneous" EnableSecondLevel="False">
+    <Sample Name="Getting Started" SourcePath="Tools.Windows\Samples\Scrollers Frame\Scrollers Frame" ImagePath="Tools.Windows\Images\scrollersframe.png"/>
+  </Product>
+  <Product Name="Folder Browser" Category="Miscellaneous" EnableSecondLevel="False">
+    <Sample Name="Getting Started" SourcePath="Tools.Windows\Samples\FolderBrowser\Folder Browser" ImagePath="Tools.Windows\Images\folderbrowser.png"/>
+  </Product>
+  <Product Name="SpellCheckerAdv" Category="Miscellaneous" EnableSecondLevel="False" >
+    <Sample Name="Getting Started" SourcePath="Tools.Windows\Samples\SpellChecker\SpellCheckerAdv Demo" ImagePath="Tools.Windows\Images\SpellCheckerAdv.png"/>
+  </Product>
+  
+  <!--End of Region Miscellaneous-->  
+
+
+</Products>

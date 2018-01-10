@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sample>  
+  <name value="~/Real Time/Chart Real Time/Sample.aspx" />
+  <displayname value="Chart Real Time" />
+  <sortorder value="1" />  
+  <imageUrl value="/Real Time/Chart Real Time/images/Sample.png"></imageUrl>
+</sample>

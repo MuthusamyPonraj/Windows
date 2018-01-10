@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sample>  
+  <name value="~/Chart Types/Histogram Chart/Sample.aspx"/>
+  <displayname value="Histogram Chart" />
+  <sortorder value="11" />  
+  <imageUrl value="/Chart Types/Histogram Chart/images/sample.png"></imageUrl>
+</sample>

@@ -1,0 +1,37 @@
+<html><style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+<p>
+    This sample illustrates the usage of different custom dropdown controls in the GridControl.</p>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" src="Images\Sample.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+<b>DateTimePicker</b></p>
+<UL>
+	
+	<LI><P ALIGN=LEFT><STRONG class="style2">StyleInfo.CellType</STRONG>
+	is set for the cells that need to have custom cell control. 
+	</P>	
+<PRE><FONT COLOR="#8d2e1c">            this.gridControl1[4,2].CellType = &quot;DateTimePicker&quot;;</FONT>
+<FONT COLOR="#8d2e1c">            this.gridControl1[4,2].CellValueType = typeof(DateTime);</FONT>
+<FONT COLOR="#8d2e1c">            this.gridControl1[4,2].CellValue = DateTime.Now;</FONT>
+<FONT COLOR="#8d2e1c">            this.gridControl1[4,2].Format = &quot;MM/dd/yyyy hh:mm&quot;;  </FONT></PRE>
+<br>
+<b>DropDownCell</b></p>
+<LI><P ALIGN=LEFT>DropDowncelltype used to set for the cells</P>
+<PRE><FONT COLOR="#8d2e1c">        this.gridControl1[rowIndex, colIndex].CellType = "GridADropCell";</FONT>
+<PRE><FONT COLOR="#8d2e1c">        this.gridControl1[rowIndex, colIndex + 2].CellType = "DropDownForm";</FONT>
+</UL>
+<br><br>
+</html>
+
+

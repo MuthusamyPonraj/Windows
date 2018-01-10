@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sample>  
+  <name value="~/Chart Types/Column Charts/Sample.aspx"/>
+  <displayname value="Column Charts" />
+  <sortorder value="5" />  
+  <imageUrl value="/Chart Types/Column Charts/images/Sample1.png"></imageUrl>  
+</sample>

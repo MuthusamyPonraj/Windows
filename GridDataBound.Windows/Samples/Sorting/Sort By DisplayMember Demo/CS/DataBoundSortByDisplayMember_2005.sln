@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBoundSortByDisplayMember_2005", "DataBoundSortByDisplayMember_2005.csproj", "{1F096D2B-5A97-4430-BF4C-E9C5B571275D}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{1F096D2B-5A97-4430-BF4C-E9C5B571275D}.Debug.ActiveCfg = Debug|.NET
+		{1F096D2B-5A97-4430-BF4C-E9C5B571275D}.Debug.Build.0 = Debug|.NET
+		{1F096D2B-5A97-4430-BF4C-E9C5B571275D}.Release.ActiveCfg = Release|.NET
+		{1F096D2B-5A97-4430-BF4C-E9C5B571275D}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

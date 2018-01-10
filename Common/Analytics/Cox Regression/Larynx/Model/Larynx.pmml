@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<PMML version="4.1" xmlns="http://www.dmg.org/PMML-4_1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_1 http://www.dmg.org/v4-1/pmml-4-1.xsd">
+ <Header copyright="Copyright (c) 2016 Syncfusion" description="CoxPH Survival Regression Model">
+  <Extension name="user" value="Syncfusion" extender="Rattle/PMML"/>
+  <Application name="Rattle/PMML" version="1.4"/>
+  <Timestamp>2014-12-09 10:26:31</Timestamp>
+ </Header>
+ <DataDictionary numberOfFields="6">
+  <DataField name="survival" optype="continuous" dataType="double"/>
+  <DataField name="stage" optype="continuous" dataType="double"/>
+  <DataField name="age" optype="continuous" dataType="double"/>
+  <DataField name="diagyr" optype="continuous" dataType="double"/>
+  <DataField name="time" optype="continuous" dataType="double"/>
+  <DataField name="delta" optype="continuous" dataType="double"/>
+ </DataDictionary>
+ <GeneralRegressionModel modelType="CoxRegression" modelName="CoxPH_Survival_Regression_Model" functionName="regression" algorithmName="coxph" endTimeVariable="time" statusVariable="delta">
+  <MiningSchema>
+   <MiningField name="survival" usageType="predicted"/>
+   <MiningField name="stage" usageType="active"/>
+   <MiningField name="age" usageType="active"/>
+   <MiningField name="diagyr" usageType="active"/>
+   <MiningField name="time" usageType="active"/>
+   <MiningField name="delta" usageType="active"/>
+  </MiningSchema>
+  <Output>
+   <OutputField name="Predicted_survival" feature="predictedValue"/>
+   <OutputField name="cumulativeHazard" feature="transformedValue">
+    <Apply function="*">
+     <Constant>-1.0</Constant>
+     <Apply function="ln">
+      <FieldRef field="Predicted_survival"/>
+     </Apply>
+    </Apply>
+   </OutputField>
+  </Output>
+  <ParameterList>
+   <Parameter name="p0" label="stage" referencePoint="2.22222222222222"/>
+   <Parameter name="p1" label="age" referencePoint="64.6111111111111"/>
+   <Parameter name="p2" label="diagyr" referencePoint="74.2444444444444"/>
+  </ParameterList>
+  <FactorList/>
+  <CovariateList>
+   <Predictor name="stage"/>
+   <Predictor name="age"/>
+   <Predictor name="diagyr"/>
+  </CovariateList>
+  <PPMatrix>
+   <PPCell value="1" predictorName="stage" parameterName="p0"/>
+   <PPCell value="1" predictorName="age" parameterName="p0"/>
+   <PPCell value="1" predictorName="age" parameterName="p1"/>
+   <PPCell value="1" predictorName="diagyr" parameterName="p2"/>
+  </PPMatrix>
+  <ParamMatrix>
+   <PCell parameterName="p0" df="1" beta="0.501901301641116"/>
+   <PCell parameterName="p1" df="1" beta="0.0227523489719357"/>
+   <PCell parameterName="p2" df="1" beta="-0.00170323699799847"/>
+  </ParamMatrix>
+  <BaseCumHazardTables maxTime="10.7">
+   <BaselineCell time="0.1" cumHazard="0.00919564109062132"/>
+   <BaselineCell time="0.2" cumHazard="0.0186051570301392"/>
+   <BaselineCell time="0.3" cumHazard="0.0477469540414393"/>
+   <BaselineCell time="0.4" cumHazard="0.057821285634024"/>
+   <BaselineCell time="0.5" cumHazard="0.0682255558586944"/>
+   <BaselineCell time="0.6" cumHazard="0.0787661541168533"/>
+   <BaselineCell time="0.7" cumHazard="0.0893868696875516"/>
+   <BaselineCell time="0.8" cumHazard="0.122938348908431"/>
+   <BaselineCell time="1" cumHazard="0.146875261748433"/>
+   <BaselineCell time="1.3" cumHazard="0.171481628108741"/>
+   <BaselineCell time="1.5" cumHazard="0.183985728713141"/>
+   <BaselineCell time="1.6" cumHazard="0.196917006731027"/>
+   <BaselineCell time="1.8" cumHazard="0.223518532930615"/>
+   <BaselineCell time="1.9" cumHazard="0.251133858115349"/>
+   <BaselineCell time="2" cumHazard="0.279965149421126"/>
+   <BaselineCell time="2.2" cumHazard="0.279965149421126"/>
+   <BaselineCell time="2.3" cumHazard="0.295188151786404"/>
+   <BaselineCell time="2.4" cumHazard="0.310966638905173"/>
+   <BaselineCell time="2.5" cumHazard="0.310966638905173"/>
+   <BaselineCell time="2.6" cumHazard="0.310966638905173"/>
+   <BaselineCell time="2.9" cumHazard="0.310966638905173"/>
+   <BaselineCell time="3.2" cumHazard="0.345315392393296"/>
+   <BaselineCell time="3.3" cumHazard="0.36297861392227"/>
+   <BaselineCell time="3.5" cumHazard="0.418804246353821"/>
+   <BaselineCell time="3.6" cumHazard="0.458175807981848"/>
+   <BaselineCell time="3.7" cumHazard="0.458175807981848"/>
+   <BaselineCell time="3.8" cumHazard="0.480014602633504"/>
+   <BaselineCell time="4" cumHazard="0.55275852492963"/>
+   <BaselineCell time="4.3" cumHazard="0.577909724933739"/>
+   <BaselineCell time="4.5" cumHazard="0.577909724933739"/>
+   <BaselineCell time="4.8" cumHazard="0.577909724933739"/>
+   <BaselineCell time="5" cumHazard="0.61050091186836"/>
+   <BaselineCell time="5.1" cumHazard="0.61050091186836"/>
+   <BaselineCell time="5.3" cumHazard="0.649262103176604"/>
+   <BaselineCell time="5.5" cumHazard="0.649262103176604"/>
+   <BaselineCell time="5.9" cumHazard="0.649262103176604"/>
+   <BaselineCell time="6" cumHazard="0.691687226619741"/>
+   <BaselineCell time="6.1" cumHazard="0.691687226619741"/>
+   <BaselineCell time="6.2" cumHazard="0.736799879350419"/>
+   <BaselineCell time="6.3" cumHazard="0.785528819137173"/>
+   <BaselineCell time="6.4" cumHazard="0.894973882452498"/>
+   <BaselineCell time="6.5" cumHazard="0.955112995696864"/>
+   <BaselineCell time="6.7" cumHazard="0.955112995696864"/>
+   <BaselineCell time="7" cumHazard="1.03024201505016"/>
+   <BaselineCell time="7.4" cumHazard="1.11422853555682"/>
+   <BaselineCell time="7.5" cumHazard="1.11422853555682"/>
+   <BaselineCell time="7.6" cumHazard="1.11422853555682"/>
+   <BaselineCell time="7.8" cumHazard="1.22140178408374"/>
+   <BaselineCell time="8" cumHazard="1.22140178408374"/>
+   <BaselineCell time="8.1" cumHazard="1.22140178408374"/>
+   <BaselineCell time="9.3" cumHazard="1.22140178408374"/>
+   <BaselineCell time="9.6" cumHazard="1.22140178408374"/>
+   <BaselineCell time="10.1" cumHazard="1.22140178408374"/>
+   <BaselineCell time="10.7" cumHazard="1.22140178408374"/>
+  </BaseCumHazardTables>
+ </GeneralRegressionModel>
+</PMML>

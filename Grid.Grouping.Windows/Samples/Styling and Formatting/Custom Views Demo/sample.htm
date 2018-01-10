@@ -1,0 +1,31 @@
+<html><style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+
+<p>This sample illustrates how to set the custom views in a GridGroupingControl.
+</p>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="2">
+<div align=center>
+<img colspan="2" src="Images\CustomViews.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+<p>The code to invoke the <strong>GridColumnDescriptorCollection</strong> window is given below.</p>
+
+<p><pre><font color="#8D2E1C">
+    		_ShowGridColumnsDialog(this.groupingGrid1.Engine.TableDescriptor, "Columns", null, typeof(GridColumnDescriptorCollection));</font></pre></p>
+<p>Similarly, other property windows are invoked through the same code but with the exact property as the argument.
+</p>
+<p>Here is the code to reset to the  default<strong> </strong>properties:</p>
+<pre><font color="#8D2E1C">
+    		this.groupingGrid1.ResetTableDescriptor();</font></pre>
+
+<br><br>
+</html>

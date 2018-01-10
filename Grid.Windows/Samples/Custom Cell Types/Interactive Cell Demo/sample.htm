@@ -1,0 +1,26 @@
+<html><style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+<p>This sample illustrates the usage of different customized controls as celltypes in GridControl.</p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" src="images\sample.png" alt="Cell Types screenshot" title="Cell Types" />
+</div>
+</tr>
+</td>
+</table>
+
+<p>The following code used to add the CellModel of the entry</p>
+<p><b>DragButton</b></p>
+<pre><FONT COLOR="#8d2e1c">        gridControl1.CellModels.Add("DragButton", new DragButtonCellModel(gridControl1.Model));</font>
+<FONT COLOR="#8d2e1c">        gridControl1[4, 4].CellType = "DragButton";</font></pre>
+<p><b>EllipsisText</b></p>
+<pre><FONT COLOR="#8d2e1c">        gridControl1.CellModels.Add("EllipsisText", new EllipsisCellModel(gridControl1.Model));</font>
+<FONT COLOR="#8d2e1c">        gridControl1[rowIndex, 8].CellType = "EllipsisText";</font></pre>
+<p><br></p>
+</html>
+
+

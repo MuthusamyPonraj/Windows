@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<PMML version="4.1" xmlns="http://www.dmg.org/PMML-4_1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_1 http://www.dmg.org/v4-1/pmml-4-1.xsd">
+ <Header copyright="Copyright (c) 2016 Syncfusion" description="Generalized Linear Regression Model">
+  <Extension name="user" value="Syncfusion" extender="Rattle/PMML"/>
+  <Application name="Rattle/PMML" version="1.4"/>
+  <Timestamp>2014-12-11 12:50:13</Timestamp>
+ </Header>
+ <DataDictionary numberOfFields="21">
+  <DataField name="price" optype="continuous" dataType="double"/>
+  <DataField name="symboling" optype="continuous" dataType="double"/>
+  <DataField name="normalizedLosses" optype="continuous" dataType="double"/>
+  <DataField name="fuelType" optype="categorical" dataType="string">
+   <Value value="diesel"/>
+   <Value value="gas"/>
+  </DataField>
+  <DataField name="aspiration" optype="categorical" dataType="string">
+   <Value value="std"/>
+   <Value value="turbo"/>
+  </DataField>
+  <DataField name="numOfDoors" optype="categorical" dataType="string">
+   <Value value="four"/>
+   <Value value="two"/>
+  </DataField>
+  <DataField name="bodyStyle" optype="categorical" dataType="string">
+   <Value value="convertible"/>
+   <Value value="hardtop"/>
+   <Value value="hatchback"/>
+   <Value value="sedan"/>
+   <Value value="wagon"/>
+  </DataField>
+  <DataField name="driveWheels" optype="categorical" dataType="string">
+   <Value value="4wd"/>
+   <Value value="fwd"/>
+   <Value value="rwd"/>
+  </DataField>
+  <DataField name="wheelBase" optype="continuous" dataType="double"/>
+  <DataField name="length" optype="continuous" dataType="double"/>
+  <DataField name="width" optype="continuous" dataType="double"/>
+  <DataField name="height" optype="continuous" dataType="double"/>
+  <DataField name="curbWeight" optype="continuous" dataType="double"/>
+  <DataField name="engineSize" optype="continuous" dataType="double"/>
+  <DataField name="bore" optype="continuous" dataType="double"/>
+  <DataField name="stroke" optype="continuous" dataType="double"/>
+  <DataField name="compressionRatio" optype="continuous" dataType="double"/>
+  <DataField name="horsepower" optype="continuous" dataType="double"/>
+  <DataField name="peakRpm" optype="continuous" dataType="double"/>
+  <DataField name="cityMpg" optype="continuous" dataType="double"/>
+  <DataField name="highwayMpg" optype="continuous" dataType="double"/>
+ </DataDictionary>
+ <GeneralRegressionModel modelName="General_Regression_Model" modelType="generalizedLinear" functionName="regression" algorithmName="glm" distribution="gamma" linkFunction="power" linkParameter="-1">
+  <MiningSchema>
+   <MiningField name="price" usageType="predicted"/>
+   <MiningField name="symboling" usageType="active"/>
+   <MiningField name="normalizedLosses" usageType="active"/>
+   <MiningField name="fuelType" usageType="active"/>
+   <MiningField name="aspiration" usageType="active"/>
+   <MiningField name="numOfDoors" usageType="active"/>
+   <MiningField name="bodyStyle" usageType="active"/>
+   <MiningField name="driveWheels" usageType="active"/>
+   <MiningField name="wheelBase" usageType="active"/>
+   <MiningField name="length" usageType="active"/>
+   <MiningField name="width" usageType="active"/>
+   <MiningField name="height" usageType="active"/>
+   <MiningField name="curbWeight" usageType="active"/>
+   <MiningField name="engineSize" usageType="active"/>
+   <MiningField name="bore" usageType="active"/>
+   <MiningField name="stroke" usageType="active"/>
+   <MiningField name="compressionRatio" usageType="active"/>
+   <MiningField name="horsepower" usageType="active"/>
+   <MiningField name="peakRpm" usageType="active"/>
+   <MiningField name="cityMpg" usageType="active"/>
+   <MiningField name="highwayMpg" usageType="active"/>
+  </MiningSchema>
+  <Output>
+   <OutputField name="Predicted_price" feature="predictedValue"/>
+  </Output>
+  <ParameterList>
+   <Parameter name="p0" label="(Intercept)"/>
+   <Parameter name="p1" label="symboling"/>
+   <Parameter name="p2" label="normalizedLosses"/>
+   <Parameter name="p3" label="fuelTypegas"/>
+   <Parameter name="p4" label="aspirationturbo"/>
+   <Parameter name="p5" label="numOfDoorstwo"/>
+   <Parameter name="p6" label="bodyStylehardtop"/>
+   <Parameter name="p7" label="bodyStylehatchback"/>
+   <Parameter name="p8" label="bodyStylesedan"/>
+   <Parameter name="p9" label="bodyStylewagon"/>
+   <Parameter name="p10" label="driveWheelsfwd"/>
+   <Parameter name="p11" label="driveWheelsrwd"/>
+   <Parameter name="p12" label="wheelBase"/>
+   <Parameter name="p13" label="length"/>
+   <Parameter name="p14" label="width"/>
+   <Parameter name="p15" label="height"/>
+   <Parameter name="p16" label="curbWeight"/>
+   <Parameter name="p17" label="engineSize"/>
+   <Parameter name="p18" label="bore"/>
+   <Parameter name="p19" label="stroke"/>
+   <Parameter name="p20" label="compressionRatio"/>
+   <Parameter name="p21" label="horsepower"/>
+   <Parameter name="p22" label="peakRpm"/>
+   <Parameter name="p23" label="cityMpg"/>
+   <Parameter name="p24" label="highwayMpg"/>
+  </ParameterList>
+  <FactorList>
+   <Predictor name="fuelType"/>
+   <Predictor name="aspiration"/>
+   <Predictor name="numOfDoors"/>
+   <Predictor name="bodyStyle"/>
+   <Predictor name="driveWheels"/>
+  </FactorList>
+  <CovariateList>
+   <Predictor name="symboling"/>
+   <Predictor name="normalizedLosses"/>
+   <Predictor name="wheelBase"/>
+   <Predictor name="length"/>
+   <Predictor name="width"/>
+   <Predictor name="height"/>
+   <Predictor name="curbWeight"/>
+   <Predictor name="engineSize"/>
+   <Predictor name="bore"/>
+   <Predictor name="stroke"/>
+   <Predictor name="compressionRatio"/>
+   <Predictor name="horsepower"/>
+   <Predictor name="peakRpm"/>
+   <Predictor name="cityMpg"/>
+   <Predictor name="highwayMpg"/>
+  </CovariateList>
+  <PPMatrix>
+   <PPCell value="1" predictorName="symboling" parameterName="p1"/>
+   <PPCell value="1" predictorName="normalizedLosses" parameterName="p2"/>
+   <PPCell value="gas" predictorName="fuelType" parameterName="p3"/>
+   <PPCell value="turbo" predictorName="aspiration" parameterName="p4"/>
+   <PPCell value="two" predictorName="numOfDoors" parameterName="p5"/>
+   <PPCell value="hardtop" predictorName="bodyStyle" parameterName="p6"/>
+   <PPCell value="hatchback" predictorName="bodyStyle" parameterName="p7"/>
+   <PPCell value="sedan" predictorName="bodyStyle" parameterName="p8"/>
+   <PPCell value="wagon" predictorName="bodyStyle" parameterName="p9"/>
+   <PPCell value="fwd" predictorName="driveWheels" parameterName="p10"/>
+   <PPCell value="rwd" predictorName="driveWheels" parameterName="p11"/>
+   <PPCell value="1" predictorName="wheelBase" parameterName="p12"/>
+   <PPCell value="1" predictorName="length" parameterName="p13"/>
+   <PPCell value="1" predictorName="width" parameterName="p14"/>
+   <PPCell value="1" predictorName="height" parameterName="p15"/>
+   <PPCell value="1" predictorName="curbWeight" parameterName="p16"/>
+   <PPCell value="1" predictorName="engineSize" parameterName="p17"/>
+   <PPCell value="1" predictorName="bore" parameterName="p18"/>
+   <PPCell value="1" predictorName="stroke" parameterName="p19"/>
+   <PPCell value="1" predictorName="compressionRatio" parameterName="p20"/>
+   <PPCell value="1" predictorName="horsepower" parameterName="p21"/>
+   <PPCell value="1" predictorName="peakRpm" parameterName="p22"/>
+   <PPCell value="1" predictorName="cityMpg" parameterName="p23"/>
+   <PPCell value="1" predictorName="highwayMpg" parameterName="p24"/>
+  </PPMatrix>
+  <ParamMatrix>
+   <PCell parameterName="p0" df="1" beta="0.000504619581995273"/>
+   <PCell parameterName="p1" df="1" beta="3.34668774801677e-06"/>
+   <PCell parameterName="p2" df="1" beta="-1.83981668446969e-07"/>
+   <PCell parameterName="p3" df="1" beta="-9.1621203845893e-05"/>
+   <PCell parameterName="p4" df="1" beta="-8.38643130720025e-06"/>
+   <PCell parameterName="p5" df="1" beta="4.54007269723343e-06"/>
+   <PCell parameterName="p6" df="1" beta="2.79456789838275e-05"/>
+   <PCell parameterName="p7" df="1" beta="3.21742308347139e-05"/>
+   <PCell parameterName="p8" df="1" beta="2.92218045470367e-05"/>
+   <PCell parameterName="p9" df="1" beta="3.21950955567195e-05"/>
+   <PCell parameterName="p10" df="1" beta="1.34623126251208e-05"/>
+   <PCell parameterName="p11" df="1" beta="3.27046361233836e-06"/>
+   <PCell parameterName="p12" df="1" beta="6.12851156517326e-07"/>
+   <PCell parameterName="p13" df="1" beta="-4.96608252856028e-07"/>
+   <PCell parameterName="p14" df="1" beta="-2.64286744830496e-06"/>
+   <PCell parameterName="p15" df="1" beta="-1.49866611912751e-06"/>
+   <PCell parameterName="p16" df="1" beta="6.28378771037118e-09"/>
+   <PCell parameterName="p17" df="1" beta="-1.11397801542262e-07"/>
+   <PCell parameterName="p18" df="1" beta="-3.37871546757233e-06"/>
+   <PCell parameterName="p19" df="1" beta="-2.66312425778986e-06"/>
+   <PCell parameterName="p20" df="1" beta="-8.94406342201149e-06"/>
+   <PCell parameterName="p21" df="1" beta="-1.63890734101949e-07"/>
+   <PCell parameterName="p22" df="1" beta="-1.71766083389885e-09"/>
+   <PCell parameterName="p23" df="1" beta="4.98509836029969e-06"/>
+   <PCell parameterName="p24" df="1" beta="-1.80627107191201e-06"/>
+  </ParamMatrix>
+ </GeneralRegressionModel>
+</PMML>

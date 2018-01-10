@@ -1,0 +1,62 @@
+<style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20090102;5583429">
+	<META NAME="CHANGEDBY" CONTENT="jisha j">
+	<META NAME="CHANGED" CONTENT="20090102;5595409">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P>This sample illustrates how to copy and paste data including its
+formatting from a GridControl to Excel and vice versa.
+</P>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" src="Images\Copy-Paste.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+<P>This sample illustrates how to copy and paste data, including its
+formatting, from a grid control to Excel and vice versa. In order to achieve this, 
+the sample retrieves the BIFF-formatted	object of the clipboard and pastes the data into the grid cells.
+</P>
+<p>The following code explains to copy the workbook data</p>
+<pre>
+<font color="#8D2E1C">     private void CopyStylesAsBiffToClipBoard(GridRangeInfoList rangelist)</font>
+<font color="#8D2E1C">     {</font>
+<font color="#8D2E1C">         GridExcelConverterControl gecc = new GridExcelConverterControl();</font>
+<font color="#8D2E1C">         ExcelEngine engine = CreateEngine();</font>
+<font color="#8D2E1C">         IWorkbook book = engine.Excel.Workbooks.Create(1);</font>
+<font color="#8D2E1C">         IWorksheet sheet = book.Worksheets[0];</font>
+
+<font color="#8D2E1C">         foreach (GridRangeInfo range in rangelist)</font>
+<font color="#8D2E1C">         {</font>
+<font color="#8D2E1C">             range.ExpandRange(1, 1, this.gridControl1.RowCount, this.gridControl1.ColCount);</font>
+<font color="#8D2E1C">             for (int iRow = range.Top; iRow &lt;= range.Bottom; iRow++)</font>
+<font color="#8D2E1C">             {</font>
+<font color="#8D2E1C">                 for (int iColumn = range.Left; iColumn &lt;= range.Right; iColumn++)</font>
+<font color="#8D2E1C">                 {</font>
+<font color="#8D2E1C">                     GridStyleInfo gridCell = this.gridControl1[iRow, iColumn];</font>
+<font color="#8D2E1C">                     if (gridCell.IsEmpty) continue;</font>
+<font color="#8D2E1C">                     gecc.GridCellToExcel(this.gridControl1.Model, iRow, iColumn, sheet.Range[iRow, iColumn]);</font>
+<font color="#8D2E1C">                 }</font>
+<font color="#8D2E1C">             }</font>
+<font color="#8D2E1C">        }</font>
+<font color="#8D2E1C">        book.CopyToClipboard();</font>
+<font color="#8D2E1C">        book.Close();</font>
+<font color="#8D2E1C">    }</font></PRE>
+<br><br>
+</BODY>
+</HTML>

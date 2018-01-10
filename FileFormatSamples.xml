@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Products>
+
+<!--Region ShowCase-->
+
+<ShowcaseSample Name="Invoice" SourcePath="Showcase\Invoice\CS" RowSpan="1" ImagePath="Showcase\Invoice.png"/>
+<ShowcaseSample Name="Succinctly Series" SourcePath="Showcase\SuccinitySeries\CS" RowSpan="1" ImagePath="Showcase\succinctly.png"/> 
+<ShowcaseSample Name="Presentation Viewer" SourcePath="Showcase\Presentation Demo\CS" RowSpan="1" ImagePath="Showcase\ppt__logo.png"/>
+<!--End of Region ShowCase-->
+
+<!--Region File Format-->
+
+ <Product Name="DocIO" Category="File Format" IsUpdated="True" EnableSecondLevel="True" >
+    <Sample Name="Sales Invoice" Category="Product Showcase" SourcePath="DocIO.Windows\Samples\Product Showcase\Sales Invoice" ImagePath="DocIO.Windows\Images\invoice.png"/>
+    <Sample Name="Update Fields" Category="Product Showcase" SourcePath="DocIO.Windows\Samples\Product Showcase\Update Fields" ImagePath="DocIO.Windows\Images\updatefields.png"/>
+
+    <Sample Name="Hello World" Category="Getting Started" SourcePath="DocIO.Windows\Samples\Getting Started\Hello World" ImagePath="DocIO.Windows\Images\generateword.png"/>
+
+    <Sample Name="Image Insertion" Category="Insert Content" SourcePath="DocIO.Windows\Samples\Insert Content\Image Insertion" ImagePath="DocIO.Windows\Images\image-insertion.png"/>
+    <Sample Name="Table Insertion" Category="Insert Content" SourcePath="DocIO.Windows\Samples\Insert Content\Table Insertion" ImagePath="DocIO.Windows\Images\tableinsertion.png"/>
+    <Sample Name="Hyperlink" Category="Insert Content" SourcePath="DocIO.Windows\Samples\Insert Content\Hyperlink" ImagePath="DocIO.Windows\Images\hyperlink.png"/>
+    <Sample Name="Bookmarks" Category="Insert Content" SourcePath="DocIO.Windows\Samples\Insert Content\Bookmarks" ImagePath="DocIO.Windows\Images\bookmark.png"/>
+    <Sample Name="Header and Footer" Category="Insert Content" SourcePath="DocIO.Windows\Samples\Insert Content\Header and Footer" ImagePath="DocIO.Windows\Images\headerandfooter.png"/>
+    <Sample Name="Clone and Merge" Category="Insert Content" IsUpdated="True" SourcePath="DocIO.Windows\Samples\Insert Content\Clone and Merge" ImagePath="DocIO.Windows\Images\cloneandmerge.png"/>
+    <Sample Name="OLE Object" Category="Insert Content" SourcePath="DocIO.Windows\Samples\Insert Content\OLE Object" ImagePath="DocIO.Windows\Images\oleobject.png"/>
+
+    <Sample Category="Formatting" Name="Format Text" SourcePath="DocIO.Windows\Samples\Formatting\Format Text" ImagePath="DocIO.Windows\Images\formattext.png"/>
+    <Sample Name="Format Table" Category="Formatting" SourcePath="DocIO.Windows\Samples\Formatting\Format Table" ImagePath="DocIO.Windows\Images\tableformat.png"/>
+    <Sample Name="Styles" Category="Formatting" SourcePath="DocIO.Windows\Samples\Formatting\Styles" ImagePath="DocIO.Windows\Images\styles.png"/>
+    <Sample Name="RTL Support" Category="Formatting" SourcePath="DocIO.Windows\Samples\Formatting\RTL Support" ImagePath="DocIO.Windows\Images\rtl.png"/>
+    <Sample Name="Table Styles" Category="Formatting" SourcePath="DocIO.Windows\Samples\Formatting\TableStyles" ImagePath="DocIO.Windows\Images\tablestyles.png"/>
+
+    <Sample Name="Insert Break" Category="Page Layout" SourcePath="DocIO.Windows\Samples\Page Layout\Insert Break" ImagePath="DocIO.Windows\Images\insertbreak.png"/>
+    <Sample Name="Watermark" Category="Page Layout" SourcePath="DocIO.Windows\Samples\Page Layout\Watermark" ImagePath="DocIO.Windows\Images\watermark.png"/>
+
+    <Sample Name="Footnotes and Endnotes" Category="References" SourcePath="DocIO.Windows\Samples\References\Footnotes and Endnotes" ImagePath="DocIO.Windows\Images\footnote.png"/>
+    <Sample Name="Table of Contents" Category="References" SourcePath="DocIO.Windows\Samples\References\Table of Contents" ImagePath="DocIO.Windows\Images\toc.png"/>
+
+    <Sample Name="Find and Replace" Category="Editing" SourcePath="DocIO.Windows\Samples\Editing\Find and Replace" ImagePath="DocIO.Windows\Images\findandreplace.png"/>
+    <Sample Name="Advanced Replace" Category="Editing" SourcePath="DocIO.Windows\Samples\Editing\Advanced Replace" ImagePath="DocIO.Windows\Images\advancereplace.png"/>
+    <Sample Name="Forms" Category="Editing" SourcePath="DocIO.Windows\Samples\Editing\Forms" ImagePath="DocIO.Windows\Images\form.png"/>
+    <Sample Name="Bookmark Navigation"  Category="Editing" SourcePath="DocIO.Windows\Samples\Editing\Bookmark Navigation" ImagePath="DocIO.Windows\Images\bookmarknavigation.png"/>
+
+    <Sample Name="Form Filling and Protection" Category="Content Control" SourcePath="DocIO.Windows\Samples\Content Control\Form Filling and Protection" ImagePath="DocIO.Windows\Images\ProtectionAndFormFilling.png"/>
+    <Sample Name="XML Mapping" Category="Content Control" SourcePath="DocIO.Windows\Samples\Content Control\XML Mapping" ImagePath="DocIO.Windows\Images\XmlMapping.png"/>
+
+    <Sample Name="Employee Report" Category="Mail Merge" SourcePath="DocIO.Windows\Samples\Mail Merge\Employee Report" ImagePath="DocIO.Windows\Images\employeereport.png"/>
+    <Sample Name="Letter Format" Category="Mail Merge" SourcePath="DocIO.Windows\Samples\Mail Merge\Letter Format" ImagePath="DocIO.Windows\Images\letterformat.png"/>
+    <Sample Name="Mail Merge Event" Category="Mail Merge" SourcePath="DocIO.Windows\Samples\Mail Merge\Mail Merge Event" ImagePath="DocIO.Windows\Images\mailmerge.png"/>
+    <Sample Name="Nested Mail Merge" Category="Mail Merge" SourcePath="DocIO.Windows\Samples\Mail Merge\Nested Mail Merge" ImagePath="DocIO.Windows\Images\nestedmerge.png"/>
+
+    <Sample Name="Document Settings" Category="View" SourcePath="DocIO.Windows\Samples\View\Document Settings" ImagePath="DocIO.Windows\Images\wordsettings.png"/>
+    <Sample Name="Macro Preservation" Category="View" SourcePath="DocIO.Windows\Samples\View\Macro Preservation" ImagePath="DocIO.Windows\Images\macropreservation.png"/>
+
+    <Sample Name="Document Protection" Category="Security" SourcePath="DocIO.Windows\Samples\Security\Document Protection" ImagePath="DocIO.Windows\Images\protection.png"/>
+    <Sample Name="Encrypt and Decrypt" Category="Security" SourcePath="DocIO.Windows\Samples\Security\Encrypt and Decrypt" ImagePath="DocIO.Windows\Images\encrypt.png"/>
+
+    <Sample Name="Word to EPub" Category="Import and Export"  SourcePath="DocIO.Windows\Samples\Import and Export\Doc to EPub" ImagePath="DocIO.Windows\Images\wordtoepub.png"/>
+    <Sample Name="Word to HTML" Category="Import and Export"  SourcePath="DocIO.Windows\Samples\Import and Export\Doc To HTML" ImagePath="DocIO.Windows\Images\wordtohtml.png"/>
+    <Sample Name="Word to PDF"  Category="Import and Export" IsUpdated="True" SourcePath="DocIO.Windows\Samples\Import and Export\Doc to PDF" ImagePath="DocIO.Windows\Images\wordtopdf.png"/>
+    <Sample Name="Word to RTF" Category="Import and Export"  SourcePath="DocIO.Windows\Samples\Import and Export\Doc to RTF" ImagePath="DocIO.Windows\Images\wordtortf.png"/>
+	<Sample Name="Word to ODT" Category="Import and Export"  SourcePath="DocIO.Windows\Samples\Import And Export\Doc to ODT" ImagePath="DocIO.Windows\Samples\Import And Export\Doc to ODT\images\sample.png" />
+	<Sample Name="Word to WordML" Category="Import and Export"  SourcePath="DocIO.Windows\Samples\Import And Export\Word to WordML" ImagePath="DocIO.Windows\Samples\Import And Export\Word to WordML\images\sample.png" />
+    <Sample Name="HTML to Word" Category="Import and Export"  SourcePath="DocIO.Windows\Samples\Import and Export\HTML To Doc" ImagePath="DocIO.Windows\Images\htmltoword.png"/>
+    <Sample Name="RTF to Word" Category="Import and Export"  SourcePath="DocIO.Windows\Samples\Import and Export\RTF to Doc" ImagePath="DocIO.Windows\Images\rtftoword.png"/>
+	<Sample Name="WordML to Word" Category="Import and Export"  SourcePath="DocIO.Windows\Samples\Import And Export\WordML to Word" ImagePath="DocIO.Windows\Samples\Import And Export\WordML to Word\images\WordMLtoWord.png" />
+    <Sample Name="Word to Image" Category="Import and Export"  SourcePath="DocIO.Windows\Samples\Import and Export\Word To Image" ImagePath="DocIO.Windows\Images\wordtoimage.png"/>
+
+<Sample Name="AutoShapes" Category="Shapes" SourcePath="DocIO.Windows\Samples\Shapes\AutoShapes" ImagePath="DocIO.Windows\Images\AutoShapes.png"/>
+<Sample Name="Print"  Category="Print" SourcePath="DocIO.Windows\Samples\Print\Print" ImagePath="DocIO.Windows\Images\printing.png"/>
+  <Sample Name="Pie Chart"  Category="Chart"  SourcePath="DocIO.Windows\Samples\Chart\Pie Chart" ImagePath="DocIO.Windows\Images\piechart.png"/>
+  <Sample Name="Bar Chart"  Category="Chart"  SourcePath="DocIO.Windows\Samples\Chart\Bar Chart" ImagePath="DocIO.Windows\Images\barchart.png"/>
+  </Product>
+<Product Name="PDF" Category="File Format" EnableSecondLevel="True" >
+<Sample Name="Job Application" Category="Product Showcase"  SourcePath="PDF.Windows\Samples\Product Showcase\Job Application" ImagePath="PDF.Windows\images\job.png"/>
+<Sample Name="Invoice" Category="Product Showcase"  SourcePath="PDF.Windows\Samples\Product Showcase\Invoice" ImagePath="PDF.Windows\images\invoice.png"/>
+<Sample Name="Hello World" Category="Getting Started"  SourcePath="PDF.Windows\Samples\Getting Started\Hello World" ImagePath="PDF.Windows\images\hello.png"/>
+<Sample Name="PDF-A" Category="Getting Started"  SourcePath="PDF.Windows\Samples\Getting Started\PDF-A" ImagePath="PDF.Windows\images\conformance.png"/>
+<Sample Name="PDF Compression Level" Category="Compression"  SourcePath="PDF.Windows\Samples\Compression\PDF Compression Level" ImagePath="PDF.Windows\images\compress.png"/>
+<Sample Name="Compress Existing PDF" Category="Compression" SourcePath="PDF.Windows\Samples\Compression\Compress Existing PDF" ImagePath="PDF.Windows\images\compress.png"/>
+<Sample Name="Text Flow" Category="Drawing Text"  SourcePath="PDF.Windows\Samples\Drawing Text\Text Flow" ImagePath="PDF.Windows\images\textflow.png"/>
+<Sample Name="RTL Support" Category="Drawing Text"  SourcePath="PDF.Windows\Samples\Drawing Text\RTL Support" ImagePath="PDF.Windows\images\RTL.png"/>
+<Sample Name="Bullets and Lists" Category="Drawing Text"  SourcePath="PDF.Windows\Samples\Drawing Text\Bullets and Lists" ImagePath="PDF.Windows\images\bullets.png"/>
+<Sample Name="Multi Column HTML Text" Category="Drawing Text"  SourcePath="PDF.Windows\Samples\Drawing Text\Multi Column HTML Text" ImagePath="PDF.Windows\images\multi.png"/>
+<Sample Name="Barcode" Category="Graphics"  SourcePath="PDF.Windows\Samples\Graphics\Barcode" ImagePath="PDF.Windows\images\barcode.png"/>
+<Sample Name="Drawing Shapes" Category="Graphics"  SourcePath="PDF.Windows\Samples\Graphics\Drawing Shapes" ImagePath="PDF.Windows\images\shapes.png"/>
+<Sample Name="Graphic Brushes" Category="Graphics"  SourcePath="PDF.Windows\Samples\Graphics\Graphic Brushes" ImagePath="PDF.Windows\images\brush.png"/>
+<Sample Name="Image Insertion" Category="Graphics"  SourcePath="PDF.Windows\Samples\Graphics\Image Insertion" ImagePath="PDF.Windows\images\imageinsertion.png"/>
+<Sample Name="Layers" Category="Graphics"  SourcePath="PDF.Windows\Samples\Graphics\Layers" ImagePath="PDF.Windows\images\layers.png"/>
+<Sample Name="Northwind Report" Category="Tables" SourcePath="PDF.Windows\Samples\Tables\Northwind Report" ImagePath="PDF.Windows\images\northwind.png"/>
+<Sample Name="Adventure Cycle Works" Category="Tables" SourcePath="PDF.Windows\Samples\Tables\Adventure Cycle" ImagePath="PDF.Windows\images\AdventureCycle.png"/>
+<Sample Name="Table Features" Category="Tables"  SourcePath="PDF.Windows\Samples\Tables\Table Features" ImagePath="PDF.Windows\images\table.png"/>
+<Sample Name="Document Settings" Category="Settings"  SourcePath="PDF.Windows\Samples\Settings\Document Settings" ImagePath="PDF.Windows\images\docsetting.png"/>
+<Sample Name="Page Settings" Category="Settings"  SourcePath="PDF.Windows\Samples\Settings\Page Settings" ImagePath="PDF.Windows\images\pages.png"/>
+<Sample Name="Headers and Footers" Category="Settings"  SourcePath="PDF.Windows\Samples\Settings\Headers and Footers" ImagePath="PDF.Windows\images\headers.png"/>
+<Sample Name="Encryption" Category="Security" SourcePath="PDF.Windows\Samples\Security\Encryption" ImagePath="PDF.Windows\images\encryption.png"/>
+<Sample Name="Digital Signature" Category="Security"  SourcePath="PDF.Windows\Samples\Security\Digital Signature" ImagePath="PDF.Windows\images\digitalsignatures.png"/>
+<Sample Name="Form Fill" Category="User Interaction"  SourcePath="PDF.Windows\Samples\User Interaction\Form Fill" ImagePath="PDF.Windows\images\formfilling.png"/>
+<Sample Name="XFA Form Creation" Category="User Interaction"  SourcePath="PDF.Windows\Samples\User Interaction\XFA Form Creation" ImagePath="PDF.Windows\images\formfilling.png"/>
+<Sample Name="XFA Form Fill" Category="User Interaction"  SourcePath="PDF.Windows\Samples\User Interaction\XFA Form Fill" ImagePath="PDF.Windows\images\formfilling.png"/>
+<Sample Name="Interactive Features" Category="User Interaction"  SourcePath="PDF.Windows\Samples\User Interaction\Interactive Features" ImagePath="PDF.Windows\images\userinteraction.png"/>
+<Sample Name="Portfolio" Category="User Interaction"  SourcePath="Pdf.Windows\Samples\User Interaction\Portfolio" ImagePath="Pdf.Windows\Images\portfolio.png"/>
+<Sample Name="Annotations" Category="User Interaction" SourcePath="Pdf.Windows\Samples\User Interaction\Annotation Flatten" ImagePath="Pdf.Windows\Images\Sample.png"/>
+<Sample Name="Named Destination" Category="User Interaction" SourcePath="PDF.Windows\Samples\User Interaction\Named Destination" ImagePath="PDF.Windows\images\namedDestination.png"/>
+<Sample Name="Pdf Viewer Demo" Category="Viewer"  SourcePath="PDF.Windows\Samples\Viewer\Pdf Viewer Demo" ImagePath="PDF.Windows\images\viewer.png"/>
+<Sample Name="Custom Toolbar" Category="Viewer"  SourcePath="PDF.Windows\Samples\Viewer\Custom Toolbar" ImagePath="PDF.Windows\images\customtool.png"/>
+<Sample Name="Multi Tabbed Viewer" Category="Viewer"  SourcePath="PDF.Windows\Samples\Viewer\Multi Tabbed Viewer" ImagePath="PDF.Windows\images\mutitab.png"/>
+<Sample Name="HTML to PDF" Category="Import to PDF"  SourcePath="PDF.Windows\Samples\Import to PDF\HTML to PDF" ImagePath="PDF.Windows\images\htmltopdf.png"/>
+<Sample Name="Doc to PDF" Category="Import to PDF" SourcePath="PDF.Windows\Samples\Import to PDF\Doc to PDF" ImagePath="PDF.Windows\images\wordtopdf.png"/>
+<Sample Name="RTF to PDF" Category="Import to PDF"  SourcePath="PDF.Windows\Samples\Import to PDF\RTF to PDF" ImagePath="PDF.Windows\images\RTFtopdf.png"/>
+<Sample Name="Excel to PDF" Category="Import to PDF"  SourcePath="PDF.Windows\Samples\Import to PDF\Excel to PDF" ImagePath="PDF.Windows\images\exceltopdf.png"/>
+<Sample Name="XPS to PDF" Category="Import to PDF"  SourcePath="PDF.Windows\Samples\Import to PDF\XPS to PDF" ImagePath="PDF.Windows\images\xpstopdf.png"/>
+<Sample Name="Image Extraction" Category="Export PDF"  SourcePath="PDF.Windows\Samples\Export PDF\Image Extraction" ImagePath="PDF.Windows\images\imageextraction.png"/>
+<Sample Name="Text Extraction" Category="Export PDF"  SourcePath="PDF.Windows\Samples\Export PDF\Text Extraction" ImagePath="PDF.Windows\images\textextraction.png"/>
+<Sample Name="Export as Image" Category="Export PDF"  SourcePath="PDF.Windows\Samples\Export PDF\Export as Image" ImagePath="PDF.Windows\images\pdftoimage.png"/>
+<Sample Name="Silent Printing" Category="Print"  SourcePath="PDF.Windows\Samples\Print\Silent Printing" ImagePath="PDF.Windows\images\printing.png"/>
+<Sample Name="Merge Documents" Category="Modify Documents"  SourcePath="PDF.Windows\Samples\Modify Documents\Merge Documents" ImagePath="PDF.Windows\images\merge.png"/>
+<Sample Name="Split Document" Category="Modify Documents"  SourcePath="PDF.Windows\Samples\Modify Documents\Split Document" ImagePath="PDF.Windows\images\split.png"/>
+<Sample Name="Stamp Document" Category="Modify Documents"  SourcePath="PDF.Windows\Samples\Modify Documents\Stamp Document" ImagePath="PDF.Windows\images\import.png"/>
+<Sample Name="Overlay Documents" Category="Modify Documents"  SourcePath="PDF.Windows\Samples\Modify Documents\Overlay Documents" ImagePath="PDF.Windows\images\overlay.png"/>
+<Sample Name="Booklet" Category="Modify Documents"  SourcePath="PDF.Windows\Samples\Modify Documents\Booklet" ImagePath="PDF.Windows\images\booklet.png"/>
+<Sample Name="PDF OCR" Category="OCR"  SourcePath="PDF.Windows\Samples\OCR\PDF OCR" ImagePath="PDF.Windows\images\ocr.png"/>
+<Sample Name="Image OCR" Category="OCR"  SourcePath="PDF.Windows\Samples\OCR\Image OCR" ImagePath="PDF.Windows\images\OCRImage.png"/>
+<Sample Name="Autotag" Category="Accessibility" SourcePath="PDF.Windows\Samples\Accessibility\Auto Tag" ImagePath="PDF.Windows\images\hello.png"/>
+<Sample Name="Customtag" Category="Accessibility" SourcePath="PDF.Windows\Samples\Accessibility\Custom Tag" ImagePath="PDF.Windows\images\hello.png"/>
+
+</Product>
+
+<Product Name="PDF Viewer" Category="File Format" EnableSecondLevel="True">
+<Sample Name="Pdf Viewer Demo" Category="Getting Started" 
+SourcePath="PdfViewer.Windows\Samples\Getting Started\Pdf Viewer Demo" ImagePath="PdfViewer.Windows\Images\viewer.png"/>
+<Sample Name="PdfViewer Bookmark Navigation" Category="Bookmark Navigation" 
+SourcePath="PdfViewer.Windows\Samples\PdfViewer Bookmark\PdfViewer Bookmark" ImagePath="PdfViewer.Windows\Images\Bookmark.png"/>
+<Sample Name="Custom Toolbar" Category="Toolbar Customization" 
+SourcePath="PdfViewer.Windows\Samples\Toolbar Customization\Custom Toolbar" ImagePath="PdfViewer.Windows\Images\customtool.png"/>
+<Sample Name="Silent Printing" Category="Print" 
+SourcePath="PdfViewer.Windows\Samples\Print\Silent Printing" ImagePath="PdfViewer.Windows\Images\printing.png"/>
+<Sample Name="Multi Tabbed Viewer" Category="Multi Tabbed View" 
+SourcePath="PdfViewer.Windows\Samples\Multi Tabbed View\Multi Tabbed Viewer" ImagePath="PdfViewer.Windows\Images\mutitab.png"/>
+<Sample Name="Export as Image" Category="Export" 
+SourcePath="PdfViewer.Windows\Samples\Export\Export as Image" ImagePath="PdfViewer.Windows\Images\pdftoimage.png"/>
+</Product>
+
+ <Product Name="XlsIO" Category="File Format" EnableSecondLevel="True" IsUpdated="False">
+
+    <Sample Name="Budget Planner" Category="Product Showcase" SourcePath="XlsIO.Windows\Samples\Product Showcase\Budget Planner" ImagePath="XlsIO.Windows\Images\Budget Planner.png"/>
+    <Sample Name="Stock Portfolio" Category="Product Showcase" SourcePath="XlsIO.Windows\Samples\Product Showcase\Stock Portfolio" ImagePath="XlsIO.Windows\Images\Stock Portfolio.png"/>
+
+    <Sample Name="Create Spreadsheet" Category="Getting Started" SourcePath="XlsIO.Windows\Samples\Getting Started\Create Spreadsheet" ImagePath="XlsIO.Windows\Images\Create Spreadsheet.png"/>
+    <Sample Name="Find and Extract" Category="Getting Started" SourcePath="XlsIO.Windows\Samples\Getting Started\Find and Extract" ImagePath="XlsIO.Windows\Images\Find and Extract.png"/>
+    <Sample Name="Replace Options" Category="Getting Started" SourcePath="XlsIO.Windows\Samples\Getting Started\Replace Options" ImagePath="XlsIO.Windows\Images\Find and Extract.png"/>
+
+    <Sample Name="Conditional Formatting" Category="Formatting" SourcePath="XlsIO.Windows\Samples\Formatting\Conditional Formatting" ImagePath="XlsIO.Windows\Images\Conditional Formatting.png"/>
+    <Sample Name="Format Cells" Category="Formatting" SourcePath="XlsIO.Windows\Samples\Formatting\Format Cells" ImagePath="XlsIO.Windows\Images\Format Cells.png"/>
+    <Sample Name="Styles and Formatting" Category="Formatting" SourcePath="XlsIO.Windows\Samples\Formatting\Styles and Formatting" ImagePath="XlsIO.Windows\Images\Styles and Formatting.png"/>
+
+    <Sample Name="Compute All Formulas" Category="Formulas" SourcePath="XlsIO.Windows\Samples\Formulas\Compute All Formulas" ImagePath="XlsIO.Windows\Images\Compute All Formulas.png"/>
+    <Sample Name="Compute Specific Formula" Category="Formulas" SourcePath="XlsIO.Windows\Samples\Formulas\Compute Specific Formula" ImagePath="XlsIO.Windows\Images\Compute Specific Formula.png"/>
+	<Sample Name="Formulas" Category="Formulas" SourcePath="XlsIO.Windows\Samples\Formulas\Formulas" ImagePath="XlsIO.Windows\Images\Formulas.png"/>
+	<Sample Name="Table Formula" Category="Formulas" SourcePath="XlsIO.Windows\Samples\Formulas\Table Formula"  ImagePath="XlsIO.Windows\Images\Table Formula.png"/>
+	
+    <Sample Name="Data Validation" Category="Data Management" SourcePath="XlsIO.Windows\Samples\Data Management\Data Validation" ImagePath="XlsIO.Windows\Images\Data Validation.png"/>
+    <Sample Name="Form Controls" Category="Data Management" SourcePath="XlsIO.Windows\Samples\Data Management\Form Controls" ImagePath="XlsIO.Windows\Images\Form Controls.png"/>
+    
+    <Sample Name="Interactive Features" Category="Data Management" SourcePath="XlsIO.Windows\Samples\Data Management\Interactive Features" ImagePath="XlsIO.Windows\Images\Interactive Features.png"/>
+    <Sample Name="Ole Object" Category="Data Management" SourcePath="XlsIO.Windows\Samples\Data Management\OleObject" ImagePath="XlsIO.Windows\Images\OleObject.png"/>
+    <Sample Name="Performance" Category="Data Management" SourcePath="XlsIO.Windows\Samples\Data Management\Performance" ImagePath="XlsIO.Windows\Images\Performance.png"/>
+    <Sample Name="Range Manipulation" Category="Data Management" SourcePath="XlsIO.Windows\Samples\Data Management\Range Manipulation" ImagePath="XlsIO.Windows\Images\Range Manipulation.png"/>
+    <Sample Name="Sorting" Category="Data Management" SourcePath="XlsIO.Windows\Samples\Data Management\Sorting" ImagePath="XlsIO.Windows\Images\Sorting.png"/>	
+	<Sample Name="Filters" Category="Data Management" SourcePath="XlsIO.Windows\Samples\Data Management\Filters"  ImagePath="XlsIO.Windows\Images\Worksheet Management.png"/>
+	
+    <Sample Name="External Connection" Category="Data Binding" SourcePath="XlsIO.Windows\Samples\Data Binding\External Connection" ImagePath="XlsIO.Windows\Images\External Connection.png"/>
+	<Sample Name="Import From Grid" Category="Data Binding" SourcePath="XlsIO.Windows\Samples\Data Binding\Import From Grid" ImagePath="XlsIO.Windows\Images\BusinessObject.png"/>
+    <Sample Name="Import-Export DataTable" Category="Data Binding" SourcePath="XlsIO.Windows\Samples\Data Binding\Import-Export DataTable" ImagePath="XlsIO.Windows\Images\Import Export Data Table.png"/>
+    <Sample Name="Invoice" Category="Data Binding" SourcePath="XlsIO.Windows\Samples\Data Binding\Invoice" ImagePath="XlsIO.Windows\Images\Invoice.png"/>
+    <Sample Name="Template Marker" Category="Data Binding" SourcePath="XlsIO.Windows\Samples\Data Binding\Template Marker" ImagePath="XlsIO.Windows\Images\Template Marker.png"/>
+    <Sample Name="Business Objects" Category="Data Binding" SourcePath="XlsIO.Windows\Samples\Data Binding\Import-BussinessObjects" ImagePath="XlsIO.Windows\Images\BusinessObject.png"/>
+    <Sample Name="LINQ Wrapper" Category="Data Binding" SourcePath="XlsIO.Windows\Samples\Data Binding\LINQ Wrapper" ImagePath="XlsIO.Windows\Images\LINQ Wrapper.png"/>
+
+    <Sample Name="Chart Worksheet" Category="Charts" SourcePath="XlsIO.Windows\Samples\Charts\Chart Worksheet" ImagePath="XlsIO.Windows\Images\Chart Worksheet.png"/>
+    <Sample Name="Embedded Chart" Category="Charts" SourcePath="XlsIO.Windows\Samples\Charts\Embedded Chart" ImagePath="XlsIO.Windows\Images\Embedded Chart.png"/>
+    <Sample Name="Sparklines" Category="Charts" SourcePath="XlsIO.Windows\Samples\Charts\Sparklines" ImagePath="XlsIO.Windows\Images\Sparklines.png"/>
+    <Sample Name="Box and Whisker" Category="Charts" SourcePath="XlsIO.Windows\Samples\Charts\Box and Whisker"  ImagePath="XlsIO.Windows\Images\Embedded Chart.png"/>
+	<Sample Name="Funnel" Category="Charts" SourcePath="XlsIO.Windows\Samples\Charts\Funnel Chart"   ImagePath="XlsIO.Windows\Images\Embedded Chart.png"/>
+	<Sample Name="Sunburst" Category="Charts" SourcePath="XlsIO.Windows\Samples\Charts\Sunburst"  ImagePath="XlsIO.Windows\Images\Embedded Chart.png"/>
+	<Sample Name="Treemap" Category="Charts" SourcePath="XlsIO.Windows\Samples\Charts\Treemap"   ImagePath="XlsIO.Windows\Images\Embedded Chart.png"/>
+	
+    <Sample Name="Row-Column Manipulations" Category="Sheet Management" SourcePath="XlsIO.Windows\Samples\Sheet Manipulations\Row-Column Manipulations" ImagePath="XlsIO.Windows\Images\Row Column Manipulations.png"/>
+    <Sample Name="Worksheet Management" Category="Sheet Management" SourcePath="XlsIO.Windows\Samples\Sheet Manipulations\Worksheet Management" ImagePath="XlsIO.Windows\Images\Worksheet Management.png"/>
+
+	<Sample Name="Excel to PDF" Category="Export" SourcePath="XlsIO.Windows\Samples\Export\Excel to PDF" IsUpdated="False" ImagePath="XlsIO.Windows\Images\Excel to PDF.png"/>
+	<Sample Name="Worksheet to HTML" Category="Export" SourcePath="XlsIO.Windows\Samples\Export\Worksheet to HTML" ImagePath="XlsIO.Windows\Images\Worksheet to HTML.png"/>
+    <Sample Name="Worksheet to Image" Category="Export" SourcePath="XlsIO.Windows\Samples\Export\Worksheet to Image" ImagePath="XlsIO.Windows\Images\Worksheet to Image.png"/>
+	<Sample Name="Excel To ODS" Category="Export" SourcePath="XlsIO.Windows\Samples\Export\Excel To ODS" ImagePath="XlsIO.Windows\Images\ExcelToODS.png"/>
+	
+    <Sample Name="Document Settings" Category="Settings" SourcePath="XlsIO.Windows\Samples\Settings\Document Settings" ImagePath="XlsIO.Windows\Images\Document Settings.png"/>
+    <Sample Name="Encrypt and Decrypt" Category="Settings" SourcePath="XlsIO.Windows\Samples\Settings\Encrypt and Decrypt" ImagePath="XlsIO.Windows\Images\Encrypt and Decrypt.png"/>
+    <Sample Name="Workbook Protection" Category="Settings" SourcePath="XlsIO.Windows\Samples\Settings\Workbook Protection" ImagePath="XlsIO.Windows\Images\Workbook Protection.png"/>
+    <Sample Name="Worksheet Protection" Category="Settings" SourcePath="XlsIO.Windows\Samples\Settings\Worksheet Protection" ImagePath="XlsIO.Windows\Images\Worksheet Protection.png"/>
+
+    <Sample Name="Pivot Chart" Category="Business Intelligence" SourcePath="XlsIO.Windows\Samples\Business Intelligence\Pivot Chart" ImagePath="XlsIO.Windows\Images\Pivot Chart.png"/>
+    <Sample Name="Pivot Table" Category="Business Intelligence" SourcePath="XlsIO.Windows\Samples\Business Intelligence\Pivot Table" ImagePath="XlsIO.Windows\Images\Pivot Table.png"/>
+    <Sample Name="Tables" Category="Business Intelligence" SourcePath="XlsIO.Windows\Samples\Business Intelligence\Tables" ImagePath="XlsIO.Windows\Images\Tables.png"/>
+
+    <Sample Name="AutoShapes" Category="Shapes" SourcePath="\XlsIO.Windows\Samples\Shapes\AutoShapes" ImagePath="XlsIO.Windows\Images\AutoShapes.png"/>
+		
+  </Product>
+
+<Product Name="Presentation" Category="File Format" EnableSecondLevel="True">
+<Sample Name="PPTX To Image" Category="Conversion" 
+SourcePath="Presentation.Windows\Samples\Conversion\PPTXToImage" ImagePath="Presentation.Windows\Samples\Conversion\PPTXToImage\Images\PPTXToImage1.png"/>
+<Sample Name="PPTX To PDF" Category="Conversion" 
+SourcePath="Presentation.Windows\Samples\Conversion\PPTXToPDF" ImagePath="Presentation.Windows\Samples\Conversion\PPTXToPDF\Images\ptxtopdfsample.png"/>
+<Sample Name="Hello World" Category="Getting Started" 
+SourcePath="Presentation.Windows\Samples\Getting Started\HelloWorld" ImagePath="Presentation.Windows\Samples\Getting Started\HelloWorld\Images\HelloWorldSample.png"/>
+<Sample Name="Images" Category="Slide Elements" 
+SourcePath="Presentation.Windows\Samples\Slide Elements\Images" ImagePath="Presentation.Windows\Samples\Slide Elements\Images\Images\imagesample.png"/>
+<Sample Name="Slides" Category="Slide Elements"
+SourcePath="Presentation.Windows\Samples\Slide Elements\Slides" ImagePath="Presentation.Windows\Samples\Slide Elements\Slides\Images\slidessample.png"/>
+<Sample Name="Tables" Category="Slide Elements" 
+SourcePath="Presentation.Windows\Samples\Slide Elements\Tables" ImagePath="Presentation.Windows\Samples\Slide Elements\Tables\Images\tablesample.png"/>
+<Sample Name="Notes" Category="Slide Elements" 
+SourcePath="Presentation.Windows\Samples\Slide Elements\Notes" ImagePath="Presentation.Windows\Samples\Slide Elements\Notes\Images\notessample.png"/>
+<Sample Name="OLE Object" Category="Slide Elements" 
+SourcePath="Presentation.Windows\Samples\Slide Elements\OLE Object" ImagePath="Presentation.Windows\Samples\Slide Elements\OLE Object\Images\oleobject.png"/>
+<Sample Name="Comments" Category="Slide Elements" SourcePath="Presentation.Windows\Samples\Slide Elements\Comments" ImagePath="Presentation.Windows\Samples\Slide Elements\Comments\Images\CommentsSample.JPG"/>
+<Sample Name="Cloning Slide" Category="Clone and Merge" 
+SourcePath="Presentation.Windows\Samples\Clone and Merge\CloningSlide" ImagePath="Presentation.Windows\Samples\Clone and Merge\CloningSlide\Images\CloningSlide.png"/>
+<Sample Name="Merging Presentations" Category="Clone and Merge" 
+SourcePath="Presentation.Windows\Samples\Clone and Merge\MergingPresentations" ImagePath="Presentation.Windows\Samples\Clone and Merge\MergingPresentations\Images\MergingPresentations.png"/>
+<Sample Name="Encryption And Decryption" Category="Security" 
+SourcePath="Presentation.Windows\Samples\Security\Encryption And Decryption" ImagePath="Presentation.Windows\Samples\Security\Encryption And Decryption\Images\EncryptionAndDecryption.png"/>
+<Sample Name="SmartArt Creation" Category="SmartArt" SourcePath="Presentation.Windows\Samples\SmartArt\SmartArt Creation" ImagePath="XlsIO.Windows\Images\Budget Planner.png"/>
+<Sample Name="Manipulating SmartArt" Category="SmartArt" SourcePath="Presentation.Windows\Samples\SmartArt\Manipulating SmartArt" ImagePath="XlsIO.Windows\Images\Budget Planner.png"/>
+<Sample Name="Customizing Appearance" Category="SmartArt" SourcePath="Presentation.Windows\Samples\SmartArt\Customizing Appearance" ImagePath="XlsIO.Windows\Images\Budget Planner.png"/>
+<Sample Name="Chart Creation" Category="Chart" SourcePath="Presentation.Windows\Samples\Working With Chart\Creating Chart" ImagePath="XlsIO.Windows\Images\Budget Planner.png"/>
+<Sample Name="Chart from Excel Data" Category="Chart" SourcePath="Presentation.Windows\Samples\Working With Chart\Excel Data To Chart" ImagePath="XlsIO.Windows\Images\Budget Planner.png"/>
+<Sample Name="Customizing Appearance" Category="Chart" SourcePath="Presentation.Windows\Samples\Working With Chart\Modifying Chart" ImagePath="XlsIO.Windows\Images\Budget Planner.png"/>
+</Product>
+  <!--End of Region File Format-->
+</Products>

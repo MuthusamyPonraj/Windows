@@ -1,0 +1,68 @@
+<style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;3221009">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P> 
+This sample illustrates how to visualize the column values using Data Bars with the given criteria.
+</P>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" src="Images\DataBars.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+
+<p>The following code illustrates the conditional formatting with the Data Bar rule for the ‘Unit Price’ column.</p>
+
+<FONT COLOR="#8d2e1c"><PRE>
+//Initialize the GridConditionalFormatDescriptor and ConditionalFormatDataBarRule.
+GridConditionalFormatDescriptor gridConditionalFormatDescriptor1 = new GridConditionalFormatDescriptor();
+
+//Initialize the ConditionalFormatDataBarRule
+ConditionalFormatDataBarRule conditionDataBarRule = new ConditionalFormatDataBarRule();
+
+// Column name in which column we are going to apply.
+conditionDataBarRule.ColumnName = "UnitPrice";
+conditionDataBarRule.AxisPosition = AxisPosition.Automatic;
+
+//Applying same color for negativeBar cell as like positive.
+conditionDataBarRule.FillNegativeColorSameAsPositive = true;
+
+//Define whether the user need to enter minimum and maximum values or it automatically calculates based on cell values. 
+conditionDataBarRule.AutoCalculateMinMax = true;
+
+//Setting appearance for Positive cells.
+conditionDataBarRule.PositiveBar.FillStyle = FillStyle.Gradient;
+conditionDataBarRule.PositiveBar.GradientFillColor1 = Color.DeepSkyBlue;
+conditionDataBarRule.PositiveBar.GradientFillColor2 = Color.FromArgb(255, 255, 255);
+conditionDataBarRule.PositiveBar.BorderColor = conditionDataBarRule2.PositiveBar.GradientFillColor1;
+conditionDataBarRule.NegativeBar.FillStyle = FillStyle.Gradient;
+
+//Adding ConditionalFormatDataBarRule to the GridConditionalFormatDescriptor by using Rules property.
+gridConditionalFormatDescriptor1.Rules.Add(conditionDataBarRule);
+
+this.gridGroupingControl1.TableDescriptor.ConditionalFormats.Add(gridConditionalFormatDescriptor1);
+<PRE></FONT>
+<br><br>
+</BODY>
+</HTML>

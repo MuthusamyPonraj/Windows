@@ -1,0 +1,29 @@
+<html><style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+<p>This sample illustrates how to print or preview the content of a Grid Grouping 
+Control.
+</p>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" src="Images\HierarchicalGrid.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+<p>The following code shows how to print data from the data grid.</p>
+
+<font color="#8D2E1C"><pre>
+ GridPrintDocument pd = new GridPrintDocument(this.gridGroupingControl1.TableControl); 
+ PrintDialog printDialog = new PrintDialog(); 
+ printDialog.Document = pd;
+ pd.DefaultPageSettings.Landscape = true;
+ printDialog.ShowDialog();  </pre></font>
+		<br><br>
+</html>

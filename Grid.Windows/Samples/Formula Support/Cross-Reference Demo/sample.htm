@@ -1,0 +1,35 @@
+<style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20090102;4013173">
+	<META NAME="CHANGEDBY" CONTENT="jisha j">
+	<META NAME="CHANGED" CONTENT="20090102;4025695">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P>This sample illustrates how to implement the cross sheet reference between sheets which are implemented with GridControls.</p>
+
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" src="Images\CrossReference2.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+<p>The following code used to registering the grid as sheet for cross reference</p>
+<PRE><FONT COLOR="#8d2e1c">        int sheetFamilyID = GridFormulaEngine.CreateSheetFamilyID();</FONT>
+<FONT COLOR="#8d2e1c">            GridFormulaEngine.RegisterGridAsSheet("Display", this.gridDisplay.Model, sheetFamilyID);</FONT>
+<FONT COLOR="#8d2e1c">            GridFormulaEngine.RegisterGridAsSheet("Calculate", this.gridCalculations.Model, sheetFamilyID);</FONT></PRE>
+<br><br>
+</BODY>
+</HTML>

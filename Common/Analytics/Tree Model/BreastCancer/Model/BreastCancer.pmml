@@ -1,0 +1,329 @@
+<?xml version="1.0"?>
+<PMML version="4.1" xmlns="http://www.dmg.org/PMML-4_1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_1 http://www.dmg.org/v4-1/pmml-4-1.xsd">
+ <Header copyright="Copyright (c) 2016 Syncfusion" description="RPart Decision Tree Model">
+  <Extension name="user" value="Syncfusion" extender="Rattle/PMML"/>
+  <Application name="Rattle/PMML" version="1.4"/>
+  <Timestamp>2014-07-17 10:12:33</Timestamp>
+ </Header>
+ <DataDictionary numberOfFields="10">
+  <DataField name="cens" optype="categorical" dataType="string">
+   <Value value="0"/>
+   <Value value="1"/>
+  </DataField>
+  <DataField name="horTh" optype="categorical" dataType="string">
+   <Value value="no"/>
+   <Value value="yes"/>
+  </DataField>
+  <DataField name="age" optype="continuous" dataType="double">
+   <Interval closure="closedClosed" leftMargin="21" rightMargin="80"/>
+  </DataField>
+  <DataField name="menostat" optype="categorical" dataType="string">
+   <Value value="Pre"/>
+   <Value value="Post"/>
+  </DataField>
+  <DataField name="tsize" optype="continuous" dataType="double">
+   <Interval closure="closedClosed" leftMargin="3" rightMargin="120"/>
+  </DataField>
+  <DataField name="tgrade" optype="categorical" dataType="string">
+   <Value value="I"/>
+   <Value value="II"/>
+   <Value value="III"/>
+  </DataField>
+  <DataField name="pnodes" optype="continuous" dataType="double">
+   <Interval closure="closedClosed" leftMargin="1" rightMargin="51"/>
+  </DataField>
+  <DataField name="progrec" optype="continuous" dataType="double">
+   <Interval closure="closedClosed" leftMargin="0" rightMargin="2380"/>
+  </DataField>
+  <DataField name="estrec" optype="continuous" dataType="double">
+   <Interval closure="closedClosed" leftMargin="0" rightMargin="1091"/>
+  </DataField>
+  <DataField name="time" optype="continuous" dataType="double">
+   <Interval closure="closedClosed" leftMargin="8" rightMargin="2659"/>
+  </DataField>
+ </DataDictionary>
+ <TreeModel modelName="RPart_Model" functionName="classification" algorithmName="rpart" splitCharacteristic="binarySplit" missingValueStrategy="defaultChild">
+  <MiningSchema>
+   <MiningField name="cens" usageType="predicted"/>
+   <MiningField name="horTh" usageType="active"/>
+   <MiningField name="age" usageType="active"/>
+   <MiningField name="menostat" usageType="active"/>
+   <MiningField name="tsize" usageType="active"/>
+   <MiningField name="tgrade" usageType="active"/>
+   <MiningField name="pnodes" usageType="active"/>
+   <MiningField name="progrec" usageType="active"/>
+   <MiningField name="estrec" usageType="active"/>
+   <MiningField name="time" usageType="active"/>
+  </MiningSchema>
+  <Output>
+   <OutputField name="Predicted_cens" optype="categorical" dataType="string" feature="predictedValue"/>
+   <OutputField name="Probability_0" optype="continuous" dataType="double" feature="probability" value="0"/>
+   <OutputField name="Probability_1" optype="continuous" dataType="double" feature="probability" value="1"/>
+  </Output>
+  <Node id="1" score="0" recordCount="550" defaultChild="2">
+   <True/>
+   <ScoreDistribution value="0" recordCount="298" confidence="0.541818181818182"/>
+   <ScoreDistribution value="1" recordCount="252" confidence="0.458181818181818"/>
+   <Node id="2" score="0" recordCount="406" defaultChild="4">
+    <CompoundPredicate booleanOperator="surrogate">
+     <SimplePredicate field="time" operator="greaterOrEqual" value="626"/>
+     <SimplePredicate field="pnodes" operator="lessThan" value="14.5"/>
+     <SimplePredicate field="age" operator="greaterOrEqual" value="31.5"/>
+     <SimplePredicate field="estrec" operator="lessThan" value="1016"/>
+    </CompoundPredicate>
+    <ScoreDistribution value="0" recordCount="279" confidence="0.687192118226601"/>
+    <ScoreDistribution value="1" recordCount="127" confidence="0.312807881773399"/>
+    <Node id="4" score="0" recordCount="165">
+     <CompoundPredicate booleanOperator="surrogate">
+      <SimplePredicate field="time" operator="greaterOrEqual" value="1602"/>
+      <SimplePredicate field="age" operator="greaterOrEqual" value="70.5"/>
+      <SimplePredicate field="tsize" operator="lessThan" value="14.5"/>
+     </CompoundPredicate>
+     <ScoreDistribution value="0" recordCount="141" confidence="0.854545454545455"/>
+     <ScoreDistribution value="1" recordCount="24" confidence="0.145454545454545"/>
+    </Node>
+    <Node id="5" score="0" recordCount="241" defaultChild="10">
+     <CompoundPredicate booleanOperator="surrogate">
+      <SimplePredicate field="time" operator="lessThan" value="1602"/>
+      <SimplePredicate field="age" operator="lessThan" value="70.5"/>
+      <SimplePredicate field="tsize" operator="greaterOrEqual" value="14.5"/>
+     </CompoundPredicate>
+     <ScoreDistribution value="0" recordCount="138" confidence="0.572614107883817"/>
+     <ScoreDistribution value="1" recordCount="103" confidence="0.427385892116183"/>
+     <Node id="10" score="0" recordCount="18">
+      <CompoundPredicate booleanOperator="surrogate">
+       <SimplePredicate field="progrec" operator="greaterOrEqual" value="422.5"/>
+       <SimplePredicate field="estrec" operator="greaterOrEqual" value="751"/>
+      </CompoundPredicate>
+      <ScoreDistribution value="0" recordCount="16" confidence="0.888888888888889"/>
+      <ScoreDistribution value="1" recordCount="2" confidence="0.111111111111111"/>
+     </Node>
+     <Node id="11" score="0" recordCount="223" defaultChild="22">
+      <CompoundPredicate booleanOperator="surrogate">
+       <SimplePredicate field="progrec" operator="lessThan" value="422.5"/>
+       <SimplePredicate field="estrec" operator="lessThan" value="751"/>
+      </CompoundPredicate>
+      <ScoreDistribution value="0" recordCount="122" confidence="0.547085201793722"/>
+      <ScoreDistribution value="1" recordCount="101" confidence="0.452914798206278"/>
+      <Node id="22" score="0" recordCount="123" defaultChild="44">
+       <CompoundPredicate booleanOperator="surrogate">
+        <SimplePredicate field="pnodes" operator="lessThan" value="3.5"/>
+        <SimplePredicate field="tsize" operator="lessThan" value="27.5"/>
+        <SimplePredicate field="time" operator="greaterOrEqual" value="860"/>
+        <SimplePredicate field="progrec" operator="lessThan" value="347.5"/>
+        <SimplePredicate field="estrec" operator="greaterOrEqual" value="2.5"/>
+        <SimplePredicate field="age" operator="greaterOrEqual" value="49.5"/>
+       </CompoundPredicate>
+       <ScoreDistribution value="0" recordCount="77" confidence="0.626016260162602"/>
+       <ScoreDistribution value="1" recordCount="46" confidence="0.373983739837398"/>
+       <Node id="44" score="0" recordCount="42">
+        <CompoundPredicate booleanOperator="surrogate">
+         <SimpleSetPredicate field="tgrade" booleanOperator="isIn">
+          <Array n="2" type="string">&quot;I&quot; &quot;III&quot;</Array>
+         </SimpleSetPredicate>
+         <SimplePredicate field="estrec" operator="lessThan" value="3.5"/>
+         <SimplePredicate field="age" operator="lessThan" value="36.5"/>
+         <SimplePredicate field="progrec" operator="lessThan" value="10.5"/>
+         <SimplePredicate field="tsize" operator="lessThan" value="9"/>
+        </CompoundPredicate>
+        <ScoreDistribution value="0" recordCount="33" confidence="0.785714285714286"/>
+        <ScoreDistribution value="1" recordCount="9" confidence="0.214285714285714"/>
+       </Node>
+       <Node id="45" score="0" recordCount="81" defaultChild="90">
+        <CompoundPredicate booleanOperator="surrogate">
+         <SimpleSetPredicate field="tgrade" booleanOperator="isIn">
+          <Array n="1" type="string">&quot;II&quot;</Array>
+         </SimpleSetPredicate>
+         <SimplePredicate field="estrec" operator="greaterOrEqual" value="3.5"/>
+         <SimplePredicate field="age" operator="greaterOrEqual" value="36.5"/>
+         <SimplePredicate field="progrec" operator="greaterOrEqual" value="10.5"/>
+         <SimplePredicate field="tsize" operator="greaterOrEqual" value="9"/>
+        </CompoundPredicate>
+        <ScoreDistribution value="0" recordCount="44" confidence="0.54320987654321"/>
+        <ScoreDistribution value="1" recordCount="37" confidence="0.45679012345679"/>
+        <Node id="90" score="0" recordCount="42">
+         <CompoundPredicate booleanOperator="surrogate">
+          <SimplePredicate field="estrec" operator="lessThan" value="60"/>
+          <SimplePredicate field="progrec" operator="lessThan" value="39.5"/>
+          <SimplePredicate field="age" operator="lessThan" value="55.5"/>
+          <SimplePredicate field="tsize" operator="greaterOrEqual" value="22.5"/>
+          <SimplePredicate field="time" operator="lessThan" value="1470.5"/>
+          <SimpleSetPredicate field="menostat" booleanOperator="isIn">
+           <Array n="1" type="string">&quot;Pre&quot;</Array>
+          </SimpleSetPredicate>
+         </CompoundPredicate>
+         <ScoreDistribution value="0" recordCount="29" confidence="0.69047619047619"/>
+         <ScoreDistribution value="1" recordCount="13" confidence="0.309523809523809"/>
+        </Node>
+        <Node id="91" score="1" recordCount="39" defaultChild="182">
+         <CompoundPredicate booleanOperator="surrogate">
+          <SimplePredicate field="estrec" operator="greaterOrEqual" value="60"/>
+          <SimplePredicate field="progrec" operator="greaterOrEqual" value="39.5"/>
+          <SimplePredicate field="age" operator="greaterOrEqual" value="55.5"/>
+          <SimplePredicate field="tsize" operator="lessThan" value="22.5"/>
+          <SimplePredicate field="time" operator="greaterOrEqual" value="1470.5"/>
+          <SimpleSetPredicate field="menostat" booleanOperator="isIn">
+           <Array n="1" type="string">&quot;Post&quot;</Array>
+          </SimpleSetPredicate>
+         </CompoundPredicate>
+         <ScoreDistribution value="0" recordCount="15" confidence="0.384615384615385"/>
+         <ScoreDistribution value="1" recordCount="24" confidence="0.615384615384615"/>
+         <Node id="182" score="0" recordCount="18">
+          <CompoundPredicate booleanOperator="surrogate">
+           <SimplePredicate field="progrec" operator="greaterOrEqual" value="87"/>
+           <SimplePredicate field="age" operator="lessThan" value="50.5"/>
+           <SimpleSetPredicate field="menostat" booleanOperator="isIn">
+            <Array n="1" type="string">&quot;Pre&quot;</Array>
+           </SimpleSetPredicate>
+           <SimplePredicate field="tsize" operator="lessThan" value="30.5"/>
+           <SimplePredicate field="estrec" operator="greaterOrEqual" value="295"/>
+           <SimplePredicate field="time" operator="lessThan" value="663.5"/>
+          </CompoundPredicate>
+          <ScoreDistribution value="0" recordCount="11" confidence="0.611111111111111"/>
+          <ScoreDistribution value="1" recordCount="7" confidence="0.388888888888889"/>
+         </Node>
+         <Node id="183" score="1" recordCount="21">
+          <CompoundPredicate booleanOperator="surrogate">
+           <SimplePredicate field="progrec" operator="lessThan" value="87"/>
+           <SimplePredicate field="age" operator="greaterOrEqual" value="50.5"/>
+           <SimpleSetPredicate field="menostat" booleanOperator="isIn">
+            <Array n="1" type="string">&quot;Post&quot;</Array>
+           </SimpleSetPredicate>
+           <SimplePredicate field="tsize" operator="greaterOrEqual" value="30.5"/>
+           <SimplePredicate field="estrec" operator="lessThan" value="295"/>
+           <SimplePredicate field="time" operator="greaterOrEqual" value="663.5"/>
+          </CompoundPredicate>
+          <ScoreDistribution value="0" recordCount="4" confidence="0.19047619047619"/>
+          <ScoreDistribution value="1" recordCount="17" confidence="0.80952380952381"/>
+         </Node>
+        </Node>
+       </Node>
+      </Node>
+      <Node id="23" score="1" recordCount="100" defaultChild="46">
+       <CompoundPredicate booleanOperator="surrogate">
+        <SimplePredicate field="pnodes" operator="greaterOrEqual" value="3.5"/>
+        <SimplePredicate field="tsize" operator="greaterOrEqual" value="27.5"/>
+        <SimplePredicate field="time" operator="lessThan" value="860"/>
+        <SimplePredicate field="progrec" operator="greaterOrEqual" value="347.5"/>
+        <SimplePredicate field="estrec" operator="lessThan" value="2.5"/>
+        <SimplePredicate field="age" operator="lessThan" value="49.5"/>
+       </CompoundPredicate>
+       <ScoreDistribution value="0" recordCount="45" confidence="0.45"/>
+       <ScoreDistribution value="1" recordCount="55" confidence="0.55"/>
+       <Node id="46" score="1" recordCount="93" defaultChild="92">
+        <CompoundPredicate booleanOperator="surrogate">
+         <SimplePredicate field="age" operator="lessThan" value="65.5"/>
+         <SimplePredicate field="estrec" operator="lessThan" value="392"/>
+        </CompoundPredicate>
+        <ScoreDistribution value="0" recordCount="45" confidence="0.483870967741935"/>
+        <ScoreDistribution value="1" recordCount="48" confidence="0.516129032258065"/>
+        <Node id="92" score="0" recordCount="78" defaultChild="184">
+         <SimplePredicate field="age" operator="greaterOrEqual" value="43.5"/>
+         <ScoreDistribution value="0" recordCount="42" confidence="0.538461538461538"/>
+         <ScoreDistribution value="1" recordCount="36" confidence="0.461538461538462"/>
+         <Node id="184" score="0" recordCount="30">
+          <CompoundPredicate booleanOperator="surrogate">
+           <SimplePredicate field="time" operator="greaterOrEqual" value="1084"/>
+           <SimplePredicate field="age" operator="lessThan" value="48.5"/>
+           <SimplePredicate field="tsize" operator="greaterOrEqual" value="41"/>
+           <SimpleSetPredicate field="tgrade" booleanOperator="isIn">
+            <Array n="1" type="string">&quot;I&quot;</Array>
+           </SimpleSetPredicate>
+           <SimpleSetPredicate field="menostat" booleanOperator="isIn">
+            <Array n="1" type="string">&quot;Pre&quot;</Array>
+           </SimpleSetPredicate>
+           <SimplePredicate field="progrec" operator="greaterOrEqual" value="146"/>
+          </CompoundPredicate>
+          <ScoreDistribution value="0" recordCount="21" confidence="0.7"/>
+          <ScoreDistribution value="1" recordCount="9" confidence="0.3"/>
+         </Node>
+         <Node id="185" score="1" recordCount="48" defaultChild="370">
+          <CompoundPredicate booleanOperator="surrogate">
+           <SimplePredicate field="time" operator="lessThan" value="1084"/>
+           <SimplePredicate field="age" operator="greaterOrEqual" value="48.5"/>
+           <SimplePredicate field="tsize" operator="lessThan" value="41"/>
+           <SimpleSetPredicate field="tgrade" booleanOperator="isIn">
+            <Array n="2" type="string">&quot;II&quot; &quot;III&quot;</Array>
+           </SimpleSetPredicate>
+           <SimpleSetPredicate field="menostat" booleanOperator="isIn">
+            <Array n="1" type="string">&quot;Post&quot;</Array>
+           </SimpleSetPredicate>
+           <SimplePredicate field="progrec" operator="lessThan" value="146"/>
+          </CompoundPredicate>
+          <ScoreDistribution value="0" recordCount="21" confidence="0.4375"/>
+          <ScoreDistribution value="1" recordCount="27" confidence="0.5625"/>
+          <Node id="370" score="0" recordCount="14">
+           <CompoundPredicate booleanOperator="surrogate">
+            <SimpleSetPredicate field="tgrade" booleanOperator="isIn">
+             <Array n="1" type="string">&quot;III&quot;</Array>
+            </SimpleSetPredicate>
+            <SimplePredicate field="progrec" operator="lessThan" value="10.5"/>
+            <SimplePredicate field="estrec" operator="lessThan" value="5"/>
+            <SimplePredicate field="time" operator="lessThan" value="634.5"/>
+            <SimplePredicate field="tsize" operator="lessThan" value="20.5"/>
+           </CompoundPredicate>
+           <ScoreDistribution value="0" recordCount="10" confidence="0.714285714285714"/>
+           <ScoreDistribution value="1" recordCount="4" confidence="0.285714285714286"/>
+          </Node>
+          <Node id="371" score="1" recordCount="34">
+           <CompoundPredicate booleanOperator="surrogate">
+            <SimpleSetPredicate field="tgrade" booleanOperator="isIn">
+             <Array n="2" type="string">&quot;I&quot; &quot;II&quot;</Array>
+            </SimpleSetPredicate>
+            <SimplePredicate field="progrec" operator="greaterOrEqual" value="10.5"/>
+            <SimplePredicate field="estrec" operator="greaterOrEqual" value="5"/>
+            <SimplePredicate field="time" operator="greaterOrEqual" value="634.5"/>
+            <SimplePredicate field="tsize" operator="greaterOrEqual" value="20.5"/>
+           </CompoundPredicate>
+           <ScoreDistribution value="0" recordCount="11" confidence="0.323529411764706"/>
+           <ScoreDistribution value="1" recordCount="23" confidence="0.676470588235294"/>
+          </Node>
+         </Node>
+        </Node>
+        <Node id="93" score="1" recordCount="15">
+         <SimplePredicate field="age" operator="lessThan" value="43.5"/>
+         <ScoreDistribution value="0" recordCount="3" confidence="0.2"/>
+         <ScoreDistribution value="1" recordCount="12" confidence="0.8"/>
+        </Node>
+       </Node>
+       <Node id="47" score="1" recordCount="7">
+        <CompoundPredicate booleanOperator="surrogate">
+         <SimplePredicate field="age" operator="greaterOrEqual" value="65.5"/>
+         <SimplePredicate field="estrec" operator="greaterOrEqual" value="392"/>
+        </CompoundPredicate>
+        <ScoreDistribution value="0" recordCount="0" confidence="0"/>
+        <ScoreDistribution value="1" recordCount="7" confidence="1"/>
+       </Node>
+      </Node>
+     </Node>
+    </Node>
+   </Node>
+   <Node id="3" score="1" recordCount="144" defaultChild="6">
+    <CompoundPredicate booleanOperator="surrogate">
+     <SimplePredicate field="time" operator="lessThan" value="626"/>
+     <SimplePredicate field="pnodes" operator="greaterOrEqual" value="14.5"/>
+     <SimplePredicate field="age" operator="lessThan" value="31.5"/>
+     <SimplePredicate field="estrec" operator="greaterOrEqual" value="1016"/>
+    </CompoundPredicate>
+    <ScoreDistribution value="0" recordCount="19" confidence="0.131944444444444"/>
+    <ScoreDistribution value="1" recordCount="125" confidence="0.868055555555555"/>
+    <Node id="6" score="0" recordCount="11">
+     <CompoundPredicate booleanOperator="surrogate">
+      <SimplePredicate field="time" operator="lessThan" value="168.5"/>
+      <SimplePredicate field="tsize" operator="greaterOrEqual" value="77.5"/>
+     </CompoundPredicate>
+     <ScoreDistribution value="0" recordCount="7" confidence="0.636363636363636"/>
+     <ScoreDistribution value="1" recordCount="4" confidence="0.363636363636364"/>
+    </Node>
+    <Node id="7" score="1" recordCount="133">
+     <CompoundPredicate booleanOperator="surrogate">
+      <SimplePredicate field="time" operator="greaterOrEqual" value="168.5"/>
+      <SimplePredicate field="tsize" operator="lessThan" value="77.5"/>
+     </CompoundPredicate>
+     <ScoreDistribution value="0" recordCount="12" confidence="0.0902255639097744"/>
+     <ScoreDistribution value="1" recordCount="121" confidence="0.909774436090226"/>
+    </Node>
+   </Node>
+  </Node>
+ </TreeModel>
+</PMML>

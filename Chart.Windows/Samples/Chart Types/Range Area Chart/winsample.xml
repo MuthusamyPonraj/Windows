@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sample>  
+  <name value="~/Chart Types/Range Area Chart/Sample.aspx"/>
+  <displayname value="Range Area Chart" />
+  <sortorder value="16" />  
+  <imageUrl value="/Chart Types/Range Area Chart/images/sample.png"></imageUrl>
+</sample>

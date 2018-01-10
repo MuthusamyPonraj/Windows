@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sample>  
+  <name value="~/Data Binding/Huge Data in Multi-Chart/Sample.aspx" />
+  <displayname value="Huge Data in Multi-Chart" />
+  <sortorder value="6" />  
+  <imageUrl value="/Data Binding/Huge Data in Multi-Chart/images/sample.png"></imageUrl>
+</sample>

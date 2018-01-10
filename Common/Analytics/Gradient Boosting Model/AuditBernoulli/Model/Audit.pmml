@@ -1,0 +1,2158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_2" version="4.2">
+    <Header>
+        <Application name="JPMML-Converter" version="1.0-SNAPSHOT"/>
+        <Timestamp>2015-03-17T04:38:36Z</Timestamp>
+    </Header>
+    <DataDictionary>
+        <DataField name="Adjusted" optype="continuous" dataType="double"/>
+        <DataField name="ID" optype="continuous" dataType="double"/>
+        <DataField name="Age" optype="continuous" dataType="double"/>
+        <DataField name="Employment" optype="categorical" dataType="string">
+            <Value value="Consultant"/>
+            <Value value="Private"/>
+            <Value value="PSFederal"/>
+            <Value value="PSLocal"/>
+            <Value value="PSState"/>
+            <Value value="SelfEmp"/>
+            <Value value="Volunteer"/>
+        </DataField>
+        <DataField name="Education" optype="categorical" dataType="string">
+            <Value value="Associate"/>
+            <Value value="Bachelor"/>
+            <Value value="College"/>
+            <Value value="Doctorate"/>
+            <Value value="HSgrad"/>
+            <Value value="Master"/>
+            <Value value="Preschool"/>
+            <Value value="Professional"/>
+            <Value value="Vocational"/>
+            <Value value="Yr10"/>
+            <Value value="Yr11"/>
+            <Value value="Yr12"/>
+            <Value value="Yr1t4"/>
+            <Value value="Yr5t6"/>
+            <Value value="Yr7t8"/>
+            <Value value="Yr9"/>
+        </DataField>
+        <DataField name="Marital" optype="categorical" dataType="string">
+            <Value value="Absent"/>
+            <Value value="Divorced"/>
+            <Value value="Married"/>
+            <Value value="Married-spouse-absent"/>
+            <Value value="Unmarried"/>
+            <Value value="Widowed"/>
+        </DataField>
+        <DataField name="Occupation" optype="categorical" dataType="string">
+            <Value value="Cleaner"/>
+            <Value value="Clerical"/>
+            <Value value="Executive"/>
+            <Value value="Farming"/>
+            <Value value="Home"/>
+            <Value value="Machinist"/>
+            <Value value="Military"/>
+            <Value value="Professional"/>
+            <Value value="Protective"/>
+            <Value value="Repair"/>
+            <Value value="Sales"/>
+            <Value value="Service"/>
+            <Value value="Support"/>
+            <Value value="Transport"/>
+        </DataField>
+        <DataField name="Income" optype="continuous" dataType="double"/>
+        <DataField name="Sex" optype="categorical" dataType="string">
+            <Value value="Female"/>
+            <Value value="Male"/>
+        </DataField>
+        <DataField name="Deductions" optype="continuous" dataType="double"/>
+        <DataField name="Hours" optype="continuous" dataType="double"/>
+        <DataField name="Accounts" optype="categorical" dataType="string">
+            <Value value="Canada"/>
+            <Value value="China"/>
+            <Value value="Columbia"/>
+            <Value value="Cuba"/>
+            <Value value="Ecuador"/>
+            <Value value="England"/>
+            <Value value="Fiji"/>
+            <Value value="Germany"/>
+            <Value value="Greece"/>
+            <Value value="Guatemala"/>
+            <Value value="Hong"/>
+            <Value value="Hungary"/>
+            <Value value="India"/>
+            <Value value="Indonesia"/>
+            <Value value="Iran"/>
+            <Value value="Ireland"/>
+            <Value value="Italy"/>
+            <Value value="Jamaica"/>
+            <Value value="Japan"/>
+            <Value value="Malaysia"/>
+            <Value value="Mexico"/>
+            <Value value="NewZealand"/>
+            <Value value="Nicaragua"/>
+            <Value value="Philippines"/>
+            <Value value="Poland"/>
+            <Value value="Portugal"/>
+            <Value value="Scotland"/>
+            <Value value="Singapore"/>
+            <Value value="Taiwan"/>
+            <Value value="UnitedStates"/>
+            <Value value="Vietnam"/>
+            <Value value="Yugoslavia"/>
+        </DataField>
+        <DataField name="Adjustment" optype="continuous" dataType="double"/>
+    </DataDictionary>
+    <MiningModel functionName="regression">
+        <MiningSchema>
+            <MiningField name="Adjusted" usageType="target"/>
+            <MiningField name="ID" usageType="active"/>
+            <MiningField name="Age" usageType="active"/>
+            <MiningField name="Employment" usageType="active"/>
+            <MiningField name="Education" usageType="active"/>
+            <MiningField name="Marital" usageType="active"/>
+            <MiningField name="Occupation" usageType="active"/>
+            <MiningField name="Income" usageType="active"/>
+            <MiningField name="Sex" usageType="active"/>
+            <MiningField name="Deductions" usageType="active"/>
+            <MiningField name="Hours" usageType="active"/>
+            <MiningField name="Accounts" usageType="active"/>
+            <MiningField name="Adjustment" usageType="active"/>
+        </MiningSchema>
+        <Output>
+            <OutputField name="bernoulliValue" feature="predictedValue"/>
+            <OutputField name="probability_1" optype="continuous" dataType="double" feature="transformedValue">
+                <Apply function="/">
+                    <Constant dataType="double">1</Constant>
+                    <Apply function="+">
+                        <Constant dataType="double">1</Constant>
+                        <Apply function="exp">
+                            <Apply function="*">
+<Constant dataType="double">-1</Constant>
+<FieldRef field="bernoulliValue"/>
+                            </Apply>
+                        </Apply>
+                    </Apply>
+                </Apply>
+            </OutputField>
+            <OutputField name="probability_0" optype="continuous" dataType="double" feature="transformedValue">
+                <Apply function="-">
+                    <Constant dataType="double">1</Constant>
+                    <FieldRef field="probability_1"/>
+                </Apply>
+            </OutputField>
+        </Output>
+        <Targets>
+            <Target field="Adjusted" rescaleConstant="-1.5254071635826085"/>
+        </Targets>
+        <Segmentation multipleModelMethod="sum">
+            <Segment id="1">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="3.634425276216598E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.56310985779122E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.0029826288186609157">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="2">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.315383335955706E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.130138118990571E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="123.5"/>
+                        </Node>
+                        <Node id="3" score="0.0030149231384829357">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="123.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="3">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.1178265605398588E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.357531520112498E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="723.5"/>
+                        </Node>
+                        <Node id="3" score="0.002988034678748947">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="723.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="4">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-4.0554426509837646E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.807324414684423E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="1685"/>
+                        </Node>
+                        <Node id="3" score="0.003184506924381226">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="1685"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="5">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="1.1172519104583641E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.225539969138627E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="600.5"/>
+                        </Node>
+                        <Node id="3" score="0.0032884036375077676">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="600.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="6">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.2450393481294874E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.80390905739419E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="1901"/>
+                        </Node>
+                        <Node id="3" score="0.003186667386154554">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="1901"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="7">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="2.7175697214665433E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.554865936557766E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="630"/>
+                        </Node>
+                        <Node id="3" score="0.0029833460060437874">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="630"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="8">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-7.353455936951749E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.294833295399145E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.00297562792970705">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="9">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="5.9931227893375306E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.499590768703194E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="638"/>
+                        </Node>
+                        <Node id="3" score="0.002976530055477969">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="638"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="10">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="2.1875125742786775E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.085440779291895E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.003035989272404034">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="11">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="3.954385748007522E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.398881423517487E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.002913699356859926">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="12">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.6006683358253443E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.688851969900613E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="600.5"/>
+                        </Node>
+                        <Node id="3" score="0.002945975890008991">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="600.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="13">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="6.395130407196666E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.068264181850185E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="123.5"/>
+                        </Node>
+                        <Node id="3" score="0.002975232764571281">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="123.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="14">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-4.500860374942454E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.635113605116406E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="123.5"/>
+                        </Node>
+                        <Node id="3" score="0.0026471029912077397">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="123.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="15">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.2971786146456679E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.404668868329567E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.0029438094882577445">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="16">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-3.755024655831229E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.171476353390594E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="123.5"/>
+                        </Node>
+                        <Node id="3" score="0.0025293367059702416">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="123.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="17">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="2.2625502079475988E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.350755041454059E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.0027512788189752164">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="18">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="4.8113230617220475E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.109148670306217E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="1944"/>
+                        </Node>
+                        <Node id="3" score="0.0034443484412604855">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="1944"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="19">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="8.143755270240748E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.24273797920891E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.0030290399472186983">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="20">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.420857327388562E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.398081388594272E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.00279416272635188">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="21">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="2.6940920588601934E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.775509402465637E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="1901"/>
+                        </Node>
+                        <Node id="3" score="0.002892509165337046">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="1901"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="22">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-2.0903299763690483E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.866125820787779E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="123.5"/>
+                        </Node>
+                        <Node id="3" score="0.0029424910655596347">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="123.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="23">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="3.08596278318026E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.474679024855555E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="1448.5"/>
+                        </Node>
+                        <Node id="3" score="0.0032783641508800903">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="1448.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="24">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="4.7987821762814215E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.875146248083074E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="1888"/>
+                        </Node>
+                        <Node id="3" score="0.0030146788982006937">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="1888"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="25">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="1.4067515488388076E-6">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.819004634750667E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.0029129448904112796">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="26">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="1.2540988470547745E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.846562256561219E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="417.5"/>
+                        </Node>
+                        <Node id="3" score="0.002801329844977226">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="417.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="27">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.091997194448429E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.395691125612424E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.002691794758272523">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="28">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-7.116719916070338E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.793526346352475E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="123.5"/>
+                        </Node>
+                        <Node id="3" score="0.0028836754798882563">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="123.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="29">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="3.068364834421588E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.70930817892716E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="123.5"/>
+                        </Node>
+                        <Node id="3" score="0.003082984885169457">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="123.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="30">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-4.091136260692186E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.864888866809764E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.0029413987336892964">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="31">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.985262852056196E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.810043069853527E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="215.5"/>
+                        </Node>
+                        <Node id="3" score="0.002648295445114606">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="215.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="32">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="7.798649943268182E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.629010887503423E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.0030593152211724948">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="33">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-3.835288890038555E-7">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.51468700385736E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.0026833720229224906">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="34">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="9.673695814297085E-6">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.01043241689023E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="1672.5"/>
+                        </Node>
+                        <Node id="3" score="0.0030793660003499137">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="1672.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="35">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="3.5403987656970456E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.028876276691853E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="123.5"/>
+                        </Node>
+                        <Node id="3" score="0.0029641237067322508">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="123.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="36">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="7.022185240429053E-6">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.115754654171406E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.0027880884176554386">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="37">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-6.588147586786574E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.648878434229597E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.002511704504491543">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="38">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.4827425624860628E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.558301160534004E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="123.5"/>
+                        </Node>
+                        <Node id="3" score="0.0028066828186991944">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="123.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="39">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.2858204139571088E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.940262731101467E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.002511160308252945">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="40">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-3.623800778045582E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.791603131847246E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="123.5"/>
+                        </Node>
+                        <Node id="3" score="0.002815625035545608">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="123.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="41">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="4.621736871242547E-6">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.767584410909918E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="417.5"/>
+                        </Node>
+                        <Node id="3" score="0.0029323246821474627">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="417.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="42">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-6.038307219195743E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.243330212126699E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="600.5"/>
+                        </Node>
+                        <Node id="3" score="0.0025954167238908927">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="600.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="43">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.683841667862809E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.987674236385787E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.002666013860703283">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="44">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.177669375464658E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.769255499474393E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.0029470861796568075">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="45">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-2.3915104754419037E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.50907660230417E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="417.5"/>
+                        </Node>
+                        <Node id="3" score="0.002678302507109196">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="417.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="46">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="1.958770738471753E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-5.864991269569088E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="2678"/>
+                        </Node>
+                        <Node id="3" score="0.002683753576325248">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="2678"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="47">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="2.379055001427658E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.542095788763624E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.0026984537150170056">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="48">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-6.738353770472554E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.457982910223546E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.0026690410713147046">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="49">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="2.0855631999146453E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.478005021057099E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="358"/>
+                        </Node>
+                        <Node id="3" score="0.0028328957747802675">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="358"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="50">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.171512412918452E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.120731635328747E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.002594406847452564">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="51">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-6.923281952219258E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.166973550593938E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="592.5"/>
+                        </Node>
+                        <Node id="3" score="0.003023017724754996">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="592.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="52">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.414617089299348E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.797911902968998E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.0024549865869005582">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="53">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-2.353027733512795E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.28570201148469E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="1669.5"/>
+                        </Node>
+                        <Node id="3" score="0.003021642159560792">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="1669.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="54">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-7.705745491919379E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.768987174577513E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.002699134043495349">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="55">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Education" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.979450000599295E-5">
+                            <SimplePredicate field="Education" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.386171833646694E-4">
+                            <SimpleSetPredicate field="Education" booleanOperator="isIn">
+<Array type="string">"Associate" "College" "HSgrad" "Vocational" "Yr10" "Yr11" "Yr12" "Yr1t4" "Yr5t6" "Yr7t8" "Yr9"</Array>
+                            </SimpleSetPredicate>
+                        </Node>
+                        <Node id="3" score="0.0022471905777287776">
+                            <SimpleSetPredicate field="Education" booleanOperator="isIn">
+<Array type="string">"Bachelor" "Doctorate" "Master" "Preschool" "Professional"</Array>
+                            </SimpleSetPredicate>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="56">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-6.18449277857998E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.864044595418291E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.002500123763703218">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="57">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="4.0878190035103746E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.967921865638185E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="417.5"/>
+                        </Node>
+                        <Node id="3" score="0.0027183484458385998">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="417.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="58">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="4.384978690755679E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.613356148477385E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="123.5"/>
+                        </Node>
+                        <Node id="3" score="0.002623689548608606">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="123.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="59">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="2.361522774381077E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.875604455710854E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="387.5"/>
+                        </Node>
+                        <Node id="3" score="0.00268827344674646">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="387.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="60">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.1561979870619204E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.757887119198199E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.0025250558541483194">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="61">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.55531299097798E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.327261850307856E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="417.5"/>
+                        </Node>
+                        <Node id="3" score="0.0025629965138709685">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="417.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="62">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.264373452113573E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.771411034258458E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="215.5"/>
+                        </Node>
+                        <Node id="3" score="0.0025427760303215444">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="215.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="63">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.7160727896287434E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.111980385134588E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="417.5"/>
+                        </Node>
+                        <Node id="3" score="0.0024299713511009894">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="417.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="64">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.6206608304079084E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.185864907628518E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="1887"/>
+                        </Node>
+                        <Node id="3" score="0.0027309201686714106">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="1887"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="65">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.639874271358702E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.789625259280136E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="600.5"/>
+                        </Node>
+                        <Node id="3" score="0.0021037332496601584">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="600.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="66">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-2.2402693008378289E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.091357621242682E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="1901"/>
+                        </Node>
+                        <Node id="3" score="0.0024414688603228724">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="1901"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="67">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.1020419907105892E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.335195877908981E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="1874"/>
+                        </Node>
+                        <Node id="3" score="0.0028904070908128184">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="1874"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="68">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.039768431717746E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.523342494781265E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.002578268865109298">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="69">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-2.0711607030400022E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.566550036313547E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="592.5"/>
+                        </Node>
+                        <Node id="3" score="0.0024573191459980044">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="592.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="70">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="1.4304913229104083E-6">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.747192032132184E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="417.5"/>
+                        </Node>
+                        <Node id="3" score="0.0027965217225665155">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="417.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="71">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.7834691799621845E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.007469778490993E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.0021351023610795845">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="72">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.5728547366822295E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.510909442260117E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="1669.5"/>
+                        </Node>
+                        <Node id="3" score="0.002597436145385579">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="1669.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="73">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="3.9583377884790405E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.156524175440352E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="1931"/>
+                        </Node>
+                        <Node id="3" score="0.0027970340169810983">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="1931"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="74">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.1602776981075613E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.849404122826123E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="123.5"/>
+                        </Node>
+                        <Node id="3" score="0.00229287849479648">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="123.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="75">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="3.503327537372866E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.295398658640884E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="417.5"/>
+                        </Node>
+                        <Node id="3" score="0.0029228795986477765">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="417.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="76">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.0790581568706792E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.772569267524328E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="123.5"/>
+                        </Node>
+                        <Node id="3" score="0.0024407772610618213">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="123.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="77">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.5704677485563925E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.970440524283619E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.002536275101596235">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="78">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-4.1959526943497845E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.270517340912921E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="123.5"/>
+                        </Node>
+                        <Node id="3" score="0.0022430011870696654">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="123.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="79">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.3531635022644725E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.082792147748696E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="2543.5"/>
+                        </Node>
+                        <Node id="3" score="0.0026229002302740976">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="2543.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="80">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.377711825715973E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.446862810465808E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.002289889211328336">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="81">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.1738242503877883E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.085693330780895E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.0024313692983561797">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="82">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.692999885946021E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.614730296510902E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="592.5"/>
+                        </Node>
+                        <Node id="3" score="0.0023731639080452776">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="592.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="83">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.0223946021104689E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.978866211945787E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.002320595613519265">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="84">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-3.0287362447162425E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.544967991495133E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="638"/>
+                        </Node>
+                        <Node id="3" score="0.002327395414396749">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="638"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="85">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.185359351384333E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.998985076910689E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="387.5"/>
+                        </Node>
+                        <Node id="3" score="0.002168237879937354">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="387.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="86">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.6124038226995844E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.227573952812828E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.0023989163693842576">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="87">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.2293364334927477E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.081575988421743E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.002257504337777249">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="88">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.3946204627394963E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.772221188581834E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="630"/>
+                        </Node>
+                        <Node id="3" score="0.0027923305262028265">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="630"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="89">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-2.588988236328987E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.685815274691607E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="417.5"/>
+                        </Node>
+                        <Node id="3" score="0.002669805718391353">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="417.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="90">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-5.59631963721118E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.956411714806296E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="1931"/>
+                        </Node>
+                        <Node id="3" score="0.002806245553566001">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="1931"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="91">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-2.5850688137711065E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.408295166941834E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="5308.5"/>
+                        </Node>
+                        <Node id="3" score="0.0027326055008093995">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="5308.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="92">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.2040048530725289E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.248978852270859E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="417.5"/>
+                        </Node>
+                        <Node id="3" score="0.0025134810429148766">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="417.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="93">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-3.7049439530461163E-6">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.539566523071422E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.0025335517219776432">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="94">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="2.0020531133834615E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.962491342135336E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.002682381362708015">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="95">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.2705434608774793E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.605921707939962E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.0027076805921964135">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="96">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.2582830183628836E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.578952948441668E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="592.5"/>
+                        </Node>
+                        <Node id="3" score="0.0022615330157030235">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="592.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="97">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.0578174595740074E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.932784622699091E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="76.5"/>
+                        </Node>
+                        <Node id="3" score="0.002304153763814317">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="76.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="98">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Education" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-4.855171836110988E-6">
+                            <SimplePredicate field="Education" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.306092644532228E-4">
+                            <SimpleSetPredicate field="Education" booleanOperator="isIn">
+<Array type="string">"Associate" "College" "HSgrad" "Preschool" "Vocational" "Yr10" "Yr11" "Yr12" "Yr5t6" "Yr7t8" "Yr9"</Array>
+                            </SimpleSetPredicate>
+                        </Node>
+                        <Node id="3" score="0.0023273433729784276">
+                            <SimpleSetPredicate field="Education" booleanOperator="isIn">
+<Array type="string">"Bachelor" "Doctorate" "Master" "Professional" "Yr1t4"</Array>
+                            </SimpleSetPredicate>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="99">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-6.004984047929641E-5">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.410006955996118E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="215.5"/>
+                        </Node>
+                        <Node id="3" score="0.002757034519059543">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="215.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="100">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="Adjustment" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.5977865420456033E-4">
+                            <SimplePredicate field="Adjustment" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.794277980186295E-4">
+                            <SimplePredicate field="Adjustment" operator="lessThan" value="417.5"/>
+                        </Node>
+                        <Node id="3" score="0.0024933669756472287">
+                            <SimplePredicate field="Adjustment" operator="greaterOrEqual" value="417.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+        </Segmentation>
+    </MiningModel>
+</PMML>

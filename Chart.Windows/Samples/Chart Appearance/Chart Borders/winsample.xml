@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sample>  
+  <name value="~/Chart Appearance/Chart Borders/Sample.aspx" />
+  <displayname value="Chart Borders" />
+  <sortorder value="2" />  
+  <imageUrl value="/Chart Appearance/Chart Borders/images/sample.png"></imageUrl>
+</sample>

@@ -1,0 +1,49 @@
+<style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;4120090">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P>This sample illustrates a typical market update simulation and how a
+Grid Grouping Control handles those high-frequency updates. It also
+discusses various built-in optimization properties.</P>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" src="Images\marketsimulation2.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+<P>The built-in properties the grid provides for high-frequency
+	updates and optimizations are as follows:</P>
+
+		<LI><P><B>GridGroupingControl.BlinkTime-</B>Adds optional support
+		to highlight values in a record for a short time after a change is
+		detected.</P></LI>
+
+<LI><P>The engine will highlight a cell for
+the specified period in milliseconds if the value is increased or
+decreased.</P></LI>
+		<LI><P><B>GridGroupingControl.UpdateDisplayFrequency-</B>Allows
+		specification of how often the display should be updated when a new
+		<STRONG>ListChanged</STRONG> event-handler logic is used.</P></LI>
+<br><br>
+	</BODY>
+</HTML>

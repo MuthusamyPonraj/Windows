@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<PMML version="4.1" xmlns="http://www.dmg.org/PMML-4_1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_1 http://www.dmg.org/v4-1/pmml-4-1.xsd">
+ <Header copyright="Copyright (c) 2016 Syncfusion" description="Generalized Linear Regression Model">
+  <Extension name="user" value="Syncfusion" extender="Rattle/PMML"/>
+  <Application name="Rattle/PMML" version="1.4"/>
+  <Timestamp>2014-10-28 00:25:44</Timestamp>
+ </Header>
+ <DataDictionary numberOfFields="10">
+  <DataField name="cens" optype="categorical" dataType="string">
+   <Value value="0"/>
+   <Value value="1"/>
+  </DataField>
+  <DataField name="horTh" optype="categorical" dataType="string">
+   <Value value="no"/>
+   <Value value="yes"/>
+  </DataField>
+  <DataField name="age" optype="continuous" dataType="double"/>
+  <DataField name="menostat" optype="categorical" dataType="string">
+   <Value value="Pre"/>
+   <Value value="Post"/>
+  </DataField>
+  <DataField name="tsize" optype="continuous" dataType="double"/>
+  <DataField name="tgrade" optype="categorical" dataType="string">
+   <Value value="I"/>
+   <Value value="II"/>
+   <Value value="III"/>
+  </DataField>
+  <DataField name="pnodes" optype="continuous" dataType="double"/>
+  <DataField name="progrec" optype="continuous" dataType="double"/>
+  <DataField name="estrec" optype="continuous" dataType="double"/>
+  <DataField name="time" optype="continuous" dataType="double"/>
+ </DataDictionary>
+ <GeneralRegressionModel modelName="General_Regression_Model" modelType="generalizedLinear" functionName="classification" algorithmName="glm" distribution="binomial" linkFunction="cloglog">
+  <MiningSchema>
+   <MiningField name="cens" usageType="predicted"/>
+   <MiningField name="horTh" usageType="active"/>
+   <MiningField name="age" usageType="active"/>
+   <MiningField name="menostat" usageType="active"/>
+   <MiningField name="tsize" usageType="active"/>
+   <MiningField name="tgrade" usageType="active"/>
+   <MiningField name="pnodes" usageType="active"/>
+   <MiningField name="progrec" usageType="active"/>
+   <MiningField name="estrec" usageType="active"/>
+   <MiningField name="time" usageType="active"/>
+  </MiningSchema>
+  <Output>
+   <OutputField name="Probability_1" targetField="cens" feature="probability" value="1"/>
+   <OutputField name="Predicted_cens" feature="predictedValue"/>
+  </Output>
+  <ParameterList>
+   <Parameter name="p0" label="(Intercept)"/>
+   <Parameter name="p1" label="horThyes"/>
+   <Parameter name="p2" label="age"/>
+   <Parameter name="p3" label="menostatPost"/>
+   <Parameter name="p4" label="tsize"/>
+   <Parameter name="p5" label="tgradeII"/>
+   <Parameter name="p6" label="tgradeIII"/>
+   <Parameter name="p7" label="pnodes"/>
+   <Parameter name="p8" label="progrec"/>
+   <Parameter name="p9" label="estrec"/>
+   <Parameter name="p10" label="time"/>
+  </ParameterList>
+  <FactorList>
+   <Predictor name="horTh"/>
+   <Predictor name="menostat"/>
+   <Predictor name="tgrade"/>
+  </FactorList>
+  <CovariateList>
+   <Predictor name="age"/>
+   <Predictor name="tsize"/>
+   <Predictor name="pnodes"/>
+   <Predictor name="progrec"/>
+   <Predictor name="estrec"/>
+   <Predictor name="time"/>
+  </CovariateList>
+  <PPMatrix>
+   <PPCell value="yes" predictorName="horTh" parameterName="p1"/>
+   <PPCell value="1" predictorName="age" parameterName="p2"/>
+   <PPCell value="Post" predictorName="menostat" parameterName="p3"/>
+   <PPCell value="1" predictorName="tsize" parameterName="p4"/>
+   <PPCell value="II" predictorName="tgrade" parameterName="p5"/>
+   <PPCell value="III" predictorName="tgrade" parameterName="p6"/>
+   <PPCell value="1" predictorName="pnodes" parameterName="p7"/>
+   <PPCell value="1" predictorName="progrec" parameterName="p8"/>
+   <PPCell value="1" predictorName="estrec" parameterName="p9"/>
+   <PPCell value="1" predictorName="time" parameterName="p10"/>
+  </PPMatrix>
+  <ParamMatrix>
+   <PCell targetCategory="1" parameterName="p0" df="1" beta="-0.0317603339805854"/>
+   <PCell targetCategory="1" parameterName="p1" df="1" beta="-0.261065251893427"/>
+   <PCell targetCategory="1" parameterName="p2" df="1" beta="-0.0085670365081331"/>
+   <PCell targetCategory="1" parameterName="p3" df="1" beta="0.397339499492931"/>
+   <PCell targetCategory="1" parameterName="p4" df="1" beta="0.00275667353821932"/>
+   <PCell targetCategory="1" parameterName="p5" df="1" beta="0.802519333456598"/>
+   <PCell targetCategory="1" parameterName="p6" df="1" beta="0.707523418416135"/>
+   <PCell targetCategory="1" parameterName="p7" df="1" beta="0.0237956972296481"/>
+   <PCell targetCategory="1" parameterName="p8" df="1" beta="-0.000803850866371775"/>
+   <PCell targetCategory="1" parameterName="p9" df="1" beta="0.000308598756989079"/>
+   <PCell targetCategory="1" parameterName="p10" df="1" beta="-0.00110923853031753"/>
+  </ParamMatrix>
+ </GeneralRegressionModel>
+</PMML>

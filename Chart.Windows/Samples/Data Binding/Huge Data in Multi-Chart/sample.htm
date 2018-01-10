@@ -1,0 +1,32 @@
+<html><style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+
+
+<head>
+</head>
+
+
+<p>This sample shows how selections in a high-level view can be expanded to a
+low-level view<strong> </strong>when they are bound to large data.</p>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" width="80%" src="Images\Huge Data.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+<p><strong>Features</strong>:</p>
+<ul>
+<li>The top chart shows the entire set of 100,000 data points while the bottom 
+chart shows a subset of the points based on the selection in the top chart.</li>
+<li> Both charts are bound to a custom-data model that automatically compresses 
+(by averaging) multiple chart points into one; this makes it possible to plot all 
+the points within the available chart space.&nbsp;&nbsp;&nbsp; </li>
+<li>The custom-data model automatically increases or decreases this compression ratio as the chart's size changes because of resizing or zooming.</li>
+</html>

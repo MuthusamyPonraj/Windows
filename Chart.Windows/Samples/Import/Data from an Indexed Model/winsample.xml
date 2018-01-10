@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sample>  
+  <name value="~/Import/Data from an Indexed Model/Sample.aspx" />
+  <displayname value="Data from an Indexed Model" />
+  <sortorder value="2" />  
+  <imageUrl value="/Import/Data from an Indexed Model/images/sample.png"></imageUrl>
+</sample>

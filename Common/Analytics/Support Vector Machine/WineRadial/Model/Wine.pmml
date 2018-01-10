@@ -1,0 +1,722 @@
+<?xml version="1.0"?>
+<PMML version="4.1" xmlns="http://www.dmg.org/PMML-4_1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_1 http://www.dmg.org/v4-1/pmml-4-1.xsd">
+ <Header copyright="Copyright (c) 2016 Syncfusion" description="Support Vector Machine PMML Model">
+  <Extension name="user" value="Syncfusion" extender="Rattle/PMML"/>
+  <Application name="Rattle/PMML" version="1.4"/>
+  <Timestamp>2014-07-17 10:58:29</Timestamp>
+ </Header>
+ <DataDictionary numberOfFields="14">
+  <DataField name="Type" optype="categorical" dataType="string">
+   <Value value="1"/>
+   <Value value="2"/>
+   <Value value="3"/>
+  </DataField>
+  <DataField name="Alcohol" optype="continuous" dataType="double"/>
+  <DataField name="Malic" optype="continuous" dataType="double"/>
+  <DataField name="Ash" optype="continuous" dataType="double"/>
+  <DataField name="Alcalinity" optype="continuous" dataType="double"/>
+  <DataField name="Magnesium" optype="continuous" dataType="double"/>
+  <DataField name="Phenols" optype="continuous" dataType="double"/>
+  <DataField name="Flavanoids" optype="continuous" dataType="double"/>
+  <DataField name="Nonflavanoids" optype="continuous" dataType="double"/>
+  <DataField name="Proanthocyanins" optype="continuous" dataType="double"/>
+  <DataField name="Color" optype="continuous" dataType="double"/>
+  <DataField name="Hue" optype="continuous" dataType="double"/>
+  <DataField name="Dilution" optype="continuous" dataType="double"/>
+  <DataField name="Proline" optype="continuous" dataType="double"/>
+ </DataDictionary>
+ <SupportVectorMachineModel modelName="SVM_model" functionName="classification" algorithmName="supportVectorMachine" classificationMethod="OneAgainstOne" svmRepresentation="SupportVectors">
+  <MiningSchema>
+   <MiningField name="Type" usageType="predicted"/>
+   <MiningField name="Alcohol" usageType="active"/>
+   <MiningField name="Malic" usageType="active"/>
+   <MiningField name="Ash" usageType="active"/>
+   <MiningField name="Alcalinity" usageType="active"/>
+   <MiningField name="Magnesium" usageType="active"/>
+   <MiningField name="Phenols" usageType="active"/>
+   <MiningField name="Flavanoids" usageType="active"/>
+   <MiningField name="Nonflavanoids" usageType="active"/>
+   <MiningField name="Proanthocyanins" usageType="active"/>
+   <MiningField name="Color" usageType="active"/>
+   <MiningField name="Hue" usageType="active"/>
+   <MiningField name="Dilution" usageType="active"/>
+   <MiningField name="Proline" usageType="active"/>
+  </MiningSchema>
+  <Output>
+   <OutputField name="Predicted_Type" feature="predictedValue"/>
+   <OutputField name="Probability_1" optype="continuous" dataType="double" feature="probability" value="1"/>
+   <OutputField name="Probability_2" optype="continuous" dataType="double" feature="probability" value="2"/>
+   <OutputField name="Probability_3" optype="continuous" dataType="double" feature="probability" value="3"/>
+  </Output>
+  <LocalTransformations>
+   <DerivedField name="derived_Alcohol" optype="continuous" dataType="double">
+    <NormContinuous field="Alcohol">
+     <LinearNorm orig="0" norm="-16.0165008669959"/>
+     <LinearNorm orig="13.0032432432432" norm="0"/>
+    </NormContinuous>
+   </DerivedField>
+   <DerivedField name="derived_Malic" optype="continuous" dataType="double">
+    <NormContinuous field="Malic">
+     <LinearNorm orig="0" norm="-2.10884939565657"/>
+     <LinearNorm orig="2.36290540540541" norm="0"/>
+    </NormContinuous>
+   </DerivedField>
+   <DerivedField name="derived_Ash" optype="continuous" dataType="double">
+    <NormContinuous field="Ash">
+     <LinearNorm orig="0" norm="-8.62263101909484"/>
+     <LinearNorm orig="2.37290540540541" norm="0"/>
+    </NormContinuous>
+   </DerivedField>
+   <DerivedField name="derived_Alcalinity" optype="continuous" dataType="double">
+    <NormContinuous field="Alcalinity">
+     <LinearNorm orig="0" norm="-5.55683074791746"/>
+     <LinearNorm orig="19.5304054054054" norm="0"/>
+    </NormContinuous>
+   </DerivedField>
+   <DerivedField name="derived_Magnesium" optype="continuous" dataType="double">
+    <NormContinuous field="Magnesium">
+     <LinearNorm orig="0" norm="-7.28076046963725"/>
+     <LinearNorm orig="99.1351351351351" norm="0"/>
+    </NormContinuous>
+   </DerivedField>
+   <DerivedField name="derived_Phenols" optype="continuous" dataType="double">
+    <NormContinuous field="Phenols">
+     <LinearNorm orig="0" norm="-3.64114550963282"/>
+     <LinearNorm orig="2.28121621621622" norm="0"/>
+    </NormContinuous>
+   </DerivedField>
+   <DerivedField name="derived_Flavanoids" optype="continuous" dataType="double">
+    <NormContinuous field="Flavanoids">
+     <LinearNorm orig="0" norm="-2.02627347266831"/>
+     <LinearNorm orig="2.0247972972973" norm="0"/>
+    </NormContinuous>
+   </DerivedField>
+   <DerivedField name="derived_Nonflavanoids" optype="continuous" dataType="double">
+    <NormContinuous field="Nonflavanoids">
+     <LinearNorm orig="0" norm="-2.94935520259695"/>
+     <LinearNorm orig="0.362162162162162" norm="0"/>
+    </NormContinuous>
+   </DerivedField>
+   <DerivedField name="derived_Proanthocyanins" optype="continuous" dataType="double">
+    <NormContinuous field="Proanthocyanins">
+     <LinearNorm orig="0" norm="-2.72462195498638"/>
+     <LinearNorm orig="1.59337837837838" norm="0"/>
+    </NormContinuous>
+   </DerivedField>
+   <DerivedField name="derived_Color" optype="continuous" dataType="double">
+    <NormContinuous field="Color">
+     <LinearNorm orig="0" norm="-2.11411112887056"/>
+     <LinearNorm orig="5.03378377702703" norm="0"/>
+    </NormContinuous>
+   </DerivedField>
+   <DerivedField name="derived_Hue" optype="continuous" dataType="double">
+    <NormContinuous field="Hue">
+     <LinearNorm orig="0" norm="-4.17290468695972"/>
+     <LinearNorm orig="0.960040540540541" norm="0"/>
+    </NormContinuous>
+   </DerivedField>
+   <DerivedField name="derived_Dilution" optype="continuous" dataType="double">
+    <NormContinuous field="Dilution">
+     <LinearNorm orig="0" norm="-3.62034917761133"/>
+     <LinearNorm orig="2.61722972972973" norm="0"/>
+    </NormContinuous>
+   </DerivedField>
+   <DerivedField name="derived_Proline" optype="continuous" dataType="double">
+    <NormContinuous field="Proline">
+     <LinearNorm orig="0" norm="-2.41070380442223"/>
+     <LinearNorm orig="739.5" norm="0"/>
+    </NormContinuous>
+   </DerivedField>
+  </LocalTransformations>
+  <RadialBasisKernelType gamma="0.0722239242340934" description="Radial basis kernel type"/>
+  <VectorDictionary numberOfVectors="62">
+   <VectorFields numberOfFields="13">
+    <FieldRef field="derived_Alcohol"/>
+    <FieldRef field="derived_Malic"/>
+    <FieldRef field="derived_Ash"/>
+    <FieldRef field="derived_Alcalinity"/>
+    <FieldRef field="derived_Magnesium"/>
+    <FieldRef field="derived_Phenols"/>
+    <FieldRef field="derived_Flavanoids"/>
+    <FieldRef field="derived_Nonflavanoids"/>
+    <FieldRef field="derived_Proanthocyanins"/>
+    <FieldRef field="derived_Color"/>
+    <FieldRef field="derived_Hue"/>
+    <FieldRef field="derived_Dilution"/>
+    <FieldRef field="derived_Proline"/>
+   </VectorFields>
+   <VectorInstance id="1">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>0.0822263824856164 -0.77012712338595 -0.991679907916628 -1.14673915970689 -0.0833674862935559 0.189595812035261 0.615651215291653 -0.669107448947368 -0.381969306385589 -0.560168503738397 0.956074062041909 0.100661315716727 0.914404891332569 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="2">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>0.057591757773327 -0.564856374971122 -1.20970708252172 -2.02875747734901 -0.524024199559496 0.700361321591005 1.24611051582755 -1.56491906645256 2.25137746649413 0.909777222737972 0.695278532431657 0.404981876509357 1.338193254517 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="3">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>0.057591757773327 -0.279262290220056 3.07816068471175 1.55622020080927 1.82614493785885 0.556708522028452 0.65568037723044 0.87820352674342 0.558511683928596 -0.610566642931872 0.738744454033365 0.806131706645096 0.295021898986087 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="4">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>0.291620692540081 0.202677727797367 1.80633549951538 0.41813204901299 1.38548822459291 0.828052698979941 0.665687667715137 0.226704168557825 0.387515140235108 -0.29977811790544 0.347551159617987 0.432647382035959 -0.0146695971871535 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="5">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-1.53134153616938 0.283001064133605 1.98802481168629 0.133610011063921 0.283846441428061 -0.847896629249843 0.00520649572514602 1.93688998379501 -0.929158246204752 -0.518170054410501 1.17340367005045 -0.162160986785999 -0.43193813939952 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="6">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>0.057591757773327 -0.636254896158888 0.643523901621559 -0.435434064834218 -0.0833674862935559 0.269402922903347 0.40549811511302 -0.587670029174169 -0.262271725800148 -0.329177032434967 0.695278532431657 -0.148328234022698 1.19149728264547 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="7">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>1.46176536637385 -0.689803787049713 0.389158864582286 -0.862217121757822 0.651060369149678 1.62612380766079 1.90659168781754 -0.343357769854571 0.455913757712504 1.53975396265642 1.17340367005045 0.280487101639644 3.06594581211508 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="8">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>1.05529405862107 -0.76120230823748 1.07957825083174 1.55622020080927 -0.964680912825437 1.0674740315842 0.835811605954983 -1.23916938735976 0.473013412081852 -0.694563541587665 1.73846065087267 0.75080069559189 -1.07414050514824 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="9">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-1.77768778329228 -0.279262290220056 3.11449854714593 2.55204733363101 1.45893101013724 1.43458674157739 3.05743009355768 0.87820352674342 0.473013412081852 0.405795830803217 -0.130573978000809 1.48393659204686 -0.894845428416364 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="10">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-0.348879549979458 -0.493457853783355 -0.628301283574808 -0.207816434474962 -0.964680912825437 -0.129632631437078 0.505571019959988 -0.831982288493767 0.302016868388364 -0.476171605082604 0.869142218838491 0.723135190065288 -0.0831277173938699 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="11">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-0.0902159905004142 1.28258036076233 1.00690252596338 -0.264720842064776 0.210403655883738 0.205557234208879 0.385483534143626 -0.913419708266966 0.661109610144689 -0.224180909115227 0.304085238016278 1.24877979507074 0.0994272698240404 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="12">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-0.656812358883083 -0.752277493089009 -0.628301283574808 -0.150912026885149 4.61697078854314 0.349210033771431 0.24538146735787 -0.343357769854571 2.88406467816004 -1.02215144634526 0.869142218838491 0.0176647991369187 0.643832320991737 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="13">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-0.779985482444534 -1.0289467626916 0.679861764055742 -0.406981861039311 -0.0833674862935559 0.221518656382495 0.62565850577635 0.0638293290114264 0.832106153838178 -0.182182459787331 0.999539983643617 -0.438816042052026 -0.200484494891098 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="14">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-0.188754489349574 -0.680878971901242 0.534510314319014 -0.492338472424032 -0.303695842926526 0.317287189424197 0.345454372204839 -0.831982288493767 -0.22807241706145 -0.463572070284235 0.564880767626531 1.40094007546705 0.898105338902398 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="15">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>1.49871730344229 1.45215184858328 0.498172451884831 -1.80113984698975 2.11991608003615 1.14728114245228 1.01594283467953 -1.32060680713296 0.832106153838178 0.0278097868521506 -0.304437664407644 1.26261254783404 0.0668281649636993 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="16">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-1.28499528904648 -1.13604454447325 -0.26492265923299 0.41813204901299 0.136960870339414 1.75381518504973 0.115286691056811 -1.89066874554536 0.0968210159561777 -0.765960905445088 0.130221551609443 0.709302437301986 0.477576886203998 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="17">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>0.365524566676952 -0.573781190119593 -0.8463284581799 -0.719956102783287 -0.37713862847085 0.189595812035261 0.165323143480295 -0.750544868720567 -0.416168615124287 -0.455172380418656 0.26061931641457 0.211323337823138 1.77828117013161 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="18">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-0.718398920663809 1.844843715116 1.29760542543684 1.98300325773287 0.210403655883738 -0.129632631437078 0.105279400572114 0.552453847650623 0.199418942172271 -1.24054338285032 -0.174039899602517 0.695469684538685 -1.22083647701978 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="19">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-0.816937419512968 0.0777303157187764 0.316483139713922 0.41813204901299 -0.0833674862935559 0.444978566813133 0.0852648196027207 -0.180482930308172 -0.484567232601682 -0.938154547689463 -0.695630958823022 1.05512125638452 -0.982863011539285 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="20">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>0.057591757773327 3.0675433904565 -0.882666320614083 0.560393067987524 -0.964680912825437 0.540747099854835 0.62565850577635 -0.506232609400969 0.712408573252735 -1.02215144634526 -0.999892410034983 0.667804179012082 -1.17193781972926 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="21">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>0.611870813799851 -0.493457853783355 0.861551076226651 0.133610011063921 -0.230253057382203 0.397094300292282 0.585629343837562 -0.669107448947368 0.113920670325527 -0.63576571252861 0.695278532431657 1.66376237796978 0.343920556276599 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="22">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-1.90086090685373 1.22903146987151 -2.00914005607372 -0.00865100791061406 0.577617583605355 1.43458674157739 0.555607472383472 -0.994857128040166 3.3970543092405 -0.896156098361567 -0.912960566831566 0.266654348876343 -0.578634111271055 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="23">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-1.71610122151155 -0.903999350613012 1.18859183813429 0.133610011063921 -0.37713862847085 0.732284165938239 0.895855348863164 -0.587670029174169 1.53319198298148 -1.00115222168131 -0.000176213195682818 0.889128223224903 -0.19396467391903 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="24">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-0.37351417469175 1.34505406680163 0.0984559651088302 0.987176124911128 0.136960870339414 0.875936965500792 0.525585600929381 0.552453847650623 0.609810647036643 -1.03475098114362 0.999539983643617 0.709302437301986 -0.901365249388432 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="25">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>0.414793816101531 -1.26991677170032 -0.0468954846278978 -0.719956102783287 0.797945940238325 0.397094300292282 -0.725325709657722 1.52970288492902 -2.00643647147373 -0.782760285176247 0.26061931641457 -0.950627894294175 0.0342290601033582 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="26">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-0.0163121163635436 -0.618405265861947 0.82521321379247 2.97883039055461 2.9277867210237 1.62612380766079 0.865833477409074 -1.23916938735976 0.626910301405992 -0.707163076386034 1.52113104286412 1.22111428954414 0.800308024321375 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="27">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>0.821265123854315 -0.993247502097721 -1.6457614317319 -0.435434064834218 -0.37713862847085 -0.289246853173248 -0.234968475907578 -0.343357769854571 -1.47634718602391 -0.518170054410501 1.17340367005045 -0.217491997839204 -0.356960198220735 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="28">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>2.15153485831797 -0.564856374971122 0.062118102674649 -2.31327951529807 -0.59746698510382 1.30689536418845 1.66641671618482 0.552453847650623 2.08038092280064 0.15380513483584 1.26033551325387 0.155992326769932 1.338193254517 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="29">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>0.057591757773327 -0.529157114377239 -0.991679907916628 -0.719956102783287 0.577617583605355 1.14728114245228 0.975913672740739 -0.669107448947368 0.746607881991433 0.00261071725541301 -0.347903586009352 1.01362299809462 0.474316975717963 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="30">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-0.779985482444534 -1.15389417477019 -0.991679907916628 -0.293173045859683 -0.81779534173679 1.97727509548036 1.726460459093 -0.994857128040166 0.609810647036643 -0.224180909115227 0.347551159617987 0.211323337823138 -0.259162883639712 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="31">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-1.46975497438865 -0.21678858418076 1.33394328787102 0.560393067987524 2.56057279330209 -1.0873179618541 -1.03555171468332 -1.80923132577216 -0.0570758733679615 -1.06414989567315 -0.0436421347973916 -0.494147053105231 -0.373259750650906 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="32">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>0.131495631910195 -1.20744306566102 -2.44519440528391 -1.28900017868143 -1.55222319718002 1.11535829810505 1.15604490146528 -0.831982288493767 1.17409924122515 0.111806685507943 0.695278532431657 0.778466201118493 -0.774228740433102 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="33">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-0.176437176993429 -0.903999350613012 -0.192246934364626 -0.435434064834218 1.67925936677021 -1.23097076141665 -0.775362162081207 -1.23916938735976 -1.11725444426759 -0.392174706426812 -0.869494645229857 -1.83592407114546 -0.356960198220735 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="34">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>0.488697690238401 1.99656557264 1.7699976370812 1.55622020080927 0.944831511326972 -0.480783919256652 -1.06557358613741 -0.750544868720567 -0.826560319988659 1.45575706400062 -1.26068793964524 -0.964460647057477 -0.356960198220735 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="35">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>0.75967856207359 2.30893410283648 -0.083233347062079 0.133610011063921 -0.524024199559496 -0.448861074909418 -1.22569023389256 0.87820352674342 -0.980457209312799 -0.266179358443123 -0.217505821204226 -0.784634861134559 -0.617753037103464 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="36">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-0.681446983595374 0.595369594330083 0.970564663529198 2.12526427670741 -0.156810271837879 -0.608475296645588 -1.44585062455589 2.18120224311461 -0.775261356880613 1.03577257072166 -1.26068793964524 -1.2272829495602 0.458017423287793 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="37">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>1.64652505171603 -0.609480450713476 1.18859183813429 1.55622020080927 -0.0833674862935559 0.828052698979941 -0.715318419173026 1.36682804538262 1.89228472473781 3.34568728375595 -1.69534715566232 -0.909129636004271 -0.259162883639712 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="38">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-0.927793230718273 1.3539788819501 -0.628301283574808 -0.293173045859683 0.944831511326972 -1.43846924967367 -1.24570481486196 -0.587670029174169 -0.775261356880613 1.33396156094972 -1.34761978284865 -0.853798624951066 0.37651966113694 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="39">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>1.69579430114061 -0.43990896289253 0.0257802402404662 -2.14256629252863 0.210403655883738 1.62612380766079 1.61638026376134 -0.587670029174169 2.33687573834087 1.03577257072166 1.04300590524533 0.529476651379069 2.63237771747255 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="40">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>0.131495631910195 -0.413134517447118 1.3702811503052 1.6984812197838 1.23860265350427 -0.129632631437078 -0.745340290627116 -0.831982288493767 -0.0570758733679615 0.867778773410076 -1.52148346925549 -1.78059306009226 -1.02524184785773 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="41">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-0.607543109458504 -1.00217231724619 -0.446611971403899 -0.577695083808752 -1.03812369836976 -0.448861074909418 -1.44585062455589 1.93688998379501 -0.587165158817775 0.174804359499788 -0.912960566831566 -1.53160351035283 -0.291761988500053 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="42">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>1.48639999108615 1.49677592432563 0.243807414845558 -0.179364230680056 0.871388725782648 0.907859809848026 0.62565850577635 -0.506232609400969 -0.587165158817775 0.0866076159112056 -0.391369507611061 0.985957492568013 1.10999952049462 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="43">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-0.582908484746214 2.80872375115084 0.970564663529198 1.55622020080927 -0.230253057382203 -0.784050940555375 -1.4258360435865 2.18120224311461 -0.843659974358008 -0.0141886624757455 -0.608699115619605 -1.28261396061341 -0.731849904114658 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="44">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>1.07992868333336 2.38925743917272 -0.519287696272263 0.133610011063921 -1.40533762609138 -2.07692613661835 -1.68602559618862 0.308141588331025 -1.56184545787066 -0.0561871118036416 -1.65188123406061 -1.78059306009226 -1.05784095271807 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="45">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>0.34088994196466 -0.645179711307359 1.69732191221284 -1.14673915970689 0.797945940238325 0.508824255507601 0.65568037723044 -0.180482930308172 -0.399068960754938 -0.182182459787331 0.564880767626531 0.225156090586439 0.458017423287793 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="46">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>0.43942844081382 0.175903282351955 -0.083233347062079 0.133610011063921 -0.744352556192467 -1.40654640532644 -1.52590894843347 0.0638293290114264 -1.63024407534805 0.237802033491632 -1.13029017484011 -0.203659245075902 0.132026374684382 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="47">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-0.348879549979458 -0.54700674467418 -0.337598384101354 0.844915105936594 -1.11156648391408 -1.43846924967367 -0.264990347361668 0.959640946516619 0.06262170721748 -0.728162301049982 -0.347903586009352 -0.272823008892409 -0.819867487237579 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="48">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-0.989379792498999 0.595369594330083 -0.192246934364626 -0.150912026885149 -0.230253057382203 -1.64596773793069 -1.53591623891817 0.308141588331025 -1.47634718602391 0.195803584163736 -1.30415386124694 -1.08895542192719 -0.748149456544829 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="49">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-0.238023738774153 -0.047217096359815 0.0984559651088302 1.2716981628602 -0.0833674862935559 -1.80558195966686 -0.935478809836356 -0.750544868720567 -1.30535064233043 0.279800482819528 -1.30415386124694 -1.73909480180235 -0.585153932243123 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="50">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>0.193082193690921 1.07730961234751 -0.809990595745719 0.41813204901299 0.210403655883738 -1.24693218359027 -1.47587249600998 0.552453847650623 -0.501666886971031 -0.434173155754708 -1.5649493908572 -1.29644671337671 0.295021898986087 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="51">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-0.287292988198734 0.952362200268915 -1.42773425712681 -1.00447814073236 -1.40533762609138 -1.03943369533325 -0.775362162081207 0.552453847650623 -1.30535064233043 -0.686163851722086 -1.13029017484011 -0.68780559179145 -1.19801710361754 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="52">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-0.779985482444534 -1.26991677170032 -3.68068172804609 -2.54089714565733 -0.81779534173679 -0.480783919256652 -1.45585791504059 -0.669107448947368 -2.00643647147373 -1.29514136697658 0.391017081219696 -1.10278817469049 -0.715550351684488 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="53">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>0.599553501443706 -0.627330081010418 -0.48294983383808 1.2716981628602 -0.891238127281113 -0.640398140992822 -0.184932023484093 -0.750544868720567 -0.96335755494345 -0.543369124007238 0.0867556300077347 0.225156090586439 -0.872026055014125 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="54">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>0.057591757773327 1.33612925165316 -0.192246934364626 0.844915105936594 -1.03812369836976 -1.00751085098601 -0.435114285601514 2.01832740356821 0.0455220528481316 -0.0981855611315381 -0.521767272416187 -0.839965872187765 -0.731849904114658 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="55">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-0.151802552281138 0.5596703337362 0.0984559651088302 0.133610011063921 0.357289226972385 -1.56616062706261 -0.805384033535297 -0.994857128040166 -1.30535064233043 0.15380513483584 -0.956426488433274 -1.65609828522254 -0.682951246824147 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="56">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-0.496687298253199 0.086655130867247 -0.628301283574808 -0.293173045859683 -0.37713862847085 -1.05539511750686 -1.36579230067832 2.18120224311461 -1.11725444426759 0.867778773410076 -0.999892410034983 -1.43477424100972 -0.145066016628518 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="57">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-0.878523981293694 -0.671954156752771 -0.591963421140627 0.247418826243548 0.283846441428061 -1.88538907053495 -1.00552984322923 0.0638293290114264 -0.22807241706145 -0.833158424369722 -0.23489218984491 -1.10278817469049 0.425418318427452 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="58">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-0.0902159905004142 0.399023661063725 1.18859183813429 0.41813204901299 -0.230253057382203 -1.1830864948958 -1.52590894843347 1.36682804538262 -1.44214787728522 -0.182182459787331 -0.826028723628148 -0.424983289288724 -0.454757512801759 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="59">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-0.447418048828618 -0.895074535464542 -1.28238280739008 -0.776860510373101 0.0635180847950909 -0.416938230562184 -0.615245514326057 1.36682804538262 -1.66444338408675 0.300799707483476 0.0867556300077347 -1.42094148824642 -0.943744085706876 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="60">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>0.63650543851214 0.720317006408674 1.26126756300265 1.12943714388566 -0.156810271837879 -1.16712507272218 -1.50589436746408 1.12251578606302 -1.78414096467219 -0.287178583107071 -0.304437664407644 -0.770802108371258 -0.715550351684488 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="61">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-1.49438959910094 -0.20786376903229 1.47929473760774 2.55204733363101 -0.524024199559496 -0.241362586652398 0.21535959590378 1.77401514424861 0.284917214019015 -0.854157649033671 0.0432897084060259 -0.245157503365807 -0.89158551793033 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+   <VectorInstance id="62">
+    <REAL-SparseArray n="13">
+     <Indices>1 2 3 4 5 6 7 8 9 10 11 12 13 </Indices>
+     <REAL-Entries>-1.18645679019732 1.72882111818588 0.0257802402404662 0.702654086962059 -1.40533762609138 -0.289246853173248 -0.274997637846365 0.471016427877423 -0.416168615124287 -1.02215144634526 -0.739096880424731 -0.0653317174428894 -0.519955722522441 </REAL-Entries>
+    </REAL-SparseArray>
+   </VectorInstance>
+  </VectorDictionary>
+  <SupportVectorMachine targetCategory="1" alternateTargetCategory="2">
+   <SupportVectors numberOfAttributes="13" numberOfSupportVectors="32">
+    <SupportVector vectorId="1"/>
+    <SupportVector vectorId="2"/>
+    <SupportVector vectorId="3"/>
+    <SupportVector vectorId="4"/>
+    <SupportVector vectorId="5"/>
+    <SupportVector vectorId="6"/>
+    <SupportVector vectorId="7"/>
+    <SupportVector vectorId="8"/>
+    <SupportVector vectorId="9"/>
+    <SupportVector vectorId="10"/>
+    <SupportVector vectorId="11"/>
+    <SupportVector vectorId="12"/>
+    <SupportVector vectorId="13"/>
+    <SupportVector vectorId="14"/>
+    <SupportVector vectorId="15"/>
+    <SupportVector vectorId="16"/>
+    <SupportVector vectorId="17"/>
+    <SupportVector vectorId="18"/>
+    <SupportVector vectorId="19"/>
+    <SupportVector vectorId="20"/>
+    <SupportVector vectorId="21"/>
+    <SupportVector vectorId="22"/>
+    <SupportVector vectorId="23"/>
+    <SupportVector vectorId="24"/>
+    <SupportVector vectorId="25"/>
+    <SupportVector vectorId="26"/>
+    <SupportVector vectorId="27"/>
+    <SupportVector vectorId="28"/>
+    <SupportVector vectorId="29"/>
+    <SupportVector vectorId="30"/>
+    <SupportVector vectorId="31"/>
+    <SupportVector vectorId="32"/>
+   </SupportVectors>
+   <Coefficients absoluteValue="0.804956133342604" numberOfCoefficients="32">
+    <Coefficient value="-1"/>
+    <Coefficient value="-1"/>
+    <Coefficient value="-1"/>
+    <Coefficient value="-1"/>
+    <Coefficient value="0.393502529152269"/>
+    <Coefficient value="-0.885538857064369"/>
+    <Coefficient value="-0.263853025518938"/>
+    <Coefficient value="0.572248824768027"/>
+    <Coefficient value="0.485522006189314"/>
+    <Coefficient value="1"/>
+    <Coefficient value="-1"/>
+    <Coefficient value="0.417669329553606"/>
+    <Coefficient value="1"/>
+    <Coefficient value="-0.71545785986848"/>
+    <Coefficient value="-0.35586732359367"/>
+    <Coefficient value="1"/>
+    <Coefficient value="-0.367121514072206"/>
+    <Coefficient value="0.0526020368782769"/>
+    <Coefficient value="0.54815714159314"/>
+    <Coefficient value="0.218493070394724"/>
+    <Coefficient value="-1"/>
+    <Coefficient value="0.0832806465565712"/>
+    <Coefficient value="0.506804376540288"/>
+    <Coefficient value="0.689052144652842"/>
+    <Coefficient value="0.56212830526227"/>
+    <Coefficient value="0.651967202700695"/>
+    <Coefficient value="0.671344534188241"/>
+    <Coefficient value="-0.703837655496192"/>
+    <Coefficient value="-1"/>
+    <Coefficient value="0.294550997290115"/>
+    <Coefficient value="0.368795510773657"/>
+    <Coefficient value="0.77555757911982"/>
+   </Coefficients>
+  </SupportVectorMachine>
+  <SupportVectorMachine targetCategory="1" alternateTargetCategory="3">
+   <SupportVectors numberOfAttributes="13" numberOfSupportVectors="23">
+    <SupportVector vectorId="1"/>
+    <SupportVector vectorId="2"/>
+    <SupportVector vectorId="3"/>
+    <SupportVector vectorId="33"/>
+    <SupportVector vectorId="6"/>
+    <SupportVector vectorId="34"/>
+    <SupportVector vectorId="35"/>
+    <SupportVector vectorId="36"/>
+    <SupportVector vectorId="7"/>
+    <SupportVector vectorId="37"/>
+    <SupportVector vectorId="38"/>
+    <SupportVector vectorId="11"/>
+    <SupportVector vectorId="39"/>
+    <SupportVector vectorId="15"/>
+    <SupportVector vectorId="40"/>
+    <SupportVector vectorId="41"/>
+    <SupportVector vectorId="17"/>
+    <SupportVector vectorId="42"/>
+    <SupportVector vectorId="43"/>
+    <SupportVector vectorId="28"/>
+    <SupportVector vectorId="44"/>
+    <SupportVector vectorId="45"/>
+    <SupportVector vectorId="46"/>
+   </SupportVectors>
+   <Coefficients absoluteValue="0.091525778865233" numberOfCoefficients="23">
+    <Coefficient value="-0.194894474044534"/>
+    <Coefficient value="-0.350123112561003"/>
+    <Coefficient value="-0.967375781618536"/>
+    <Coefficient value="0.754356827103256"/>
+    <Coefficient value="-0.115213494379478"/>
+    <Coefficient value="0.432350413196718"/>
+    <Coefficient value="0.472015972056344"/>
+    <Coefficient value="0.103386635440581"/>
+    <Coefficient value="-0.305433731459606"/>
+    <Coefficient value="0.820621498576963"/>
+    <Coefficient value="0.281440624034266"/>
+    <Coefficient value="-0.374281623538117"/>
+    <Coefficient value="-0.00301663800718844"/>
+    <Coefficient value="-0.398551827209579"/>
+    <Coefficient value="0.25848143946064"/>
+    <Coefficient value="0.52477552963496"/>
+    <Coefficient value="-0.601416426420975"/>
+    <Coefficient value="-0.447518901802219"/>
+    <Coefficient value="0.249287273425339"/>
+    <Coefficient value="-0.422407446764832"/>
+    <Coefficient value="0.173388590066226"/>
+    <Coefficient value="-0.0711185423738016"/>
+    <Coefficient value="0.181247197184575"/>
+   </Coefficients>
+  </SupportVectorMachine>
+  <SupportVectorMachine targetCategory="2" alternateTargetCategory="3">
+   <SupportVectors numberOfAttributes="13" numberOfSupportVectors="36">
+    <SupportVector vectorId="33"/>
+    <SupportVector vectorId="5"/>
+    <SupportVector vectorId="47"/>
+    <SupportVector vectorId="35"/>
+    <SupportVector vectorId="48"/>
+    <SupportVector vectorId="49"/>
+    <SupportVector vectorId="50"/>
+    <SupportVector vectorId="8"/>
+    <SupportVector vectorId="9"/>
+    <SupportVector vectorId="37"/>
+    <SupportVector vectorId="51"/>
+    <SupportVector vectorId="52"/>
+    <SupportVector vectorId="53"/>
+    <SupportVector vectorId="38"/>
+    <SupportVector vectorId="12"/>
+    <SupportVector vectorId="54"/>
+    <SupportVector vectorId="55"/>
+    <SupportVector vectorId="56"/>
+    <SupportVector vectorId="40"/>
+    <SupportVector vectorId="41"/>
+    <SupportVector vectorId="57"/>
+    <SupportVector vectorId="18"/>
+    <SupportVector vectorId="20"/>
+    <SupportVector vectorId="58"/>
+    <SupportVector vectorId="22"/>
+    <SupportVector vectorId="59"/>
+    <SupportVector vectorId="43"/>
+    <SupportVector vectorId="60"/>
+    <SupportVector vectorId="25"/>
+    <SupportVector vectorId="26"/>
+    <SupportVector vectorId="61"/>
+    <SupportVector vectorId="44"/>
+    <SupportVector vectorId="62"/>
+    <SupportVector vectorId="31"/>
+    <SupportVector vectorId="46"/>
+    <SupportVector vectorId="32"/>
+   </SupportVectors>
+   <Coefficients absoluteValue="-0.44081192239283" numberOfCoefficients="36">
+    <Coefficient value="1"/>
+    <Coefficient value="-0.498663915433776"/>
+    <Coefficient value="-0.0371592952382186"/>
+    <Coefficient value="1"/>
+    <Coefficient value="0.10334988164311"/>
+    <Coefficient value="0.0582933169251473"/>
+    <Coefficient value="0.235542260253143"/>
+    <Coefficient value="-0.0405718344964462"/>
+    <Coefficient value="-0.412699941245292"/>
+    <Coefficient value="1"/>
+    <Coefficient value="-1"/>
+    <Coefficient value="-0.200831889640564"/>
+    <Coefficient value="-0.637943704329194"/>
+    <Coefficient value="0.446070829663933"/>
+    <Coefficient value="-0.331607029844194"/>
+    <Coefficient value="-1"/>
+    <Coefficient value="0.347774998941698"/>
+    <Coefficient value="1"/>
+    <Coefficient value="0.922803876010159"/>
+    <Coefficient value="1"/>
+    <Coefficient value="-1"/>
+    <Coefficient value="-0.177282842466635"/>
+    <Coefficient value="-0.0925321468732033"/>
+    <Coefficient value="0.718554684901368"/>
+    <Coefficient value="-0.29779099283416"/>
+    <Coefficient value="-1"/>
+    <Coefficient value="1"/>
+    <Coefficient value="0.0572261915030557"/>
+    <Coefficient value="-1"/>
+    <Coefficient value="-0.261516874747559"/>
+    <Coefficient value="-0.0885247398774747"/>
+    <Coefficient value="0.467637700997503"/>
+    <Coefficient value="-1"/>
+    <Coefficient value="-1"/>
+    <Coefficient value="0.849371609217024"/>
+    <Coefficient value="-0.129500143029426"/>
+   </Coefficients>
+  </SupportVectorMachine>
+ </SupportVectorMachineModel>
+</PMML>

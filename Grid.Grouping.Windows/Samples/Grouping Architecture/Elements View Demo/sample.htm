@@ -1,0 +1,31 @@
+<html><style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+<p><p>This sample illustrates to display an event log that will show the order of various events related to the 
+grouping engine. 
+<p></p>
+
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" src="Images\ElementsView.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+<p> Here is the code to hook up an event:</p>
+
+<p><pre><font color="#8D2E1C">
+        this.groupingEngine.GroupCollapsed+=new GroupEventHandler(groupingEngine_GroupCollapsed);  </font></pre></p>
+<p><font color="#8D2E1C"><pre>
+ private void groupingEngine_GroupCollapsed(object sender, GroupEventArgs e)
+ {
+     AppendOutput("GroupCollapsed",e);
+ } </pre></font></p>
+		<br><br>
+</html>

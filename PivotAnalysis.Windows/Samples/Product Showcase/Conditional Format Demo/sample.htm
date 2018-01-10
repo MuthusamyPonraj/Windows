@@ -1,0 +1,37 @@
+<html><style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+<p>
+<br>This demo illustrates conditional formatting support in the PivotGrid control.</br>
+<br> </br>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" src="Images\ConditionalFormat.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+<p>The panel on the right enables you to switch between different rule types, apply conditions, and set criteria for formatting in Pivot Grid value cells.
+	</p>
+<p> Here is a short code Snippet:
+
+<b><p><pre><FONT color="#8D2E1C">
+
+NewRuleConditionalFormat newRule1 = new NewRuleConditionalFormat();
+newRule1.FormatStyle = FormatStyle.IconSets;
+newRule1.SummaryElement = "Quantity";            
+newRule1.Image = BitMapImageName.FourArrowsGray;            
+newRule1.RuleType = RuleType.FormatAllCellsBasedOnTheirValues;            
+PivotGridNewRuleConditionalFormat newRuleFormat1 = new PivotGridNewRuleConditionalFormat();
+newRuleFormat1.NewRuleCollections.Add(newRule1); this.pivotGridControl1.TableControl.NewRuleConditionalFormat.Add(newRuleFormat1);
+</font><p></b></pre>
+<br><br>
+</html>
+
+

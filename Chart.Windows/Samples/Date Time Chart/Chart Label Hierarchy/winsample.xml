@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sample>  
+  <name value="~/Date Time Chart/Chart Label Hierarchy/Sample.aspx" />
+  <displayname value="Chart Label Hierarchy" />
+  <sortorder value="1" />  
+  <imageUrl value="~/Date Time Chart/Chart Label Hierarchy/images/sample.png"></imageUrl>
+</sample>

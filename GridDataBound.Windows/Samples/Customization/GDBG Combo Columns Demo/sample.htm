@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20081231;3565696">
+	<META NAME="CHANGED" CONTENT="20081231;3571587">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P>This demo illustrates Essential Grid&rsquo;s support for the
+foreign-key combo boxes in grid cells. 
+</P>
+<P>In this sample, 
+<UL>
+	<LI><P>The top-left grid has three columns, which are
+populated with three ID columns from the Orders table in the
+Northwind database.</P>
+	<LI><P>The first column shows the raw ID of the order,
+but instead of the next two columns showing the customer ID and the
+employee ID.</P>
+	<LI><P>These columns use individual combo boxes to display the
+company's name and the employee's name based on the IDs.</P>
+	<LI><P>The combo boxes are bound to the <EM>Customer table</EM> and the <EM>Employee table</EM> in order
+to make a correspondence between the IDs and the displayed values.</P>
+	<LI><P>This sample shows these secondary tables(<EM>Customer table</EM> and <EM>Employee table</EM>) as well as a grid that
+shows the raw values from the Orders table.</P>
+</UL>
+<P><FONT SIZE=4><B>Features:</B></FONT></P>
+<UL>
+	<LI><P><SPAN LANG="en-US">With
+	the exception of a few lines of code, the </SPAN><STRONG><SPAN LANG="en-US">Form_Load</SPAN></STRONG><SPAN LANG="en-US">
+	handler is used to set column widths and fill the data set.</SPAN></P>
+	<LI><P>The entire sample is built
+	using the designer, including the creation of data adapters for required
+	tables and adding data bound grid columns to the primary grid that
+	shows the foreign-key data.</P>
+	<LI><P>The cell
+	type of the grid is set to combo box to get the combo box
+	columns; data source, display member, and value member are
+	also set.</SPAN></P>
+</UL>
+<!--<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT="GDBG Combos screenshot" ALIGN=BOTTOM  BORDER=0></P>-->
+<P ALIGN=LEFT><BR><BR>
+</P>
+</BODY>
+</HTML>

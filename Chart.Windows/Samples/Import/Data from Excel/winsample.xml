@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sample>  
+  <name value="~/Import/Data from Excel/Sample.aspx" />
+  <displayname value="Data from Excel" />
+  <sortorder value="5" />  
+  <imageUrl value="/Import/Data from Excel/images/sample.png"></imageUrl>
+</sample>

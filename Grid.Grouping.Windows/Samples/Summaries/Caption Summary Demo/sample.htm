@@ -1,0 +1,41 @@
+<style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;2344140">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P>This sample demonstrates displaying a summary in caption cells of the Grouping grid control. We need to set the <b>ShowCaptionSummaryCells</b> property to true for showing the summaries in Caption cells.
+</P>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2"  src="Images\CaptionSummary.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+<p><b>Caption Summary:</b></p>
+<PRE><FONT COLOR="#8d2e1c">        // Creating summaries in caption.</FONT>
+<FONT COLOR="#8d2e1c">        this.gridGroupingControl1.ChildGroupOptions.ShowCaptionSummaryCells = true;</FONT>
+<FONT COLOR="#8d2e1c">        this.gridGroupingControl1.ChildGroupOptions.ShowSummaries = false;</FONT>
+<FONT COLOR="#8d2e1c">        this.gridGroupingControl1.ChildGroupOptions.CaptionSummaryRow = &quot;Sum&quot;;</FONT>
+<FONT COLOR="#8d2e1c">        this.gridGroupingControl1.ChildGroupOptions.CaptionText = &quot;{RecordCount} Items&quot;;</FONT>
+<br><br>
+</BODY>
+</HTML>

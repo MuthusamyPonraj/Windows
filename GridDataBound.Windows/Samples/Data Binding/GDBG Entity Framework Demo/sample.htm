@@ -1,0 +1,49 @@
+<html>
+<p>This sample illustrates the implementation of ADO.NET Entity Framework support in the GridDataBoundGrid.</p>
+
+<!--<p>Below is an image of a GridDataBoundGrid Entity Framework.</p>
+
+<p><p align=center><img src="images/DBG Entity.png" alt="DBG Entity Framework" title="DBG Entity Framework" /></p>-->
+
+<p><p align=center><b>GridDataBoundGrid Entity Framework.</b></p>
+
+<p>
+<p><strong>Features</strong></p>
+<ul>
+	    <li><p>The ADO.NET Entity Framework enables you to create data access applications by programming against a conceptual application model instead of programming directly against a relational storage schema.</p> 
+	    
+</ul>
+<p><strong>Interactive Features</strong></p>
+<ul>
+	 <li><p>The Entity Data Model Wizard is used to generate an Entity Data Model (EDM) for Entity Framework support. This allows you to create a model from an existing database in this sample.</STRONG>.</p>
+
+</ul>
+<p>The following code illustrates binding a datasource to the GridDataBoundGrid through the Entity Data Model.
+<p><font color="#8D2E1C"><pre>
+
+                //Creates an object for entity connection.
+                EntityConnection con = new EntityConnection("name=NorthwindGridEntities");
+
+                con.StoreConnection.ConnectionString = "Data Source=" + FindFile("NorthwindwithImage.sdf");
+                NorthwindGridEntities db = new NorthwindGridEntities(con);    
+
+                //Bind the datasource to GridDataBoundGrid.
+                this.gridDataBoundGrid1.DataSource = db.Customers;
+</pre></font></p>
+</p>
+<p><strong>Note: </strong></p>
+<p>To run DBG Entity Framework_2008, you must have the following installed:
+               <p><font color="#8D2E1C">
+               <ul>
+               <li>Microsoft Visual Studio 2008.<li>The ADO.NET Entity Framework runtime and tools.<li>Microsoft SQL Server 2005 or later with Database Services, or the Express edition of SQL Server 2005 or later.                         
+               </ul>
+</font></p>
+</p>
+<p>To run DBG Entity Framework_2010, you must have the following installed:
+               <p><font color="#8D2E1C">
+               <ul>
+               <li>Microsoft Visual Studio 2010.<li>.NET Framework 4.0<li>Microsoft SQL Server 2005 or later with Database Services, or the Express edition of SQL Server 2005 or later.                         
+               </ul>
+</font></p>
+</p>
+</html>

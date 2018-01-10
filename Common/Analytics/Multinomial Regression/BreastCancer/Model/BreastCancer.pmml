@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<PMML version="4.1" xmlns="http://www.dmg.org/PMML-4_1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_1 http://www.dmg.org/v4-1/pmml-4-1.xsd">
+ <Header copyright="Copyright (c) 2016 Syncfusion" description="Multinomial Logistic Model">
+  <Extension name="user" value="Syncfusion" extender="Rattle/PMML"/>
+  <Application name="Rattle/PMML" version="1.4"/>
+  <Timestamp>2014-12-05 10:45:06</Timestamp>
+ </Header>
+ <DataDictionary numberOfFields="10">
+  <DataField name="cens" optype="categorical" dataType="string">
+   <Value value="0"/>
+   <Value value="1"/>
+  </DataField>
+  <DataField name="horTh" optype="categorical" dataType="string">
+   <Value value="no"/>
+   <Value value="yes"/>
+  </DataField>
+  <DataField name="age" optype="continuous" dataType="double"/>
+  <DataField name="menostat" optype="categorical" dataType="string">
+   <Value value="Pre"/>
+   <Value value="Post"/>
+  </DataField>
+  <DataField name="tsize" optype="continuous" dataType="double"/>
+  <DataField name="tgrade" optype="categorical" dataType="string">
+   <Value value="I"/>
+   <Value value="II"/>
+   <Value value="III"/>
+  </DataField>
+  <DataField name="pnodes" optype="continuous" dataType="double"/>
+  <DataField name="progrec" optype="continuous" dataType="double"/>
+  <DataField name="estrec" optype="continuous" dataType="double"/>
+  <DataField name="time" optype="continuous" dataType="double"/>
+ </DataDictionary>
+ <RegressionModel modelName="multinom_Model" functionName="classification" algorithmName="multinom" normalizationMethod="softmax">
+  <MiningSchema>
+   <MiningField name="cens" usageType="predicted"/>
+   <MiningField name="horTh" usageType="active"/>
+   <MiningField name="age" usageType="active"/>
+   <MiningField name="menostat" usageType="active"/>
+   <MiningField name="tsize" usageType="active"/>
+   <MiningField name="tgrade" usageType="active"/>
+   <MiningField name="pnodes" usageType="active"/>
+   <MiningField name="progrec" usageType="active"/>
+   <MiningField name="estrec" usageType="active"/>
+   <MiningField name="time" usageType="active"/>
+  </MiningSchema>
+  <Output>
+   <OutputField name="Predicted_cens" feature="predictedValue"/>
+   <OutputField name="Probability_0" optype="continuous" dataType="double" feature="probability" value="0"/>
+   <OutputField name="Probability_1" optype="continuous" dataType="double" feature="probability" value="1"/>
+  </Output>
+  <RegressionTable intercept="1.10573879632411" targetCategory="1">
+   <NumericPredictor name="age" exponent="1" coefficient="-0.00792763950756841"/>
+   <NumericPredictor name="tsize" exponent="1" coefficient="0.00324535424154938"/>
+   <NumericPredictor name="pnodes" exponent="1" coefficient="0.0431070619047764"/>
+   <NumericPredictor name="progrec" exponent="1" coefficient="-0.00175706503500956"/>
+   <NumericPredictor name="estrec" exponent="1" coefficient="0.000141847050263576"/>
+   <NumericPredictor name="time" exponent="1" coefficient="-0.00156065025145937"/>
+   <CategoricalPredictor name="horTh" value="yes" coefficient="-0.118757948524519"/>
+   <CategoricalPredictor name="menostat" value="Post" coefficient="0.398606427941284"/>
+   <CategoricalPredictor name="tgrade" value="II" coefficient="0.554413887456208"/>
+   <CategoricalPredictor name="tgrade" value="III" coefficient="0.0853453738545647"/>
+  </RegressionTable>
+  <RegressionTable intercept="0.0" targetCategory="0"/>
+ </RegressionModel>
+</PMML>

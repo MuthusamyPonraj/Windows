@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sample>  
+  <name value="~/User Interaction/Chart Custom Trend Lines/Sample.aspx" />
+  <displayname value="Chart Custom Trend Lines" />
+  <sortorder value="2" />  
+  <imageUrl value="/User Interaction/Chart Custom Trend Lines/Images/Trend.png"></imageUrl>
+</sample>

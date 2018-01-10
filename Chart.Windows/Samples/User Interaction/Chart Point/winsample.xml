@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sample>  
+  <name value="~/User Interaction/Chart Point/Sample.aspx" />
+  <displayname value="Chart Point" />
+  <sortorder value="6" />  
+  <imageUrl value="/User Interaction/Chart Point/Images/Sample.png"></imageUrl>
+</sample>

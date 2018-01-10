@@ -1,0 +1,36 @@
+<html><style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+<p>This sample illustrates how to resizing the individual rows in a GridGroupingControl.</p>
+
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" src="Images\sample.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+<p><b>Resizing Rows:</b></p>
+<p><font color="#8D2E1C"><pre>
+void gridGroupingControl1_TableControlResizingRows(object sender, GridTableControlResizingRowsEventArgs e)<br>
+{<br>
+    if (e.Inner.Reason == GridResizeCellsReason.MouseUp)<br>
+    {<br>
+        e.TableControl.Model.RowHeights.SetRange(e.Inner.Rows.Top, e.Inner.Rows.Bottom, e.Inner.Height);<br>
+        e.Inner.Cancel = true;<br>
+    }<br>
+    else if (e.Inner.Reason == GridResizeCellsReason.DoubleClick)<br>
+    {<br>
+        e.TableControl.Model.RowHeights.SetRange(e.Inner.Rows.Top, e.Inner.Rows.Bottom + 1, -1); // back to default size.<br>
+        e.Inner.Cancel = true;<br>
+    }<br>
+}<br>
+</pre></font></p>
+<br><br>
+</html>

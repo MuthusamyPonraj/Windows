@@ -1,0 +1,2044 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_2" version="4.2">
+    <Header>
+        <Application name="JPMML-Converter" version="1.0-SNAPSHOT"/>
+        <Timestamp>2015-03-17T06:18:29Z</Timestamp>
+    </Header>
+    <DataDictionary>
+        <DataField name="cens" optype="continuous" dataType="double"/>
+        <DataField name="horTh" optype="categorical" dataType="string">
+            <Value value="no"/>
+            <Value value="yes"/>
+        </DataField>
+        <DataField name="age" optype="continuous" dataType="double"/>
+        <DataField name="menostat" optype="categorical" dataType="string">
+            <Value value="Pre"/>
+            <Value value="Post"/>
+        </DataField>
+        <DataField name="tsize" optype="continuous" dataType="double"/>
+        <DataField name="tgrade" optype="continuous" dataType="double"/>
+        <DataField name="pnodes" optype="continuous" dataType="double"/>
+        <DataField name="progrec" optype="continuous" dataType="double"/>
+        <DataField name="estrec" optype="continuous" dataType="double"/>
+        <DataField name="time" optype="continuous" dataType="double"/>
+    </DataDictionary>
+    <MiningModel functionName="regression">
+        <MiningSchema>
+            <MiningField name="cens" usageType="target"/>
+            <MiningField name="horTh" usageType="active"/>
+            <MiningField name="age" usageType="active"/>
+            <MiningField name="menostat" usageType="active"/>
+            <MiningField name="tsize" usageType="active"/>
+            <MiningField name="tgrade" usageType="active"/>
+            <MiningField name="pnodes" usageType="active"/>
+            <MiningField name="progrec" usageType="active"/>
+            <MiningField name="estrec" usageType="active"/>
+            <MiningField name="time" usageType="active"/>
+        </MiningSchema>
+        <Targets>
+            <Target field="cens" rescaleConstant="0.8484848484848485"/>
+        </Targets>
+        <Segmentation multipleModelMethod="sum">
+            <Segment id="1">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-7.88639281482724E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-1.708000862626703E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="613.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010345140632539698">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="613.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="2">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.237133102158553E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-5.546035078513805E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="613.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010431836327202987">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="613.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="3">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.5145623103232E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.40822149274075E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="968"/>
+                        </Node>
+                        <Node id="3" score="-0.0010528063339017614">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="968"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="4">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.803963615249859E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-4.432075219886038E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="649"/>
+                        </Node>
+                        <Node id="3" score="-0.0010333047733825382">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="649"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="5">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.639643044155957E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.824752856515815E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="1214.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010640036689145071">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="1214.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="6">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-5.645529699442346E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="5.831839323475239E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="626"/>
+                        </Node>
+                        <Node id="3" score="-0.0010462456595070968">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="626"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="7">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.289002447071111E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.632294498277877E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="965.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010523619198719572">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="965.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="8">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.756090523696308E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-4.173570725088613E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="587.5"/>
+                        </Node>
+                        <Node id="3" score="-0.001042038875901154">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="587.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="9">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.428412378229206E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.153092670630157E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="626"/>
+                        </Node>
+                        <Node id="3" score="-0.001044705247867867">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="626"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="10">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.935460907857541E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-4.226024821683777E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="626"/>
+                        </Node>
+                        <Node id="3" score="-0.0010370717619834306">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="626"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="11">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.004953434551552E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-4.7119548579609627E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="613.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010394474712964931">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="613.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="12">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.48725618673571E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.924351974639901E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="891.5"/>
+                        </Node>
+                        <Node id="3" score="-0.001048863792741985">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="891.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="13">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.618019897137724E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.812884059265138E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="1220.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010666726240585206">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="1220.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="14">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.45758990976375E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.8257340803602E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="867.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010535603760703064">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="867.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="15">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.610021617093453E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-4.662368513621055E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="736"/>
+                        </Node>
+                        <Node id="3" score="-0.001047772846174706">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="736"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="16">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.986799251193496E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.088315384802191E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="736"/>
+                        </Node>
+                        <Node id="3" score="-0.0010476075491935991">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="736"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="17">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.454190934358987E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.7473574807758914E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="649"/>
+                        </Node>
+                        <Node id="3" score="-0.0010499568822565253">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="649"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="18">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.237616175643548E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.612589585904964E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="1032"/>
+                        </Node>
+                        <Node id="3" score="-0.001062108475879937">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="1032"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="19">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.184661989992943E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.487678090721397E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="732"/>
+                        </Node>
+                        <Node id="3" score="-0.001052578513116076">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="732"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="20">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.496580605678251E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.708848291333889E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="1334.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010726031974795153">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="1334.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="21">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.706079148648904E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-2.8416718794718E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="643.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010493327078302877">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="643.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="22">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.73717043473585E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-2.3538561630012848E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="595.5"/>
+                        </Node>
+                        <Node id="3" score="-0.001045120852622013">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="595.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="23">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.587094479182067E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.579407132209665E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="626.5"/>
+                        </Node>
+                        <Node id="3" score="-0.001047441383105609">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="626.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="24">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-7.980618192238217E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.366289401713607E-5">
+                            <SimplePredicate field="time" operator="lessThan" value="630.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010452497501470474">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="630.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="25">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.294978659108726E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.012750550932636E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="735.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010506217040542963">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="735.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="26">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.882385467079847E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-4.883354264487855E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="651"/>
+                        </Node>
+                        <Node id="3" score="-0.0010417367140802027">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="651"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="27">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.931315154696544E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.985176919793579E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="1084"/>
+                        </Node>
+                        <Node id="3" score="-0.0010612672677367814">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="1084"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="28">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.012698054451313E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-1.2351906130911755E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="634.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010567035029838301">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="634.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="29">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.119894936924638E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-4.651315014313791E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="625"/>
+                        </Node>
+                        <Node id="3" score="-0.0010481747865720326">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="625"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="30">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.049399723655046E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.058853830735137E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="732"/>
+                        </Node>
+                        <Node id="3" score="-0.0010512166736496307">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="732"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="31">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.728855094070882E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.983509034655151E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="1339.5"/>
+                        </Node>
+                        <Node id="3" score="-0.001069968399499053">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="1339.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="32">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-7.890813820995131E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-2.3961097219560517E-5">
+                            <SimplePredicate field="time" operator="lessThan" value="613.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010516226563230262">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="613.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="33">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.304240320711891E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-2.4965532674209594E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="636"/>
+                        </Node>
+                        <Node id="3" score="-0.0010453084530429536">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="636"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="34">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.754365766528523E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-2.864068071789569E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="607.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010476999998008782">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="607.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="35">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.194014938765616E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.384164684724047E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="927"/>
+                        </Node>
+                        <Node id="3" score="-0.0010668263821196828">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="927"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="36">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.1545406554022E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-4.7470542395725777E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="613.5"/>
+                        </Node>
+                        <Node id="3" score="-0.001044352253172973">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="613.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="37">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.388714752851899E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.451139890786273E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="904.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010574054668468517">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="904.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="38">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.68006469503064E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-9.046737551783034E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="1466"/>
+                        </Node>
+                        <Node id="3" score="-0.0010835723502812353">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="1466"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="39">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.998481784927152E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.65099859287211E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="904.5"/>
+                        </Node>
+                        <Node id="3" score="-0.001062143312758249">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="904.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="40">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.805916167056849E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-5.296071490426557E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="735.5"/>
+                        </Node>
+                        <Node id="3" score="-0.001060931702300501">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="735.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="41">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-7.949685137015201E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="7.510653260631029E-5">
+                            <SimplePredicate field="time" operator="lessThan" value="625"/>
+                        </Node>
+                        <Node id="3" score="-0.0010494244234707912">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="625"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="42">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-7.547933574230639E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.104162986100208E-5">
+                            <SimplePredicate field="time" operator="lessThan" value="613.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010480055957687198">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="613.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="43">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.438155884922849E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.565636524001879E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="736"/>
+                        </Node>
+                        <Node id="3" score="-0.001060189449780878">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="736"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="44">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.297930332848841E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-1.7796379519213068E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="620"/>
+                        </Node>
+                        <Node id="3" score="-0.0010449599662475403">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="620"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="45">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-6.618261680709581E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="5.150826178399193E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="595.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010579564423531557">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="595.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="46">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.735452697139078E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.799077083097665E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="1207.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010819289037801187">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="1207.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="47">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.358374503162771E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.32994006123375E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="1229"/>
+                        </Node>
+                        <Node id="3" score="-0.0010801791263764903">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="1229"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="48">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.394809959512723E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-5.582208395513019E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="611"/>
+                        </Node>
+                        <Node id="3" score="-0.0010441058760796364">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="611"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="49">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.383643964652967E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.576888634009498E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="1339"/>
+                        </Node>
+                        <Node id="3" score="-0.0010903740850812765">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="1339"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="50">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.095677307380977E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-1.2091926900627995E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="595.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010504250744965168">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="595.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="51">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.362221843994569E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-2.7605661147988566E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="626.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010551701494492388">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="626.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="52">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.89593231467233E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.584050461472816E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="625.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010449407196268415">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="625.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="53">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.825208771763073E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-4.901048839589946E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="736"/>
+                        </Node>
+                        <Node id="3" score="-0.0010530471988361868">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="736"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="54">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.961843804175903E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-4.6084253521119095E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="626"/>
+                        </Node>
+                        <Node id="3" score="-0.0010572608631439582">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="626"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="55">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.843589120628548E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.737839840529904E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="607.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010528982086874703">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="607.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="56">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.979198178420497E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.667230927622716E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="891.5"/>
+                        </Node>
+                        <Node id="3" score="-0.00106765918562214">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="891.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="57">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.371132793273733E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-2.266643647710859E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="649"/>
+                        </Node>
+                        <Node id="3" score="-0.0010506200425465676">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="649"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="58">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.570298922488658E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.589175486736542E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="1220.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010848232809392672">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="1220.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="59">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.409943918930141E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.386960813244235E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="904.5"/>
+                        </Node>
+                        <Node id="3" score="-0.001080854952286114">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="904.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="60">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.420337977225148E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-2.799525926069036E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="626"/>
+                        </Node>
+                        <Node id="3" score="-0.0010538734478917151">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="626"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="61">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.103372478157274E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-1.569077887352535E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="626.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010611485553415657">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="626.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="62">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.619620905841629E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.6406620117174313E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="736"/>
+                        </Node>
+                        <Node id="3" score="-0.0010709235778505154">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="736"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="63">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.283603087870754E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-1.3307096866578032E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="626"/>
+                        </Node>
+                        <Node id="3" score="-0.0010578732948465321">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="626"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="64">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.125459680443115E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-1.039340017201791E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="607.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010556971329594548">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="607.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="65">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.95544352581007E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.578232960699013E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="891.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010807815394727777">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="891.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="66">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.43581307448134E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.105511902552328E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="1166.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010825679970526577">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="1166.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="67">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.734390794248667E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.213810341080226E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="965.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010757488263239126">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="965.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="68">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-7.865604787684353E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="4.353554577355422E-5">
+                            <SimplePredicate field="time" operator="lessThan" value="614"/>
+                        </Node>
+                        <Node id="3" score="-0.0010605727587143345">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="614"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="69">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-7.971952264011662E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="1.285162033678758E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="597"/>
+                        </Node>
+                        <Node id="3" score="-0.001062305072485258">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="597"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="70">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.037155131345706E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-1.5585812593342977E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="626"/>
+                        </Node>
+                        <Node id="3" score="-0.0010478828701199253">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="626"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="71">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.808702121979882E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-5.134743836155094E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="732"/>
+                        </Node>
+                        <Node id="3" score="-0.0010576173945971267">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="732"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="72">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.544905032129349E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.939899297253176E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="963.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010814223293044492">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="963.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="73">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.278620121989035E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-5.817192395139906E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="651"/>
+                        </Node>
+                        <Node id="3" score="-0.0010583178310500012">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="651"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="74">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-7.830448812866234E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-1.7328075140306667E-5">
+                            <SimplePredicate field="time" operator="lessThan" value="714.5"/>
+                        </Node>
+                        <Node id="3" score="-0.001061141034762649">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="714.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="75">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.642750386097279E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.8100024895918486E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="613.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010600632867245633">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="613.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="76">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.11001310666714E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.49104004472088E-5">
+                            <SimplePredicate field="time" operator="lessThan" value="595.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010719493630094968">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="595.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="77">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.45178203510502E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.651077830730066E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="963"/>
+                        </Node>
+                        <Node id="3" score="-0.0010854928168384204">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="963"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="78">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.329522508196692E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.69291496767105E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="756.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010635157951846056">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="756.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="79">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.017730786396083E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-4.2052536364054925E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="595"/>
+                        </Node>
+                        <Node id="3" score="-0.0010395951942027192">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="595"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="80">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.314660680050107E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.898179289052223E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="815"/>
+                        </Node>
+                        <Node id="3" score="-0.0010747690342153505">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="815"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="81">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.497777137846626E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.94704570608676E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="1052.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010857322502677194">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="1052.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="82">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.316920831521839E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-1.8126270340035832E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="620.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010591821617845958">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="620.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="83">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.326327918281474E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.698099942777265E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="715.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010627796474406517">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="715.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="84">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.008544281723567E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-4.5757467054201534E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="607.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010529602273592386">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="607.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="85">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.844791780007895E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.819851681162294E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="626"/>
+                        </Node>
+                        <Node id="3" score="-0.0010569035931572563">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="626"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="86">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.255552589761532E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.071069478134598E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="927"/>
+                        </Node>
+                        <Node id="3" score="-0.0010788761233325778">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="927"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="87">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.458632763900652E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.088298409345328E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="1175.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010976541587408087">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="1175.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="88">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.617868571163277E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-4.0854711809393165E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="733"/>
+                        </Node>
+                        <Node id="3" score="-0.0010656248349835426">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="733"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="89">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.736619334031103E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.181369478574745E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="965.5"/>
+                        </Node>
+                        <Node id="3" score="-0.001075743784716979">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="965.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="90">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.52664250780602E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-2.8732312590099593E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="643.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010736351473071483">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="643.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="91">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.472541792613302E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.337664740766028E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="1199"/>
+                        </Node>
+                        <Node id="3" score="-0.001106535168994281">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="1199"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="92">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-7.40239010487833E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="5.8359154112226806E-5">
+                            <SimplePredicate field="time" operator="lessThan" value="607.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010467716393242198">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="607.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="93">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.456806210122868E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.648294848962867E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="1466"/>
+                        </Node>
+                        <Node id="3" score="-0.0011109762770716645">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="1466"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="94">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.061918208243235E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.102584118192496E-5">
+                            <SimplePredicate field="time" operator="lessThan" value="595.5"/>
+                        </Node>
+                        <Node id="3" score="-0.001052168940317931">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="595.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="95">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.15124118900456E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-1.3436175273858072E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="626"/>
+                        </Node>
+                        <Node id="3" score="-0.0010577720909977582">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="626"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="96">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-7.669413717421816E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-5.042449411756894E-5">
+                            <SimplePredicate field="time" operator="lessThan" value="649"/>
+                        </Node>
+                        <Node id="3" score="-0.0010520858434499357">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="649"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="97">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.957478205936959E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.717353738323782E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="963.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010864611198634663">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="963.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="98">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.358916441670642E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-2.2219928323108322E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="595.5"/>
+                        </Node>
+                        <Node id="3" score="-0.0010629578177133773">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="595.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="99">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.906878556593736E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.809669921388591E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="626"/>
+                        </Node>
+                        <Node id="3" score="-0.0010589452280836212">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="626"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="100">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="time" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.712239185485198E-4">
+                            <SimplePredicate field="time" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-8.168132081893479E-4">
+                            <SimplePredicate field="time" operator="lessThan" value="1068"/>
+                        </Node>
+                        <Node id="3" score="-0.0010988701057787686">
+                            <SimplePredicate field="time" operator="greaterOrEqual" value="1068"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+        </Segmentation>
+    </MiningModel>
+</PMML>

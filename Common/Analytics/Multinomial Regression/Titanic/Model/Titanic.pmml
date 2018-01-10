@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<PMML version="4.1" xmlns="http://www.dmg.org/PMML-4_1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_1 http://www.dmg.org/v4-1/pmml-4-1.xsd">
+ <Header copyright="Copyright (c) 2016 Syncfusion" description="Multinomial Logistic Model">
+  <Extension name="user" value="Syncfusion" extender="Rattle/PMML"/>
+  <Application name="Rattle/PMML" version="1.4"/>
+  <Timestamp>2014-12-05 14:30:57</Timestamp>
+ </Header>
+ <DataDictionary numberOfFields="5">
+  <DataField name="Survived" optype="categorical" dataType="string">
+   <Value value="0"/>
+   <Value value="1"/>
+  </DataField>
+  <DataField name="sex" optype="categorical" dataType="string">
+   <Value value="female"/>
+   <Value value="male"/>
+  </DataField>
+  <DataField name="age" optype="continuous" dataType="double"/>
+  <DataField name="sibsp" optype="continuous" dataType="double"/>
+  <DataField name="parch" optype="continuous" dataType="double"/>
+ </DataDictionary>
+ <RegressionModel modelName="multinom_Model" functionName="classification" algorithmName="multinom" normalizationMethod="softmax">
+  <MiningSchema>
+   <MiningField name="Survived" usageType="predicted"/>
+   <MiningField name="sex" usageType="active"/>
+   <MiningField name="age" usageType="active"/>
+   <MiningField name="sibsp" usageType="active"/>
+   <MiningField name="parch" usageType="active"/>
+  </MiningSchema>
+  <Output>
+   <OutputField name="Predicted_Survived" feature="predictedValue"/>
+   <OutputField name="Probability_0" optype="continuous" dataType="double" feature="probability" value="0"/>
+   <OutputField name="Probability_1" optype="continuous" dataType="double" feature="probability" value="1"/>
+  </Output>
+  <RegressionTable intercept="1.35692110005207" targetCategory="1">
+   <NumericPredictor name="age" exponent="1" coefficient="-0.00538902110104367"/>
+   <NumericPredictor name="sibsp" exponent="1" coefficient="-0.310918747218063"/>
+   <NumericPredictor name="parch" exponent="1" coefficient="0.152879642650011"/>
+   <CategoricalPredictor name="sex" value="male" coefficient="-2.44061125001568"/>
+  </RegressionTable>
+  <RegressionTable intercept="0.0" targetCategory="0"/>
+ </RegressionModel>
+</PMML>

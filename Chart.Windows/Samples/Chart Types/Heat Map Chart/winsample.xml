@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sample>  
+  <name value="~/Chart Types/Heat Map Chart/Sample.aspx"/>
+  <displayname value="Heat Map Chart" />
+  <sortorder value="10" />  
+  <imageUrl value="/Chart Types/Heat Map Chart/images/Sample.png"></imageUrl>
+</sample>

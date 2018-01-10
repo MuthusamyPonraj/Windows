@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<PMML version="4.1" xmlns="http://www.dmg.org/PMML-4_1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_1 http://www.dmg.org/v4-1/pmml-4-1.xsd">
+ <Header copyright="Copyright (c) 2016 Syncfusion" description="Linear Regression Model">
+  <Extension name="user" value="Syncfusion" extender="Rattle/PMML"/>
+  <Application name="Rattle/PMML" version="1.4"/>
+  <Timestamp>2014-07-17 12:38:17</Timestamp>
+ </Header>
+ <DataDictionary numberOfFields="18">
+  <DataField name="Price" optype="continuous" dataType="double"/>
+  <DataField name="Mileage" optype="continuous" dataType="double"/>
+  <DataField name="Cylinder" optype="continuous" dataType="double"/>
+  <DataField name="Doors" optype="continuous" dataType="double"/>
+  <DataField name="Cruise" optype="continuous" dataType="double"/>
+  <DataField name="Sound" optype="continuous" dataType="double"/>
+  <DataField name="Leather" optype="continuous" dataType="double"/>
+  <DataField name="Buick" optype="continuous" dataType="double"/>
+  <DataField name="Cadillac" optype="continuous" dataType="double"/>
+  <DataField name="Chevy" optype="continuous" dataType="double"/>
+  <DataField name="Pontiac" optype="continuous" dataType="double"/>
+  <DataField name="Saab" optype="continuous" dataType="double"/>
+  <DataField name="Saturn" optype="continuous" dataType="double"/>
+  <DataField name="convertible" optype="continuous" dataType="double"/>
+  <DataField name="coupe" optype="continuous" dataType="double"/>
+  <DataField name="hatchback" optype="continuous" dataType="double"/>
+  <DataField name="sedan" optype="continuous" dataType="double"/>
+  <DataField name="wagon" optype="continuous" dataType="double"/>
+ </DataDictionary>
+ <RegressionModel modelName="Linear_Regression_Model" functionName="regression" algorithmName="least squares">
+  <MiningSchema>
+   <MiningField name="Price" usageType="predicted"/>
+   <MiningField name="Mileage" usageType="active"/>
+   <MiningField name="Cylinder" usageType="active"/>
+   <MiningField name="Doors" usageType="active"/>
+   <MiningField name="Cruise" usageType="active"/>
+   <MiningField name="Sound" usageType="active"/>
+   <MiningField name="Leather" usageType="active"/>
+   <MiningField name="Buick" usageType="active"/>
+   <MiningField name="Cadillac" usageType="active"/>
+   <MiningField name="Chevy" usageType="active"/>
+   <MiningField name="Pontiac" usageType="active"/>
+   <MiningField name="Saab" usageType="active"/>
+   <MiningField name="Saturn" usageType="active"/>
+   <MiningField name="convertible" usageType="active"/>
+   <MiningField name="coupe" usageType="active"/>
+   <MiningField name="hatchback" usageType="active"/>
+   <MiningField name="sedan" usageType="active"/>
+   <MiningField name="wagon" usageType="active"/>
+  </MiningSchema>
+  <Output>
+   <OutputField name="Predicted_Price" feature="predictedValue"/>
+  </Output>
+  <RegressionTable intercept="-1404.85634354542">
+   <NumericPredictor name="Mileage" exponent="1" coefficient="-0.201340622164363"/>
+   <NumericPredictor name="Cylinder" exponent="1" coefficient="3794.8236596627"/>
+   <NumericPredictor name="Doors" exponent="1" coefficient="1588.3110092597"/>
+   <NumericPredictor name="Cruise" exponent="1" coefficient="424.970769596581"/>
+   <NumericPredictor name="Sound" exponent="1" coefficient="499.61577647855"/>
+   <NumericPredictor name="Leather" exponent="1" coefficient="784.986438997019"/>
+   <NumericPredictor name="Buick" exponent="1" coefficient="552.173111394673"/>
+   <NumericPredictor name="Cadillac" exponent="1" coefficient="12611.32359635"/>
+   <NumericPredictor name="Chevy" exponent="1" coefficient="-568.090998283941"/>
+   <NumericPredictor name="Pontiac" exponent="1" coefficient="-1716.28817772575"/>
+   <NumericPredictor name="Saab" exponent="1" coefficient="12439.5191213991"/>
+   <NumericPredictor name="Saturn" exponent="1" coefficient="0"/>
+   <NumericPredictor name="convertible" exponent="1" coefficient="10562.3973171046"/>
+   <NumericPredictor name="coupe" exponent="1" coefficient="0"/>
+   <NumericPredictor name="hatchback" exponent="1" coefficient="-6530.39136964952"/>
+   <NumericPredictor name="sedan" exponent="1" coefficient="-4505.20249327318"/>
+   <NumericPredictor name="wagon" exponent="1" coefficient="0"/>
+  </RegressionTable>
+ </RegressionModel>
+</PMML>

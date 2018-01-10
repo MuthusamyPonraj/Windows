@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20081231;4041040">
+	<META NAME="CHANGED" CONTENT="20081231;4051881">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P>This sample displays hierarchical data using nested drop grids.</P>
+<P>In this sample,</P>
+<UL>
+	<LI><P>The primary grid is the Customers table from the Northwind database.</P>
+	<LI><P>If you click a row of this table, the Orders table will be displayed in
+	a new grid, which shows the orders placed by the customers.</P>
+	<LI><P>If you click any of the rows in the Orders table, it in turn drops another
+	grid with the <EM>Order_Details</EM> table, which shows
+	the order details of the selected row in the Orders table.</P>
+</UL>
+<!--<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT="GDBGwithDropGrids screenshot" ALIGN=BOTTOM  BORDER=0></P>-->
+<P ALIGN=LEFT><FONT SIZE=4><B>Features:</B></FONT></P>
+<UL>
+	<LI><P><SPAN LANG="en-US">The
+	sample has a derived GDBG class called</SPAN><STRONG><SPAN LANG="en-US">
+	GridHierDataBoundGrid, </SPAN></STRONG><SPAN LANG="en-US">which
+	is used for each of the three grids that are involved. In the
+	constructor for this class, you must pass the tables that are used
+	by this grid as well as the child table, if any. 
+	      </SPAN>
+	</P>
+	<LI><P><SPAN LANG="en-US">To
+	specify a relationship between a parent table and a child table, you
+	must pass an event handler for the </SPAN><STRONG><SPAN LANG="en-US">QueryFilterString</SPAN></STRONG><SPAN LANG="en-US"> event.
+	Your event should specify the </SPAN><STRONG><SPAN LANG="en-US">FilterString</SPAN></STRONG><SPAN LANG="en-US">
+	that defines the relationship between the parent table and the child
+	table. </SPAN>
+	</P>
+	<LI><P><STRONG><SPAN LANG="en-US">GridHierDataBoundGrid</SPAN></STRONG><SPAN LANG="en-US">
+	has a second event, which lets you format the grid just before it is
+	dropped. You can use it to specify features such as background colors
+	and other cell properties. </SPAN>
+	</P>
+	<LI><P><STRONG><SPAN LANG="en-US">GridHierDataBoundGrid</SPAN></STRONG><SPAN LANG="en-US">
+	has an unbound column at the beginning to show the related tables as
+	a drop-down. It uses a custom cell (</SPAN><STRONG><SPAN LANG="en-US">DBDropDownGridCell</SPAN></STRONG><SPAN LANG="en-US">)
+	derived from </SPAN><STRONG><SPAN LANG="en-US">GridDropDownGridCellModel</SPAN></STRONG><SPAN LANG="en-US">
+	and </SPAN><STRONG><SPAN LANG="en-US">GridDropDownGridCellRenderer</SPAN></STRONG><SPAN LANG="en-US">
+	classes to display related tables. This cell model is added to
+	</SPAN><STRONG><SPAN LANG="en-US">GridHierDataBoundGrid</SPAN></STRONG><SPAN LANG="en-US">
+	in its constructor. </SPAN>
+	</P>
+	<LI><P><SPAN LANG="en-US">In the
+	</SPAN><STRONG><SPAN LANG="en-US">GridDropDownGridCellRenderer.OnInitialize</SPAN></STRONG><SPAN LANG="en-US">
+	override method, the </SPAN><STRONG><SPAN LANG="en-US">QueryFilterString</SPAN></STRONG><SPAN LANG="en-US">
+	event is fired in order to obtain the filter string. A data view is
+	created with this filter string and is assigned to the drop-down
+	grid. </SPAN>
+	</P>
+	<LI><P ALIGN=LEFT><SPAN LANG="en-US">Formatting
+	is applied to the drop-down grid by firing </SPAN><STRONG><SPAN LANG="en-US">QueryFormatGrid</SPAN></STRONG><SPAN LANG="en-US">
+	event just before the drop-down container is shown in the
+	</SPAN><STRONG><SPAN LANG="en-US">GridDropDownGridCellRenderer.DropDownContainerShowingDropDown
+	</SPAN></STRONG><SPAN LANG="en-US">override.
+	</SPAN>
+	</P>	
+</UL>
+</BODY>
+</HTML>

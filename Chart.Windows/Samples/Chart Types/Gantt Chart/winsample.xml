@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sample>  
+  <name value="~/Chart Types/Gantt Chart/Sample.aspx"/>
+  <displayname value="Gantt Chart" />
+  <sortorder value="9" />  
+  <imageUrl value="/Chart Types/Gantt Chart/images/sample.png"></imageUrl>
+</sample>

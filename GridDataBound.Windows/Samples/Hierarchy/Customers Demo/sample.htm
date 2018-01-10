@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20081231;4322648">
+	<META NAME="CHANGED" CONTENT="20081231;4331812">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P>This sample demonstrates the binding of a GDBG<STRONG> </STRONG>to
+custom collections. The GDBG can be bound to any collection that
+derives from the <STRONG>IList</STRONG> interface.</P>
+<P>In this sample, the customer list is derived from the
+<STRONG>IBindingList</STRONG> interface. This gives additional control over
+adding, editing, and removing records from a list. 
+</P>
+<!--<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT=" Customers screenshot" ALIGN=BOTTOM  BORDER=0></P>-->
+<P><FONT SIZE=4><B>Features:</B></FONT></P>
+<UL>
+	<LI><P><SPAN LANG="en-US">You can
+	see the custom collections implementation in the </SPAN><STRONG><SPAN LANG="en-US">Customer.cs</SPAN></STRONG><SPAN LANG="en-US">
+	file in this sample.</SPAN></P>
+</UL>
+<P STYLE="margin-left: 0.49in"> <SPAN LANG="en-US">When
+an item is added, inserted, or removed, you need to raise the
+</SPAN><STRONG><SPAN LANG="en-US">IBindingList.ListChanged
+</SPAN></STRONG><SPAN LANG="en-US">event.
+The grid will listen to this ListChanged event and update the records accordingly.</SPAN></P>
+<UL>
+	<LI><P><SPAN LANG="en-US">The<STRONG> Customer</STRONG></SPAN><SPAN LANG="en-US">
+	class contains three public properties- </SPAN><STRONG><SPAN LANG="en-US">ID</SPAN></STRONG><SPAN LANG="en-US">,
+	</SPAN><STRONG><SPAN LANG="en-US">FirstName</SPAN></STRONG><SPAN LANG="en-US">,
+	and </SPAN><SPAN LANG="en-US"><STRONG>LastName</STRONG>.</SPAN></P>
+</UL>
+<P STYLE="margin-left: 0.49in"> <SPAN LANG="en-US">The
+customer objects are added to </SPAN><STRONG><SPAN LANG="en-US">CustomerCollection,</SPAN></STRONG><SPAN LANG="en-US">
+which implements the </SPAN><STRONG><SPAN LANG="en-US">IList
+</SPAN></STRONG><SPAN LANG="en-US">and
+the </SPAN><STRONG><SPAN LANG="en-US">IBindingList</SPAN></STRONG><SPAN LANG="en-US">
+interfaces. </SPAN>
+</P>
+</BODY>
+</HTML>

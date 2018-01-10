@@ -1,0 +1,46 @@
+<style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20081230;6590776">
+	<META NAME="CHANGED" CONTENT="20081230;7001823">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P>This sample illustrates the binding of a grid to an external
+data source so that no data actually resides in the GridControl.
+</P>
+<p>
+<table width="100%">
+<tr>
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" src="Images\VirtualGrid.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+<UL>
+<p>Virtual grid does not maintain any data. All information is provided on demand through handled events if essential Grid needs a row count for a grid, it fires QueryRowCount event.</p>
+<PRE><FONT COLOR="#8d2e1c">         gridControl1.QueryRowHeight += new GridRowColSizeEventHandler(GridQueryRowHeight);</FONT>
+<FONT COLOR="#8d2e1c">        void GridQueryRowCount(object sender, GridRowColCountEventArgs e)</FONT>
+<FONT COLOR="#8d2e1c">        {</FONT>
+<FONT COLOR="#8d2e1c">            e.Count = 30000;</FONT>
+<FONT COLOR="#8d2e1c">            e.Handled = true;</FONT>
+<FONT COLOR="#8d2e1c">        }</FONT>
+<br><br>
+</BODY>
+</HTML>
+
+

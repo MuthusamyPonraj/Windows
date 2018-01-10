@@ -1,0 +1,26 @@
+<html><style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+<p><p>This sample illustrates the Related Master Details setup with data source and data member properties inside a form. </p></p>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2"  src="Images\Related Master Details.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+<p>The following code shows registering the <strong>DataTable/IList</strong> with the <strong>SourceListSet</strong> so that the 
+<strong>RelationDescriptor</strong> can resolve the name.</p>
+
+<pre><font color="#8D2E1C">
+    		this.gridGroupingControl1.Engine.SourceListSet.Add("MyParentTable",parentTable);<br>
+    		this.gridGroupingControl1.Engine.SourceListSet.Add("MyChildTable",childTable);<br>
+    		this.gridGroupingControl1.Engine.SourceListSet.Add("MyGrandChildTable", grandChildTable);  </font></pre>
+<br><br>
+</html>

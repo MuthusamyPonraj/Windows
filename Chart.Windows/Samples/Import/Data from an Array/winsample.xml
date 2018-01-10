@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sample>  
+  <name value="~/Import/Data from an Array/Sample.aspx" />
+  <displayname value="Data from an Array" />
+  <sortorder value="1" />  
+  <imageUrl value="/Import/Data from an Array/images/sample.png"></imageUrl>
+</sample>

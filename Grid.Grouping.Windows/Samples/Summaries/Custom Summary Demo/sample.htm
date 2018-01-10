@@ -1,0 +1,48 @@
+<style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;2311621">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P>This sample illustrates the implementation of custom summaries and custom counters in a Grouping grid control.
+</P>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" src="Images\CustomSummary.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+</P>
+
+<p>The following code shows how to set up custom summaries.</P>
+	<PRE><FONT COLOR="#8d2e1c">        GridSummaryColumnDescriptor sd3 = new GridSummaryColumnDescriptor();</FONT>
+<FONT COLOR="#8d2e1c">        sd3.Name = &quot;QuantityMedian&quot;;</FONT>
+<FONT COLOR="#8d2e1c">        sd3.DataMember = &quot;Quantity&quot;;</FONT>
+<FONT COLOR="#8d2e1c">        sd3.DisplayColumn = &quot;Quantity&quot;;</FONT>
+<FONT COLOR="#8d2e1c">        sd3.Format = &quot;{Median}&quot;;</FONT>
+
+<FONT COLOR="#8d2e1c">        // Declaring the Summary type to be Custom.</FONT>
+<FONT COLOR="#8d2e1c">        sd3.SummaryType = SummaryType.Custom;</FONT>
+
+<FONT COLOR="#8d2e1c">        // Adding the SummaryColumn to the SummaryRow.</FONT>
+<FONT COLOR="#8d2e1c">        this.gridGroupingControl1.TableDescriptor.SummaryRows.Add(new GridSummaryRowDescriptor(&quot;Row 3&quot;, &quot;Statistic Median&quot;, sd3));  </FONT></PRE>
+<br><br>
+</BODY>
+</HTML>

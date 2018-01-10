@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sample>  
+  <displayname value="Database Diagram" />
+  <sortorder value="5" />  
+  <imageUrl value="/Use Case Diagrams/Database Diagram/Images/sample.png"></imageUrl>  
+  <name value="~/Use Case Diagrams/Database Diagram/Sample.aspx" />
+</sample>

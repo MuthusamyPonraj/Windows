@@ -1,0 +1,35 @@
+<style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20081231;5034726">
+	<META NAME="CHANGED" CONTENT="20081231;5113723">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P>This sample illustrates a multicolumn list box with headers in the GridListControl.
+</P>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" src="Images\GettingStarted.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+<p>The following code illustrate to bind the DataSource with GridListControl</p>
+<PRE><FONT COLOR="#8d2e1c">        ArrayList USStates = new ArrayList();</FONT></PRE>
+<PRE><FONT COLOR="#8d2e1c">        USStates.Add(new USState("Alaska", "AK", 1));</FONT></PRE>
+<PRE><FONT COLOR="#8d2e1c">        USStates.Add(new USState("Arizona", "AZ", 2));</FONT></PRE>
+<PRE><FONT COLOR="#8d2e1c">        ListBox1.DataSource = USStates;</FONT></PRE>
+</BODY>
+</HTML>

@@ -1,0 +1,1 @@
+Illustrates usage of the CommandBars framework for creating dockable toolbars and rebars. Note: The CommandBars framework is meant to be used with the default .Net menus. If you plan to use the XPMenus framework in Essential Tools, do not use this framework, instead use the XPMenus framework. Take a look at the XPMenus sample.

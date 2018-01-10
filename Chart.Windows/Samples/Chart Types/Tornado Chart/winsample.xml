@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sample>  
+  <name value="~/Chart Types/Tornado Chart/Sample.aspx"/>
+  <displayname value="Tornado Chart" />
+  <sortorder value="19" />  
+  <imageUrl value="/Chart Types/Tornado Chart/images/sample.png"></imageUrl>
+</sample>

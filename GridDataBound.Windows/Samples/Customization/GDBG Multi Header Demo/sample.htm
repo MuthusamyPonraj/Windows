@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20081231;4002198">
+	<META NAME="CHANGED" CONTENT="20081231;4010485">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P>This sample illustrates the implementation of multiple row and
+column headers in a <strong>GridDataBoundGrid</strong> (GDBG) and the addition of unbound rows or columns
+as well.</P>
+<P>A couple of fixed rows at the top of the grid that show a variety
+of controls such as combo boxes, drop-down lists, check boxes, and
+buttons are shown in this sample. There is also an unbound check box
+column displayed on the left side of the grid that affects the
+display of the values in that row. 
+</P>
+<!--<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT="GDBGMultiHeader screenshot" ALIGN=BOTTOM  BORDER=0></P>-->
+<P><FONT SIZE=4><B>Features:</B></FONT></P>
+<UL>
+	<LI><P><SPAN LANG="en-US">Additional
+	row headers can be added below the existing header by setting 
+	</SPAN><SPAN LANG="en-US"><STRONG>Model.Rows.HeaderCount</STRONG>.
+	These additional headers do not move by setting <STRONG>Model.Rows.FrozenCount</STRONG>, if the user scrolls the grid.</SPAN></P>
+</UL>
+<UL>
+	<LI><P><STRONG><SPAN LANG="en-US">Model.CoveredRanges</SPAN></STRONG><SPAN LANG="en-US">
+	is used to cover cells and display them as a group.</SPAN></P>
+</UL>
+<UL>
+	<LI><P><SPAN LANG="en-US">Styles
+	applied in the grid can be set using the </SPAN><STRONG><SPAN LANG="en-US">ChangeCells
+	</SPAN></STRONG><SPAN LANG="en-US">for
+	a range and by passing the </SPAN><STRONG><SPAN LANG="en-US">GridStyleInfo</SPAN></STRONG><SPAN LANG="en-US">
+	object.</SPAN></P>
+</UL>
+<UL>
+	<LI><P><SPAN LANG="en-US">When an
+	instance of </SPAN><STRONG><SPAN LANG="en-US">GridBoundColumn</SPAN></STRONG><SPAN LANG="en-US">
+	is added to </SPAN><STRONG><SPAN LANG="en-US">GridBoundColumnsCollection</SPAN></STRONG><SPAN LANG="en-US">,
+	it creates an unbound column at the end.</SPAN></P>
+</UL>
+<UL>
+	<LI><P><SPAN LANG="en-US">To move
+	a column to a different position, </SPAN><STRONG><SPAN LANG="en-US">Model.Cols.MoveRange</SPAN></STRONG><SPAN LANG="en-US">
+	is used. With the function </SPAN><STRONG><SPAN LANG="en-US">NameToColIndex</SPAN></STRONG><SPAN LANG="en-US">,
+	the index of the column can be obtained by passing the column name. </SPAN>
+	</P>
+</UL>
+<UL>
+	<LI><P><SPAN LANG="en-US">A bound
+	column has its own data store to store the values that are entered in
+	it. But in an unbound column there is no data store present, so it
+	has to be handled manually by adding a collection like a hash table.
+	To make an unbound column work together, you must assign a key as
+	the corresponding primary key value in the row in the </SPAN><STRONG><SPAN LANG="en-US">Key/Value</SPAN></STRONG><SPAN LANG="en-US">
+	external collection.</SPAN></P>
+	<LI><P><SPAN LANG="en-US">The </SPAN><STRONG><SPAN LANG="en-US">Model.QueryCellInfo</SPAN></STRONG><SPAN LANG="en-US">
+	event is used to display the values. The </SPAN><STRONG><SPAN LANG="en-US">Model.SaveCellInfo
+	</SPAN></STRONG><SPAN LANG="en-US">event
+	is used to save changes that are made by the user in a
+	column.</SPAN></P>
+	<LI><P><SPAN LANG="en-US">To make
+	the black triangle at the row header travel with the current cell,
+	</SPAN><STRONG><SPAN LANG="en-US">GridBinder.CurrentPosition</SPAN></STRONG><SPAN LANG="en-US">
+	should be set in the </SPAN><STRONG><SPAN LANG="en-US">CurrentCellChanged</SPAN></STRONG><SPAN LANG="en-US">
+	event.</SPAN></P>
+
+	<LI><P ALIGN=LEFT><SPAN LANG="en-US">Use
+	the </SPAN><STRONG><SPAN LANG="en-US">ScrollTipFeedback</SPAN></STRONG><SPAN LANG="en-US">
+	handler to synchronize ScrollTips with data content in the table to
+	give feedback when scrolling.</SPAN></P>
+</UL>
+</BODY>
+</HTML>

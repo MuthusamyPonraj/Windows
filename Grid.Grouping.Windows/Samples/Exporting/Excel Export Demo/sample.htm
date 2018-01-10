@@ -1,0 +1,32 @@
+<style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;3494931">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P>This sample illustrates the conversion of content in a GridGroupingcontrol to an excel file. </P>
+<P ALIGN=CENTER><img src="images/ExcelExport.png" NAME="graphics1" ALT="Excel Export screenshot"  BORDER=0>
+</P>
+
+<LI><P>XlsIO libraries are used to convert grid content to
+	Excel. The dependent&nbsp;.dll files are <STRONG>Syncfusion.XlsIO.Base</STRONG>
+	and <STRONG>Syncfusion.GridConverter.Windows</STRONG>. 
+	</P>
+	<PRE><FONT COLOR="#8d2e1c">                Syncfusion.GroupingGridExcelConverter.GroupingGridExcelConverterControl converter = new</FONT>
+<FONT COLOR="#8d2e1c">                Syncfusion.GroupingGridExcelConverter.GroupingGridExcelConverterControl();</FONT>
+<FONT COLOR="#8d2e1c">                converter.GroupingGridToExcel(this.gridGroupingControl1, </FONT>
+<FONT COLOR="#8d2e1c">                saveFileDialog.FileName,Syncfusion.GridExcelConverter.ConverterOptions.Default);   </FONT></PRE>
+</BODY>
+</HTML>

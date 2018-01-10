@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sample>  
+  <name value="~/Chart Appearance/Interlaced Grid/Sample.aspx" />
+  <displayname value="Interlaced Grid" />
+  <sortorder value="8" />  
+  <imageUrl value="/Chart Appearance/Interlaced Grid/images/sample.png"></imageUrl>
+</sample>

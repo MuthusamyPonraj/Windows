@@ -1,0 +1,2036 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_2" version="4.2">
+    <Header>
+        <Application name="JPMML-Converter" version="1.0-SNAPSHOT"/>
+        <Timestamp>2015-03-17T05:37:53Z</Timestamp>
+    </Header>
+    <DataDictionary>
+        <DataField name="Surv" optype="continuous" dataType="double"/>
+        <DataField name="race" optype="continuous" dataType="double"/>
+        <DataField name="poverty" optype="continuous" dataType="double"/>
+        <DataField name="smoke" optype="continuous" dataType="double"/>
+        <DataField name="alcohol" optype="continuous" dataType="double"/>
+        <DataField name="agemth" optype="continuous" dataType="double"/>
+        <DataField name="ybirth" optype="continuous" dataType="double"/>
+        <DataField name="yschool" optype="continuous" dataType="double"/>
+        <DataField name="pc3mth" optype="continuous" dataType="double"/>
+    </DataDictionary>
+    <MiningModel functionName="regression">
+        <MiningSchema>
+            <MiningField name="Surv" usageType="target"/>
+            <MiningField name="race" usageType="active"/>
+            <MiningField name="poverty" usageType="active"/>
+            <MiningField name="smoke" usageType="active"/>
+            <MiningField name="alcohol" usageType="active"/>
+            <MiningField name="agemth" usageType="active"/>
+            <MiningField name="ybirth" usageType="active"/>
+            <MiningField name="yschool" usageType="active"/>
+            <MiningField name="pc3mth" usageType="active"/>
+        </MiningSchema>
+        <Targets>
+            <Target field="Surv" rescaleConstant="0.0"/>
+        </Targets>
+        <Segmentation multipleModelMethod="sum">
+            <Segment id="1">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.26751662913841E-5">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.7271534269360995E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="80.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="80.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="2">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-5.784340583097448E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.086774886576343E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="84.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="84.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="3">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="2.783484384950129E-4">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="3.8285844700057536E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="12.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="12.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="4">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.7058153038381882E-5">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-4.85501278784715E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="8.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="8.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="5">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-4.900290161501091E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-5.983852672460079E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="84.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="84.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="6">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.396707906218566E-5">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.2028679642277005E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="80.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="80.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="7">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.779099708169143E-5">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.512880477691828E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="80.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="80.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="8">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="6.198410945658447E-5">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="4.4104077882569715E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="10.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="10.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="9">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-5.478823938388625E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.825470899676065E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="84.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="84.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="10">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-2.1857538450855007E-5">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.5162127073114577E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="78.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="78.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="11">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="race" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-4.364218700371573E-4">
+                            <SimplePredicate field="race" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-5.329243957549446E-4">
+                            <SimplePredicate field="race" operator="lessThan" value="2.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="race" operator="greaterOrEqual" value="2.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="12">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="2.023385351789569E-4">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="2.9017541866749633E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="12.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="12.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="13">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-4.1127777582101576E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-5.055573988497536E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="84.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="84.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="14">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-5.442818040532181E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.690507225903345E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="84.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="84.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="15">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-4.842884523966214E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-5.933335343932116E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="84.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="84.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="16">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="6.468394388550909E-5">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="4.198782322392696E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="10.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="10.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="17">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="2.2407886945483542E-4">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="2.8989224370031154E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="13.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="13.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="18">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.688579269495948E-5">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.3142003399108254E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="80.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="80.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="19">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-2.116823135327541E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.996043673832603E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="82.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="82.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="20">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="3.02746429795545E-4">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="3.7715885193384394E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="13.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="13.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="21">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-3.5725586850303285E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-4.4061557115374045E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="84.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="84.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="22">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="alcohol" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-6.889125072849458E-4">
+                            <SimplePredicate field="alcohol" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.366983459405489E-4">
+                            <SimplePredicate field="alcohol" operator="lessThan" value="0.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="alcohol" operator="greaterOrEqual" value="0.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="23">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-6.97830900095615E-5">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-2.482667625340169E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="80.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="80.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="24">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="3.44171716029602E-4">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="3.8012995501776934E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="15.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="15.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="25">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-3.8305105895038974E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-4.662134599067243E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="84.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="84.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="26">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-4.4326775688694186E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-5.395035198952911E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="84.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="84.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="27">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="1.8761082274431745E-4">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="2.776640176615898E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="12.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="12.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="28">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="1.902805758841881E-4">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="2.8161525230859836E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="12.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="12.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="29">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="2.711916846254147E-4">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="3.401387230895032E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="13.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="13.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="30">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-2.2006631510735326E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.914641182198111E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="82.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="82.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="31">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-6.374217817544246E-5">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-2.4065924413177252E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="80.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="80.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="32">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="agemth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="7.474346026273255E-5">
+                            <SimplePredicate field="agemth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="6.91377007430276E-4">
+                            <SimplePredicate field="agemth" operator="lessThan" value="18.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="agemth" operator="greaterOrEqual" value="18.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="33">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="race" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.841430230493782E-4">
+                            <SimplePredicate field="race" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-2.561387914596614E-4">
+                            <SimplePredicate field="race" operator="lessThan" value="1.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="race" operator="greaterOrEqual" value="1.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="34">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.600423546253846E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.1166142742838053E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="82.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="82.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="35">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-6.202642139284815E-5">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-2.521953397291628E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="80.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="80.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="36">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="2.0122764027599648E-4">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="2.966303860642179E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="12.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="12.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="37">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="race" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-2.6665363700746164E-4">
+                            <SimplePredicate field="race" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.2454554504197637E-4">
+                            <SimplePredicate field="race" operator="lessThan" value="2.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="race" operator="greaterOrEqual" value="2.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="38">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-5.966763780443021E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.310273505840788E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="84.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="84.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="39">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="race" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-2.1957239856009258E-4">
+                            <SimplePredicate field="race" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.100831582718865E-4">
+                            <SimplePredicate field="race" operator="lessThan" value="1.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="race" operator="greaterOrEqual" value="1.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="40">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="2.5065087347065707E-4">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="3.1979594201428656E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="13.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="13.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="41">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-4.0846858095979806E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-5.004416389242559E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="84.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="84.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="42">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="race" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-4.302444045776461E-4">
+                            <SimplePredicate field="race" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-5.236527292556877E-4">
+                            <SimplePredicate field="race" operator="lessThan" value="2.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="race" operator="greaterOrEqual" value="2.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="43">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-7.982075021381528E-5">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.1088081662222793E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="80.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="80.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="44">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="poverty" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="3.053043070254949E-4">
+                            <SimplePredicate field="poverty" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="3.655747365677447E-4">
+                            <SimplePredicate field="poverty" operator="lessThan" value="0.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="poverty" operator="greaterOrEqual" value="0.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="45">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.071808569243089E-5">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.688537550131805E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="80.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="80.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="46">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="2.028842793900575E-4">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="2.9438111127184815E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="12.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="12.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="47">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="2.891909580478376E-4">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="3.7544089290421026E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="13.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="13.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="48">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-2.6173829159867565E-5">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-4.8421583945754994E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="78.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="78.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="49">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.6722993082762117E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.003644388651448E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="82.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="82.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="50">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="agemth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="7.083091436210205E-5">
+                            <SimplePredicate field="agemth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="4.764988784359593E-4">
+                            <SimplePredicate field="agemth" operator="lessThan" value="18.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="agemth" operator="greaterOrEqual" value="18.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="51">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="agemth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="5.914809683068654E-5">
+                            <SimplePredicate field="agemth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="0.0021884795827354017">
+                            <SimplePredicate field="agemth" operator="lessThan" value="16.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="agemth" operator="greaterOrEqual" value="16.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="52">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="agemth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="1.507769033381455E-4">
+                            <SimplePredicate field="agemth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="5.934835556927004E-4">
+                            <SimplePredicate field="agemth" operator="lessThan" value="19.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="agemth" operator="greaterOrEqual" value="19.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="53">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-9.362484149045923E-5">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.6084574324447827E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="80.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="80.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="54">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="race" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-4.892472273070718E-4">
+                            <SimplePredicate field="race" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-5.746713463606874E-4">
+                            <SimplePredicate field="race" operator="lessThan" value="2.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="race" operator="greaterOrEqual" value="2.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="55">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="2.2861251829476404E-4">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="3.0209511346093824E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="13.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="13.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="56">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="2.821402344828146E-4">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="3.650065970581867E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="13.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="13.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="57">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="7.011958599154354E-5">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="5.640053655841545E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="10.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="10.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="58">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="2.841123922807349E-4">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="3.274815736569219E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="14.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="14.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="59">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="race" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-2.544483505647066E-4">
+                            <SimplePredicate field="race" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.7065310909032063E-4">
+                            <SimplePredicate field="race" operator="lessThan" value="1.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="race" operator="greaterOrEqual" value="1.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="60">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="agemth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="4.7944695264149374E-5">
+                            <SimplePredicate field="agemth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="0.0013645797882873283">
+                            <SimplePredicate field="agemth" operator="lessThan" value="16.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="agemth" operator="greaterOrEqual" value="16.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="61">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="1.9832665624565891E-4">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="2.5044663075390373E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="13.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="13.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="62">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-4.1629912250574363E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-5.100353487653151E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="84.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="84.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="63">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="agemth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="5.873006747240249E-5">
+                            <SimplePredicate field="agemth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="4.8289166588419825E-4">
+                            <SimplePredicate field="agemth" operator="lessThan" value="18.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="agemth" operator="greaterOrEqual" value="18.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="64">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="race" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-2.691070398863386E-4">
+                            <SimplePredicate field="race" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.9046903826645197E-4">
+                            <SimplePredicate field="race" operator="lessThan" value="1.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="race" operator="greaterOrEqual" value="1.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="65">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-4.622258311955656E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-5.700785251411976E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="84.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="84.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="66">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.7079022565842797E-5">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-4.860952576432181E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="8.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="8.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="67">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.8445748409213274E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.649693535512786E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="82.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="82.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="68">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-6.093463647797256E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.490304151777358E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="84.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="84.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="69">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="1.1922438152621086E-4">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="4.3676258578908926E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="11.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="11.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="70">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-1.2741855883992986E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-2.3339042955828736E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="82.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="82.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="71">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-5.204031540663377E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.375800231938575E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="84.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="84.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="72">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.398672961228954E-5">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.341407522209369E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="80.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="80.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="73">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="2.3407585017534986E-4">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="2.9259481271918733E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="13.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="13.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="74">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-4.74905527582602E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-5.723617107673052E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="84.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="84.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="75">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="agemth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="4.800475038111867E-5">
+                            <SimplePredicate field="agemth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="0.0014801464700844923">
+                            <SimplePredicate field="agemth" operator="lessThan" value="16.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="agemth" operator="greaterOrEqual" value="16.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="76">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-4.578402190507461E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-5.429515418230003E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="84.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="84.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="77">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-6.432644103125043E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.677671994052471E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="84.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="84.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="78">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-5.557292365779467E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.632897339801299E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="84.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="84.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="79">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="2.8180962364589615E-4">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="3.248272920529021E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="14.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="14.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="80">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="race" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-2.085834924179589E-4">
+                            <SimplePredicate field="race" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-2.934444570138585E-4">
+                            <SimplePredicate field="race" operator="lessThan" value="1.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="race" operator="greaterOrEqual" value="1.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="81">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="race" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-3.5728769660909893E-4">
+                            <SimplePredicate field="race" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-4.3343097621431674E-4">
+                            <SimplePredicate field="race" operator="lessThan" value="2.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="race" operator="greaterOrEqual" value="2.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="82">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.842625706254865E-5">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.176477195450777E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="80.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="80.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="83">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="2.2789067553243873E-4">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="2.877800339488134E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="13.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="13.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="84">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-8.197766742760993E-5">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.226780526405923E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="80.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="80.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="85">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="8.205118885726609E-5">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="3.3732155419098284E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="11.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="11.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="86">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-5.895484481858704E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-7.151899207500723E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="84.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="84.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="87">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="race" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-4.7169031292015895E-4">
+                            <SimplePredicate field="race" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-5.798186570779363E-4">
+                            <SimplePredicate field="race" operator="lessThan" value="2.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="race" operator="greaterOrEqual" value="2.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="88">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="1.768982631563744E-4">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="2.6498930108444745E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="12.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="12.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="89">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-7.943274804658677E-5">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-2.998991507881337E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="80.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="80.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="90">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="race" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-5.408999369952938E-4">
+                            <SimplePredicate field="race" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-6.518989468672922E-4">
+                            <SimplePredicate field="race" operator="lessThan" value="2.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="race" operator="greaterOrEqual" value="2.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="91">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="agemth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="8.040892782455184E-5">
+                            <SimplePredicate field="agemth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="0.0022885617919295525">
+                            <SimplePredicate field="agemth" operator="lessThan" value="16.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="agemth" operator="greaterOrEqual" value="16.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="92">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-4.6269783130695034E-4">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-5.668814489522239E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="84.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="84.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="93">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-7.59339465490621E-5">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-2.988889385441806E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="80.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="80.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="94">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="ybirth" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-7.357020544642267E-5">
+                            <SimplePredicate field="ybirth" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-3.0585366309186947E-4">
+                            <SimplePredicate field="ybirth" operator="lessThan" value="80.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="ybirth" operator="greaterOrEqual" value="80.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="95">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="2.332547081832619E-4">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="3.332210116903742E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="12.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="12.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="96">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="2.116674789545805E-4">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="2.7193391393470415E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="13.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="13.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="97">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="race" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-3.903390894468758E-4">
+                            <SimplePredicate field="race" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-5.597886166486204E-4">
+                            <SimplePredicate field="race" operator="lessThan" value="1.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="race" operator="greaterOrEqual" value="1.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="98">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="2.3869653036375822E-4">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="2.953769773732125E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="13.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="13.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="99">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="race" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="-3.560358701988832E-4">
+                            <SimplePredicate field="race" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="-4.319123671265141E-4">
+                            <SimplePredicate field="race" operator="lessThan" value="2.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="race" operator="greaterOrEqual" value="2.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+            <Segment id="100">
+                <True/>
+                <TreeModel functionName="regression" splitCharacteristic="multiSplit">
+                    <MiningSchema>
+                        <MiningField name="yschool" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="1">
+                        <True/>
+                        <Node id="4" score="2.529188332531146E-4">
+                            <SimplePredicate field="yschool" operator="isMissing"/>
+                        </Node>
+                        <Node id="2" score="3.161485415663933E-4">
+                            <SimplePredicate field="yschool" operator="lessThan" value="13.5"/>
+                        </Node>
+                        <Node id="3" score="0">
+                            <SimplePredicate field="yschool" operator="greaterOrEqual" value="13.5"/>
+                        </Node>
+                    </Node>
+                </TreeModel>
+            </Segment>
+        </Segmentation>
+    </MiningModel>
+</PMML>

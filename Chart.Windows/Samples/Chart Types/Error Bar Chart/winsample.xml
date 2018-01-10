@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sample>  
+  <name value="~/Chart Types/Error Bar Chart/Sample.aspx"/>
+  <displayname value="Error Bar Chart" />
+  <sortorder value="7" />  
+  <imageUrl value="/Chart Types/Error Bar Chart/images/Image1.png"></imageUrl>
+</sample>
