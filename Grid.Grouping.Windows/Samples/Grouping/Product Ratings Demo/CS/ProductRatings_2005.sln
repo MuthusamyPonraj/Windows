@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductRatings_2005", "ProductRatings_2005.csproj", "{C979BB74-1BF7-46C8-9A89-0A3993C9FEB9}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{C979BB74-1BF7-46C8-9A89-0A3993C9FEB9}.Debug.ActiveCfg = Debug|.NET
+		{C979BB74-1BF7-46C8-9A89-0A3993C9FEB9}.Debug.Build.0 = Debug|.NET
+		{C979BB74-1BF7-46C8-9A89-0A3993C9FEB9}.Release.ActiveCfg = Release|.NET
+		{C979BB74-1BF7-46C8-9A89-0A3993C9FEB9}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

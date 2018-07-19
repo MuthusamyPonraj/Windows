@@ -1,0 +1,61 @@
+<style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;2434478">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P>This sample demonstrates localizing the GroupingGrid with the help of ILocalization provider to localize the data.</P>
+
+<p>
+<table width="100%">
+<tr>
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" src="Images\Localization.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+<P><b>Localization:</b></P>
+<font color="#8D2E1C"><pre>
+	// To enable localization
+	 LocalizationProvider.Provider = new Localizer();
+	
+</pre></font>
+
+<p><font> <b> Steps for Performing Localization: </font></b></p>
+
+The Strings in could be Localized using satellite Assemblies. A text File containing the key and the corresponding string is added. The resource File is then created from it using the following command in Visual Studio Command Promt.
+The SR.resources file could be obtained from the following location:
+
+<b><br><br> <Installed Location of EssentialStudio>\<Version>\Windows\Grid.Windows\Samples\Localization Samples\Localization Demo\CS\Resources</br></br></b>
+
+<br>The resource File could be altered  by the user as per his needs. From the resource File, the satellite dlls are created using the following command: </br>
+
+<br><br><b>al /t:lib /culture:de-DE /out:Location\Syncfusion.Grid.Grouping.Windows.resources.dll /v:1.1.0.0 /delay+ /keyf:F:\\sf.publicsnk /embed:F:\SR.Resources </br></b>
+
+
+<br>The obtained resource file is then placed in the following location: </br>
+
+
+<br><br><b>< Location of Form>\bin\debug\de-DE  (In case of German Culture) </b> </br>
+
+
+<br><br>The Program could be ran to see the changes made in the Resource File.</br>
+<br><br>
+</BODY>
+</HTML>

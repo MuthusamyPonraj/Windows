@@ -1,0 +1,22 @@
+<style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+<HTML>
+<P>This sample illustrates how to filter the column by using the display member, instead of the value member in GridGroupingControl.
+</P>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" src="Images\FilterByDisplay.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+ 
+<p><b>FilterByDisplayMember:</b></p>
+<font color="#8D2E1C"><pre> this.gridGroupingControl1.TableDescriptor.Columns[1].Appearance.FilterBarCell.CellType = "FilterByDisplayMemberCell";
+</pre></font>
+</HTML>

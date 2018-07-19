@@ -1,0 +1,70 @@
+<style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;3480618">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P>This sample illustrates the serialization and de-serialization of
+schema information of GridGroupingControl and GridExcelFilter using XML serialization. 
+</P>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" src="Images\XMLSerialization.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+</P>
+
+
+<P><BR>The schema information of GridGroupingControl and properties of GridExcelFilter can be serialized and save to xml file with <STRONG>XmlTextWriter</STRONG>
+	using the below code,
+	</P>
+	<FONT COLOR="#8d2e1c"><PRE> XmlTextWriter xw = new XmlTextWriter("GridSchema.xml", System.Text.Encoding.UTF8);
+ XmlTextWriter xwApp = new XmlTextWriter("GridLooknFeel.xml", System.Text.Encoding.UTF8);
+ XmlTextWriter xwExcelFilter = new XmlTextWriter("GridExcelFilter.xml", System.Text.Encoding.UTF8);
+ xw.Formatting = System.Xml.Formatting.Indented;
+ this.gridGroupingControl1.WriteXmlSchema(xw);
+ this.gridGroupingControl1.WriteXmlLookAndFeel(xwApp);
+ this.excelFilter.WriteXml(xwExcelFilter);
+ xw.Close();
+ xwApp.Close();
+ xwExcelFilter.Close();
+	</PRE></FONT>
+<P>The schema information of GridGroupingControl and properties of GridExcelFilter can be de-serialized and loaded from xml file with <STRONG>XmlTextReader</STRONG>
+	using the below code,</P>
+	<FONT COLOR="#8d2e1c"><PRE> if (File.Exists("GridSchema.xml") && File.Exists("GridLooknFeel.xml") && File.Exists("GridExcelFilter.xml"))
+ {
+    XmlReader xr = new XmlTextReader("GridSchema.xml");
+    XmlReader xrApp = new XmlTextReader("GridLooknFeel.xml");
+    XmlReader xrExcelFilter = new XmlTextReader("GridExcelFilter.xml");
+    this.gridGroupingControl1.ApplyXmlSchema(xr);
+    this.gridGroupingControl1.ApplyXmlLookAndFeel(xrApp);
+    this.excelFilter.ApplyXml(xrExcelFilter);
+    xr.Close();
+    xrApp.Close();
+    xrExcelFilter.Close();
+ }
+ else
+    MessageBox.Show("Click \"Save Xml Schema\" button to serialize the grid.");
+	</PRE></FONT>
+</ul>
+<BR><BR>
+</BODY>
+</HTML>

@@ -1,0 +1,51 @@
+<style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;3510790">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P>This sample illustrates how to save a data table, theme and
+schema of the GridGroupingControl information to individual XML files. 
+</P>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" src="Images\EmployeeView.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+<LI><P>In the <STRONG>Initialize</STRONG> menu handler, a data set bound
+	to the Grid Grouping Control is filled from an adapter.</P>
+	<LI><P>In the <STRONG>Save</STRONG> menu handler:</P>
+	<UL>
+		<LI><P>Table record field styles are serialized to
+		<STRONG>TableRecordFieldStylesCollection.xml.</STRONG></P>
+		<LI><P>The data set is serialized to <STRONG>DataSet.xml.</STRONG></P>
+		<LI><P>The appearance is serialized to <STRONG>LookAndFeel.xml.</STRONG></P>
+		<LI><P>The engine schema is serialized to <STRONG>EngineSchema.xml.</STRONG></P>
+	</UL>
+	<LI><P>This sample shows how to handle the <STRONG>QueryCellStyleInfo </STRONG>and
+	look up cell-specific formatting information from a separate store.</P>
+	<LI><P><STRONG>TableRecordFieldStylesCollection</STRONG> lets you
+	add custom formatting to individual fields in a record that is
+	identified by using the primary key of the record and the field name</P>
+	<br><br>
+</BODY>
+</HTML>

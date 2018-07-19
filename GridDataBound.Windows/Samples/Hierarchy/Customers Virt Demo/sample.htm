@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20081231;4353107">
+	<META NAME="CHANGED" CONTENT="20081231;4365892">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P>This sample demonstrates the binding of a GridDataBoundGrid (GDBG) with custom
+collections. The GDBG can be bound to any collection derived from the
+<STRONG>IList</STRONG> interface. 
+</P>
+<P>In this sample, the customer list is derived from the
+<STRONG>IBindingList</STRONG>. This gives you additional control over adding, 
+editing, and removing records from a list. The customer
+list itself contains references to the nested objects. These child
+nodes can be expanded or collapsed inside the grid. 
+</P>
+<P>This sample also demonstrates having unbound columns with the
+customer-objects fields.</P>
+<P>&nbsp;</P>
+<!--<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT=" CustomersVirt screenshot" ALIGN=BOTTOM  BORDER=0></P>-->
+<P><FONT SIZE=4><B>Features</B></FONT></P>
+<UL>
+	<LI><P>The sample is implemented with two unbound columns along
+	with bound columns.</P>
+</UL>
+<P STYLE="margin-left: 0.49in"> &ldquo;<SPAN LANG="en-US">Unbound1&rdquo;
+concatenates the customer&rsquo;s ID, first name, and last name.
+&ldquo;Unbound2&rdquo; shows the record's position in the collection.
+These columns are added to the grid in the </SPAN><STRONG><SPAN LANG="en-US">Form_Load</SPAN></STRONG><SPAN LANG="en-US">
+event handler. </SPAN>
+</P>
+<UL>
+	<LI><P><SPAN LANG="en-US">The<STRONG> RecordObjectBinder
+	</STRONG>
+	</SPAN><SPAN LANG="en-US">class
+	is a helper class that populates the unbound columns. It subscribes
+	to </SPAN><STRONG><SPAN LANG="en-US">QueryCellInfo</SPAN></STRONG><SPAN LANG="en-US">
+	in order to display the unbound column values in the grid. </SPAN>
+	</P>
+</UL>
+<UL>
+	<LI><P ALIGN=LEFT><SPAN LANG="en-US">The<STRONG> Customer</STRONG></SPAN><SPAN LANG="en-US">
+	class implements the</SPAN><STRONG><SPAN LANG="en-US">
+	IRecordObject</SPAN></STRONG><SPAN LANG="en-US">
+	interface, which has a </SPAN><STRONG><SPAN LANG="en-US">QueryCellInfo</SPAN></STRONG><SPAN LANG="en-US">
+	method. The </SPAN><STRONG><SPAN LANG="en-US">QueryCellInfo</SPAN></STRONG><SPAN LANG="en-US">
+	method is used to provide the values for the unbound columns for
+	each customer object.</SPAN><STRONG><SPAN LANG="en-US">
+	RecordObjectBinder</SPAN></STRONG><SPAN LANG="en-US">&rsquo;s
+	</SPAN><STRONG><SPAN LANG="en-US">GridModelQueryCellInfo</SPAN></STRONG><SPAN LANG="en-US">
+	calls this method to populate the unbound column fields.</SPAN></P>
+</UL>
+</BODY>
+</HTML>

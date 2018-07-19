@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20081231;4394801">
+	<META NAME="CHANGED" CONTENT="20081231;4421801">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P>This sample demonstrates the display of a data set with multiple
+nested relations. It displays Northwind&rsquo;s <EM>Category</EM>, <EM>Products</EM>,
+and the <EM>Orders_Details</EM> tables, and it lets you expand or collapse the
+details for each order and the products for each category.</P>
+<P>This sample illustrates the display of &ldquo;<strong>of #records</strong>&rdquo;
+inside the record navigation bar, highlighting the current record, and
+marking the column header for the current column. 
+</P>
+<P>The records of the Products table will be displayed in a
+quicken-like manner with one record spanning two rows. 
+</P>
+<!--<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT=" ExpandGrid screenshot" ALIGN=BOTTOM  BORDER=0></P>-->
+<P><BR><BR>
+</P>
+<P><B><FONT SIZE=4>Features</B></FONT>
+
+</P>
+<UL>
+	<LI><P>Add a relation in the data set and set
+	the data source to the grid; pass <STRONG>RelationName</STRONG>
+	through the <STRONG>Grid.Binder.AddRelation</STRONG>
+	function to show a hierarchical pattern.</P>
+</UL>
+<UL>
+	<LI><P>Highlighting a record is handled in the
+	<STRONG>PrepareViewStyleInfo </STRONG>handler.</P>
+</UL>
+<UL>
+	<LI><P>Mark the column header by setting
+	<STRONG>HighlightCurrentColumnHeader</STRONG> property
+	to <EM>true</EM>.
+	In the picture given above, the &quot;OrderId&quot; is highlighted.
+	
+	</P>
+</UL>
+<UL>
+	<LI><P>Records of the three tables can be
+	differentiated by setting <STRONG>RowStyles.BackColor</STRONG>
+	of the <STRONG>GridHierarchyLevel</STRONG>
+	class.</P>
+</UL>
+<UL>
+	<LI><P>To span records, use hyphen &quot;-&quot; for
+	a covered cell and fullstop &quot;.&quot; for a new row in the<STRONG>
+	LayoutColumns()</STRONG> function of
+	the <STRONG>GridHierarchyLevel</STRONG>
+	class.</P>
+</UL>
+<UL>
+	<LI><P>Grid events handled within
+	<STRONG>GridRecordNavigationControl</STRONG>
+	need to be subscribed to in a <STRONG>PaneCreated
+	</STRONG>event handler and unsubscribed
+	in a <STRONG>PaneClosing</STRONG>
+	event handler. 
+	</P>
+</UL>
+<P ALIGN=LEFT STYLE="margin-left: 0.49in">The
+reason is that as the panes are opened and closed, the original GridControl or the GDBG may be destroyed. So, a one-time subscription
+cannot be applied to the initial GridControl events.</P>
+</BODY>
+</HTML>

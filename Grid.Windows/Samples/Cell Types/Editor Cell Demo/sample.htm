@@ -1,0 +1,67 @@
+<html><style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+<p><p>This sample illustrates the cell types for editing a cell in the GridControl.<p>
+<p></p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" src="Images\EditorCell.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+<p><i><b>BrowseOnly</b></i></p>
+<FONT COLOR="#000000">
+<UL>
+	<P>The Grid is set as uneditable using<STRONG> Browseonly </STRONG>property.</P>
+</UL>
+<PRE STYLE="margin-left: 1in; margin-bottom: 0.2in"><FONT COLOR="#800000">        this.gridControl1.BrowseOnly = true;</font>
+</PRE>
+<p><i><b>MaskEdit</b></i></p>
+<FONT COLOR="#000000">
+<UL>
+	<LI><P>The commonly used mask
+	symbols can be implemented using <STRONG>MaskEdit</STRONG>.</P></LI>
+<PRE STYLE="margin-left: 1in; margin-bottom: 0.2in"><FONT COLOR="#800000">        GridStyleInfo style1 = gridControl1[2, 4];</font>
+<FONT COLOR="#800000">        GridMaskEditInfo maskedEditStyle1 = style1.MaskEdit; </font> </PRE>
+	<LI><P>Set the <STRONG>CellType
+	</STRONG>as
+	<STRONG>OriginalTextBox</STRONG>.</P>
+<PRE STYLE="margin-left: 1in; margin-bottom: 0.2in"><FONT COLOR="#800000">        gridControl1.TableStyle.CellType = &quot;OriginalTextBox&quot;;  </FONT></PRE>
+	<LI><P>Set <STRONG>Style.PasswordChar</STRONG>
+	to the character that needs to replace the password.</P>
+<PRE STYLE="margin-left: 1in"><FONT COLOR="#800000">        GridStyleInfo style;</FONT>
+<FONT COLOR="#800000">        style = gridControl1[row, 2];</FONT>
+<FONT COLOR="#800000">        style.PasswordChar = '*'; </FONT> </PRE>
+	<LI>Additionally, you can specify casing for the character
+	to be &quot;Lower&quot; or &quot;Upper&quot;, using the below code.</LI>
+<PRE STYLE="margin-left: 1in; margin-bottom: 0.2in; text-align: left"><FONT COLOR="#800000">        style.CharacterCasing = CharacterCasing.Lower;</PRE>
+</font>
+<P><i><b>Currency</b></i></P>
+<P>The various options in this sample include setting patterns to display positive 
+    and negative numbers; grouping the digits; setting decimal separator such as 
+    &quot;.&quot;, and more options. </P>
+<FONT COLOR="#000000">
+	<LI>To have currency cells,
+	you should set the cell type as <B>Currency</B>.</LI>
+<PRE STYLE="margin-left: 1in"><FONT COLOR="#800000">        GridStyleInfo style = gridControl1[row, 2];</FONT>
+<FONT COLOR="#800000">        style.CellType = &quot;Currency&quot;; </FONT> </PRE>
+	<LI>Using the <STRONG>CurrencyEdit</STRONG>
+	property, the currency symbol,
+	pattern, decimal digits, and text color for positive and negative
+	numbers can be changed.</LI>
+<PRE STYLE="margin-left: 0.5in; text-align: left"><FONT COLOR="#800000">        style.CurrencyEdit.CurrencyDecimalDigits = 2;</FONT>
+<FONT COLOR="#800000">          style.CurrencyEdit.CurrencyNegativePattern = 1;</FONT>                
+<FONT COLOR="#800000">          style.CurrencyEdit.CurrencyPositivePattern = 0;</FONT>
+<FONT COLOR="#800000">          style.CurrencyEdit.CurrencySymbol = (row % 2 == 0) ? &quot;$ &quot; : &quot;DM &quot;;</FONT>
+<FONT COLOR="#800000">          style.CurrencyEdit.NegativeColor = System.Drawing.Color.Red;</FONT></PRE>
+</UL>
+<br><br>
+</html>
+
+

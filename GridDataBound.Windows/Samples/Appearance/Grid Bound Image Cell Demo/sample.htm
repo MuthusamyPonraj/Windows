@@ -1,0 +1,142 @@
+﻿<html>
+
+<p><p>This sample reads the photo field in the Employee table of the Northwind database and displays the photos in a couple of columns within a grid. 
+<p></p>
+
+<!--<p>Given below is a sample image.</p>-->
+
+<!--<p><p align=center><img src="images/sample.png" alt=" GridDataBoundImageCells screenshot" title="GridDataBoundImageCell" /></p>-->
+
+<p><p align=center><b>Grid Data-Bound Image Cell</b></p>
+
+<P>In this sample,</P>
+<UL>
+	<LI><P>One column displays the pictures directly in the grid cell, while the other displays the pictures as a drop-down from the cell. </P>
+	<LI><P>Image Draw Modes:
+	<OL><LI><P>Fit to Cell - Resizes the image to fit the cell</P>
+	<LI><P>No Resize - Image is drawn with its original size</P>
+	<LI><P>Fit Proportionally - Draws the image in proportion to the cell size.</P></OL></P>
+</UL>
+<P><FONT SIZE=4><B>Features</B></FONT></P>
+<UL>
+	<LI>
+<p>The cell that displays the pictures (<strong>ImageCell</strong>) 
+	is derived from <strong>GridStaticCellModel</strong> and <strong>GridStaticCellRenderer</strong> classes. 
+	It has three ways to handle fitting the picture to the cell using 
+	the properties: <strong>FitToCell</strong>, <strong>NoResize</strong>, and 
+	<strong>FitProportionally</strong>. These properties are defined in the 
+	<strong>GridImageCellModel </strong>class. <strong>GridStyleInfo.CellValue</strong> has the photo as a byte array. This is streamed to an 
+	image and drawn to the cell in the <strong>OnDraw</strong> override.<br><br> 
+	Refer to the following code in <strong>GridImageCellRenderer.cs</strong>.
+</p>
+<p>
+<font color="#8D2E1C"><pre>
+    		protected override void OnDraw(System.Drawing.Graphics g, System.Drawing.Rectangle clientRectangle, 
+    						int rowIndex, int colIndex, Syncfusion.Windows.Forms.Grid.GridStyleInfo style)
+    		{
+    			if (clientRectangle.IsEmpty)
+    				return;
+    			try
+    			{
+    				Byte[] pict = style.CellValue as Byte[];
+    				if(pict != null)
+    				{
+    					int PictOffSet = ((GridImageCellModel)this.Model).PictureBufferOffset;
+    					MemoryStream buffer = new MemoryStream(pict, PictOffSet, pict.Length - PictOffSet);
+    					Image image = Image.FromStream(buffer, true);
+    					GridImageCellDrawOption cellDrawOption = ((GridImageCellModel)this.Model).CellDrawOption;
+    					System.Drawing.GraphicsUnit gu = System.Drawing.GraphicsUnit.Point;
+    					RectangleF srcRect = image.GetBounds(ref gu);
+    					Rectangle destRect = Rectangle.Empty;
+    					Region saveRegion = g.Clip;
+    					switch(cellDrawOption)
+    					{
+    						case GridImageCellDrawOption.FitToCell:
+    						destRect = clientRectangle;
+    							break;
+    						case GridImageCellDrawOption.NoResize:
+    						destRect = new Rectangle(clientRectangle.X, clientRectangle.Y, (int) srcRect.Width, (int) srcRect.Height);
+    						g.Clip = new Region(clientRectangle);
+    							break;
+    						case GridImageCellDrawOption.FitProportionally:
+    						{
+    							float srcRatio =  srcRect.Width / srcRect.Height;
+    							float tarRatio = (float) clientRectangle.Width / clientRectangle.Height;
+    							destRect = clientRectangle;
+    							if( tarRatio &lt; srcRatio )
+    							{
+    								destRect.Height = (int) (destRect.Width * srcRatio);	
+    							}
+    							else
+    							{
+    								destRect.Width = (int) (destRect.Height * srcRatio);
+    							}
+    						}
+    							break;
+    						default:
+    							break;
+    					}
+    					if(!destRect.IsEmpty)
+    						g.DrawImage(image,  destRect, srcRect, gu);
+    					g.Clip = saveRegion;
+    				}
+    			}
+    			catch{}
+    		}    </pre></font></p>
+
+<li><p>The cell that displays the pictures in the drop-down is derived from
+	<strong>GridDropDownCellModel/GridDropDownCellRenderer</strong>.
+A picture box is added to the drop-down container to show the picture. The <strong>GridStyleInfo.CellValue</strong> has the photo as a byte array. This is streamed to an 
+	image and is assigned to the picture box in the 
+	<strong>OnInitialize</strong> override. <br><br>Refer the 
+	following code in <strong>GridDropDownImageCellRenderer.cs</strong>.</p>
+<p>
+<font color="#8D2E1C"><pre>
+    		protected override void OnInitialize(int rowIndex, int colIndex)
+    		{
+    			GridStyleInfo style = Grid.Model[rowIndex, colIndex];
+    			Byte[] pict = style.CellValue as Byte[];
+    			if(pict != null)
+    			{
+    				int PictOffSet = 78;//((GridImageCellModel)this.Model).PictureBufferOffset;
+    				MemoryStream buffer = new MemoryStream(pict, PictOffSet, pict.Length - PictOffSet);
+    				this.picImage = Image.FromStream(buffer, true);
+    				System.Drawing.GraphicsUnit gu = System.Drawing.GraphicsUnit.Point;
+    				RectangleF srcRect = this.picImage.GetBounds(ref gu);
+    				this.pictureWidth = (int) srcRect.Width;
+    				this.pictureHeight = (int) srcRect.Height;
+    				if(this.pictureBox != null)
+    				pictureBox.Image = this.picImage;
+    			}
+    		}  </pre></font></p>
+
+	<li><p>In the sample, if you enable the proportional grid cells and resize the form, you will notice that the 
+	grid changes the column widths and row heights to dynamically fit the client area. This is achieved by handling the<strong> Model.QueryColWidth</strong> and the 
+	<strong>Model.QueryRowHeight</strong> events and providing the size on demand.<br><br> Refer the following code in 
+	<strong>Form1.cs</strong>.</p></li>
+<p>
+<font color="#8D2E1C"><pre>
+    		// In the Form Load
+    		//handle dynamically sizing columns/rows to clientarea
+    		this.gridDataBoundGrid1.Model.QueryColWidth += new GridRowColSizeEventHandler(GetColWidth);
+    		this.gridDataBoundGrid1.Model.QueryRowHeight += new GridRowColSizeEventHandler(GetRowHeight);
+    		private void GetColWidth(object sender, GridRowColSizeEventArgs e)
+    		{
+    			if(this.proportionalCellSizing &amp;&amp; e.Index > 0)
+    			{
+    				e.Size = (int) ((this.gridDataBoundGrid1.ClientRectangle.Width - this.gridDataBoundGrid1.Model.ColWidths[0]) 
+    				/ (float)this.gridDataBoundGrid1.Model.ColCount);
+    				e.Handled = true;
+    			}
+    		}
+    		private void GetRowHeight(object sender, GridRowColSizeEventArgs e)
+    		{
+    			if(this.proportionalCellSizing &amp;&amp; e.Index > 0)
+    			{
+    				e.Size = (int) ((this.gridDataBoundGrid1.ClientRectangle.Height - this.gridDataBoundGrid1.Model.RowHeights[0]) 
+    				/ (float)this.gridDataBoundGrid1.Model.RowCount);
+    				e.Handled = true;
+    			}	
+    		}  </pre></font></p>
+</UL>
+</html>

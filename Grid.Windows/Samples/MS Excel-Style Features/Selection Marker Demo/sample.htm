@@ -1,0 +1,37 @@
+<style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20090102;4320695">
+	<META NAME="CHANGEDBY" CONTENT="jisha j">
+	<META NAME="CHANGED" CONTENT="20090102;4341110">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P>This sample illustrates Excel-Style selection behavior and the Excel Marker selection behavior in GridControl.
+</P>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2"  src="Images\SelectionMarker.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+<p>The following code snippetr illustrates to enable ExcelMarker for GridControl</p>
+<pre><font color="#8D2E1C">
+	this.excelMarker = new ExcelMarkerMouseController(gridControl1);<br>
+	gridControl1.MouseControllerDispatcher.Add(excelMarker);
+</font></pre>
+<br><br>
+</BODY>
+</HTML>

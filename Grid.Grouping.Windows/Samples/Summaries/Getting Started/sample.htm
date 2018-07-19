@@ -1,0 +1,38 @@
+<style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;2275292">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	.style1 {
+	text-align: left;
+}
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P>This sample illustrates how to create
+summaries for a table and for each group that is created in a
+table of the Grouping grid control. 
+</P>
+	<P ALIGN=CENTER><img src="images/sample6.png" NAME="graphics6" ALT="Summary Tutorial" ALIGN=BOTTOM  BORDER=0></P>
+	<p> Below code is used to add the Summaries in GridGroupingControl. </p>
+
+<font color="#8D2E1C"><pre>
+ this.gridGroupingControl1.TableDescriptor.SummaryRows.Add(
+ new Syncfusion.Windows.Forms.Grid.Grouping.GridSummaryRowDescriptor(
+      "Row 1", new Syncfusion.Windows.Forms.Grid.Grouping.GridSummaryColumnDescriptor[] {
+ new Syncfusion.Windows.Forms.Grid.Grouping.GridSummaryColumnDescriptor(
+      "Won", Syncfusion.Grouping.SummaryType.Int32Aggregate, "wins", "{Sum}"),
+ new Syncfusion.Windows.Forms.Grid.Grouping.GridSummaryColumnDescriptor(
+      "Lost", Syncfusion.Grouping.SummaryType.Int32Aggregate, "losses", "{Sum}")})); </pre></font>
+	<br><br>
+</BODY>
+</HTML>

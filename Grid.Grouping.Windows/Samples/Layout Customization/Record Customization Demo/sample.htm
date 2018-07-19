@@ -1,0 +1,21 @@
+<html><style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+<p><p>This sample illustrates how to implement the multiple rows for a record and also image cells.</p>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2"  src="Images\RecordCustomization.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+<p>The following code is used to show how the image will display.</p>
+<PRE><FONT COLOR="#8d2e1c">        this.gridGroupingControl1.Appearance.AnyCell.ImageSizeMode = GridImageSizeMode.CenterImage;</FONT></PRE>
+<p>also you can customize the style for cells using <b>QueryCellStyleInfo</b> event</p>
+</html>

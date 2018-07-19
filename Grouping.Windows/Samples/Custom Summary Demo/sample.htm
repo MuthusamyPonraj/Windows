@@ -1,0 +1,54 @@
+<html><style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+
+<head>
+
+</head>
+
+<p>Essential Grouping supports custom summaries and custom counters. </p>
+<p><strong>Features</strong>:</p>
+<p class="style1">In this sample, the last two fields show custom counters. One counter automatically counts the 
+quantity of all records, and the other counts the quantity of the visible records 
+(using a filter set to <strong>[UnitPrice] &lt;> 20</strong>). Changing the quantity in one record will automatically update all subsequent records. </p>
+
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" width="50%" src="Images\CustomSummary.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+<p>The following is a sample code snippet showing a typical use-case.</p>
+
+<font color="#8D2E1C"><pre>
+			this.engine1 = new Engine();
+
+			// Setup a integrated summary.
+			sd0 = new SummaryDescriptor();
+			//sd0.Name = "QuantityAvg";
+			sd0.MappingName = "Quantity";
+			sd0.SummaryType = SummaryType.DoubleAggregate;
+			this.engine1.TableDescriptor.Summaries.Add(sd0);</pre>
+<pre>
+
+<font color="#8D2E1C">                        // Setup custom summaries.</font>
+			sd1 = new SummaryDescriptor();
+			sd1.Name = "QuantityTotal";
+			sd1.MappingName = "Quantity";
+			sd1.SummaryType = SummaryType.Custom;
+			sd1.CreateSummaryMethod = new CreateSummaryDelegate(TotalSummary.CreateSummaryMethod);
+			this.engine1.TableDescriptor.Summaries.Add(sd1);
+
+</pre>
+</font>
+
+<p>This example also shows custom summaries. A simple custom summary counts the total value; 
+a more advanced summary class creates a vector of values that are in memory and performs statistical functions.</p>
+</html>

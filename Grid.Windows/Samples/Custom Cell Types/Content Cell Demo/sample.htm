@@ -1,0 +1,37 @@
+<html><style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+<BODY>
+<p>This sample illustrates how to place the custom controls in the GridControl. </p>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" src="Images\Content Cell.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+<p><i><b>ChartCell</b></i></p>
+<UL>
+<LI><P>To have a chart cell, set the CellType property to &quot;ChartCell&quot;</P>
+	<PRE STYLE="margin-left: 0.75in"><FONT COLOR="#800000">        style.CellType = &quot;ChartCell&quot;;</FONT></PRE>
+<LI> This special cell type requires you to create instances for
+	each grid that are used in the cells with the <STRONG>CellEmbeddedGrid</STRONG>
+	class and by passing the parent grid in that constructor.</LI>
+
+
+<PRE><FONT COLOR="#8d2e1c">        GridControl grid;</FONT>
+<FONT COLOR="#8d2e1c">        this.gridControl1[2,2].CellType = &quot;GridinCell&quot;;</FONT>
+<FONT COLOR="#8d2e1c">        this.gridControl1.CoveredRanges.Add(GridRangeInfo.Cells(2, 2, 6, 4));</FONT>
+<FONT COLOR="#8d2e1c">        grid = new CellEmbeddedGrid(this.gridControl1);</FONT>
+<FONT COLOR="#8d2e1c">        this.gridControl1[2,2].Control = grid;</FONT> </PRE>
+</UL>
+<p><br><p>
+</BODY>
+</html>
+
+

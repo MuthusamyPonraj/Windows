@@ -1,0 +1,57 @@
+<style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;3221009">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P>This sample illustrates how to apply style settings dynamically in a GridGroupingControl. 
+</P>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=left>
+<img colspan="2" src="Images\DynamicFormatting.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+<P>Provide formatting at run time using the <STRONG>QueryCellStyleInfo</STRONG>
+	event handler.</P>
+	<P><STRONG>QueryCellStyleInfo</STRONG> provides the
+	<STRONG>GridStyleInfo</STRONG> object for a given cell on demand.</P>
+<p>The following code snippet illustrates how to apply the styles for specific cell</p>
+
+<FONT COLOR="#8d2e1c"><PRE> private void gridGroupingControl1_QueryCellStyleInfo(object sender, Syncfusion.Windows.Forms.Grid.Grouping.GridTableCellStyleInfoEventArgs e)
+ {
+     if(e.TableCellIdentity.TableCellType == GridTableCellType.RecordFieldCell)
+     {
+         if(e.TableCellIdentity.ColIndex %2 ==0)
+         {
+             e.Style.Font.FontStyle=FontStyle.Bold;
+             e.Style.BackColor=Color.FromArgb(255, 187, 111);
+         }
+         else
+         {
+             e.Style.TextColor = Color.White;
+             e.Style.BackColor=Color.FromArgb(55, 91, 114);
+         }
+     }
+ }<PRE></FONT>
+<br><br>
+</BODY>
+</HTML>

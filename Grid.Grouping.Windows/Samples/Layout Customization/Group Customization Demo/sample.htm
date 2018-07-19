@@ -1,0 +1,28 @@
+<html><style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+
+<p>This sample demonstrate how to customize the layout of groups in GridGroupingControl.
+ It adds a custom section for each group and displays the summary section above the 
+group details. 
+</p>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" src="Images\GroupCustomization.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+
+<p>In the form's <strong>ctor()</strong>, a new <strong>GroupingEngineFactory</strong> 
+is assigned, which has the modified <strong>GridChildTable </strong>in order to have an extra section.</p>
+<pre><font color="#8D2E1C">
+        // GroupingEngineFactory provides a modified GridChildTable that adds an extra section.
+        GridEngineFactory.Factory = new GroupingEngineFactory();</font></pre>
+<br><br>
+</html>

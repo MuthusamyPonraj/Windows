@@ -1,0 +1,57 @@
+<style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;3264840">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P>This sample illustrates how to have covered ranges, bannered ranges, and
+drawing background images in a GridGroupingControl.</P>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" src="Images\CustomCellRange.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+<LI><P><FONT><B>Covered Range:</B></FONT></P>
+	<UL>
+		<LI><P>Covered ranges are cells that span multiple columns and rows.</P>
+		<LI><P>Bannered ranges are cells that let you span only the background
+		of a single cell across multiple columns and rows.</P>
+		<LI><P>This sample also demonstrates the customization of a grid appearance
+		through events at run time.</P>
+		<LI><P>Customize the drawing of a cell's background at run-time with
+		the <STRONG>TableControlDrawCellBackground</STRONG> event.</P>
+		<LI><P>Customize style information of individual cells at run time
+		with the <STRONG>TableControlPrepareViewStyleInfo</STRONG> event.</P>
+		<LI><P>Covered ranges can be specified at run time by subscribing
+		to the <STRONG>QueryCoveredRange</STRONG> event.</P>
+		<LI><P>This event is raised for each cell when the grid renders the
+		current visible cells.</P>
+		<LI><P>In this event, you can allocate the number of rows and
+		columns that a covered range should span.</P>
+		<LI><P>Check whether the queried row is a record and if it has a
+		parent group.</P>
+		<LI><P>Also check to see if the column of the cell is a picture. In
+		which case, you can get the number of rows in the group and return a
+		range covering all rows in the column.</P>
+	</UL>
+	<br><br>
+</BODY>
+</HTML>

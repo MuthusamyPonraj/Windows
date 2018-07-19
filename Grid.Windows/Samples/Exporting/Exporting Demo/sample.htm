@@ -1,0 +1,40 @@
+<style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20090102;1152271">
+	<META NAME="CHANGEDBY" CONTENT="jisha j">
+	<META NAME="CHANGED" CONTENT="20090102;1164985">
+	<style type="text/css">
+	.style1 {
+		font-size: medium;
+	}
+	</style>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<p>This sample illustrates how the GridControl contents can be exported to an Excel, PDF, MS Word, and HTML files.</p>
+<div align=center>
+<img colspan="2" src="Images\ExportingExcel.png"/>
+</div>
+</BR>
+
+<p>Essential DocIO libraries are used to support the conversion of grid content into a Word file. The dependent 
+	assemblies are <strong>Syncfusion.DocIO.Base</strong> and <strong>Syncfusion.GridHelperClasses.Windows</strong>.</p>
+<pre><font color="#8D2E1C">
+        GridWordConverter converter = new GridWordConverter(true, true);<br>
+        converter.GridToWord("Sample.doc", gridControl1);<br>
+
+	    //Header event to create an header, that will display on each page<br>
+	    converter.DrawHeader += new GridWordConverterBase.DrawDocHeaderFooterEventHandler(converter_DrawHeader);<br>
+	    //Footer event to create a footer, that will display on each page<br>
+	    converter.DrawFooter += new GridWordConverterBase.DrawDocHeaderFooterEventHandler(converter_DrawFooter);<br>
+</font></pre>
+<br><br>
+</BODY>
+</HTML>

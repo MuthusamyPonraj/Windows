@@ -1,0 +1,41 @@
+<style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;2354203">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P>This samples illustrates how to sort groups by the value of a
+summary in a GridGroupingControl.
+</P>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" src="Images\SortBySummary.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+<p> Below code is used to sort the Summaries in GridGroupingControl. </p>
+
+<font color="#8D2E1C"><pre>
+ SortColumnDescriptor gsd = new SortColumnDescriptor("ShipCountry");
+ gsd.SetGroupSummarySortOrder(summaryColumn1.GetSummaryDescriptorName(), "Average");
+ this.gridGroupingControl1.TableDescriptor.GroupedColumns.Add(gsd);</pre></font>
+	<br><br>
+</BODY>
+</HTML>

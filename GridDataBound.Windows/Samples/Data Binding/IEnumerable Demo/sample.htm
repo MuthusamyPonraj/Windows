@@ -1,0 +1,26 @@
+<html>
+<p>This sample illustrates the implementation of IEnumerable collection in the GridDataBoundGrid.</p>
+
+<p>Below is an image of a GridDataBoundGrid IEnumerable collection.</p>
+
+<!--<p><p align=center><img src="images/IEnumerable.png" alt="IEnumerable Demo" title="IEnumerable Demo" /></p>-->
+
+<p><p align=center><b>GridDataBoundGrid IEnumerable Demo</b></p>
+
+<p>
+<p><strong>Features</strong></p>
+<ul>
+	    <li><p>The GridDataBoundGrid can be binded with IEnumerable collection.</p>
+</ul>
+
+<p>The following code illustrates binding a datasource to the GridDataBoundGrid through IEnumerator.
+<p><font color="#8D2E1C"><pre>
+
+		//Creates an object for IEnumerator.
+		CustomerCollection customers = PopulateCustomers.CreateCustomers();
+				               
+                //Bind the datasource to GridDataBoundGrid.
+                this.gridDataBoundGrid1.DataSource = customers;
+</pre></font></p>
+</p>
+</html>

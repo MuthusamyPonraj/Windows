@@ -1,0 +1,47 @@
+<html>
+<p>This sample demonstrates the export of content from griddataboundgrid to a PDF file.It also 
+illustrates support for headers and footers.</p>
+
+<p>Below is an image of a pdf export.</p>
+
+<!--<p><p align=center><img src="images/Pdf.png" alt="Pdf Export screenshot" title="Pdf Export" /></p>-->
+
+<p><p align=center><b>Pdf Export</b></p>
+
+<p>
+<p><strong>Features</strong></p>
+<ul>
+	    <li><p>This implementation allows multiple options to have modifications
+	on a PDF file according to its features such as adding headers and footers for
+	all the pages.</p> 
+	    
+</ul>
+<p><strong>Interactive Features</strong></p>
+<ul>
+	 <li><p>PDF libraries are used to support the conversion of grid content
+	to a PDF page.</p>
+         <li><p>Dependent assemblies are <STRONG>Syncfusion.Pdf.Base</STRONG>
+	and <STRONG>Syncfusion.GridHelperClasses.Windows</STRONG>.</p>
+
+</ul>
+<p><font color="#8D2E1C"><pre>
+    		GridPDFConverter converter = new GridPDFConverter(true,true);
+                converter.ExportToPdf("Sample.pdf", gridDataBoundGrid1);
+
+                //Header Event to create an header that will displays on each page
+                converter.DrawPDFFooter += new GridPDFConverter.DrawPDFHeaderFooterEventHandler(converter_DrawPDFFooter);
+
+               //Footer Event to create an footer that will displays on each page
+                converter.DrawPDFHeader += new GridPDFConverter.DrawPDFHeaderFooterEventHandler(converter_DrawPDFHeader);
+
+
+</pre></font></p>
+</p>
+
+<!--<p><p>Below is a sample image of the exported file.</p>
+
+<p><p align=center><img src="images/PdfExported.png" alt="PDF Export screenshot" title="Pdf Export" /></p>-->
+
+<p><p align=center><b>Pdf Export</b></p>
+
+</html>

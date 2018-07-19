@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20120101;3310415">
+	<META NAME="CHANGEDBY" CONTENT="Ragamathullah B">
+	<META NAME="CHANGED" CONTENT="20120101;3341206">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P>This sample illustrates to show the error icon and set custom error. 
+</P>
+<!--<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT="Errorprovider in GridDataBoundGrid Demo" ALIGN=BOTTOM  BORDER=0></P>-->
+
+<P><FONT SIZE=4><B>Features</B></FONT></P>
+<UL>
+	<LI><P><STRONG> ShowHeaderErroricon</STRONG> is used to show error icon on RowHeader.</P>
+<PRE STYLE="margin-bottom: 0.2in"><FONT COLOR="#8d2e1c">            this.gridDataBoundGrid1.ShowRowHeaderErroricon = true; </FONT> </PRE>
+	<LI><P><STRONG> ShowErroricon</STRONG> is used to show error icon in CurrentCell.</P>
+<PRE STYLE="margin-bottom: 0.2in"><FONT COLOR="#8d2e1c">            this.gridDataBoundGrid1.CurrentCell.ShowErroricon = true; </FONT> </PRE>
+<LI><P><STRONG> ShowErrorMessageBox</STRONG> is used to show the error Messagebox.</P>
+<PRE STYLE="margin-bottom: 0.2in"><FONT COLOR="#8d2e1c">            this.gridDataBoundGrid1.CurrentCell.ShowErrorMessageBox = true; </FONT> </PRE>
+<LI><P><STRONG> ValidationErrorText</STRONG> this text will display in the error MessageBox.</P>
+<PRE STYLE="margin-bottom: 0.2in"><FONT COLOR="#8d2e1c">            this.gridDataBoundGrid1.CurrentCell.ValidationErrorText = "Please enter valid text" </FONT> </PRE>
+<LI><P><STRONG> SetError</STRONG> method is used to set custom error by using CurrentCellValidating event.</P>
+<PRE STYLE="margin-bottom: 0.2in"><FONT COLOR="#8d2e1c">   
+       void gridDataBoundGrid1_CurrentCellValidating(object sender, CancelEventArgs e)
+        {
+            long output;
+            if (chksetError.Checked)
+            {
+                long.TryParse(this.gridDataBoundGrid1.CurrentCell.Renderer.ControlText, out output);
+                if (this.GridDataBoundGrid1.CurrentCell.ColIndex == 1 && output > 5)
+                {
+                    if (string.IsNullOrEmpty(textBox2.Text))
+                        this.gridDataBoundGrid1.CurrentCell.SetError("Please enter valid number");
+                    else
+                        this.gridDataBoundGrid1.CurrentCell.SetError(textBox2.Text);
+
+                }
+            }
+        }</FONT> </PRE>
+</UL>
+
+</BODY>
+</HTML>

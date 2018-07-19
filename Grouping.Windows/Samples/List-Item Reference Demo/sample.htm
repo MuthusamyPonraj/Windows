@@ -1,0 +1,32 @@
+<html><style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+<p><strong>Features</strong>:</p>
+<p>This sample shows the <strong>RelationKind.ListItemReference</strong> relation.</p>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2" width="50%" src="Images\ListItemReference1.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+<p>The following is a sample code snippet showing this relation.</p>
+
+<font color="#8D2E1C"><pre>
+		USStatesCollection usStates = USStatesCollection.CreateDefaultCollection();
+
+		this.engine1.SourceListSet.Add("Countries", countries);
+
+		RelationDescriptor usStatesRd = new RelationDescriptor();
+		usStatesRd.Name = "State";
+		usStatesRd.MappingName = "State";  // FieldName in table
+		usStatesRd.ChildTableName = "USStates";  // SourceListSet name for lookup.
+		usStatesRd.RelationKind = RelationKind.ListItemReference;
+		usStatesRd.ChildTableDescriptor.SortedColumns.Add("Name");
+		mainTd.Relations.Add(usStatesRd);
+</pre></font>
+</html>

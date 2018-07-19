@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomGridCell_2005", "CustomGridCell_2005.csproj", "{6268BB64-7401-4E57-B1FD-F27A26FD0A01}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{6268BB64-7401-4E57-B1FD-F27A26FD0A01}.Debug.ActiveCfg = Debug|.NET
+		{6268BB64-7401-4E57-B1FD-F27A26FD0A01}.Debug.Build.0 = Debug|.NET
+		{6268BB64-7401-4E57-B1FD-F27A26FD0A01}.Release.ActiveCfg = Release|.NET
+		{6268BB64-7401-4E57-B1FD-F27A26FD0A01}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

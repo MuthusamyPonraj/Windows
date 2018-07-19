@@ -1,0 +1,30 @@
+<html><style>body{font-family: Segoe UI; font-size:14}
+product{color:#800000; font-family: Tahoma; font-weight:bold;}
+</style>
+
+<p>Grid&#39;s grouping control provides built-in support for stacked multi-headers. </p>
+<p>
+<table width="100%">
+<tr  >
+<td width="100%" colspan="3">
+<div align=center>
+<img colspan="2"  src="Images\StackedHeaders.png"/>
+</div>
+</tr>
+</td>
+</table>
+</p>
+</p>
+
+<p><b>Resizing Rows:</b></p>
+<p><font color="#8D2E1C"><pre>
+Syncfusion.Windows.Forms.Grid.Grouping.GridStackedHeaderDescriptor gridStackedHeaderDescriptor1 = 
+new Syncfusion.Windows.Forms.Grid.Grouping.GridStackedHeaderDescriptor();
+gridStackedHeaderDescriptor1.VisibleColumns.AddRange(
+        new Syncfusion.Windows.Forms.Grid.Grouping.GridStackedHeaderVisibleColumnDescriptor[] {
+        new Syncfusion.Windows.Forms.Grid.Grouping.GridStackedHeaderVisibleColumnDescriptor("OrderID"),
+        new Syncfusion.Windows.Forms.Grid.Grouping.GridStackedHeaderVisibleColumnDescriptor("CustomerID"),
+        new Syncfusion.Windows.Forms.Grid.Grouping.GridStackedHeaderVisibleColumnDescriptor("EmployeeID")});
+</pre></font></p>
+<br><br>
+</html>
