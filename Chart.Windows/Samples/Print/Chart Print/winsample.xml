@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<sample>  
-  <name value="~/Print/Chart Print/Sample.aspx" />
-  <displayname value="Chart Print" />
-  <sortorder value="1" />  
-  <imageUrl value="/Print/Chart Print/images/sample.png"></imageUrl>  
-</sample>

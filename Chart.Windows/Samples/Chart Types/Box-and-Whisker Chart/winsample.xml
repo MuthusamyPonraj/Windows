@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<sample>  
-  <name value="~/Chart Types/Box-and-Whisker Chart/Sample.aspx"/>
-  <displayname value="Box-and-Whisker Chart" />
-  <sortorder value="3"/>  
-  <imageUrl value="/Chart Types/Box-and-Whisker Chart/images/sample.png"></imageUrl>
-</sample>

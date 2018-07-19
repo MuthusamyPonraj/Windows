@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<sample>  
-  <name value="~/User Interaction/Chart Toolbar/Sample.aspx" />
-  <displayname value="Chart Toolbar" />
-  <sortorder value="9" />  
-  <imageUrl value="/User Interaction/Chart Toolbar/images/sample.png"></imageUrl>
-</sample>

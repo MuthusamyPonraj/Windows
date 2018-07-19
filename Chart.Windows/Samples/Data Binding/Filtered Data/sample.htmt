@@ -1,9 +1,0 @@
-# Filtered Data Sample
-
-This sample shows how to improve the performance of the chart when loading large number of datapoints using IChartSeriesModel.
-
-<div align=center>![FilteredDataSample](images/sample.png)</div>
-
-* In this sample, the new set of data points are added for every 800ms and data points added before 5 mins are filtered out using the Grouping Engine.
-
-* The range along the PrimaryXAxis is held at 3 minutes during run time in order to improve the performance of the chart.

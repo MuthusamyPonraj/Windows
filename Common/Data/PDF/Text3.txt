@@ -1,9 +1,0 @@
-Plan for the long term: standardize on Syncfusion components 
-
-With the release of Visual Studio 2010 and .NET 4, the component market is more vibrant than ever. Some vendors offer a wide variety of products, while others target a niche. While both approaches have their place, there are pitfalls associated with accumulating components from several vendors including multiple licensing policies to keep track of, high administrative overhead, and varying levels of support. 
-
-Syncfusion has earned a rock-solid reputation in the component space by offering developers a different path - the opportunity to cover all their development needs with one vendor. With a comprehensive line of high-performance, solidly built components, Syncfusion strives to truly partner with its customers by backing its products with straightforward licensing, an extensive track record, and a strong technical support infrastructure that appreciates how developers work - after all, we're developers too! 
-
-Thinking about standardization? Think about Syncfusion. 
-Consider the benefits of having only one vendor to contact for technical support, updates, and licensing. 
-One package. One vendor. One license. One great price. 

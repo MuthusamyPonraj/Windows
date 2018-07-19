@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<sample>  
-  <displayname value="Simple Drill Down" />
-  <sortorder value="19" />  
-  <imageUrl value="/Getting Started/Simple Drill Down/Images/sample.png"></imageUrl>
-  <name value="~/Getting Started/Simple Drill Down/Sample.aspx" />
-</sample>

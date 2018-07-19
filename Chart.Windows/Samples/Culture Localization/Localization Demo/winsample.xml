@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<sample>  
-  <name value="~/Culture Localization/Localization Demo/Sample.aspx" />
-  <displayname value="Localization Demo" />
-  <sortorder value="2" />  
-  <imageUrl value="/Culture Localization/Localization Demo/images/sample.png"></imageUrl>
-</sample>

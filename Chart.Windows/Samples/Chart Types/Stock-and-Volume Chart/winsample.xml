@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<sample>  
-  <name value="~/Chart Types/Stock-and-Volume Chart/Sample.aspx"/>
-  <displayname value="Stock-and-Volume Chart" />
-  <sortorder value="18" />  
-  <imageUrl value="/Chart Types/Stock-and-Volume Chart/Images/Sample.png"></imageUrl>
-</sample>

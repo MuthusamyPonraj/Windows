@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<sample>  
-  <name value="~/Data Binding/Filtered Data/Sample.aspx" />
-  <displayname value="Filtered Data" />
-  <sortorder value="5" />  
-  <imageUrl value="/Data Binding/Filtered Data/Images/sample.png"></imageUrl>
-</sample>

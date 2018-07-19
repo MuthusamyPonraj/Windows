@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<sample>  
-  <name value="~/Chart Types/Pie Chart/Sample.aspx"/>
-  <displayname value="Pie Chart" />
-  <sortorder value="13"/>  
-   <imageUrl value="/Chart Types/Pie Chart/Images/Sample1.png"></imageUrl>  
-</sample>

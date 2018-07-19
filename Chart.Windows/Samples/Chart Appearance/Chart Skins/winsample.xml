@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<sample>  
-  <name value="~/Chart Appearance/Chart Skins/Sample.aspx" />
-  <displayname value="Chart Skins" />
-  <sortorder value="5" />  
-  <imageUrl value="/Chart Appearance/Chart Skins/images/sample.png"></imageUrl>
-</sample>

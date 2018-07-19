@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<sample>  
-  <name value="~/Chart Types/Line Charts/Sample.aspx"/>
-  <displayname value="Line Charts" />
-  <sortorder value="12"/>  
-  <imageUrl value="/Chart Types/Line Charts/images/Sample1.png"></imageUrl>  
-</sample>

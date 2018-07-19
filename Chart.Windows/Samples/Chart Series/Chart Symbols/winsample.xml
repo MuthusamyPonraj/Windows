@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<sample>  
-  <name value="~/Chart Series/Chart Symbols/Sample.aspx" />
-  <displayname value="Chart Symbols" />
-  <sortorder value="4" />  
-  <imageUrl value="/Chart Series/Chart Symbols/images/sample.png"></imageUrl>
-</sample>

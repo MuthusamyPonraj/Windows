@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<sample>  
-  <name value="~/Export/Chart Export Data/Sample.aspx" />
-  <displayname value="Chart Export Data" />
-  <sortorder value="1" />  
-  <imageUrl value="/Export/Chart Export Data/images/Sample.png"></imageUrl>
-</sample>

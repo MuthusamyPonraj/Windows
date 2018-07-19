@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<sample>  
-  <name value="~/Data Binding/Axis Label Binding/Sample.aspx" />
-  <displayname value="Axis Label Binding" />
-  <sortorder value="1" />  
-  <imageUrl value="/Data Binding/Axis Label Binding/images/sample.png"></imageUrl>
-</sample>

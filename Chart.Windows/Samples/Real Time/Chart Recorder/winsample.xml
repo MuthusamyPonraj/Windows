@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<sample>  
-  <name value="~/Real Time/Chart Recorder/Sample.aspx" />
-  <displayname value="Chart Recorder" />
-  <sortorder value="2" />  
-  <imageUrl value="/Real Time/Chart Recorder/images/sample.png"></imageUrl>
-</sample>

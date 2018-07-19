@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<sample>  
-  <displayname value="Ports" />
-  <sortorder value="2" />  
-  <imageUrl value="/Getting Started/Ports/Images/sample.png"></imageUrl>  
-  <name value="~/Getting Started/Ports/Sample.aspx" />
-</sample>
