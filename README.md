@@ -3,12 +3,25 @@
 This section guides you to use the Syncfusion Windows Forms samples in your applications.
 
 * [Overview](#overview)
+* [Requirements to run the demo](#requirements-to-run-the-demo)
+* [Documentation](#documentation)
 * [License](#license)
 * [Using the samples](#using-the-samples)
-* [Samples by category](#samples-by-category)
+* [Samples List](#samples-list)
 * [Support and Feedback](#support-and-feedback)
 
 ## <a name="overview"></a>Overview ##
+
+This repository contains the demos of [Syncfusion Windows Forms UI controls](https://www.syncfusion.com/products/windows-forms). This is the best place to check our controls to get more insight about the usage of APIs.
+
+## <a name="requirements-to-run-the-demo"></a>Requirements to run the demo ##
+
+The samples requires Visual Studio 2010 or higher to build, test and deploy. 
+
+## <a name="documentation"></a>Documentation ##
+
+All controls documentation for the Syncfusion Windows Forms controls can be found on [Syncfusion Help](https://help.syncfusion.com/windowsforms/overview). All API documentation can be found at the [API Reference](https://help.syncfusion.com/cr/windowsforms).
+
 
 ## <a name="license"></a>License ##
 
@@ -24,14 +37,14 @@ The easiest way to use these samples without using Git is to download the zip fi
    * Before you unzip the archive, right-click it, select **Properties**, and then select **Unblock**.
    * Be sure to unzip the entire archive, and not just individual samples. The samples all depend on the SharedContent folder in the archive.  
 
-**To use the Syncfusion Windows Forms samples, Syncfusion license key should be registered in SynfusionLicense.txt file. Refer [this](https://www.syncfusion.com/kb/9002) link for more information.**
+**To use the Syncfusion Windows Forms samples, Syncfusion license key should be registered in SyncfusionLicense.txt file. Refer [this](https://www.syncfusion.com/kb/9002) link for more information.**
 
 
 
 **Reminder:** If you unzip individual samples, they will not build due to references to other portions of the ZIP file that were not unzipped. You must unzip the entire archive if you intend to build the samples.
 
 
-## <a name="samples-by-category"></a>Samples by category ## 
+## <a name="samples-list"></a>Samples List ## 
 
 <table>
 <tr>
@@ -572,8 +585,6 @@ RangeSlider
 </table>
 
 ## <a name="support-and-feedback"></a>Support and Feedback ##
-
-* For using the Syncfusion controls, refer the [User Guide](https://help.syncfusion.com/windowsforms/overview) .
 
 * For any other queries, reach our support team [here](https://www.syncfusion.com/support/directtrac/incidents) with your query.
 
