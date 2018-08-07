@@ -98,7 +98,7 @@ The easiest way to use these samples without using Git is to download the zip fi
 <a href="Schedule.Windows/Samples">Schedule</a>
 </td>
 <td>
-BulletGraph
+<a href="BulletGraph.Windows/Samples">BulletGraph</a>
 </td>
 <td>
 <a href="Maps.Windows">Maps</a>
