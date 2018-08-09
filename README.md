@@ -64,20 +64,13 @@ The easiest way to use these samples without using Git is to download the zip fi
 <a href="Grid.Grouping.Windows/Samples">GridGroupingControl</a>
 </td>
 <td>
-<a href=" Spreadsheet.Windows/Samples">Spreadsheet</a>
+<a href="Spreadsheet.Windows">Spreadsheet</a>
 </td>
 <td>
 <a href="Grid.Windows/Samples/Grid%20List%20Control">GridListControl</a>
 </td>
 </tr>
 <tr>
-<td>
-<a href="GridDataBound.Windows/Samples">GridDataBoundGrid(Classic)</a>
-</td>
-<td colspan="2" rowspan="1">
-</td>
-</tr>
- <tr>
 <td colspan="3" rowspan="1">
 <b>DATA VISUALIZATION</b>
 </td>
@@ -153,13 +146,10 @@ The easiest way to use these samples without using Git is to download the zip fi
 </td>
 </tr>
 <tr>
-<td>
-<a href="DICOM.Windows">DICOM</a>
-</td>
-<td>
+<td >
 <a href="PdfViewer.Windows/Samples">PDFViewer</a>
 </td>
-<td>
+<td colspan="2" rowspan="1">
 <a href="Presentation.Windows/Samples">Presentation</a>
 </td>
 </tr>
@@ -181,7 +171,7 @@ The easiest way to use these samples without using Git is to download the zip fi
 </tr>
 <tr>
 <td>
-<a href="Tools.Windows/Samples/StatusBar/StatusBarAdv">StatusStripAdv</a>
+<a href="Tools.Windows/Samples/Super%20Tooltip/SuperTooltip">SuperToolTip</a>
 </td>
 <td>
 <a href="Tools.Windows/Samples/Splash/Splash%20Control">Splash</a>
@@ -192,7 +182,7 @@ The easiest way to use these samples without using Git is to download the zip fi
 </tr>
 <tr>
 <td>
-ToolStripEx
+<a href="Tools.Windows/Samples/HubTile/HubTile/HubTile">HubTile</a>
 </td>
 <td>
 <a href="Tools.Windows/Samples/Container%20controls/Gradient%20Panel">GradientPanelExt</a>
@@ -202,14 +192,8 @@ ToolStripEx
 </td>
 </tr>
 <tr>
-<td>
+<td colspan="3" rowspan="1">
 <a href="Tools.Windows/Samples/Container%20controls/Gradient%20Panel">GradientPanel</a>
-</td>
-<td>
-<a href="Tools.Windows/Samples/Super%20Tooltip/SuperTooltip">SuperToolTip</a>
-</td>
-<td>
-<a href="Tools.Windows/Samples/HubTile/HubTile/HubTile">HubTile</a>
 </td>
 </tr>
 <tr>
@@ -247,7 +231,7 @@ ToolStripEx
 <a href="Tools.Windows/Samples/ToolBars/Command%20Bars">CommandBars</a>
 </td>
 <td>
-<a href="Tools.Windows/Samples/GroupView">GroupView</a>
+<a href="Grid.Grouping.Windows">GroupView</a>
 </td>
 </tr>
 <tr>
@@ -274,7 +258,7 @@ ToolStripEx
 </tr>
 <tr>
 <td>
-<a href="master/Tools.Windows/Samples/Metro%20Style/Metro%20Style%20Controls">MetroForm</a>
+<a href="Tools.Windows/Samples">MetroForm</a>
 </td>
 <td>
 <a href="Tools.Windows/Samples/Menu">MainFrameBarManager</a>
@@ -323,7 +307,7 @@ ToolStripEx
 <a href="Tools.Windows/Samples/Skin%20Manager/Skin%20Manager">SkinManager</a>
 </td>
 <td>
-<a href="Tools.Windows/Samples/SpellChecker/SpellCheckerAdv%20Demo">SpellCheckerAdv</a>
+<a href="Tools.Windows/Samples/MessageBoxAdv/MessageBoxAdv">MessageBoxAdv</a>
 </td>
 <td>
 <a href="Tools.Windows/Samples/Clock/Clock">Clock</a>
@@ -338,12 +322,6 @@ ToolStripEx
 </td>
 <td>
 <a href="Calculate.Windows/Samples">Calculate</a>
-</td>
-</tr>
-<tr>
-<td colspan="3" rowspan="1">
-<a href="Tools.Windows/Samples/MessageBoxAdv/MessageBoxAdv
-">MessageBoxAdv</a>
 </td>
 </tr>
 <tr>
@@ -377,24 +355,13 @@ ToolStripEx
 </tr>
 <tr>
 <td>
-<a href="Tools.Windows/Samples/Tile%20layout/TileLayout">Flow Layout</a>
+<a href="Tools.Windows/Samples/TabbedMdi%20manager/Tabbed%20MDI">TabbedMDI</a>
 </td>
 <td>
 <a href="Tools.Windows/Samples/FolderBrowser/Folder%20Browser">FolderBrowser</a>
 </td>
 <td>
-<a href="Tools.Windows/Samples/Tile%20layout/TileLayout">Border Layout</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="Tools.Windows/Samples/Tile%20layout/TileLayout">Card Layout</a>
-</td>
-<td>
-<a href="Tools.Windows/Samples/Tile%20layout/TileLayout">Grid Layout</a>
-</td>
-<td>
-<a href="Tools.Windows/Samples/Tile%20layout/TileLayout">Grid Bag Layout</a>
+<a href="Tools.Windows/Samples/Tile%20layout/TileLayout">TileLayout</a>
 </td>
 </tr>
 <tr>
@@ -406,14 +373,6 @@ ToolStripEx
 </td>
 <td>
 <a href="Tools.Windows/Samples/Container%20controls/Popup%20Container">PopupControlContainer</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="Tools.Windows/Samples/Tile%20layout/TileLayout">TileLayout</a>
-</td>
-<td colspan="2" rowspan="1">
-<a href="Tools.Windows/Samples/TabbedMdi%20manager/Tabbed%20MDI">TabbedMDI</a>
 </td>
 </tr>
 <tr>
@@ -459,7 +418,7 @@ ToolStripEx
 <a href="Tools.Windows/Samples/Editor%20Controls/Editor%20Controls">ButtonEdit</a>
 </td>
 <td>
-<a href="Tools.Windows/Samples/List%20Controls/FontComboBox">FontComboBox</a>
+<a href="Tools.Windows/Samples/Input%20Controls/CheckBoxAdv">CheckBoxAdv</a>
 </td>
 <td>
 <a href="Tools.Windows/Samples/List%20Controls/FontListBox">FontListBox</a>
@@ -521,7 +480,7 @@ ToolStripEx
 </tr>
 <tr>
 <td>
-RangeSlider
+<a href="Tools.Windows/Samples/Input%20Controls/RadioButtonAdv">RadioButtonAdv</a>
 </td>
 <td>
 <a href="Tools.Windows/Samples/List%20Controls/ComboBoxAdv">ComboBoxAdv</a>
@@ -561,22 +520,6 @@ RangeSlider
 </td>
 <td>
 <a href="Tools.Windows/Samples/Input%20Controls/SfDateTimeEdit/Getting%20Started">DateTimeEdit</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="Tools.Windows/Samples/Calendar/DateTime%20Picker">DateTimePickerAdv</a>
-</td>
-<td>
-<a href="Tools.Windows/Samples/Input%20Controls/RadioButtonAdv">RadioButtonAdv</a>
-</td>
-<td>
-<a href="Tools.Windows/Samples/Calendar/Month%20Calendar">MonthcalenderAdv</a>
-</td>
-</tr>
-<tr>
-<td colspan="3" rowspan="1">
-<a href="Tools.Windows/Samples/Input%20Controls/CheckBoxAdv">CheckBoxAdv</a>
 </td>
 </tr>
 </table>
